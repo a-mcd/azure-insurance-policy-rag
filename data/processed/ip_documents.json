@@ -1,0 +1,3619 @@
+{
+  "summary": {
+    "documents_found": 6,
+    "documents_extracted": 6,
+    "documents_failed": 0,
+    "sections_extracted": 54,
+    "warnings": 0
+  },
+  "warnings": [],
+  "failures": [],
+  "documents": [
+    {
+      "document_name": "Gold-IP-HO-2-012.pdf",
+      "document_type": "insurance_product_information",
+      "product": "Gold Home Insurance Policy",
+      "fca_reference_number": "309378",
+      "page_count": 2,
+      "sections": [
+        {
+          "section_heading": "What is this type of insurance?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "This policy meets demands and needs of those wishing cover for loss or damage to their Buildings and/or Contents for causes such as storm, flood, fire, theft, escape of water or subsidence.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "The type and amount of cover included depends on options chosen when arranging your policy and will be confirmed on your policy documents.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Home Emergency cover is included with Admiral Gold Home Insurance and is summarised in a separate Insurance Product Information Document.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What is insured?",
+          "subsections": [
+            {
+              "subsection_headings": [
+                "Buildings (Main features, if selected)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Unlimited rebuild cost: For damage or loss (caused) by events such as fire, storm, flood, theft, escape of water, malicious acts and subsidence.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Alternative accommodation: Up to £75,000 for temporary accommodation for your family and pets if your home is not safe to live in following an insured event.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Replacement locks: Up to £1,000 if keys are lost or stolen.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Property owner's liability: Up to £2 Million for sums you and your family are legally liable for.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Underground services: Covering accidental damage to underground drains, pipes and cables and tanks.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Accidental breakage of glass and sanitary ware.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 6
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Trace and access: Up to £5,000 to cover the cost of sourcing a water or oil leak.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 7
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Contents (Main features, if selected)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Household contents: Are covered for damage or loss by events such as fire, storm, flood, theft, escape of water, malicious acts and subsidence up to £125,000.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Freezer food: Up to £750.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Digital downloads: Up to £1,000 for the loss or damage of content you have legally downloaded.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Occupiers and personal liability: Up to £2 Million for sums you and your family are legally liable for.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Shared properties: As well as covering those living with their partner and/or families we also offer cover for those living in shared accommodation such as student houses.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Theft from Garages and Outbuildings: Up to £5,000.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 6
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Garden contents cover: Up to £1,000 for items you keep in your garden such as patio furniture.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 7
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Garden plants cover: Up to £3,000.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 8
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Contents at University: Up to £5,000 for contents kept by you or your family when temporarily residing in student accommodation.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 9
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Other included benefits"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Unoccupancy: There is an allowance of up to 60 days if you are not regularly residing in your property before restrictions apply.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Home Emergency cover: Refer to separate Insurance Product Information Document.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Optional Cover"
+              ],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Full accidental damage: To buildings or contents for unintentional and unforeseen incidents such as smashing a window with a football or knocking a tin of paint over a carpet.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Personal possessions: Increase your cover up to a maximum of £20,000.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Specified items: Add valuables over £2,000 up to a maximum of £30,000.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Bikes over £350: Add bikes up to £10,000 per bike up to a maximum of £20,000.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What is not insured?",
+          "subsections": [
+            {
+              "subsection_headings": [
+                "Buildings (Main cover exclusions)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Storm: Loss or damage to gates, fences and hedges.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Contents (Main cover exclusions)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Money: Theft of money unless force and violence has been used to enter your home.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Both Buildings and Contents (Main cover exclusions)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Empty homes: Loss or damage under many sections of your policy if your home is left unoccupied for more than 60 days.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "People you know: Malicious damage, theft or attempted theft caused by you, your family or anybody invited into the property unless force and violence has been used to enter your home.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Non-storm conditions: We will not pay for loss or damage from wind, rain, snow, or sleet unless caused by a storm, as defined in the policy booklet.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Escape of water: As the result of taps being left on (this may be covered if you have added Accidental Damage Cover).",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Pets: Loss or damage caused by chewing, scratching, tearing, fouling or vomiting by domestic pets.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Gradually operating causes: Any loss or damage caused by anything that happens gradually including wear and tear.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "Are there any restrictions on cover?",
+          "subsections": [
+            {
+              "subsection_headings": [
+                "Home Insurance (Buildings and/or Contents)"
+              ],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Limits: Limits apply to all sections of your policy. We will not pay more than the 'Unspecified item limit' for high risk items not listed individually on your Policy Schedule. High risk items are defined in your policy booklet.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Excesses: You must pay the first part of any claim (the excess). The excess is made up of the Compulsory excess, plus your chosen Voluntary excess. The excess for Subsidence, Escape of Water and Flood replace the compulsory excess. Your compulsory excess amount and all other excesses are shown on your Policy Schedule.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Extra conditions: Such as minimum security requirements (use of your locks and security devices) may apply. If applicable, these will appear on your Policy Schedule. If you do not keep to Extra Conditions it could affect your claim settlement.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Matching Suites: We will treat an individual item from a matching set of items as a single item. We will only pay for items that are lost or damaged but not for the other pieces of the set or suite which are not damaged or lost.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "Where am I covered?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "We cover homes in the United Kingdom of Great Britain and Northern Ireland.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "We cover pedal cycles worth up to £350 anywhere in the world if Contents Cover is purchased.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Optional Cover: For personal possessions, specified bikes and specified items you have asked to cover away from home, we will cover you anywhere in the world.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What are my obligations?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "- You must inform us without delay if any details on your Home Proposal Confirmation or Policy Schedule are incorrect or change.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "- You must tell us about changes to your property, its use and its occupants. Full details can be found in your policy documents.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "- You must maintain your property in a good state of repair and take care to prevent any accidents, loss, damage or injury. If a loss does occur you must take action to prevent further loss or damage if it is safe to do so.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "When and how do I pay?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "You can pay for your insurance with one lump sum with a debit/credit card when you take out your policy. If eligible, you can pay in monthly instalments by Direct Debit. Monthly instalments will apply for the duration of the policy.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "When does the cover start and end?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Your cover start and end date is shown on your Policy Schedule. If you do not wish your policy to automatically renew, please let us know.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "How do I cancel the contract?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "You can cancel at any time either by phone or in writing to our Customer Services department. These details can be found within your policy documentation or on our website. Your cancellation will be subject to the relevant cancellation fee.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "document_name": "HomeEmergency-IP-HE-1-008.pdf",
+      "document_type": "insurance_product_information",
+      "product": "Home Emergency Cover",
+      "fca_reference_number": "309378",
+      "page_count": 2,
+      "sections": [
+        {
+          "section_heading": "What is this type of insurance?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Home Emergency Cover provides assistance for the emergencies specified in this policy. For example, broken boilers, burst pipes, broken windows, doors and locks. It is not intended to replace the normal day-to-day maintenance of your home. We'll help to arrange and pay for any work needed to make a temporary repair to resolve the emergency in your home. You'll be covered for up to £500 per claim with no excess to pay.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What is insured?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "We'll provide up to £500 for call out charges, labour, parts and materials to carry out a temporary repair to the following emergencies.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Plumbing: We'll cover issues relating to water pipes inside your home, including pipes connected to your shower or bath, internal overflow pipes and leaks from your toilet. We'll also cover a failure of the toilet flush mechanism.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Drainage: We'll cover blocked waste pipes or drains that are your sole responsibility, including blocked sinks, baths, toilets, rainwater drains and soil vent pipes.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Electrics: We'll cover failure of your electricity supply.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Windows, doors and locks: We'll secure broken external windows, doors and locks.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Boiler and heating system: We'll cover your boiler, heating system or hot-water system if it fails or breaks down because of:\n- An emergency, leaving you without heating or hot water.\n- A loss of water pressure within a boiler due to a fault.\n- A water leak from the boiler or heating system.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 6
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Accommodation: We'll pay up to £500 for accommodation and transport if your home remains uninhabitable overnight. The maximum we will pay per night is £250.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 7
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Temporary heating: We'll pay you up to £50 towards the cost of heaters if you have no heating and the engineer is waiting for parts.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 8
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Unlimited claims: There is no limit on the number of claims you can make in each policy term.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 9
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What is not insured?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Claim notification: We won't cover any emergency not reported to us within 4 days of it being discovered.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Boiler and heating: We won't cover underfloor heating systems and commercial boilers or heating systems with an output of over 70kW/hr.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Boiler located outside of your home: We won't cover any boiler or heating system outside your home, unless this provides the main source of heating for your home.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Electrics: We won't cover an intermittent failure to the electrics within your home.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Windows, doors and locks: We won't cover internal doors and windows that do not affect the security and safety of the property. We won't cover replacing lost or stolen keys.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Plumbing: We won't cover pipes outside your home, dripping taps, domestic appliances, or frozen pipes where no damage has occurred.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 6
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Drainage: We won't cover shared or local water-authority drains, manholes, soakaways, cesspits, guttering or downpipes, treatment plants or septic tanks, or drains that aren't totally blocked.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 7
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Trace and access: We won't cover the cost of work to find the source of the emergency.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 8
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Maintenance: We won't cover normal maintenance that should be carried out.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 9
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "Are there any restrictions on cover?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Parts availability: If the engineer is not carrying the correct part to deal with an emergency it could mean the repair is delayed until the part is sourced.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Contractor availability: In some circumstances there may be a delay in our contractor's attendance, for example, bad weather limiting the availability within your area.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Air or ground-sourced heat pumps: Cover is provided on a reimbursement basis only.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "Where am I covered?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "We cover homes in the United Kingdom of Great Britain and Northern Ireland.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What are my obligations?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "- Please call us within 4 days of discovering the emergency.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "- Normal day to day maintenance of your home.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "- In some instances you will be required to replace the temporary repair with a permanent one.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "When and how do I pay?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "You can pay for your insurance with one lump sum with a debit/credit card when you take out your policy. If eligible, you can pay in monthly instalments by Direct Debit. Monthly instalments will apply for the duration of the policy.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "When does the cover start and end?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Your cover start and end date is shown on your Policy Schedule. If you do not wish your policy to automatically renew, please let us know.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "How do I cancel the contract?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "You can cancel at any time either by phone or in writing to our Customer Service department. These details can be found within your policy documentation or on our website. If the product is a standard feature in the policy it cannot be cancelled independently.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "document_name": "HomeEmergencyExtra-IP-HEE-1-005.pdf",
+      "document_type": "insurance_product_information",
+      "product": "Home Emergency Extra Cover",
+      "fca_reference_number": "309378",
+      "page_count": 2,
+      "sections": [
+        {
+          "section_heading": "What is this type of insurance?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Home Emergency Extra Cover provides assistance for the emergencies specified in this policy. For example, broken boilers, burst pipes, broken windows, doors and locks. It is not intended to replace the normal day-to-day maintenance of your home. We'll help to arrange and pay for any work needed to make a temporary repair to resolve the emergency in your home. You'll be covered for up to £1,000 per claim with no excess to pay.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What is insured?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "We'll provide up to £1,000 for call out charges, labour, parts and materials to carry out a temporary repair to the following emergencies.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Plumbing: We'll cover issues relating to water pipes inside your home, including pipes connected to your shower or bath, internal overflow pipes and leaks from your toilet. We'll also cover a failure of the toilet flush mechanism.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Drainage: We'll cover blocked waste pipes or drains that are your sole responsibility, including blocked sinks, baths, toilets, rainwater drains and soil vent pipes.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Electrics: We'll cover failure of your electricity supply.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Roofing: We'll cover damage to your roof due to storm or bad weather.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Windows, doors and locks: We'll secure broken external windows, doors and locks.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 6
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Pests: We'll remove any rats, mice, wasps, hornets, grey squirrels, or cockroaches that are infesting your home.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 7
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Internal gas pipes: We'll repair or replace the gas supply pipe within your home.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 8
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Boiler and heating system: We'll cover your boiler, heating system or hot-water system if it fails or breaks down because of:\n- An emergency, leaving you without heating or hot water.\n- A loss of water pressure within a boiler due to a fault.\n- A water leak from the boiler or heating system.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 9
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Beyond Economical Repair: If your boiler is declared beyond economic repair, we'll pay you £250 towards the cost of a replacement.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 10
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Accommodation: We'll pay up to £1,000 for accommodation and transport if your home remains uninhabitable overnight. The maximum we will pay per night is £250.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 11
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Temporary heating: We'll pay you up to £50 towards the cost of heaters if you have no heating and the engineer is waiting for parts.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 12
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Unlimited claims: There is no limit on the number of claims you can make in each policy term.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 13
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What is not insured?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Claim notification: We won't cover any emergency not reported to us within 4 days of it being discovered.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Boiler and heating: We won't cover underfloor heating systems and commercial boilers or heating systems with an output of over 70kW/hr.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Boiler located outside of your home: We won't cover any boiler or heating system outside your home, unless this provides the main source of heating for your home.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Electrics: We won't cover an intermittent failure to the electrics within your home.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Windows, doors and locks: We won't cover internal doors and windows that do not affect the security and safety of the property. We won't cover replacing lost or stolen keys.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Plumbing: We won't cover pipes outside your home, dripping taps, domestic appliances, or frozen pipes where no damaged has occurred.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 6
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Drainage: We won't cover shared or local water-authority drains, manholes, soakaways, cesspits, guttering or downpipes, treatment plants or septic tanks, or drains that aren't totally blocked.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 7
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Pests: We won't cover pests found outside your home.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 8
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Roofing: We won't cover damage to chimneys or guttering.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 9
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Trace and Access: We won't cover the cost of work to find the source of the emergency.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 10
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Maintenance: We won't cover normal maintenance that should be carried out.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 11
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "Are there any restrictions on cover?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Parts availability: If the engineer is not carrying the correct part to deal with an emergency it could mean the repair is delayed until the part is sourced.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Contractor availability: In some circumstances there may be a delay in our contractor's attendance, for example, bad weather limiting the availability within your area.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Air or ground-sourced heat pumps: Cover is provided on a reimbursement basis only.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "Where am I covered?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "We cover homes in the United Kingdom of Great Britain and Northern Ireland.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What are my obligations?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "- Please call us within 4 days of discovering the emergency.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "- Normal day to day maintenance of your home.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "- In some instances you will be required to replace the temporary repair with a permanent one.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "When and how do I pay?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "You can pay for your insurance with one lump sum with a debit/credit card when you take out your policy. If eligible, you can pay in monthly instalments by Direct Debit. Monthly instalments will apply for the duration of the policy.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "When does the cover start and end?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Your cover start and end date is shown on your Policy Schedule. If you do not wish your policy to automatically renew, please let us know.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "How do I cancel the contract?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "You can cancel at any time either by phone or in writing to our Customer Service department. These details can be found within your policy documentation or on our website. If the product is a standard feature in the policy it cannot be cancelled independently.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "document_name": "HomeLegal-IP-FL-1-008.pdf",
+      "document_type": "insurance_product_information",
+      "product": "Home Legal Expenses",
+      "fca_reference_number": "202106",
+      "page_count": 2,
+      "sections": [
+        {
+          "section_heading": "What is this type of insurance?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Home Legal Expenses insurance provides you and your family with access to telephone legal advice, along with insurance cover for up to £100,000 in legal costs and expenses should you experience one of the legal problems covered by this policy.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What is insured?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Employment disputes: Disputes relating to your employment contract.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Personal injury: Sudden or specific accidents causing your death or bodily injury.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Clinical negligence: A negligent surgical act, or clinical or medical procedure causing your death or bodily injury.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Consumer disputes: Disputes over:\n- Buying or selling or renting the home you live in.\n- Buying or selling goods.\n- Purchasing services.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Motor Contract disputes: Disputes over:\n- Buying, selling, hiring or insurance of a motor vehicle or its spare parts or accessories.\n- Service, repair or testing of the insured vehicle.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Property disputes: Disputes relating to your main home or personal possessions following:\n- Someone causing damage to them.\n- Legal nuisance or trespass.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 6
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Probate: Disputes relating to the will of your parents, grandparents, children, step-children or adopted children.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 7
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Personal identity fraud: Help and advice to reclaim your identity, including administrative costs or legal representation if needed.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 8
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Vehicle cloning: Support if your vehicle registration is cloned and defence of any resulting legal action.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 9
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Tax investigation: If HM Revenue & Customs conduct an examination which includes all areas of your self-assessment tax return.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 10
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Jury service: Payment of your salary while you attend a court or tribunal at the request of the lawyer we have appointed for you, or do jury service.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 11
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Legal defence:\n- Defence for criminal prosecutions or certain civil actions against you as an employee.\n- A formal investigation or disciplinary hearing is brought against you by a professional or regulatory body.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 12
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Telephone helplines:\n- Legal advice helplines\n- Tax advice helplines\n- Counselling\n- Personal cyber and identity theft helplines\n- Admiral Legal Depot",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 13
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What is not insured?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Claims where the lawyer we appoint for you does not believe you will be more likely than not to win your case.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Costs you incur before we have agreed to cover your claim.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Legal problems that started before the date your cover begins.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Costs that exceed your policy limit of £100,000 for any one claim.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Fines, penalties, compensation or damages you are ordered to pay by a court or other authority.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "If we agree you can choose your own lawyer, any costs above what we would have paid our preferred lawyers – this is currently £100 per hour (this amount may vary from time to time).",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 6
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Claims where you fail to notify us in a reasonable time and this affects the handling of the claim.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "Are there any restrictions on cover?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "You are not covered for:",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "The use of your own lawyer. We will appoint a preferred lawyer or other professional for you. You may choose your own lawyer when legal proceedings start or if there is a conflict of interest.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Employment claims relating to an employer’s disciplinary and internal grievance procedures or settlement agreements while you’re still employed.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Consumer dispute claims:\n- Where the amount in dispute is £100 or less incl. VAT.\n- Which arise from a loan mortgage, pension, investment or borrowing.\n- Where you haven’t entered into the agreement in a personal capacity.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Motor Contract dispute claims:\n- Where the amount in dispute is £100 or less incl. VAT.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Personal injury claims relating to an illness or injury that happens gradually or those solely for psychological injury or mental illness.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 6
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Clinical negligence claims relating to an alleged failure to correctly diagnose a condition or those solely for psychological injury or mental illness.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 7
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Property dispute claims relating to damage where the amount in dispute is £100 or less.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 8
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Tax investigation A claim relating to the following:\n- Your business activities.\n- Any investigation, enquiry, or prosecution relating to suspected or alleged dishonesty or suspected or alleged criminal offences.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 9
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Probate claims where a will has not been previously made or concluded or cannot be traced.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 10
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Legal defence claims relating to you driving a motor vehicle.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 11
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Jury service claims where you are unable to prove your loss.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 12
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "Where am I covered?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "The United Kingdom of Great Britain & Northern Ireland, the Isle of Man and the Channel Islands.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What are my obligations?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "It is your responsibility to:\n- Co-operate fully with us and the lawyer or other professional we appoint for you.\n- Give the lawyer or other professional we appoint for you any instructions that we ask you to.\n- Keep to the terms and conditions of this policy.\n- Take reasonable steps to avoid and prevent claims and avoid incurring unnecessary costs.\n- Send everything we ask for, in writing.\n- Report to us full and factual details of any claim as soon as possible and give us any information we need.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "When and how do I pay?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "You can pay for your insurance with one lump sum with a debit/credit card when you take out your policy. If eligible, you can pay in monthly instalments by Direct Debit. Monthly instalments will apply for the duration of the policy.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "When does the cover start and end?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Your cover start and end date is shown on your Policy Schedule. If you do not wish your policy to automatically renew, please let us know.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "How do I cancel the contract?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "You can cancel at any time either by phone or in writing to our Customer Service department. These details can be found within your policy documentation or on our website. If the product is a standard feature in the policy it cannot be cancelled independently.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "document_name": "Platinum-IP-HO-3-010.pdf",
+      "document_type": "insurance_product_information",
+      "product": "Platinum Home Insurance Policy",
+      "fca_reference_number": "309378",
+      "page_count": 2,
+      "sections": [
+        {
+          "section_heading": "What is this type of insurance?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "This policy meets demands and needs of those wishing cover for loss or damage to their Buildings and/or Contents for causes such as storm, flood, fire, theft, escape of water or subsidence.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "The type and amount of cover included depends on options chosen when arranging your policy and will be confirmed on your policy documents.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Home Emergency Extra Cover and Home Legal Expenses are included with Admiral Platinum Home Insurance and are summarised in separate Insurance Product Information Documents.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What is insured?",
+          "subsections": [
+            {
+              "subsection_headings": [
+                "Buildings (Main features, if selected)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Unlimited rebuild cost: For damage or loss (caused) by events such as fire, storm, flood, theft, escape of water, malicious acts and subsidence.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Alternative accommodation: Up to £100,000 for temporary accommodation for your family and pets if your home is not safe to live in following an insured event.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Replacement locks: Up to £1,000 if keys are lost or stolen.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Property owner's liability: Up to £2 Million for sums you and your family are legally liable for.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Underground services: Covering accidental damage to underground drains, pipes and cables and tanks.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Trace and access: Up to £10,000 to cover the cost of sourcing a water or oil leak.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 6
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Accidental damage to your buildings: For unintentional and unforeseen incidents such as smashing a window with a football or hammering a nail into a pipe.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 7
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Matching items cover: If one item in a matching set, such as one unit of a fitted kitchen or part of a bathroom suite, are damaged, and we are unable to replace that individual item we will replace the whole set.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 8
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Contents (Main features, if selected)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Household contents: Are covered for damage or loss by events such as fire, storm, flood, theft, escape of water, malicious acts and subsidence up to £150,000.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Freezer food: Up to £1,000.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Digital downloads: Up to £2,500 for the loss or damage of content you have legally downloaded.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Occupiers and personal liability: Up to £2 Million for sums you and your family are legally liable for.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Shared properties: As well as covering those living with their partner and/or families we also offer cover for those living in shared accommodation such as student houses.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Theft from Garages and Outbuildings: Up to £7,500.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 6
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Garden contents cover: Up to £2,500 for items you keep in your garden such as patio furniture.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 7
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Garden plants cover: Up to £5,000.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 8
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Contents at University: Up to £10,000 for contents kept by you or your family when temporarily residing in student accommodation.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 9
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Full accidental damage: For unintentional and unforeseen incidents such as knocking a tin of paint over a carpet or accidentally breaking a vase.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 10
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Personal possessions: £2,000 of cover away from home is included as standard for personal possessions.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 11
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Other included benefits"
+              ],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Unoccupancy: There is an allowance of up to 60 days if you are not regularly residing in your property before restrictions apply.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Home Legal Expenses: Refer to separate Insurance Product Information Document.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Home Emergency Extra Cover: Refer to separate Insurance Product Information Document.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 3
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Optional Cover"
+              ],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Personal possessions: Increase your cover up to a maximum of £20,000.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Specified items: Add valuables over £2,000 up to a maximum of £50,000.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Bikes over £350: Add bikes up to £10,000 per bike up to a maximum of £20,000.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What is not insured?",
+          "subsections": [
+            {
+              "subsection_headings": [
+                "Buildings (Main cover exclusions)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Storm: Loss or damage to gates, fences and hedges.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Contents (Main cover exclusions)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Money: Theft of money unless force and violence has been used to enter your home.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Both Buildings and Contents (Main cover exclusions)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Empty homes: Loss or damage under many sections of your policy if your home is left unoccupied for more than 60 days.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "People you know: Malicious damage, theft or attempted theft caused by you, your family or anybody invited into the property unless force and violence has been used to enter your home.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Non-storm conditions: We will not pay for loss or damage from wind, rain, snow, or sleet unless caused by a storm, as defined in the policy booklet.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Pets: Loss or damage caused by chewing, scratching, tearing, fouling or vomiting by domestic pets.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Gradually operating causes: Any loss or damage caused by anything that happens gradually including wear and tear.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "Are there any restrictions on cover?",
+          "subsections": [
+            {
+              "subsection_headings": [
+                "Home Insurance (Buildings and/or Contents)"
+              ],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Limits: Limits apply to all sections of your policy. We will not pay more than the 'Unspecified item limit' for high risk items not listed individually on your Policy Schedule. High risk items are defined in your policy booklet.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Excesses: You must pay the first part of any claim (the excess). The excess is made up of the Compulsory excess, plus your chosen Voluntary excess. The excess for Subsidence, Escape of Water and Flood replace the compulsory excess. Your compulsory excess amount and all other excesses are shown on your Policy Schedule.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Extra conditions: Such as minimum security requirements (use of your locks and security devices) may apply. If applicable, these will appear on your Policy Schedule. If you do not keep to Extra Conditions it could affect your claim settlement.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "Where am I covered?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "We cover homes in the United Kingdom of Great Britain and Northern Ireland.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "We cover personal possessions anywhere in the world.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "We cover pedal cycles worth up to £350 anywhere in the world if Contents Cover is purchased.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Optional Cover: For specified bikes and specified items you have asked to cover away from home, we will cover you anywhere in the world.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What are my obligations?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "- You must inform us without delay if any details on your Home Proposal Confirmation or Policy Schedule are incorrect or change.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "- You must tell us about changes to your property, its use and its occupants. Full details can be found in your policy documents.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "- You must maintain your property in a good state of repair and take care to prevent any accidents, loss, damage or injury. If a loss does occur you must take action to prevent further loss or damage if it is safe to do so.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "When and how do I pay?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "You can pay for your insurance with one lump sum with a debit/credit card when you take out your policy. If eligible, you can pay in monthly instalments by Direct Debit. Monthly instalments will apply for the duration of the policy.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "When does the cover start and end?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Your cover start and end date is shown on your Policy Schedule. If you do not wish your policy to automatically renew, please let us know.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "How do I cancel the contract?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "You can cancel at any time either by phone or in writing to our Customer Services department. These details can be found within your policy documentation or on our website. Your cancellation will be subject to the relevant cancellation fee.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "document_name": "Standard-IP-HO-1-012.pdf",
+      "document_type": "insurance_product_information",
+      "product": "Admiral Home Insurance Policy",
+      "fca_reference_number": "309378",
+      "page_count": 2,
+      "sections": [
+        {
+          "section_heading": "What is this type of insurance?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "This policy meets demands and needs of those wishing cover for loss or damage to their Buildings and/or Contents for causes such as storm, flood, fire, theft, escape of water or subsidence.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "The type and amount of cover included depends on options chosen when arranging your policy and will be confirmed on your policy documents.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What is insured?",
+          "subsections": [
+            {
+              "subsection_headings": [
+                "Buildings (Main features, if selected)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Unlimited rebuild cost: For damage or loss (caused) by events such as fire, storm, flood, theft, escape of water, malicious acts and subsidence.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Alternative accommodation: Up to £50,000 for temporary accommodation for your family and pets if your home is not safe to live in following an insured event.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Replacement locks: Up to £1,000 if keys are lost or stolen.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Property owner's liability: Up to £1 Million for sums you and your family are legally liable for.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Underground services: Covering accidental damage to underground drains, pipes and cables and tanks.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Trace and access: Up to £5,000 to cover the cost of sourcing a water or oil leak.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 6
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Contents (Main features, if selected)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Household contents: Are covered for damage or loss by events such as fire, storm, flood, theft, escape of water, malicious acts and subsidence up to £100,000.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Freezer food: Up to £500.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Digital downloads: Up to £500 for the loss or damage of content you have legally downloaded.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Occupiers and personal liability: Up to £1 Million for sums you and your family are legally liable for.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Shared properties: As well as covering those living with their partner and/or families we also offer cover for those living in shared accommodation such as student houses.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Garden plants cover: Up to £1,000.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 6
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Other included benefits"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Unoccupancy: There is an allowance of up to 60 days if you are not regularly residing in your property before restrictions apply.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Optional Cover"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Full accidental damage: To buildings or contents for unintentional and unforeseen incidents such as smashing a window with a football or knocking a tin of paint over a carpet.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Personal possessions: Increase your cover up to a maximum of £20,000.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Specified items: Add valuables over £2,000 up to a maximum of £20,000.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Bikes over £350: Add bikes up to £10,000 per bike up to a maximum of £20,000.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What is not insured?",
+          "subsections": [
+            {
+              "subsection_headings": [
+                "Buildings (Main cover exclusions)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Storm: Loss or damage to gates, fences and hedges.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Contents (Main cover exclusions)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Money: Theft of money unless force and violence has been used to enter your home.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Garage and Outbuildings: Theft from Garages and Outbuildings.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                }
+              ]
+            },
+            {
+              "subsection_headings": [
+                "Both Buildings and Contents (Main cover exclusions)"
+              ],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Empty homes: Loss or damage under many sections of your policy if your home is left unoccupied for more than 60 days.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "People you know: Malicious damage, theft or attempted theft caused by you, your family or anybody invited into the property unless force and violence has been used to enter your home.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Non-storm conditions: We will not pay for loss or damage from wind, rain, snow, or sleet unless caused by a storm, as defined in the policy booklet.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Escape of water: As the result of taps being left on (this may be covered if you have added Accidental Damage Cover).",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 4
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Pets: Loss or damage caused by chewing, scratching, tearing, fouling or vomiting by domestic pets.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 5
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Gradually operating causes: Any loss or damage caused by anything that happens gradually including wear and tear.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "Are there any restrictions on cover?",
+          "subsections": [
+            {
+              "subsection_headings": [
+                "Home Insurance (Buildings and/or Contents)"
+              ],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Limits: Limits apply to all sections of your policy. We will not pay more than the 'Unspecified item limit' for high risk items not listed individually on your Policy Schedule. High risk items are defined in your policy booklet.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Excesses: You must pay the first part of any claim (the excess). The excess is made up of the Compulsory excess, plus your chosen Voluntary excess. The excess for Subsidence, Escape of Water and Flood replace the compulsory excess. Your compulsory excess amount and all other excesses are shown on your Policy Schedule.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Extra conditions: Such as minimum security requirements (use of your locks and security devices) may apply. If applicable, these will appear on your Policy Schedule. If you do not keep to Extra Conditions it could affect your claim settlement.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 3
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Matching Suites: We will treat an individual item from a matching set of items as a single item. We will only pay for items that are lost or damaged but not for the other pieces of the set or suite which are not damaged or lost.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "Where am I covered?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "We cover homes in the United Kingdom of Great Britain and Northern Ireland.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "We cover pedal cycles worth up to £350 anywhere in the world if Contents Cover is purchased.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "Optional Cover: For personal possessions, specified bikes and specified items you have asked to cover away from home, we will cover you anywhere in the world.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "What are my obligations?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "- You must inform us without delay if any details on your Home Proposal Confirmation or Policy Schedule are incorrect or change.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "- You must tell us about changes to your property, its use and its occupants. Full details can be found in your policy documents.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 2
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "- You must maintain your property in a good state of repair and take care to prevent any accidents, loss, damage or injury. If a loss does occur you must take action to prevent further loss or damage if it is safe to do so.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "When and how do I pay?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "You can pay for your insurance with one lump sum with a debit/credit card when you take out your policy. If eligible, you can pay in monthly instalments by Direct Debit. Monthly instalments will apply for the duration of the policy.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "When does the cover start and end?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Your cover start and end date is shown on your Policy Schedule. If you do not wish your policy to automatically renew, please let us know.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_heading": "How do I cancel the contract?",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 2,
+              "end_printed_page": 2,
+              "start_pdf_page": 2,
+              "end_pdf_page": 2,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "You can cancel at any time either by phone or in writing to our Customer Services department. These details can be found within your policy documentation or on our website. Your cancellation will be subject to the relevant cancellation fee.",
+                  "source_pdf_pages": [
+                    2
+                  ],
+                  "source_printed_pages": [
+                    2
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "warnings": []
+    }
+  ]
+}
