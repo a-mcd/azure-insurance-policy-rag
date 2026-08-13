@@ -31,7 +31,7 @@ The current pipeline supports two document groups:
 
 ## Steps
 
-### 1) Extract Insurance Product Information documents
+1) Extract Insurance Product Information documents
 This reads the relevant PDFs from data/raw and creates a structured JSON file containing their extracted sections and metadata.
 
 ```bash
@@ -45,7 +45,7 @@ python3 src/extract_hh_pdfs.py \
   --output-file data/processed/hh_documents.json
 ```
 
-### 2) Chunk the json files
+2) Chunk the json files
 ```bash
 python3 src/chunk_ip_documents.py \
   data/processed/ip_documents.json \
