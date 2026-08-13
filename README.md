@@ -38,21 +38,21 @@ This reads the relevant PDFs from data/raw and creates a structured JSON file co
 python3 src/extract_ip_pdfs.py \
   --input-dir data/raw \
   --output-file data/processed/ip_documents.json
-'''
+```
 ```bash
 python3 src/extract_hh_pdfs.py \
   --input-dir data/raw \
   --output-file data/processed/hh_documents.json
-'''
+```
 
 ### 2) Chunk the json files
 ```bash
 python3 src/chunk_ip_documents.py \
   data/processed/ip_documents.json \
   --output data/processed/ip_document_chunks.jsonl
-'''
+```
 ```bash
 python3 src/chunk_hh_documents.py \
   data/processed/hh_documents.json \
   --output data/processed/hh_document_chunks.jsonl
-'''
+```
