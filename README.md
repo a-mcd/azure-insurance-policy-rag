@@ -10,6 +10,7 @@ The current pipeline supports two document groups:
 
 ## Project structure
 
+```text
 .
 ├── data/
 │   ├── raw/                         # Source PDF documents
@@ -19,6 +20,7 @@ The current pipeline supports two document groups:
     ├── extract_hh_pdfs.py           # Extracts HH PDFs into structured JSON
     ├── chunk_ip_documents.py        # Chunks extracted IP documents
     └── chunk_hh_documents.py        # Chunks extracted HH documents
+```
 
 
 
