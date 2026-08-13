@@ -26,7 +26,7 @@ The current pipeline supports two document groups:
 
 - Python 3: The Python packages required by the extraction and chunking scripts
 - Source PDFs placed in data/raw
-- Install the project dependencies before running the pipeline. If the repository contains a requirements.txt file, run: python3 -m pip install -r requirements.txt
+- Install the project dependencies before running the pipeline. If the repository contains a requirements.txt file, run: `python3 -m pip install -r requirements.txt`
 
 
 ## Steps
@@ -34,22 +34,25 @@ The current pipeline supports two document groups:
 ### 1) Extract Insurance Product Information documents
 This reads the relevant PDFs from data/raw and creates a structured JSON file containing their extracted sections and metadata.
 
-'''
+```bash
 python3 src/extract_ip_pdfs.py \
   --input-dir data/raw \
   --output-file data/processed/ip_documents.json
 '''
-'''
+```bash
 python3 src/extract_hh_pdfs.py \
   --input-dir data/raw \
   --output-file data/processed/hh_documents.json
 '''
 
 ### 2) Chunk the json files
+```bash
 python3 src/chunk_ip_documents.py \
   data/processed/ip_documents.json \
   --output data/processed/ip_document_chunks.jsonl
-
+'''
+```bash
 python3 src/chunk_hh_documents.py \
   data/processed/hh_documents.json \
   --output data/processed/hh_document_chunks.jsonl
+'''
