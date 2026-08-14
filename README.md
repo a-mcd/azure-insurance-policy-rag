@@ -34,7 +34,13 @@ The current pipeline supports two document groups:
 ## Steps
 
 1) Extract Insurance Product Information documents
-This reads the relevant PDFs from data/raw and creates a structured JSON file containing their extracted sections and metadata.
+The extraction scripts read the PDF files from `data/raw` and convert them into structured JSON containing document metadata, sections, headings, paragraphs, bullet points, tables, and page references.
+
+> [!NOTE]
+> These scripts were developed and tested on macOS. PDF text positioning and line boundaries may differ across operating systems or dependency versions, which can affect how successfully the documents are parsed.
+>
+> For consistent and reproducible extraction, consider running the scripts in a Docker container with fixed Python and package versions. The parsing boundaries can then be configured and tested against that stable environment.
+
 
 ```bash
 python3 src/extract_ip_pdfs.py \
@@ -46,6 +52,18 @@ python3 src/extract_hh_pdfs.py \
   --input-dir data/raw \
   --output-file data/processed/hh_documents.json
 ```
+
+After running the scripts, compare the generated JSON files with their source PDFs. Check that:
+
+- headings and paragraphs are correctly identified;
+- bullet points remain grouped with their parent content;
+- tables contain the correct rows and columns;
+- words split across PDF lines are reconstructed correctly;
+- page references are accurate; and
+- no content is missing, duplicated, or incorrectly merged.
+- spellings are correct
+
+An LLM can help identify discrepancies between the PDFs and the generated JSON. However, any reported differences should be manually verified against the source PDFs before changing the extraction logic.
 
 2) Chunk the json files
 ```bash

@@ -38,6 +38,17 @@ COVERAGE_STATUS_LEGEND = {
     "not_included": "Not Included",
 }
 HEADING_COLOURS = {22180, 23195}
+LIST_ITEM_START = re.compile(
+    r"^\s*(?P<marker>"
+    r"•|"
+    r"\(?\d+\)(?:\.)?|"
+    r"\(?[a-z]\)(?:\.)?|"
+    r"\d+\.|"
+    r"[ivxlcdm]+\.|"
+    r"[a-z]\."
+    r")\s+(?P<text>.+)$",
+    flags=re.IGNORECASE | re.DOTALL,
+)
 
 # Transcribed from the booklet's contents page. Multiple headings with the
 # same start page share one subgroup so their page content is not duplicated.
@@ -270,17 +281,30 @@ def extract_document_title(document: pymupdf.Document) -> str | None:
 def clean_text(text: str) -> str:
     """Normalise whitespace while retaining meaningful line boundaries."""
     cleaned_lines = []
+    pending_bullet = False
 
     for line in text.splitlines():
         line = line.replace("\x07", "")
         cleaned_line = re.sub(r"[ \t]+", " ", line).strip()
         # This PDF's embedded font maps its bullet glyph to a lowercase "y".
-        # Replace only a standalone line-start marker, not words such as
-        # "you", "your" or "year".
+        # Depending on the extraction route, the glyph is returned either at
+        # the beginning of the bullet text or on a line by itself.  Defer a
+        # standalone marker and attach it to the next non-empty line.  Exact
+        # marker matching avoids changing words such as "you" or "year".
+        if cleaned_line == "y":
+            pending_bullet = True
+            continue
+
         cleaned_line = re.sub(r"^y\s+", "• ", cleaned_line)
 
         if cleaned_line:
+            if pending_bullet:
+                cleaned_line = f"• {cleaned_line}"
+                pending_bullet = False
             cleaned_lines.append(cleaned_line)
+
+    if pending_bullet:
+        cleaned_lines.append("•")
 
     return "\n".join(cleaned_lines)
 
@@ -634,8 +658,37 @@ def extract_tables(
     structured_tables = []
     table_rectangles = []
 
-    for table in page.find_tables().tables:
-        extracted_rows = table.extract()
+    # Use only stroked vector lines when constructing the table grid.  The
+    # booklet contains coloured heading backgrounds and other filled shapes;
+    # the default ``lines`` strategy also treats rectangle borders from those
+    # shapes as table edges.  That can corrupt the detected grid and cause two
+    # adjacent coverage rows to be returned as one cell (for example,
+    # "Household removal and temporary storage" followed by
+    # "Contents temporarily away from home").
+    table_finder = page.find_tables(
+        vertical_strategy="lines_strict",
+        horizontal_strategy="lines_strict",
+    )
+
+    for table in table_finder.tables:
+        # ``Table.extract()`` orders the characters in a cell using their
+        # horizontal coordinates.  In this booklet some font glyphs overlap
+        # slightly (notably ``fi``), so coordinate ordering can transpose
+        # otherwise valid words: ``find`` becomes ``fnid``, ``office`` becomes
+        # ``ofcfie``, and so on.  The normal page text engine preserves the
+        # PDF's logical character order.  Keep the table detector's cell
+        # geometry, but read each cell through that text engine instead.
+        extracted_rows = [
+            [
+                (
+                    page.get_textbox(pymupdf.Rect(cell)).strip()
+                    if cell is not None
+                    else None
+                )
+                for cell in row.cells
+            ]
+            for row in table.rows
+        ]
 
         if not extracted_rows:
             continue
@@ -780,6 +833,9 @@ def extract_tables(
                     row_index,
                     {0: "what_is_covered", 1: "what_is_not_covered"},
                 )
+                inherited = [
+                    column for column in inherited if not row.get(column)
+                ]
                 if inherited:
                     row["_inherit_columns"] = inherited
                 rows.append(row)
@@ -818,6 +874,9 @@ def extract_tables(
                     row_index,
                     {0: "what_is_covered", 1: "what_is_not_covered"},
                 )
+                inherited = [
+                    column for column in inherited if not row.get(column)
+                ]
                 if inherited:
                     row["_inherit_columns"] = inherited
                 rows.append(row)
@@ -864,6 +923,9 @@ def extract_tables(
                     row_index,
                     {0: "what_is_covered", 1: "what_is_not_covered"},
                 )
+                inherited = [
+                    column for column in inherited if not row.get(column)
+                ]
                 if inherited:
                     row["_inherit_columns"] = inherited
                 rows.append(row)
@@ -984,6 +1046,95 @@ def extract_text_blocks(
         if is_structural_heading(cleaned_text):
             continue
 
+        # A definition heading and its first enumerated item can share one PDF
+        # text block even though they occupy separate visual columns.  Split a
+        # semibold left-column first line from a right-column list item before
+        # applying whole-block heading classification.
+        if len(lines) >= 2:
+            first_line = lines[0]
+            first_line_spans = [
+                span
+                for span in first_line.get("spans", [])
+                if span.get("text", "").strip()
+            ]
+            first_line_text = clean_text(
+                "".join(
+                    span.get("text", "")
+                    for span in first_line.get("spans", [])
+                )
+            )
+            remaining_text = clean_text(
+                "\n".join(
+                    "".join(
+                        span.get("text", "")
+                        for span in line.get("spans", [])
+                    ).rstrip()
+                    for line in lines[1:]
+                )
+            )
+            remaining_list_match = LIST_ITEM_START.match(remaining_text)
+            first_line_is_emphasised = bool(first_line_spans) and all(
+                any(
+                    weight in span.get("font", "").casefold()
+                    for weight in ("bold", "semibold")
+                )
+                for span in first_line_spans
+            )
+            first_line_x0, first_line_y0, first_line_x1, first_line_y1 = (
+                first_line["bbox"]
+            )
+            remaining_x0 = min(line["bbox"][0] for line in lines[1:])
+            remaining_y0 = min(line["bbox"][1] for line in lines[1:])
+            remaining_x1 = max(line["bbox"][2] for line in lines[1:])
+            remaining_y1 = max(line["bbox"][3] for line in lines[1:])
+            is_mixed_definition_block = (
+                first_line_is_emphasised
+                and first_line_text
+                and first_line_x1 <= 170.0
+                and remaining_x0 > first_line_x1
+            )
+
+            if is_mixed_definition_block:
+                first_line_size = max(
+                    float(span.get("size", 0.0))
+                    for span in first_line_spans
+                )
+                heading_level = 3 if first_line_size >= 11.0 else 4
+                if remaining_list_match is not None:
+                    definition_item = {
+                        "content_type": "list_item",
+                        "list_marker": remaining_list_match.group("marker"),
+                        "text": remaining_list_match.group("text").strip(),
+                        "_x0": remaining_x0,
+                        "_y0": remaining_y0,
+                        "_x1": remaining_x1,
+                        "_y1": remaining_y1,
+                    }
+                else:
+                    definition_item = {
+                        "content_type": "paragraph",
+                        "text": remaining_text,
+                        "_x0": remaining_x0,
+                        "_y0": remaining_y0,
+                        "_x1": remaining_x1,
+                        "_y1": remaining_y1,
+                    }
+                text_blocks.extend(
+                    (
+                        {
+                            "content_type": "heading",
+                            "heading_level": heading_level,
+                            "text": first_line_text,
+                            "_x0": first_line_x0,
+                            "_y0": first_line_y0,
+                            "_x1": first_line_x1,
+                            "_y1": first_line_y1,
+                        },
+                        definition_item,
+                    )
+                )
+                continue
+
         maximum_font_size = max(
             (float(span.get("size", 0.0)) for span in spans),
             default=0.0,
@@ -1053,6 +1204,23 @@ def extract_text_blocks(
                     "text": cleaned_text,
                     "_x0": x0,
                     "_y0": y0,
+                    "_x1": x1,
+                    "_y1": y1,
+                }
+            )
+            continue
+
+        list_item_match = LIST_ITEM_START.match(cleaned_text)
+        if list_item_match:
+            text_blocks.append(
+                {
+                    "content_type": "list_item",
+                    "list_marker": list_item_match.group("marker"),
+                    "text": list_item_match.group("text").strip(),
+                    "_x0": x0,
+                    "_y0": y0,
+                    "_x1": x1,
+                    "_y1": y1,
                 }
             )
             continue
@@ -1062,6 +1230,8 @@ def extract_text_blocks(
                 "content_type": "paragraph",
                 "_x0": x0,
                 "_y0": y0,
+                "_x1": x1,
+                "_y1": y1,
                 "text": cleaned_text,
             }
         )
@@ -1075,17 +1245,273 @@ def order_page_content(
     notices: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
     """Interleave text and tables in their visual page order."""
-    ordered_items = sorted(
-        [*text_blocks, *tables, *notices],
+    # On some PyMuPDF/platform combinations, each visual line of a narrow
+    # left-column definition heading is returned as a separate block.  Merge
+    # vertically adjacent heading fragments before paragraphs are interleaved;
+    # otherwise a right-column definition can be sorted between the two lines
+    # of headings such as "Reasonable prospects".
+    retained_text_blocks = []
+    consumed_heading_ids = set()
+    headings = sorted(
+        (
+            item for item in text_blocks
+            if item.get("content_type") == "heading"
+        ),
+        key=lambda item: (item.get("_y0", 0.0), item.get("_x0", 0.0)),
+    )
+
+    for heading_index, heading in enumerate(headings):
+        if id(heading) in consumed_heading_ids:
+            continue
+
+        for continuation in headings[heading_index + 1:]:
+            vertical_gap = continuation.get("_y0", 0.0) - heading.get(
+                "_y1", 0.0
+            )
+            # Lines belonging to one wrapped heading sit almost directly
+            # beneath each other.  A larger allowance can accidentally join
+            # two consecutive one-line definition terms (for example,
+            # "Vehicle cloning" and "We, us, our, ARAG").
+            if vertical_gap > 4.0:
+                break
+            if vertical_gap < -1.0:
+                continue
+            if (
+                heading.get("heading_level")
+                == continuation.get("heading_level")
+                and (
+                    "\n" not in heading.get("text", "")
+                    or vertical_gap <= 4.0
+                )
+                and abs(
+                    heading.get("_x0", 0.0)
+                    - continuation.get("_x0", 0.0)
+                ) <= 35.0
+                and max(
+                    heading.get("_x1", 0.0),
+                    continuation.get("_x1", 0.0),
+                ) <= 170.0
+            ):
+                heading["text"] = "\n".join(
+                    (heading["text"].rstrip(), continuation["text"].lstrip())
+                )
+                heading["_x0"] = min(
+                    heading.get("_x0", 0.0),
+                    continuation.get("_x0", 0.0),
+                )
+                heading["_x1"] = max(
+                    heading.get("_x1", 0.0),
+                    continuation.get("_x1", 0.0),
+                )
+                heading["_y1"] = max(
+                    heading.get("_y1", 0.0),
+                    continuation.get("_y1", 0.0),
+                )
+                consumed_heading_ids.add(id(continuation))
+
+    retained_text_blocks = [
+        item for item in text_blocks
+        if id(item) not in consumed_heading_ids
+    ]
+    vertically_sorted_items = sorted(
+        [*retained_text_blocks, *tables, *notices],
         key=lambda item: (item["_y0"], item["_x0"]),
     )
+    ordered_items = []
+    visual_band = []
+    band_y = None
+
+    for item in vertically_sorted_items:
+        item_y = item.get("_y0", 0.0)
+        if band_y is None or item_y - band_y <= 3.0:
+            visual_band.append(item)
+            if band_y is None:
+                band_y = item_y
+            continue
+
+        ordered_items.extend(
+            sorted(visual_band, key=lambda value: value.get("_x0", 0.0))
+        )
+        visual_band = [item]
+        band_y = item_y
+
+    if visual_band:
+        ordered_items.extend(
+            sorted(visual_band, key=lambda value: value.get("_x0", 0.0))
+        )
+
+    # Some platforms place a right-column definition between two visual lines
+    # of its narrow left-column heading.  Recognise the heading/definition/
+    # heading pattern from column positions and overlapping vertical ranges,
+    # then join the heading lines without moving the definition text itself.
+    reconstructed_items = []
+    item_index = 0
+    while item_index < len(ordered_items):
+        if item_index + 2 < len(ordered_items):
+            first_heading = ordered_items[item_index]
+            definition = ordered_items[item_index + 1]
+            second_heading = ordered_items[item_index + 2]
+            is_split_definition_heading = (
+                first_heading.get("content_type") == "heading"
+                and definition.get("content_type") == "paragraph"
+                and second_heading.get("content_type") == "heading"
+                and first_heading.get("heading_level")
+                == second_heading.get("heading_level")
+                and max(
+                    first_heading.get("_x1", 0.0),
+                    second_heading.get("_x1", 0.0),
+                ) <= 170.0
+                and definition.get("_x0", 0.0)
+                > max(
+                    first_heading.get("_x1", 0.0),
+                    second_heading.get("_x1", 0.0),
+                )
+                and second_heading.get("_y0", 0.0)
+                <= definition.get("_y1", 0.0)
+            )
+            if is_split_definition_heading:
+                first_heading["text"] = "\n".join(
+                    (
+                        first_heading["text"].rstrip(),
+                        second_heading["text"].lstrip(),
+                    )
+                )
+                first_heading["_x0"] = min(
+                    first_heading.get("_x0", 0.0),
+                    second_heading.get("_x0", 0.0),
+                )
+                first_heading["_x1"] = max(
+                    first_heading.get("_x1", 0.0),
+                    second_heading.get("_x1", 0.0),
+                )
+                first_heading["_y1"] = max(
+                    first_heading.get("_y1", 0.0),
+                    second_heading.get("_y1", 0.0),
+                )
+                reconstructed_items.extend((first_heading, definition))
+                item_index += 3
+                continue
+
+        reconstructed_items.append(ordered_items[item_index])
+        item_index += 1
+
+    ordered_items = reconstructed_items
+    merged_items = []
+
+    for item_index, item in enumerate(ordered_items):
+        previous = merged_items[-1] if merged_items else None
+        next_item = (
+            ordered_items[item_index + 1]
+            if item_index + 1 < len(ordered_items)
+            else None
+        )
+        previous_text = previous.get("text", "") if previous else ""
+        current_text = item.get("text", "")
+        is_same_column_continuation = (
+            abs(previous.get("_x0", 0.0) - item.get("_x0", 0.0)) <= 2.0
+            and 0.0
+            <= item.get("_y0", 0.0) - previous.get("_y1", 0.0)
+            <= 4.0
+        ) if previous else False
+        current_starts_list_item = re.match(
+            r"^(?:\(?[a-z0-9]+[.)]\s)",
+            current_text.lstrip(),
+            flags=re.IGNORECASE,
+        ) is not None
+        is_short_sentence_ending_fragment = (
+            len(previous_text.strip()) >= 60
+            and 0 < len(current_text.strip()) <= 80
+            and current_text.rstrip().endswith((".", "!", "?"))
+            and not current_text.lstrip().startswith(("•", "-"))
+            and not current_starts_list_item
+        )
+        first_current_letter = re.search(r"[A-Za-z]", current_text)
+        is_lowercase_continuation = (
+            first_current_letter is not None
+            and first_current_letter.group(0).islower()
+            and not current_text.lstrip().startswith(("•", "-"))
+            and not current_starts_list_item
+        )
+        is_relaxed_list_column_continuation = (
+            previous is not None
+            and previous.get("content_type") == "list_item"
+            and item.get("content_type") == "paragraph"
+            and abs(
+                previous.get("_x0", 0.0) - item.get("_x0", 0.0)
+            ) <= 30.0
+            and -2.0
+            <= item.get("_y0", 0.0) - previous.get("_y1", 0.0)
+            <= 6.0
+        )
+        is_list_item_continuation = (
+            previous is not None
+            and previous.get("content_type") == "list_item"
+            and item.get("content_type") == "paragraph"
+            and not current_starts_list_item
+            and first_current_letter is not None
+            and first_current_letter.group(0).islower()
+        )
+        is_paragraph_between_list_items = (
+            previous is not None
+            and previous.get("content_type") == "list_item"
+            and item.get("content_type") == "paragraph"
+            and next_item is not None
+            and next_item.get("content_type") == "list_item"
+            and not current_text.rstrip().endswith(":")
+        )
+        is_pipe_delimited_list_continuation = (
+            previous is not None
+            and previous.get("content_type") == "list_item"
+            and item.get("content_type") in {"paragraph", "heading"}
+            and previous_text.rstrip().endswith("|")
+        )
+        previous_is_unfinished = (
+            not previous_text.rstrip().endswith(
+                (".", "!", "?", ":", ";")
+            )
+            or is_paragraph_between_list_items
+            or is_relaxed_list_column_continuation
+            or is_pipe_delimited_list_continuation
+        )
+        can_join_paragraph_fragment = (
+            previous is not None
+            and previous.get("content_type") in {"paragraph", "list_item"}
+            and (
+                item.get("content_type") == "paragraph"
+                or is_pipe_delimited_list_continuation
+            )
+            and previous_is_unfinished
+            and (
+                is_same_column_continuation
+                or is_short_sentence_ending_fragment
+                or is_lowercase_continuation
+                or is_list_item_continuation
+                or is_paragraph_between_list_items
+                or is_relaxed_list_column_continuation
+                or is_pipe_delimited_list_continuation
+            )
+        )
+
+        if can_join_paragraph_fragment:
+            previous["text"] = "\n".join(
+                (previous["text"].rstrip(), item["text"].lstrip())
+            )
+            previous["_x1"] = max(
+                previous.get("_x1", 0.0),
+                item.get("_x1", 0.0),
+            )
+            previous["_y1"] = item.get("_y1", previous.get("_y1"))
+            continue
+
+        merged_items.append(item)
+
     content = []
 
-    for order, item in enumerate(ordered_items, start=1):
+    for order, item in enumerate(merged_items, start=1):
         output_item = {
             key: value
             for key, value in item.items()
-            if key not in {"_x0", "_y0"}
+            if key not in {"_x0", "_y0", "_x1", "_y1"}
         }
         output_item["order"] = order
         content.append(output_item)
@@ -1094,11 +1520,11 @@ def order_page_content(
 
 
 CONTINUATION_START = re.compile(
-    r"^\s*\(?\s*cont(?:inued)?\s*\.{0,3}\s*\)?\s*",
+    r"^\s*\(?\s*cont(?:inued)?\b\s*\.{0,3}\s*\)?\s*",
     flags=re.IGNORECASE,
 )
 CONTINUATION_END = re.compile(
-    r"\s*\(?\s*cont(?:inued)?\s*\.{1,3}\s*\)?\s*$",
+    r"\s*\(?\s*cont(?:inued)?\b\s*\.{1,3}\s*\)?\s*$",
     flags=re.IGNORECASE,
 )
 CONTINUABLE_TABLE_TYPES = {
