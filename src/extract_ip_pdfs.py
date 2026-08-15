@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -389,6 +390,28 @@ def remove_heading(text: str, heading: str) -> str:
     return clean_text(pattern.sub("", text, count=1))
 
 
+def extract_document_code(pdf_path: Path) -> str | None:
+    """Extract the document code, retaining its ``IP-`` prefix."""
+    match = re.search(
+        r"-(IP-[A-Z]+-\d+-\d+)",
+        pdf_path.stem,
+        flags=re.IGNORECASE,
+    )
+
+    return match.group(1).upper() if match else None
+
+
+def calculate_sha256(pdf_path: Path) -> str:
+    """Calculate the SHA-256 checksum of a source PDF."""
+    digest = hashlib.sha256()
+
+    with pdf_path.open("rb") as source_file:
+        for block in iter(lambda: source_file.read(1024 * 1024), b""):
+            digest.update(block)
+
+    return digest.hexdigest()
+
+
 def extract_product(page: pymupdf.Page) -> str | None:
     """Extract the product name from the first page."""
     text = clean_text(page.get_text("text", sort=True))
@@ -431,6 +454,62 @@ def extract_fca_reference_number(
             return match.group(1)
 
     return None
+
+
+def extract_document_summary(page: pymupdf.Page) -> str | None:
+    """Extract the introductory document summary above the first section."""
+    first_section_rect = find_heading(
+        page,
+        "What is this type of insurance?",
+    )
+
+    if first_section_rect is None:
+        return None
+
+    # The standard IP document summary is a separate text block immediately
+    # above the first recognised section. Requiring "This document" prevents
+    # company, product and FCA header blocks from being returned as a summary.
+    for block in reversed(page.get_text("blocks", sort=True)):
+        block_text = clean_text(block[4])
+
+        if block[1] >= first_section_rect.y0:
+            continue
+
+        if re.match(r"^This document\b", block_text, flags=re.IGNORECASE):
+            return block_text.replace("\n", " ")
+
+    return None
+
+
+def create_document_summary_section(
+    summary: str,
+    pdf_page: int,
+    printed_page: int | None,
+) -> dict[str, Any]:
+    """Represent document summary text using the standard section schema."""
+    printed_pages = [printed_page] if printed_page is not None else []
+
+    return {
+        "section_heading": "Document summary",
+        "subsections": [
+            {
+                "subsection_headings": [],
+                "start_printed_page": printed_page,
+                "end_printed_page": printed_page,
+                "start_pdf_page": pdf_page,
+                "end_pdf_page": pdf_page,
+                "content": [
+                    {
+                        "content_type": "paragraph",
+                        "text": summary,
+                        "source_pdf_pages": [pdf_page],
+                        "source_printed_pages": printed_pages,
+                        "order": 1,
+                    }
+                ],
+            }
+        ],
+    }
 
 
 def extract_first_page_introduction(
@@ -779,10 +858,20 @@ def extract_ip_pdf(pdf_path: Path) -> dict[str, Any]:
 
         first_page = document[0]
 
-        product = extract_product(first_page)
+        title = extract_product(first_page)
         fca_reference_number = (
             extract_fca_reference_number(first_page)
         )
+        document_summary = extract_document_summary(first_page)
+
+        if document_summary:
+            sections.append(
+                create_document_summary_section(
+                    document_summary,
+                    pdf_page=1,
+                    printed_page=printed_page_number(first_page),
+                )
+            )
 
         insurance_type = extract_first_page_introduction(first_page)
 
@@ -808,9 +897,13 @@ def extract_ip_pdf(pdf_path: Path) -> dict[str, Any]:
     return {
         "document_name": pdf_path.name,
         "document_type": "insurance_product_information",
-        "product": product,
+        "document_code": extract_document_code(pdf_path),
+        "title": title,
+        "sha256": calculate_sha256(pdf_path),
         "fca_reference_number": fca_reference_number,
         "page_count": page_count,
+        "excluded_pages": [],
+        "coverage_status_legend": {},
         "sections": sections,
         "warnings": warnings,
     }
@@ -903,11 +996,11 @@ def main() -> int:
 
     output = {
         "summary": {
-            "documents_found": len(pdf_paths),
+            "pdf_files_found": len(pdf_paths),
             "documents_extracted": len(documents),
             "documents_failed": len(failures),
-            "sections_extracted": sum(
-                len(document["sections"])
+            "pages_extracted": sum(
+                document["page_count"]
                 for document in documents
             ),
             "warnings": len(warnings),
@@ -924,10 +1017,10 @@ def main() -> int:
     )
 
     print("\nExtraction summary")
-    print(f"Documents found:     {len(pdf_paths)}")
+    print(f"PDF files found:     {len(pdf_paths)}")
     print(f"Documents extracted: {len(documents)}")
     print(f"Documents failed:    {len(failures)}")
-    print(f"Sections extracted:  {output['summary']['sections_extracted']}")
+    print(f"Pages extracted:     {output['summary']['pages_extracted']}")
     print(f"Warnings:            {len(warnings)}")
     print(f"Output:              {output_file}")
 

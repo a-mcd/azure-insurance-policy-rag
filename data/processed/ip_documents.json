@@ -1,9 +1,9 @@
 {
   "summary": {
-    "documents_found": 6,
+    "pdf_files_found": 6,
     "documents_extracted": 6,
     "documents_failed": 0,
-    "sections_extracted": 54,
+    "pages_extracted": 12,
     "warnings": 0
   },
   "warnings": [],
@@ -12,10 +12,39 @@
     {
       "document_name": "Gold-IP-HO-2-012.pdf",
       "document_type": "insurance_product_information",
-      "product": "Gold Home Insurance Policy",
+      "document_code": "IP-HO-2-012",
+      "title": "Gold Home Insurance Policy",
+      "sha256": "ce930a32688e44613b349c2126b43161e6c814beab54b87b41b84a093a3d4641",
       "fca_reference_number": "309378",
       "page_count": 2,
+      "excluded_pages": [],
+      "coverage_status_legend": {},
       "sections": [
+        {
+          "section_heading": "Document summary",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "This document summarises Admiral Gold Home Insurance and is not tailored to you. Your complete pre-contractual and contractual information will be included in your Policy Schedule and other documents upon purchase.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
         {
           "section_heading": "What is this type of insurance?",
           "subsections": [
@@ -715,10 +744,39 @@
     {
       "document_name": "HomeEmergency-IP-HE-1-008.pdf",
       "document_type": "insurance_product_information",
-      "product": "Home Emergency Cover",
+      "document_code": "IP-HE-1-008",
+      "title": "Home Emergency Cover",
+      "sha256": "fff0bed62d5260fe279146da75f9ca1bed18e74283b33dce76862480f2233e88",
       "fca_reference_number": "309378",
       "page_count": 2,
+      "excluded_pages": [],
+      "coverage_status_legend": {},
       "sections": [
+        {
+          "section_heading": "Document summary",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "This document summarises the key features of the insurance policy and is not tailored to you. Your complete pre-contractual and contractual information will be included in your Policy Schedule and other documents upon purchase.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
         {
           "section_heading": "What is this type of insurance?",
           "subsections": [
@@ -1170,10 +1228,39 @@
     {
       "document_name": "HomeEmergencyExtra-IP-HEE-1-005.pdf",
       "document_type": "insurance_product_information",
-      "product": "Home Emergency Extra Cover",
+      "document_code": "IP-HEE-1-005",
+      "title": "Home Emergency Extra Cover",
+      "sha256": "751562878e62455bba44780028f198eda14ffb3e5b3e75525cda458596eb135a",
       "fca_reference_number": "309378",
       "page_count": 2,
+      "excluded_pages": [],
+      "coverage_status_legend": {},
       "sections": [
+        {
+          "section_heading": "Document summary",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "This document summarises the key features of the insurance policy and is not tailored to you. Your complete pre-contractual and contractual information will be included in your Policy Schedule and other documents upon purchase.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
         {
           "section_heading": "What is this type of insurance?",
           "subsections": [
@@ -1691,10 +1778,39 @@
     {
       "document_name": "HomeLegal-IP-FL-1-008.pdf",
       "document_type": "insurance_product_information",
-      "product": "Home Legal Expenses",
+      "document_code": "IP-FL-1-008",
+      "title": "Home Legal Expenses",
+      "sha256": "620e684f45d9105710249c39d8ed4082f043871775a787a8e1d4554d847c8ee6",
       "fca_reference_number": "202106",
       "page_count": 2,
+      "excluded_pages": [],
+      "coverage_status_legend": {},
       "sections": [
+        {
+          "section_heading": "Document summary",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "This document is a summary of the insurance cover and restrictions. Please refer to your policy documentation for full details of your cover and the terms and conditions.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
         {
           "section_heading": "What is this type of insurance?",
           "subsections": [
@@ -2245,10 +2361,39 @@
     {
       "document_name": "Platinum-IP-HO-3-010.pdf",
       "document_type": "insurance_product_information",
-      "product": "Platinum Home Insurance Policy",
+      "document_code": "IP-HO-3-010",
+      "title": "Platinum Home Insurance Policy",
+      "sha256": "49f4807b90635a3693062d951345ad1f4ef8dad17f4bf1d34fe0d3863eb78376",
       "fca_reference_number": "309378",
       "page_count": 2,
+      "excluded_pages": [],
+      "coverage_status_legend": {},
       "sections": [
+        {
+          "section_heading": "Document summary",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "This document summarises Admiral Platinum Home Insurance and is not tailored to you. Your complete pre-contractual and contractual information will be included in your Policy Schedule and other documents upon purchase.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
         {
           "section_heading": "What is this type of insurance?",
           "subsections": [
@@ -2970,10 +3115,39 @@
     {
       "document_name": "Standard-IP-HO-1-012.pdf",
       "document_type": "insurance_product_information",
-      "product": "Admiral Home Insurance Policy",
+      "document_code": "IP-HO-1-012",
+      "title": "Admiral Home Insurance Policy",
+      "sha256": "c0ffb7b2ae28a12d347c8c1c6267c8d74b3fad3e8cb56a418b1df8d0372604d7",
       "fca_reference_number": "309378",
       "page_count": 2,
+      "excluded_pages": [],
+      "coverage_status_legend": {},
       "sections": [
+        {
+          "section_heading": "Document summary",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": 1,
+              "end_printed_page": 1,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "This document summarises Admiral Home Insurance and is not tailored to you. Your complete pre-contractual and contractual information will be included in your Policy Schedule and other documents upon purchase.",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [
+                    1
+                  ],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
         {
           "section_heading": "What is this type of insurance?",
           "subsections": [

@@ -28,7 +28,6 @@ UNNUMBERED_FRONT_PAGES = 2
 FINAL_PRINTED_PAGE = 67
 COVER_LEVELS = ("admiral", "gold", "platinum")
 EXCLUDED_PDF_PAGES = {
-    1: "Front cover",
     2: "Contents page represented by the section hierarchy",
     70: "Final page containing only the document code",
 }
@@ -157,12 +156,27 @@ DEFINED_HEADINGS = frozenset(
     )
 )
 
+DEFINED_HEADING_PRINTED_PAGES: dict[str, set[int]] = {}
+for group in CONTENTS_GROUPS:
+    group_start_page = group["subgroups"][0][0]
+    DEFINED_HEADING_PRINTED_PAGES.setdefault(
+        normalise_heading(group["group_heading"]),
+        set(),
+    ).add(group_start_page)
+    for start_page, subgroup_headings in group["subgroups"]:
+        for subgroup_heading in subgroup_headings:
+            DEFINED_HEADING_PRINTED_PAGES.setdefault(
+                normalise_heading(subgroup_heading),
+                set(),
+            ).add(start_page)
+
 # These running page titles are navigation labels used by the PDF. Their
 # meaning is already represented by section_heading and subsection_headings,
 # so retaining them in page content would duplicate structural context.
 RUNNING_PAGE_TITLES = frozenset(
     normalise_heading(title)
     for title in (
+        "Guide to your Home Insurance cover",
         "Guide to Home Emergency cover and Home Emergency Extra cover",
         "Guide to your Home Emergency cover and Home Emergency Extra cover",
         "Guide to your Home Legal Expenses",
@@ -183,8 +197,10 @@ REDUNDANT_PAGE_TEXT = frozenset(
     }
 )
 
-
-def is_structural_heading(text: str) -> bool:
+def is_structural_heading(
+    text: str,
+    printed_page: int | None,
+) -> bool:
     """Return whether text is already represented by the JSON hierarchy.
 
     Some PDF headings occur twice in the same extracted block because the PDF
@@ -192,17 +208,40 @@ def is_structural_heading(text: str) -> bool:
     those duplicated heading blocks without discarding a block that also
     contains genuine paragraph content.
     """
-    if normalise_heading(text) in STRUCTURAL_HEADINGS:
+    normalised_text = normalise_heading(text)
+    if normalised_text in RUNNING_PAGE_TITLES:
+        return True
+    if (
+        normalised_text in DEFINED_HEADINGS
+        and printed_page
+        in DEFINED_HEADING_PRINTED_PAGES.get(normalised_text, set())
+    ):
         return True
 
-    normalised_lines = [
-        normalise_heading(line)
+    heading_lines = [
+        (line, normalise_heading(line))
         for line in text.splitlines()
         if line.strip() and not re.fullmatch(r"\d+", line.strip())
     ]
-    return bool(normalised_lines) and all(
-        line in STRUCTURAL_HEADINGS
-        for line in normalised_lines
+    return bool(heading_lines) and all(
+        normalised_line in RUNNING_PAGE_TITLES
+        or (
+            normalised_line in DEFINED_HEADINGS
+            and (
+                printed_page
+                in DEFINED_HEADING_PRINTED_PAGES.get(
+                    normalised_line,
+                    set(),
+                )
+                or re.search(
+                    r"\(cont\.\)\s*$",
+                    original_line,
+                    flags=re.IGNORECASE,
+                )
+                is not None
+            )
+        )
+        for original_line, normalised_line in heading_lines
     )
 
 
@@ -276,6 +315,65 @@ def extract_document_title(document: pymupdf.Document) -> str | None:
         return None
 
     return "Guide to your Home Insurance cover"
+
+
+def extract_document_summary(
+    document: pymupdf.Document,
+) -> str | None:
+    """Extract only the text inside the bordered title-page summary box."""
+    page = document[0]
+    candidate_boxes = []
+
+    for drawing in page.get_drawings():
+        rectangle = drawing.get("rect")
+        colour = drawing.get("color")
+
+        if rectangle is None or colour is None:
+            continue
+
+        red, green, blue = colour
+        is_summary_border = (
+            rectangle.width > page.rect.width * 0.50
+            and rectangle.height > page.rect.height * 0.15
+            and red > 0.70
+            and green < 0.20
+            and blue > 0.20
+        )
+
+        if is_summary_border:
+            candidate_boxes.append(rectangle)
+
+    if not candidate_boxes:
+        return None
+
+    summary_box = max(candidate_boxes, key=lambda rectangle: rectangle.get_area())
+    summary = clean_text(page.get_text("text", clip=summary_box, sort=True))
+    return summary or None
+
+
+def create_document_summary_section(summary: str) -> dict[str, Any]:
+    """Represent title-page summary text using the standard section schema."""
+    return {
+        "section_heading": "Document summary",
+        "subsections": [
+            {
+                "subsection_headings": [],
+                "start_printed_page": None,
+                "end_printed_page": None,
+                "start_pdf_page": 1,
+                "end_pdf_page": 1,
+                "content": [
+                    {
+                        "content_type": "paragraph",
+                        "text": summary,
+                        "source_pdf_pages": [1],
+                        "source_printed_pages": [],
+                        "order": 1,
+                    }
+                ],
+            }
+        ],
+    }
 
 
 def clean_text(text: str) -> str:
@@ -1043,7 +1141,10 @@ def extract_text_blocks(
         if normalise_heading(cleaned_text) in REDUNDANT_PAGE_TEXT:
             continue
 
-        if is_structural_heading(cleaned_text):
+        if is_structural_heading(
+            cleaned_text,
+            printed_page_number(page.number + 1),
+        ):
             continue
 
         # A definition heading and its first enumerated item can share one PDF
@@ -1080,6 +1181,32 @@ def extract_text_blocks(
                 )
                 for span in first_line_spans
             )
+            first_line_size = max(
+                (
+                    float(span.get("size", 0.0))
+                    for span in first_line_spans
+                ),
+                default=0.0,
+            )
+            first_line_uses_heading_colour = bool(
+                first_line_spans
+            ) and all(
+                span.get("color") in HEADING_COLOURS
+                for span in first_line_spans
+            )
+            remaining_spans = [
+                span
+                for line in lines[1:]
+                for span in line.get("spans", [])
+                if span.get("text", "").strip()
+            ]
+            remaining_maximum_font_size = max(
+                (
+                    float(span.get("size", 0.0))
+                    for span in remaining_spans
+                ),
+                default=0.0,
+            )
             first_line_x0, first_line_y0, first_line_x1, first_line_y1 = (
                 first_line["bbox"]
             )
@@ -1093,12 +1220,19 @@ def extract_text_blocks(
                 and first_line_x1 <= 170.0
                 and remaining_x0 > first_line_x1
             )
-
-            if is_mixed_definition_block:
-                first_line_size = max(
-                    float(span.get("size", 0.0))
-                    for span in first_line_spans
+            is_stacked_heading_block = (
+                first_line_is_emphasised
+                and first_line_uses_heading_colour
+                and first_line_size >= 10.0
+                and remaining_maximum_font_size
+                < first_line_size - 0.25
+                and len(first_line_text) <= 120
+                and not first_line_text.rstrip().endswith(
+                    (".", "!", "?", ":", ";")
                 )
+            )
+
+            if is_mixed_definition_block or is_stacked_heading_block:
                 heading_level = 3 if first_line_size >= 11.0 else 4
                 if remaining_list_match is not None:
                     definition_item = {
@@ -1125,6 +1259,8 @@ def extract_text_blocks(
                             "content_type": "heading",
                             "heading_level": heading_level,
                             "text": first_line_text,
+                            "_font_size": first_line_size,
+                            "_font_colour": first_line_spans[0].get("color"),
                             "_x0": first_line_x0,
                             "_y0": first_line_y0,
                             "_x1": first_line_x1,
@@ -1202,6 +1338,8 @@ def extract_text_blocks(
                     "content_type": "heading",
                     "heading_level": heading_level,
                     "text": cleaned_text,
+                    "_font_size": maximum_font_size,
+                    "_font_colour": spans[0].get("color"),
                     "_x0": x0,
                     "_y0": y0,
                     "_x1": x1,
@@ -1505,6 +1643,89 @@ def order_page_content(
 
         merged_items.append(item)
 
+    # Borderless glossaries use bold terms in a narrow left column and their
+    # definitions in a consistent right column.  PyMuPDF does not identify
+    # these as tables because there are no drawn grid lines.  Convert runs of
+    # two or more term/definition pairs into a semantic two-column table so a
+    # term does not behave like an active document heading.
+    glossary_items = []
+    item_index = 0
+
+    while item_index < len(merged_items):
+        rows = []
+        run_index = item_index
+
+        while run_index < len(merged_items):
+            term = merged_items[run_index]
+            is_term = (
+                term.get("content_type") == "heading"
+                and term.get("heading_level") == 4
+                and term.get("_x1", float("inf")) <= 175.0
+            )
+            if not is_term:
+                break
+
+            definition_index = run_index + 1
+            definition_items = []
+            while definition_index < len(merged_items):
+                definition_item = merged_items[definition_index]
+                if definition_item.get("content_type") == "heading":
+                    break
+                if (
+                    definition_item.get("content_type")
+                    not in {"paragraph", "list_item"}
+                    or definition_item.get("_x0", 0.0) < 155.0
+                ):
+                    definition_items = []
+                    break
+                definition_items.append(definition_item)
+                definition_index += 1
+
+            if not definition_items:
+                break
+
+            definition_parts = []
+            for definition_item in definition_items:
+                definition_text = definition_item.get("text", "").strip()
+                if definition_item.get("content_type") == "list_item":
+                    marker = definition_item.get("list_marker") or "•"
+                    definition_text = f"{marker} {definition_text}".strip()
+                if definition_text:
+                    definition_parts.append(definition_text)
+
+            rows.append(
+                {
+                    "term": re.sub(
+                        r"\s+",
+                        " ",
+                        term.get("text", ""),
+                    ).strip(),
+                    "definition": "\n".join(definition_parts),
+                }
+            )
+            run_index = definition_index
+
+        if len(rows) >= 2:
+            run_items = merged_items[item_index:run_index]
+            glossary_items.append(
+                {
+                    "content_type": "table",
+                    "table_type": "definitions",
+                    "columns": ["term", "definition"],
+                    "rows": rows,
+                    "_x0": min(item.get("_x0", 0.0) for item in run_items),
+                    "_y0": min(item.get("_y0", 0.0) for item in run_items),
+                    "_x1": max(item.get("_x1", 0.0) for item in run_items),
+                    "_y1": max(item.get("_y1", 0.0) for item in run_items),
+                }
+            )
+            item_index = run_index
+            continue
+
+        glossary_items.append(merged_items[item_index])
+        item_index += 1
+
+    merged_items = glossary_items
     content = []
 
     for order, item in enumerate(merged_items, start=1):
@@ -1517,6 +1738,173 @@ def order_page_content(
         content.append(output_item)
 
     return content
+
+
+def apply_nested_heading_levels(
+    page_content: list[dict[str, Any]],
+    hierarchy_state: dict[str, Any],
+) -> None:
+    """Derive nested headings from numbering and relative typography.
+
+    A numbered level-3 heading can have same-sized unnumbered children. An
+    unnumbered level-3 heading can also act as a parent when the headings that
+    follow use a smaller font. A heading at least as large as the active
+    unnumbered parent starts a new level-3 group. The supplied state is retained
+    between pages so a child heading can follow its parent across a page break.
+    """
+    parent_font_size = hierarchy_state.get("parent_font_size")
+    parent_font_colour = hierarchy_state.get("parent_font_colour")
+    parent_is_numbered = hierarchy_state.get(
+        "parent_is_numbered",
+        False,
+    )
+    level_4_parent_font_size = hierarchy_state.get(
+        "level_4_parent_font_size"
+    )
+    level_4_parent_font_colour = hierarchy_state.get(
+        "level_4_parent_font_colour"
+    )
+    level_4_parent_is_numbered = hierarchy_state.get(
+        "level_4_parent_is_numbered",
+        False,
+    )
+    level_4_parent_number = hierarchy_state.get("level_4_parent_number")
+    parent_started_on_page = False
+    previous_item_was_heading = False
+
+    for item in page_content:
+        if item.get("content_type") != "heading":
+            previous_item_was_heading = False
+            continue
+
+        normalised_text = normalise_heading(item.get("text", ""))
+        numbered_match = re.match(r"^(\d+)\.\s+", normalised_text)
+        is_numbered = numbered_match is not None
+        heading_number = (
+            int(numbered_match.group(1)) if numbered_match else None
+        )
+        font_size = float(item.get("_font_size", 0.0))
+        font_colour = item.get("_font_colour")
+        uses_level_5_style = (
+            level_4_parent_font_size is not None
+            # PyMuPDF can report the same visual font as 9.5 on one
+            # platform and 10.0 on another. Allow a small tolerance while
+            # still requiring the child's contrasting font colour.
+            and font_size <= level_4_parent_font_size + 0.25
+            and font_colour != level_4_parent_font_colour
+        )
+
+        if is_numbered and item.get("heading_level") == 3:
+            continues_numbered_level_4 = (
+                not parent_started_on_page
+                and not parent_is_numbered
+                and level_4_parent_is_numbered
+                and level_4_parent_number is not None
+                and heading_number == level_4_parent_number + 1
+            )
+            is_numbered_child = (
+                (parent_started_on_page or continues_numbered_level_4)
+                and parent_font_size is not None
+                and not parent_is_numbered
+                and font_size < parent_font_size - 0.5
+            )
+            if is_numbered_child:
+                # A smaller numbered heading can sit below an unnumbered
+                # level-3 heading. Normally the parent must be on the same
+                # page; across a page boundary, require the numbering to
+                # continue consecutively so unrelated sections do not inherit
+                # stale hierarchy state.
+                item["heading_level"] = 4
+                level_4_parent_font_size = font_size
+                level_4_parent_font_colour = font_colour
+                level_4_parent_is_numbered = True
+                level_4_parent_number = heading_number
+            else:
+                parent_font_size = font_size
+                parent_font_colour = font_colour
+                parent_is_numbered = True
+                parent_started_on_page = False
+                level_4_parent_font_size = None
+                level_4_parent_font_colour = None
+                level_4_parent_is_numbered = False
+                level_4_parent_number = None
+        elif (
+            parent_font_size is not None
+            and item.get("heading_level") == 3
+        ):
+            is_smaller_than_parent = font_size < parent_font_size - 0.5
+            is_same_size_numbered_child = (
+                parent_is_numbered
+                and font_size <= parent_font_size + 0.5
+            )
+            is_consecutive_same_style_unnumbered_child = (
+                previous_item_was_heading
+                and parent_started_on_page
+                and not parent_is_numbered
+                and not is_numbered
+                and level_4_parent_font_size is None
+                and abs(font_size - parent_font_size) <= 0.25
+                and font_colour == parent_font_colour
+            )
+
+            if (
+                is_smaller_than_parent
+                or is_same_size_numbered_child
+                or is_consecutive_same_style_unnumbered_child
+            ):
+                if uses_level_5_style or level_4_parent_is_numbered:
+                    # On some platforms this lower-emphasis heading is
+                    # initially detected as level 3. Move it directly below
+                    # the existing level-4 parent instead of demoting it only
+                    # once to level 4. An unnumbered heading following a
+                    # numbered level-4 parent is also its semantic child even
+                    # when the PDF uses the same typography for both levels.
+                    item["heading_level"] = 5
+                else:
+                    item["heading_level"] = 4
+                    level_4_parent_font_size = font_size
+                    level_4_parent_font_colour = font_colour
+                    level_4_parent_is_numbered = False
+                    level_4_parent_number = None
+            else:
+                parent_font_size = font_size
+                parent_font_colour = font_colour
+                parent_is_numbered = False
+                parent_started_on_page = True
+                level_4_parent_font_size = None
+                level_4_parent_font_colour = None
+                level_4_parent_is_numbered = False
+                level_4_parent_number = None
+        elif item.get("heading_level") == 3:
+            parent_font_size = font_size
+            parent_font_colour = font_colour
+            parent_is_numbered = False
+            parent_started_on_page = True
+            level_4_parent_font_size = None
+            level_4_parent_font_colour = None
+            level_4_parent_is_numbered = False
+            level_4_parent_number = None
+        elif (
+            item.get("heading_level") == 4
+            and uses_level_5_style
+        ):
+            item["heading_level"] = 5
+
+        previous_item_was_heading = True
+
+    for item in page_content:
+        item.pop("_font_size", None)
+        item.pop("_font_colour", None)
+
+    hierarchy_state["parent_font_size"] = parent_font_size
+    hierarchy_state["parent_font_colour"] = parent_font_colour
+    hierarchy_state["parent_is_numbered"] = parent_is_numbered
+    hierarchy_state["level_4_parent_font_size"] = level_4_parent_font_size
+    hierarchy_state["level_4_parent_font_colour"] = level_4_parent_font_colour
+    hierarchy_state["level_4_parent_is_numbered"] = (
+        level_4_parent_is_numbered
+    )
+    hierarchy_state["level_4_parent_number"] = level_4_parent_number
 
 
 CONTINUATION_START = re.compile(
@@ -1688,9 +2076,20 @@ def extract_pages(
     """Extract every page and collect unexpected low-text warnings."""
     pages = []
     warnings = []
+    heading_hierarchy_state: dict[str, Any] = {}
+    subgroup_start_pdf_pages = {
+        printed_start + UNNUMBERED_FRONT_PAGES
+        for group in CONTENTS_GROUPS
+        for printed_start, _ in group["subgroups"]
+    }
 
     for page_index, page in enumerate(document):
         pdf_page_number = page_index + 1
+        if (
+            pdf_page_number in EXCLUDED_PDF_PAGES
+            or pdf_page_number in subgroup_start_pdf_pages
+        ):
+            heading_hierarchy_state.clear()
         booklet_page_number = printed_page_number(pdf_page_number)
         tables, table_rectangles = extract_tables(page)
         notices, notice_rectangles = extract_standalone_important_notices(
@@ -1700,6 +2099,10 @@ def extract_pages(
         excluded_rectangles = [*table_rectangles, *notice_rectangles]
         blocks = extract_text_blocks(page, excluded_rectangles)
         page_content = order_page_content(blocks, tables, notices)
+        apply_nested_heading_levels(
+            page_content,
+            heading_hierarchy_state,
+        )
 
         # Assess extraction health using the raw PDF text rather than the
         # filtered JSON content. Otherwise a page made mostly of deliberately
@@ -1755,10 +2158,26 @@ def inclusive_page_numbers(start: int, end: int) -> list[int]:
     return list(range(start, end + 1))
 
 
+MERGEABLE_CROSS_PAGE_TABLE_TYPES = {
+    "coverage_by_level",
+    "coverage_details",
+    "definitions",
+    "emergency_coverage_details",
+}
+
+
 def flatten_subsection_content(
     subsection_pages: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
-    """Flatten page content while retaining item-level source provenance."""
+    """Flatten page content while retaining item-level source provenance.
+
+    Some logical tables are extracted as one table object per PDF page because
+    layout coordinates are page-local. If one page ends with a mergeable table
+    and the same or immediately following page continues with the same table
+    type and columns, join their rows into a single logical table. Same-page
+    handoffs can occur after a row continuation is consolidated. Row provenance
+    remains page-specific, while the table records its full page range.
+    """
     subsection_content = []
 
     for page in subsection_pages:
@@ -1805,6 +2224,38 @@ def flatten_subsection_content(
                 printed_page,
                 last_printed_page,
             )
+
+            previous_item = (
+                subsection_content[-1] if subsection_content else None
+            )
+            continues_cross_page_table = (
+                item.get("content_type") == "table"
+                and item.get("table_type")
+                in MERGEABLE_CROSS_PAGE_TABLE_TYPES
+                and isinstance(previous_item, dict)
+                and previous_item.get("content_type") == "table"
+                and previous_item.get("table_type")
+                == item.get("table_type")
+                and previous_item.get("columns") == item.get("columns")
+                and previous_item.get("source_pdf_pages")
+                and pdf_page_number
+                - previous_item["source_pdf_pages"][-1]
+                in {0, 1}
+            )
+            if continues_cross_page_table:
+                previous_item.setdefault("rows", []).extend(
+                    item.get("rows", [])
+                )
+                previous_item["source_pdf_pages"] = sorted(
+                    set(previous_item["source_pdf_pages"])
+                    | set(item["source_pdf_pages"])
+                )
+                previous_item["source_printed_pages"] = sorted(
+                    set(previous_item["source_printed_pages"])
+                    | set(item["source_printed_pages"])
+                )
+                continue
+
             item["order"] = len(subsection_content) + 1
             subsection_content.append(item)
 
@@ -1858,6 +2309,46 @@ def group_pages_into_sections(
     return sections
 
 
+def apply_pure_numbered_subsection_levels(
+    sections: list[dict[str, Any]],
+) -> None:
+    """Make a complete numbered subsection sequence level 4.
+
+    A printed subsection title is already represented by
+    ``subsection_headings`` and therefore acts as the level-3 parent. When all
+    headings inside that subsection form one uninterrupted sequence beginning
+    at 1, they are direct children of the subsection rather than independent
+    level-3 boundaries. Mixed hierarchies are left unchanged.
+    """
+    for section in sections:
+        for subsection in section.get("subsections", []):
+            headings = [
+                item
+                for item in subsection.get("content", [])
+                if item.get("content_type") == "heading"
+            ]
+            if len(headings) < 3:
+                continue
+
+            heading_numbers = []
+            for heading in headings:
+                match = re.match(
+                    r"^(\d+)\.\s+",
+                    normalise_heading(heading.get("text", "")),
+                )
+                if (
+                    match is None
+                    or heading.get("heading_level") != 3
+                ):
+                    break
+                heading_numbers.append(int(match.group(1)))
+            else:
+                expected_numbers = list(range(1, len(headings) + 1))
+                if heading_numbers == expected_numbers:
+                    for heading in headings:
+                        heading["heading_level"] = 4
+
+
 def validate_page_assignments(
     pages: list[dict[str, Any]],
     excluded_pages: list[dict[str, Any]],
@@ -1900,6 +2391,7 @@ def extract_document(pdf_path: Path) -> dict[str, Any]:
             raise ValueError("The PDF contains no pages")
 
         title = extract_document_title(document)
+        document_summary = extract_document_summary(document)
         pages, warnings = extract_pages(document)
         consolidate_cross_page_table_continuations(pages)
         duplicate_vertically_merged_cells(pages)
@@ -1913,6 +2405,11 @@ def extract_document(pdf_path: Path) -> dict[str, Any]:
         for pdf_page_number, reason in EXCLUDED_PDF_PAGES.items()
     ]
     sections = group_pages_into_sections(pages)
+    apply_pure_numbered_subsection_levels(sections)
+
+    if document_summary:
+        sections.insert(0, create_document_summary_section(document_summary))
+
     validate_page_assignments(pages, excluded_pages, sections)
 
     return {
@@ -1921,7 +2418,7 @@ def extract_document(pdf_path: Path) -> dict[str, Any]:
         "document_code": extract_document_code(pdf_path),
         "title": title,
         "sha256": calculate_sha256(pdf_path),
-        "source_files": [pdf_path.name],
+        "fca_reference_number": None,
         "page_count": page_count,
         "excluded_pages": excluded_pages,
         "coverage_status_legend": COVERAGE_STATUS_LEGEND,

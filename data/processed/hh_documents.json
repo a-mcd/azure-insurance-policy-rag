@@ -15,15 +15,9 @@
       "document_code": "HH-010-018",
       "title": "Guide to your Home Insurance cover",
       "sha256": "84ff060129e741159cd2117b00734ca91ec504f3211296e4b994d1f529f9b7a2",
-      "source_files": [
-        "HH-010-018-Guide-to-your-Home-Insurance-Cover.pdf"
-      ],
+      "fca_reference_number": null,
       "page_count": 70,
       "excluded_pages": [
-        {
-          "pdf_page_number": 1,
-          "reason": "Front cover"
-        },
         {
           "pdf_page_number": 2,
           "reason": "Contents page represented by the section hierarchy"
@@ -39,6 +33,29 @@
         "not_included": "Not Included"
       },
       "sections": [
+        {
+          "section_heading": "Document summary",
+          "subsections": [
+            {
+              "subsection_headings": [],
+              "start_printed_page": null,
+              "end_printed_page": null,
+              "start_pdf_page": 1,
+              "end_pdf_page": 1,
+              "content": [
+                {
+                  "content_type": "paragraph",
+                  "text": "Guide to your\nHome Insurance cover\nIncludes:\n• Guide to Home Emergency cover and\nHome Emergency Extra cover\n• Guide to your Home Legal Expenses",
+                  "source_pdf_pages": [
+                    1
+                  ],
+                  "source_printed_pages": [],
+                  "order": 1
+                }
+              ]
+            }
+          ]
+        },
         {
           "section_heading": "Guide to your Home Insurance cover",
           "subsections": [
@@ -2486,24 +2503,7 @@
                       "source_printed_pages": [
                         12
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    14
-                  ],
-                  "source_printed_pages": [
-                    12
-                  ],
-                  "order": 3
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "coverage_details",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "8) Theft and attempted theft.",
                       "what_is_not_covered": "Unless force and violence was used to enter your home, loss or\ndamage for the following isn’t covered.\n• While your home is lived in by anyone other than you or\nyour family.\n• Caused by you, your family, or anyone invited into your\nhome.\nLoss or damage while your home is unoccupied.",
@@ -2553,24 +2553,7 @@
                       "source_printed_pages": [
                         13
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    15
-                  ],
-                  "source_printed_pages": [
-                    13
-                  ],
-                  "order": 4
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "coverage_details",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "13) Subsidence, heave and landslip.\nYou can find the amount of excess you’d need to pay for a\nsubsidence claim in your Home Policy Schedule.",
                       "what_is_not_covered": "Loss or damage caused by:\n• The weight of the buildings compressing and moving the\nground, within 10 years of them being built (this is known\nas settlement).\n• Shrinkage or expansion.\n• Coastal or river erosion.\n• Demolition or structural changes or repairs to your home.\nDamage to solid floor slabs or from them moving unless the\nfoundations of the home (not including outbuildings) are\ndamaged at the same time and by the same cause.\nLoss or damage to any part of the buildings unless the home\nis damaged at the same time and by the same cause.\nLoss or damage that’s covered under a guarantee or a\nNational House Building Council (NHBC) certificate.\nLoss or damage to hedges, gates or fences.",
@@ -2583,12 +2566,16 @@
                     }
                   ],
                   "source_pdf_pages": [
+                    14,
+                    15,
                     16
                   ],
                   "source_printed_pages": [
+                    12,
+                    13,
                     14
                   ],
-                  "order": 5
+                  "order": 3
                 },
                 {
                   "content_type": "heading",
@@ -2600,7 +2587,7 @@
                   "source_printed_pages": [
                     14
                   ],
-                  "order": 6
+                  "order": 4
                 },
                 {
                   "content_type": "paragraph",
@@ -2611,7 +2598,7 @@
                   "source_printed_pages": [
                     14
                   ],
-                  "order": 7
+                  "order": 5
                 },
                 {
                   "content_type": "table",
@@ -2638,27 +2625,7 @@
                       "source_printed_pages": [
                         14
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    16
-                  ],
-                  "source_printed_pages": [
-                    14
-                  ],
-                  "order": 8
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "coverage_by_level",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered",
-                    "admiral",
-                    "gold",
-                    "platinum"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "Site clearance and building fees\nWhen dealing with a claim for loss or damage due\nto a buildings event covered by this policy, we’ll\npay for:\n• Architects’, surveyors’ and consulting\nengineers’ fees.\n• Legal fees.\n• The cost of clearing debris from the site.\n• The cost of demolishing or supporting the\nbuildings.\n• The cost of keeping to government or local-\nauthority requirements.\nYou can find the buildings events covered by this\npolicy on pages 12-14.",
                       "what_is_not_covered": "Any fees for preparing your claim.\nAny costs you agree without our permission.",
@@ -2691,12 +2658,14 @@
                     }
                   ],
                   "source_pdf_pages": [
+                    16,
                     17
                   ],
                   "source_printed_pages": [
+                    14,
                     15
                   ],
-                  "order": 9
+                  "order": 6
                 },
                 {
                   "content_type": "important_notice",
@@ -2709,7 +2678,7 @@
                   "source_printed_pages": [
                     15
                   ],
-                  "order": 10
+                  "order": 7
                 },
                 {
                   "content_type": "table",
@@ -2751,27 +2720,7 @@
                       "source_printed_pages": [
                         15
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    17
-                  ],
-                  "source_printed_pages": [
-                    15
-                  ],
-                  "order": 11
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "coverage_by_level",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered",
-                    "admiral",
-                    "gold",
-                    "platinum"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "Property owner’s liability\nAmounts you or your family legally have to pay, as\nowners of your home, for:\n• Accidental death or injury to any person.\n• Accidental loss or damage to property.\nThis also applies to any home you used to own, as\npart of the Defective Premises Act 1972 or the\nDefective Premises (Northern Ireland) Order 1975.\nThere’s no excess for claims for property owner’s\nliability.",
                       "what_is_not_covered": "If you, your family, anyone permanently living\nwith you, or your domestic staff are injured or die.\nDamage to property which you, your family,\nanyone permanently living with you, or your\ndomestic staff, own or are responsible for.\nAny liability from:\n• You or your family being treated for or passing\non any disease or virus.\n• Any profession, business, trade or employment.\n• You owning or using a motorised vehicle.\nYou can’t claim under both ‘Occupier’s liability’ and\n‘Property Owner’s liability’ cover.",
@@ -2789,12 +2738,14 @@
                     }
                   ],
                   "source_pdf_pages": [
+                    17,
                     18
                   ],
                   "source_printed_pages": [
+                    15,
                     16
                   ],
-                  "order": 12
+                  "order": 8
                 },
                 {
                   "content_type": "important_notice",
@@ -2807,7 +2758,7 @@
                   "source_printed_pages": [
                     16
                   ],
-                  "order": 13
+                  "order": 9
                 },
                 {
                   "content_type": "table",
@@ -2872,7 +2823,7 @@
                   "source_printed_pages": [
                     16
                   ],
-                  "order": 14
+                  "order": 10
                 },
                 {
                   "content_type": "heading",
@@ -2884,7 +2835,7 @@
                   "source_printed_pages": [
                     17
                   ],
-                  "order": 15
+                  "order": 11
                 },
                 {
                   "content_type": "paragraph",
@@ -2895,7 +2846,7 @@
                   "source_printed_pages": [
                     17
                   ],
-                  "order": 16
+                  "order": 12
                 },
                 {
                   "content_type": "table",
@@ -2945,7 +2896,7 @@
                   "source_printed_pages": [
                     17
                   ],
-                  "order": 17
+                  "order": 13
                 },
                 {
                   "content_type": "heading",
@@ -2957,7 +2908,7 @@
                   "source_printed_pages": [
                     17
                   ],
-                  "order": 18
+                  "order": 14
                 },
                 {
                   "content_type": "paragraph",
@@ -2968,7 +2919,7 @@
                   "source_printed_pages": [
                     17
                   ],
-                  "order": 19
+                  "order": 15
                 },
                 {
                   "content_type": "list_item",
@@ -2980,7 +2931,7 @@
                   "source_printed_pages": [
                     17
                   ],
-                  "order": 20
+                  "order": 16
                 },
                 {
                   "content_type": "list_item",
@@ -2992,7 +2943,7 @@
                   "source_printed_pages": [
                     17
                   ],
-                  "order": 21
+                  "order": 17
                 },
                 {
                   "content_type": "list_item",
@@ -3004,7 +2955,7 @@
                   "source_printed_pages": [
                     17
                   ],
-                  "order": 22
+                  "order": 18
                 },
                 {
                   "content_type": "list_item",
@@ -3016,7 +2967,7 @@
                   "source_printed_pages": [
                     17
                   ],
-                  "order": 23
+                  "order": 19
                 },
                 {
                   "content_type": "list_item",
@@ -3028,7 +2979,7 @@
                   "source_printed_pages": [
                     17
                   ],
-                  "order": 24
+                  "order": 20
                 },
                 {
                   "content_type": "list_item",
@@ -3040,7 +2991,7 @@
                   "source_printed_pages": [
                     17
                   ],
-                  "order": 25
+                  "order": 21
                 },
                 {
                   "content_type": "important_notice",
@@ -3053,7 +3004,7 @@
                   "source_printed_pages": [
                     18
                   ],
-                  "order": 26
+                  "order": 22
                 },
                 {
                   "content_type": "heading",
@@ -3065,7 +3016,7 @@
                   "source_printed_pages": [
                     18
                   ],
-                  "order": 27
+                  "order": 23
                 },
                 {
                   "content_type": "paragraph",
@@ -3076,7 +3027,7 @@
                   "source_printed_pages": [
                     18
                   ],
-                  "order": 28
+                  "order": 24
                 },
                 {
                   "content_type": "table",
@@ -3111,7 +3062,7 @@
                   "source_printed_pages": [
                     18
                   ],
-                  "order": 29
+                  "order": 25
                 }
               ]
             },
@@ -3224,24 +3175,7 @@
                       "source_printed_pages": [
                         19
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    21
-                  ],
-                  "source_printed_pages": [
-                    19
-                  ],
-                  "order": 3
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "coverage_details",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "8) Theft and attempted theft.\nWe’ll only pay up to £1,000 for any theft from a motor\nvehicle.\nFor guidance on what steps to take after a theft or\nattempted theft, please see ‘How to make a claim’.",
                       "what_is_not_covered": "Loss or damage to contents in your outbuildings, or kept in\nthe open on the land your home stands on.\n(This may be covered under ‘Theft from garages and\noutbuildings’ or ‘Garden Contents’, if you have Gold or\nPlatinum cover.)\nLoss or damage caused by you, your family, or anyone\ninvited into your home, unless force and violence was used\nto enter your home.\nLoss or damage while your home is being lived in by anyone\nother than you or your family, unless force and violence was\nused to enter your home.\nLoss or damage while your home is unoccupied.\nLoss or damage to contents left in an unattended motor\nvehicle, while parked on the land your home stands on.\nUnless you do the following:\n• All windows, doors and the boot are closed and locked.\n• The items are hidden from view in the boot, a closed glove\ncompartment, or a concealed luggage compartment.",
@@ -3271,24 +3205,7 @@
                       "source_printed_pages": [
                         20
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    22
-                  ],
-                  "source_printed_pages": [
-                    20
-                  ],
-                  "order": 4
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "coverage_details",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "11) Oil leaks (escape of oil).\nOil escaping from any:\n• Fixed central-heating oil tank.\n• Domestic heating appliance.",
                       "what_is_not_covered": "Loss or damage caused while your home is unoccupied.",
@@ -3311,12 +3228,16 @@
                     }
                   ],
                   "source_pdf_pages": [
+                    21,
+                    22,
                     23
                   ],
                   "source_printed_pages": [
+                    19,
+                    20,
                     21
                   ],
-                  "order": 5
+                  "order": 3
                 },
                 {
                   "content_type": "heading",
@@ -3328,7 +3249,7 @@
                   "source_printed_pages": [
                     21
                   ],
-                  "order": 6
+                  "order": 4
                 },
                 {
                   "content_type": "paragraph",
@@ -3339,7 +3260,7 @@
                   "source_printed_pages": [
                     21
                   ],
-                  "order": 7
+                  "order": 5
                 },
                 {
                   "content_type": "table",
@@ -3411,27 +3332,7 @@
                       "source_printed_pages": [
                         21
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    23
-                  ],
-                  "source_printed_pages": [
-                    21
-                  ],
-                  "order": 8
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "coverage_by_level",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered",
-                    "admiral",
-                    "gold",
-                    "platinum"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "Alternative accommodation\nIf your home isn’t fit for you to live in due to loss or\ndamage to contents caused by any contents event\ncovered by this policy.\nIf a local authority or emergency service order a\ncompulsory evacuation because of risks to your\nhealth or safety from something external to your\nhome.\nWe’ll pay either:\n• The reasonable cost of temporary\naccommodation for you, your family and your\npets while your home is being repaired.\n• Any rent which you, as the tenant, remain\nlegally responsible for paying.\nWe’ll also pay for the temporary storage of your\ncontents if they’re at risk.",
                       "what_is_not_covered": "Any costs you agree without our permission.\nAny costs once your home is fit for you to live in\nagain.\nAny costs after the local authority or emergency\nservices confirm you can return to your home.\nCosts for any person who isn’t a member of your\nfamily for example, a lodger\nAny costs connected with keeping livestock.",
@@ -3449,12 +3350,14 @@
                     }
                   ],
                   "source_pdf_pages": [
+                    23,
                     24
                   ],
                   "source_printed_pages": [
+                    21,
                     22
                   ],
-                  "order": 9
+                  "order": 6
                 },
                 {
                   "content_type": "important_notice",
@@ -3467,7 +3370,7 @@
                   "source_printed_pages": [
                     22
                   ],
-                  "order": 10
+                  "order": 7
                 },
                 {
                   "content_type": "table",
@@ -3524,27 +3427,7 @@
                       "source_printed_pages": [
                         22
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    24
-                  ],
-                  "source_printed_pages": [
-                    22
-                  ],
-                  "order": 11
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "coverage_by_level",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered",
-                    "admiral",
-                    "gold",
-                    "platinum"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "Garden plants\nDamage to trees, shrubs, plants and lawns while\noutside on the land your home stands on.",
                       "what_is_not_covered": "Loss or damage caused by:\n• You, your family, or anyone invited into your\nhome.\n• Storm or flood.\n• Oil escaping.",
@@ -3634,27 +3517,7 @@
                       "source_printed_pages": [
                         23
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    25
-                  ],
-                  "source_printed_pages": [
-                    23
-                  ],
-                  "order": 12
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "coverage_by_level",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered",
-                    "admiral",
-                    "gold",
-                    "platinum"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "Theft from garages and outbuildings\nTheft or attempted theft of your or your family’s\ncontents (including sporting equipment) which are\nkept locked in your outbuildings on the land your\nhome stands on.\nFor theft or attempted theft of your office\nequipment, please see the office equipment cover\nabove.",
                       "what_is_not_covered": "Money, credit cards and high-risk items.\nTheft from greenhouses.\nLoss or damage caused:\n• By you, your family, or anyone invited into\nyour home.\n• While your home is unoccupied.",
@@ -3744,27 +3607,7 @@
                       "source_printed_pages": [
                         24
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    26
-                  ],
-                  "source_printed_pages": [
-                    24
-                  ],
-                  "order": 13
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "coverage_by_level",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered",
-                    "admiral",
-                    "gold",
-                    "platinum"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "Domestic staff’s belongings\nLoss or damage to contents that belong to your\ndomestic staff and are kept in your home.",
                       "what_is_not_covered": null,
@@ -3812,12 +3655,18 @@
                     }
                   ],
                   "source_pdf_pages": [
+                    24,
+                    25,
+                    26,
                     27
                   ],
                   "source_printed_pages": [
+                    22,
+                    23,
+                    24,
                     25
                   ],
-                  "order": 14
+                  "order": 8
                 },
                 {
                   "content_type": "heading",
@@ -3829,7 +3678,7 @@
                   "source_printed_pages": [
                     26
                   ],
-                  "order": 15
+                  "order": 9
                 },
                 {
                   "content_type": "paragraph",
@@ -3840,7 +3689,7 @@
                   "source_printed_pages": [
                     26
                   ],
-                  "order": 16
+                  "order": 10
                 },
                 {
                   "content_type": "table",
@@ -3875,7 +3724,7 @@
                   "source_printed_pages": [
                     26
                   ],
-                  "order": 17
+                  "order": 11
                 },
                 {
                   "content_type": "important_notice",
@@ -3888,7 +3737,7 @@
                   "source_printed_pages": [
                     26
                   ],
-                  "order": 18
+                  "order": 12
                 },
                 {
                   "content_type": "heading",
@@ -3900,7 +3749,7 @@
                   "source_printed_pages": [
                     27
                   ],
-                  "order": 19
+                  "order": 13
                 },
                 {
                   "content_type": "paragraph",
@@ -3911,7 +3760,7 @@
                   "source_printed_pages": [
                     27
                   ],
-                  "order": 20
+                  "order": 14
                 },
                 {
                   "content_type": "table",
@@ -3976,7 +3825,7 @@
                   "source_printed_pages": [
                     27
                   ],
-                  "order": 21
+                  "order": 15
                 },
                 {
                   "content_type": "heading",
@@ -3988,7 +3837,7 @@
                   "source_printed_pages": [
                     28
                   ],
-                  "order": 22
+                  "order": 16
                 },
                 {
                   "content_type": "paragraph",
@@ -3999,7 +3848,7 @@
                   "source_printed_pages": [
                     28
                   ],
-                  "order": 23
+                  "order": 17
                 },
                 {
                   "content_type": "list_item",
@@ -4011,7 +3860,7 @@
                   "source_printed_pages": [
                     28
                   ],
-                  "order": 24
+                  "order": 18
                 },
                 {
                   "content_type": "list_item",
@@ -4023,7 +3872,7 @@
                   "source_printed_pages": [
                     28
                   ],
-                  "order": 25
+                  "order": 19
                 },
                 {
                   "content_type": "list_item",
@@ -4035,7 +3884,7 @@
                   "source_printed_pages": [
                     28
                   ],
-                  "order": 26
+                  "order": 20
                 },
                 {
                   "content_type": "list_item",
@@ -4047,7 +3896,7 @@
                   "source_printed_pages": [
                     28
                   ],
-                  "order": 27
+                  "order": 21
                 },
                 {
                   "content_type": "list_item",
@@ -4059,7 +3908,7 @@
                   "source_printed_pages": [
                     28
                   ],
-                  "order": 28
+                  "order": 22
                 },
                 {
                   "content_type": "list_item",
@@ -4071,7 +3920,7 @@
                   "source_printed_pages": [
                     28
                   ],
-                  "order": 29
+                  "order": 23
                 },
                 {
                   "content_type": "important_notice",
@@ -4084,7 +3933,7 @@
                   "source_printed_pages": [
                     28
                   ],
-                  "order": 30
+                  "order": 24
                 },
                 {
                   "content_type": "heading",
@@ -4096,7 +3945,7 @@
                   "source_printed_pages": [
                     28
                   ],
-                  "order": 31
+                  "order": 25
                 },
                 {
                   "content_type": "paragraph",
@@ -4107,7 +3956,7 @@
                   "source_printed_pages": [
                     28
                   ],
-                  "order": 32
+                  "order": 26
                 },
                 {
                   "content_type": "table",
@@ -4142,7 +3991,7 @@
                   "source_printed_pages": [
                     28
                   ],
-                  "order": 33
+                  "order": 27
                 }
               ]
             },
@@ -4227,29 +4076,7 @@
                         29,
                         30
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    31,
-                    32
-                  ],
-                  "source_printed_pages": [
-                    29,
-                    30
-                  ],
-                  "order": 2
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "coverage_by_level",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered",
-                    "admiral",
-                    "gold",
-                    "platinum"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "(4) Employer’s liability\nYour or your family’s liability because of\naccidental injury or illness of your domestic staff.\nThe staff member needs to have an employment\ncontract and be employed by you or your family.\nThe injury or illness needs to have happened:\n• While they were carrying out work they’re\nemployed to do.\n• During the period of insurance.",
                       "what_is_not_covered": null,
@@ -4282,12 +4109,14 @@
                     }
                   ],
                   "source_pdf_pages": [
+                    31,
                     32
                   ],
                   "source_printed_pages": [
+                    29,
                     30
                   ],
-                  "order": 3
+                  "order": 2
                 }
               ]
             },
@@ -4503,7 +4332,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "1. War and terrorism",
                   "source_pdf_pages": [
                     36
@@ -4585,7 +4414,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "2. Riot",
                   "source_pdf_pages": [
                     36
@@ -4608,7 +4437,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "3. Radioactivity",
                   "source_pdf_pages": [
                     36
@@ -4631,7 +4460,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "4. Sonic bangs",
                   "source_pdf_pages": [
                     36
@@ -4654,7 +4483,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "5. Pollution or contamination",
                   "source_pdf_pages": [
                     36
@@ -4677,7 +4506,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "6. Faulty design",
                   "source_pdf_pages": [
                     36
@@ -4700,7 +4529,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "7. Electronic data and computer virus",
                   "source_pdf_pages": [
                     36
@@ -4723,7 +4552,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "8. Depreciation",
                   "source_pdf_pages": [
                     36
@@ -4746,7 +4575,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "9. Loss of tone",
                   "source_pdf_pages": [
                     36
@@ -4769,7 +4598,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "10. Gradual causes",
                   "source_pdf_pages": [
                     36
@@ -4852,7 +4681,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "11. Existing damage",
                   "source_pdf_pages": [
                     37
@@ -4875,7 +4704,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "12. Deliberate act",
                   "source_pdf_pages": [
                     37
@@ -4898,7 +4727,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "13. Indirect loss",
                   "source_pdf_pages": [
                     37
@@ -4968,7 +4797,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "14. Confiscation",
                   "source_pdf_pages": [
                     37
@@ -4991,7 +4820,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "15. Commercial use",
                   "source_pdf_pages": [
                     37
@@ -5014,7 +4843,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "16. Other insurance",
                   "source_pdf_pages": [
                     37
@@ -5048,7 +4877,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "17. Solar flare",
                   "source_pdf_pages": [
                     37
@@ -5071,7 +4900,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "18. Agreements",
                   "source_pdf_pages": [
                     37
@@ -5094,7 +4923,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "19. Deception",
                   "source_pdf_pages": [
                     37
@@ -5153,7 +4982,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "20. Processes",
                   "source_pdf_pages": [
                     38
@@ -5176,7 +5005,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "21. Pests",
                   "source_pdf_pages": [
                     38
@@ -5267,7 +5096,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Your responsibilities",
                   "source_pdf_pages": [
                     39
@@ -5290,7 +5119,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 4,
+                  "heading_level": 5,
                   "text": "What you need to do",
                   "source_pdf_pages": [
                     39
@@ -5350,7 +5179,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 4,
+                  "heading_level": 5,
                   "text": "What you can’t do",
                   "source_pdf_pages": [
                     39
@@ -5398,7 +5227,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Our responsibilities",
                   "source_pdf_pages": [
                     39
@@ -5421,7 +5250,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 4,
+                  "heading_level": 5,
                   "text": "What we can do",
                   "source_pdf_pages": [
                     39
@@ -5481,7 +5310,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 4,
+                  "heading_level": 5,
                   "text": "What we won’t do",
                   "source_pdf_pages": [
                     39
@@ -6640,7 +6469,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Home Emergency cover and Home Emergency Extra cover",
                   "source_pdf_pages": [
                     44
@@ -6754,7 +6583,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Associated home cover",
                   "source_pdf_pages": [
                     45
@@ -6777,7 +6606,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Emergency",
                   "source_pdf_pages": [
                     45
@@ -6848,7 +6677,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Heating system",
                   "source_pdf_pages": [
                     45
@@ -6871,7 +6700,7 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Home",
                   "source_pdf_pages": [
                     45
@@ -6893,8 +6722,9 @@
                   "order": 25
                 },
                 {
-                  "content_type": "paragraph",
-                  "text": "Our contractor\nA tradesperson authorised by us to assess your claim and carry out temporary repairs in your home.",
+                  "content_type": "heading",
+                  "heading_level": 4,
+                  "text": "Our contractor",
                   "source_pdf_pages": [
                     45
                   ],
@@ -6905,7 +6735,7 @@
                 },
                 {
                   "content_type": "paragraph",
-                  "text": "Period of insurance\nThe length of time you have this cover for, from the date the cover started until it’s renewed or cancelled.",
+                  "text": "A tradesperson authorised by us to assess your claim and carry out temporary repairs in your home.",
                   "source_pdf_pages": [
                     45
                   ],
@@ -6916,8 +6746,8 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
-                  "text": "Reimbursement basis",
+                  "heading_level": 4,
+                  "text": "Period of insurance",
                   "source_pdf_pages": [
                     45
                   ],
@@ -6928,7 +6758,7 @@
                 },
                 {
                   "content_type": "paragraph",
-                  "text": "We’ll need to receive your contractor’s or our contractor’s full breakdown and invoice for repairs. We’ll then pay you\nup to:",
+                  "text": "The length of time you have this cover for, from the date the cover started until it’s renewed or cancelled.",
                   "source_pdf_pages": [
                     45
                   ],
@@ -6938,9 +6768,9 @@
                   "order": 29
                 },
                 {
-                  "content_type": "list_item",
-                  "list_marker": "•",
-                  "text": "£1,000 (including VAT) as a contribution towards a repair you arranged yourself, under Home Emergency\nExtra cover.",
+                  "content_type": "heading",
+                  "heading_level": 4,
+                  "text": "Reimbursement basis",
                   "source_pdf_pages": [
                     45
                   ],
@@ -6950,9 +6780,8 @@
                   "order": 30
                 },
                 {
-                  "content_type": "list_item",
-                  "list_marker": "•",
-                  "text": "£500 (including VAT) as a contribution towards a repair you arranged yourself, under Home Emergency cover.",
+                  "content_type": "paragraph",
+                  "text": "We’ll need to receive your contractor’s or our contractor’s full breakdown and invoice for repairs. We’ll then pay you\nup to:",
                   "source_pdf_pages": [
                     45
                   ],
@@ -6964,7 +6793,7 @@
                 {
                   "content_type": "list_item",
                   "list_marker": "•",
-                  "text": "£1,000 (including VAT) for alternative accommodation, under Home Emergency Extra cover.",
+                  "text": "£1,000 (including VAT) as a contribution towards a repair you arranged yourself, under Home Emergency\nExtra cover.",
                   "source_pdf_pages": [
                     45
                   ],
@@ -6976,7 +6805,7 @@
                 {
                   "content_type": "list_item",
                   "list_marker": "•",
-                  "text": "£500 (including VAT) for alternative accommodation, under Home Emergency cover.",
+                  "text": "£500 (including VAT) as a contribution towards a repair you arranged yourself, under Home Emergency cover.",
                   "source_pdf_pages": [
                     45
                   ],
@@ -6988,7 +6817,7 @@
                 {
                   "content_type": "list_item",
                   "list_marker": "•",
-                  "text": "£250 (including VAT) towards the cost of a new boiler if your heating system is beyond economic repair, under\nHome Emergency Extra cover.",
+                  "text": "£1,000 (including VAT) for alternative accommodation, under Home Emergency Extra cover.",
                   "source_pdf_pages": [
                     45
                   ],
@@ -7000,7 +6829,7 @@
                 {
                   "content_type": "list_item",
                   "list_marker": "•",
-                  "text": "£50 (including VAT) for heaters you have bought.",
+                  "text": "£500 (including VAT) for alternative accommodation, under Home Emergency cover.",
                   "source_pdf_pages": [
                     45
                   ],
@@ -7010,9 +6839,9 @@
                   "order": 35
                 },
                 {
-                  "content_type": "heading",
-                  "heading_level": 3,
-                  "text": "Temporary repair",
+                  "content_type": "list_item",
+                  "list_marker": "•",
+                  "text": "£250 (including VAT) towards the cost of a new boiler if your heating system is beyond economic repair, under\nHome Emergency Extra cover.",
                   "source_pdf_pages": [
                     45
                   ],
@@ -7022,8 +6851,9 @@
                   "order": 36
                 },
                 {
-                  "content_type": "paragraph",
-                  "text": "Repair work that’s needed immediately to stop the emergency causing further damage. Our contractor will\ncomplete these repairs. You may need to arrange further work or repairs at your own cost to permanently fix\nthe issue.",
+                  "content_type": "list_item",
+                  "list_marker": "•",
+                  "text": "£50 (including VAT) for heaters you have bought.",
                   "source_pdf_pages": [
                     45
                   ],
@@ -7034,31 +6864,31 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
-                  "text": "We",
+                  "heading_level": 4,
+                  "text": "Temporary repair",
                   "source_pdf_pages": [
-                    46
+                    45
                   ],
                   "source_printed_pages": [
-                    44
+                    43
                   ],
                   "order": 38
                 },
                 {
                   "content_type": "paragraph",
-                  "text": "EUI Limited, Ty Admiral, David Street, Cardiff, CF10 2EH. EUI Limited is authorised and regulated by the Financial\nConduct Authority (FCA registration number 309378). EUI Limited arrange and manage this policy.",
+                  "text": "Repair work that’s needed immediately to stop the emergency causing further damage. Our contractor will\ncomplete these repairs. You may need to arrange further work or repairs at your own cost to permanently fix\nthe issue.",
                   "source_pdf_pages": [
-                    46
+                    45
                   ],
                   "source_printed_pages": [
-                    44
+                    43
                   ],
                   "order": 39
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
-                  "text": "You",
+                  "heading_level": 4,
+                  "text": "We",
                   "source_pdf_pages": [
                     46
                   ],
@@ -7069,7 +6899,7 @@
                 },
                 {
                   "content_type": "paragraph",
-                  "text": "You, as the policyholder, and any people who normally live with you in your home.",
+                  "text": "EUI Limited, Ty Admiral, David Street, Cardiff, CF10 2EH. EUI Limited is authorised and regulated by the Financial\nConduct Authority (FCA registration number 309378). EUI Limited arrange and manage this policy.",
                   "source_pdf_pages": [
                     46
                   ],
@@ -7080,8 +6910,8 @@
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
-                  "text": "Your contractor",
+                  "heading_level": 4,
+                  "text": "You",
                   "source_pdf_pages": [
                     46
                   ],
@@ -7092,7 +6922,7 @@
                 },
                 {
                   "content_type": "paragraph",
-                  "text": "A qualified tradesperson you have appointed to carry out repairs in your home.",
+                  "text": "You, as the policyholder, and any people who normally live with you in your home.",
                   "source_pdf_pages": [
                     46
                   ],
@@ -7100,6 +6930,29 @@
                     44
                   ],
                   "order": 43
+                },
+                {
+                  "content_type": "heading",
+                  "heading_level": 4,
+                  "text": "Your contractor",
+                  "source_pdf_pages": [
+                    46
+                  ],
+                  "source_printed_pages": [
+                    44
+                  ],
+                  "order": 44
+                },
+                {
+                  "content_type": "paragraph",
+                  "text": "A qualified tradesperson you have appointed to carry out repairs in your home.",
+                  "source_pdf_pages": [
+                    46
+                  ],
+                  "source_printed_pages": [
+                    44
+                  ],
+                  "order": 45
                 },
                 {
                   "content_type": "heading",
@@ -7111,7 +6964,7 @@
                   "source_printed_pages": [
                     45
                   ],
-                  "order": 44
+                  "order": 46
                 },
                 {
                   "content_type": "paragraph",
@@ -7122,7 +6975,7 @@
                   "source_printed_pages": [
                     45
                   ],
-                  "order": 45
+                  "order": 47
                 },
                 {
                   "content_type": "table",
@@ -7149,28 +7002,7 @@
                         45,
                         46
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    47,
-                    48
-                  ],
-                  "source_printed_pages": [
-                    45,
-                    46
-                  ],
-                  "order": 46
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "emergency_coverage_details",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered",
-                    "hec",
-                    "hex"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "Temporary heating\nWe’ll pay you up to £50 towards the cost of\nheaters if you have no heating and the engineer\nis waiting for parts. This also applies if we can’t\nrepair the boiler or heating system. These heaters\nwould be yours to keep.",
                       "what_is_not_covered": null,
@@ -7198,26 +7030,7 @@
                       "source_printed_pages": [
                         46
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    48
-                  ],
-                  "source_printed_pages": [
-                    46
-                  ],
-                  "order": 47
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "emergency_coverage_details",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered",
-                    "hec",
-                    "hex"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "Plumbing\nWe’ll cover an emergency relating to water pipes\ninside your home.\nWe’ll cover draining and isolating leaking water\ntanks.\nWe’ll cover toilet flushing mechanisms.\nWe’ll also cover leaks from:\n• Your toilet.\n• Pipes leading to and from the shower or bath.\n• The internal section of overflow pipes.\n• Water pipes that are part of the\nheating system.",
                       "what_is_not_covered": "Repairing or replacing all pipes outside the home.\nDripping taps or nozzles.\nAny part of the plumbing or drainage system\nif the water is going down a drain without\ncausing damage.\nRepairing or replacing any of the following:\n• Hot-water cylinders.\n• Water storage tanks or immersion tanks.\n• Radiators.\n• Sanitary fixtures, including sinks and basins.\n• External overflows.\n• Burst, split or leaking flexible hoses.\n• Lead pipes.\nDomestic appliances such as dishwashers and\nwashing machines.\nSeptic tanks, swimming pools and hot tubs.\nDealing with temporarily frozen pipes.",
@@ -7234,9 +7047,13 @@
                     }
                   ],
                   "source_pdf_pages": [
+                    47,
+                    48,
                     49
                   ],
                   "source_printed_pages": [
+                    45,
+                    46,
                     47
                   ],
                   "order": 48
@@ -7277,26 +7094,7 @@
                       "source_printed_pages": [
                         47
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    49
-                  ],
-                  "source_printed_pages": [
-                    47
-                  ],
-                  "order": 50
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "emergency_coverage_details",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered",
-                    "hec",
-                    "hex"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "Windows, doors and locks\nWe’ll cover an emergency relating to damaged\nexternal windows and doors if your home is not\nsafe or secure. We’ll provide a temporary repair\nusing boarding or a similar material to solve the\nimmediate security risk.\nWe’ll also cover gaining access to your home\nfollowing damage to the lock of the external doors.\nWe’ll cover damage to locks on external windows\nand doors if your home is not safe or secure.",
                       "what_is_not_covered": "Double glazing where one pane is broken but the\nother is intact and the home is therefore secure.\nInternal doors and windows that do not affect the\nsecurity and safety of the property.\nReplacing lost or stolen keys.",
@@ -7352,26 +7150,7 @@
                       "source_printed_pages": [
                         48
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    50
-                  ],
-                  "source_printed_pages": [
-                    48
-                  ],
-                  "order": 51
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "emergency_coverage_details",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered",
-                    "hec",
-                    "hex"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "Pests\nWe’ll cover an emergency relating to pest\ninfestations. If there’s evidence of an infestation\nin your home, we’ll provide cover for getting rid of\nthe following:\n• Rats and mice.\n• Wasps and hornets.\n• Grey squirrels.\n• Cockroaches.",
                       "what_is_not_covered": "Pests found outside your home.\nGetting rid of any pests not listed under this cover.",
@@ -7402,12 +7181,16 @@
                     }
                   ],
                   "source_pdf_pages": [
+                    49,
+                    50,
                     51
                   ],
                   "source_printed_pages": [
+                    47,
+                    48,
                     49
                   ],
-                  "order": 52
+                  "order": 50
                 },
                 {
                   "content_type": "heading",
@@ -7419,7 +7202,7 @@
                   "source_printed_pages": [
                     49
                   ],
-                  "order": 53
+                  "order": 51
                 },
                 {
                   "content_type": "paragraph",
@@ -7430,7 +7213,7 @@
                   "source_printed_pages": [
                     49
                   ],
-                  "order": 54
+                  "order": 52
                 },
                 {
                   "content_type": "list_item",
@@ -7442,7 +7225,7 @@
                   "source_printed_pages": [
                     49
                   ],
-                  "order": 55
+                  "order": 53
                 },
                 {
                   "content_type": "list_item",
@@ -7454,7 +7237,7 @@
                   "source_printed_pages": [
                     49
                   ],
-                  "order": 56
+                  "order": 54
                 },
                 {
                   "content_type": "list_item",
@@ -7466,7 +7249,7 @@
                   "source_printed_pages": [
                     49
                   ],
-                  "order": 57
+                  "order": 55
                 },
                 {
                   "content_type": "list_item",
@@ -7478,7 +7261,7 @@
                   "source_printed_pages": [
                     49
                   ],
-                  "order": 58
+                  "order": 56
                 },
                 {
                   "content_type": "list_item",
@@ -7490,7 +7273,7 @@
                   "source_printed_pages": [
                     49
                   ],
-                  "order": 59
+                  "order": 57
                 },
                 {
                   "content_type": "list_item",
@@ -7502,7 +7285,7 @@
                   "source_printed_pages": [
                     49
                   ],
-                  "order": 60
+                  "order": 58
                 },
                 {
                   "content_type": "list_item",
@@ -7514,7 +7297,7 @@
                   "source_printed_pages": [
                     49
                   ],
-                  "order": 61
+                  "order": 59
                 },
                 {
                   "content_type": "list_item",
@@ -7526,7 +7309,7 @@
                   "source_printed_pages": [
                     49
                   ],
-                  "order": 62
+                  "order": 60
                 },
                 {
                   "content_type": "list_item",
@@ -7538,7 +7321,7 @@
                   "source_printed_pages": [
                     49
                   ],
-                  "order": 63
+                  "order": 61
                 },
                 {
                   "content_type": "list_item",
@@ -7550,7 +7333,7 @@
                   "source_printed_pages": [
                     49
                   ],
-                  "order": 64
+                  "order": 62
                 },
                 {
                   "content_type": "list_item",
@@ -7562,7 +7345,7 @@
                   "source_printed_pages": [
                     49
                   ],
-                  "order": 65
+                  "order": 63
                 },
                 {
                   "content_type": "list_item",
@@ -7574,7 +7357,7 @@
                   "source_printed_pages": [
                     49
                   ],
-                  "order": 66
+                  "order": 64
                 },
                 {
                   "content_type": "list_item",
@@ -7586,7 +7369,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 67
+                  "order": 65
                 },
                 {
                   "content_type": "list_item",
@@ -7598,7 +7381,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 68
+                  "order": 66
                 },
                 {
                   "content_type": "list_item",
@@ -7610,7 +7393,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 69
+                  "order": 67
                 },
                 {
                   "content_type": "list_item",
@@ -7622,7 +7405,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 70
+                  "order": 68
                 },
                 {
                   "content_type": "list_item",
@@ -7634,7 +7417,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 71
+                  "order": 69
                 },
                 {
                   "content_type": "list_item",
@@ -7646,7 +7429,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 72
+                  "order": 70
                 },
                 {
                   "content_type": "heading",
@@ -7658,11 +7441,11 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 73
+                  "order": 71
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "1. Other insurance",
                   "source_pdf_pages": [
                     52
@@ -7670,7 +7453,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 74
+                  "order": 72
                 },
                 {
                   "content_type": "paragraph",
@@ -7681,11 +7464,11 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 75
+                  "order": 73
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "2. Parts availability",
                   "source_pdf_pages": [
                     52
@@ -7693,7 +7476,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 76
+                  "order": 74
                 },
                 {
                   "content_type": "paragraph",
@@ -7704,7 +7487,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 77
+                  "order": 75
                 },
                 {
                   "content_type": "paragraph",
@@ -7715,7 +7498,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 78
+                  "order": 76
                 },
                 {
                   "content_type": "paragraph",
@@ -7726,11 +7509,11 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 79
+                  "order": 77
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "3. How to make a claim",
                   "source_pdf_pages": [
                     52
@@ -7738,7 +7521,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 80
+                  "order": 78
                 },
                 {
                   "content_type": "paragraph",
@@ -7749,7 +7532,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 81
+                  "order": 79
                 },
                 {
                   "content_type": "paragraph",
@@ -7760,7 +7543,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 82
+                  "order": 80
                 },
                 {
                   "content_type": "paragraph",
@@ -7771,11 +7554,11 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 83
+                  "order": 81
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "4. How we’ll settle your claim",
                   "source_pdf_pages": [
                     52
@@ -7783,7 +7566,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 84
+                  "order": 82
                 },
                 {
                   "content_type": "paragraph",
@@ -7794,7 +7577,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 85
+                  "order": 83
                 },
                 {
                   "content_type": "paragraph",
@@ -7805,7 +7588,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 86
+                  "order": 84
                 },
                 {
                   "content_type": "paragraph",
@@ -7816,7 +7599,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 87
+                  "order": 85
                 },
                 {
                   "content_type": "paragraph",
@@ -7827,7 +7610,7 @@
                   "source_printed_pages": [
                     50
                   ],
-                  "order": 88
+                  "order": 86
                 },
                 {
                   "content_type": "paragraph",
@@ -7838,7 +7621,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 89
+                  "order": 87
                 },
                 {
                   "content_type": "paragraph",
@@ -7849,11 +7632,11 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 90
+                  "order": 88
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 5,
                   "text": "Claims over £500 on Home Emergency cover, or over £1,000 on Home Emergency Extra cover",
                   "source_pdf_pages": [
                     53
@@ -7861,7 +7644,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 91
+                  "order": 89
                 },
                 {
                   "content_type": "paragraph",
@@ -7872,11 +7655,11 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 92
+                  "order": 90
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 5,
                   "text": "Reimbursement basis",
                   "source_pdf_pages": [
                     53
@@ -7884,7 +7667,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 93
+                  "order": 91
                 },
                 {
                   "content_type": "paragraph",
@@ -7895,7 +7678,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 94
+                  "order": 92
                 },
                 {
                   "content_type": "list_item",
@@ -7907,7 +7690,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 95
+                  "order": 93
                 },
                 {
                   "content_type": "list_item",
@@ -7919,7 +7702,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 96
+                  "order": 94
                 },
                 {
                   "content_type": "paragraph",
@@ -7930,11 +7713,11 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 97
+                  "order": 95
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "5. Cancelling your cover",
                   "source_pdf_pages": [
                     53
@@ -7942,11 +7725,11 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 98
+                  "order": 96
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 5,
                   "text": "Your cancellation rights",
                   "source_pdf_pages": [
                     53
@@ -7954,7 +7737,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 99
+                  "order": 97
                 },
                 {
                   "content_type": "paragraph",
@@ -7965,7 +7748,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 100
+                  "order": 98
                 },
                 {
                   "content_type": "paragraph",
@@ -7976,7 +7759,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 101
+                  "order": 99
                 },
                 {
                   "content_type": "paragraph",
@@ -7987,7 +7770,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 102
+                  "order": 100
                 },
                 {
                   "content_type": "paragraph",
@@ -7998,7 +7781,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 103
+                  "order": 101
                 },
                 {
                   "content_type": "paragraph",
@@ -8009,11 +7792,11 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 104
+                  "order": 102
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "6. Our right to cancel your cover",
                   "source_pdf_pages": [
                     53
@@ -8021,7 +7804,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 105
+                  "order": 103
                 },
                 {
                   "content_type": "paragraph",
@@ -8032,7 +7815,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 106
+                  "order": 104
                 },
                 {
                   "content_type": "list_item",
@@ -8044,7 +7827,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 107
+                  "order": 105
                 },
                 {
                   "content_type": "list_item",
@@ -8056,7 +7839,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 108
+                  "order": 106
                 },
                 {
                   "content_type": "list_item",
@@ -8068,7 +7851,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 109
+                  "order": 107
                 },
                 {
                   "content_type": "paragraph",
@@ -8079,7 +7862,7 @@
                   "source_printed_pages": [
                     51
                   ],
-                  "order": 110
+                  "order": 108
                 },
                 {
                   "content_type": "paragraph",
@@ -8090,7 +7873,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 111
+                  "order": 109
                 },
                 {
                   "content_type": "list_item",
@@ -8102,7 +7885,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 112
+                  "order": 110
                 },
                 {
                   "content_type": "list_item",
@@ -8114,7 +7897,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 113
+                  "order": 111
                 },
                 {
                   "content_type": "list_item",
@@ -8126,7 +7909,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 114
+                  "order": 112
                 },
                 {
                   "content_type": "paragraph",
@@ -8137,7 +7920,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 115
+                  "order": 113
                 },
                 {
                   "content_type": "heading",
@@ -8149,7 +7932,19 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 116
+                  "order": 114
+                },
+                {
+                  "content_type": "heading",
+                  "heading_level": 4,
+                  "text": "How to make a complaint",
+                  "source_pdf_pages": [
+                    54
+                  ],
+                  "source_printed_pages": [
+                    52
+                  ],
+                  "order": 115
                 },
                 {
                   "content_type": "paragraph",
@@ -8160,11 +7955,11 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 117
+                  "order": 116
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 4,
+                  "heading_level": 5,
                   "text": "Financial Services Compensation Scheme (FSCS)",
                   "source_pdf_pages": [
                     54
@@ -8172,7 +7967,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 118
+                  "order": 117
                 },
                 {
                   "content_type": "paragraph",
@@ -8183,11 +7978,11 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 119
+                  "order": 118
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 4,
+                  "heading_level": 5,
                   "text": "Service provider and insurer",
                   "source_pdf_pages": [
                     54
@@ -8195,7 +7990,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 120
+                  "order": 119
                 },
                 {
                   "content_type": "paragraph",
@@ -8206,7 +8001,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 121
+                  "order": 120
                 },
                 {
                   "content_type": "paragraph",
@@ -8217,7 +8012,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 122
+                  "order": 121
                 },
                 {
                   "content_type": "paragraph",
@@ -8228,7 +8023,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 123
+                  "order": 122
                 },
                 {
                   "content_type": "paragraph",
@@ -8239,7 +8034,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 124
+                  "order": 123
                 },
                 {
                   "content_type": "paragraph",
@@ -8250,7 +8045,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 125
+                  "order": 124
                 },
                 {
                   "content_type": "paragraph",
@@ -8261,11 +8056,11 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 126
+                  "order": 125
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 4,
+                  "heading_level": 5,
                   "text": "Relevant law and language",
                   "source_pdf_pages": [
                     54
@@ -8273,7 +8068,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 127
+                  "order": 126
                 },
                 {
                   "content_type": "paragraph",
@@ -8284,7 +8079,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 128
+                  "order": 127
                 },
                 {
                   "content_type": "paragraph",
@@ -8295,11 +8090,11 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 129
+                  "order": 128
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 4,
+                  "heading_level": 5,
                   "text": "Data protection",
                   "source_pdf_pages": [
                     54
@@ -8307,7 +8102,7 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 130
+                  "order": 129
                 },
                 {
                   "content_type": "paragraph",
@@ -8318,11 +8113,11 @@
                   "source_printed_pages": [
                     52
                   ],
-                  "order": 131
+                  "order": 130
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 4,
+                  "heading_level": 5,
                   "text": "Recording phone calls",
                   "source_pdf_pages": [
                     55
@@ -8330,7 +8125,7 @@
                   "source_printed_pages": [
                     53
                   ],
-                  "order": 132
+                  "order": 131
                 },
                 {
                   "content_type": "paragraph",
@@ -8341,7 +8136,7 @@
                   "source_printed_pages": [
                     53
                   ],
-                  "order": 133
+                  "order": 132
                 },
                 {
                   "content_type": "paragraph",
@@ -8352,7 +8147,7 @@
                   "source_printed_pages": [
                     53
                   ],
-                  "order": 134
+                  "order": 133
                 },
                 {
                   "content_type": "list_item",
@@ -8364,7 +8159,7 @@
                   "source_printed_pages": [
                     53
                   ],
-                  "order": 135
+                  "order": 134
                 },
                 {
                   "content_type": "list_item",
@@ -8376,7 +8171,7 @@
                   "source_printed_pages": [
                     53
                   ],
-                  "order": 136
+                  "order": 135
                 },
                 {
                   "content_type": "paragraph",
@@ -8387,7 +8182,7 @@
                   "source_printed_pages": [
                     53
                   ],
-                  "order": 137
+                  "order": 136
                 },
                 {
                   "content_type": "paragraph",
@@ -8398,7 +8193,7 @@
                   "source_printed_pages": [
                     53
                   ],
-                  "order": 138
+                  "order": 137
                 },
                 {
                   "content_type": "paragraph",
@@ -8409,7 +8204,7 @@
                   "source_printed_pages": [
                     53
                   ],
-                  "order": 139
+                  "order": 138
                 }
               ]
             },
@@ -9046,390 +8841,153 @@
                   "order": 54
                 },
                 {
-                  "content_type": "heading",
-                  "heading_level": 4,
-                  "text": "Appointed\nrepresentative",
+                  "content_type": "table",
+                  "table_type": "definitions",
+                  "columns": [
+                    "term",
+                    "definition"
+                  ],
+                  "rows": [
+                    {
+                      "term": "Appointed representative",
+                      "definition": "The preferred law firm, law firm, accountant or other suitably qualified person we’ll\nappoint to act on your behalf.",
+                      "source_pdf_pages": [
+                        58
+                      ],
+                      "source_printed_pages": [
+                        56
+                      ]
+                    },
+                    {
+                      "term": "Associated home policy",
+                      "definition": "The valid home insurance policy arranged by EUI Limited which has been taken out by you.\nFor policies with multiple homes, Home Legal Expenses will be confirmed on the Home\nPolicy Schedule for each home",
+                      "source_pdf_pages": [
+                        58
+                      ],
+                      "source_printed_pages": [
+                        56
+                      ]
+                    },
+                    {
+                      "term": "Costs and Expenses",
+                      "definition": "a. All reasonable and necessary costs chargeable by the appointed representative and\nagreed by us in accordance with the ARAG Standard Terms of Appointment.\nb. The costs incurred by opponents in civil cases if you have been ordered to pay them, or\nyou pay them with our agreement.",
+                      "source_pdf_pages": [
+                        58
+                      ],
+                      "source_printed_pages": [
+                        56
+                      ]
+                    },
+                    {
+                      "term": "Countries covered",
+                      "definition": "The United Kingdom of Great Britain and Northern Ireland, the Isle of Man and the\nChannel Islands.",
+                      "source_pdf_pages": [
+                        58
+                      ],
+                      "source_printed_pages": [
+                        56
+                      ]
+                    },
+                    {
+                      "term": "ARAG Standard Terms of Appointment",
+                      "definition": "The terms and conditions (including the amount we’ll pay to an appointed representative)\nthat apply to the relevant type of claim, which could include a conditional fee agreement\n(no win, no fee). Where a law firm is acting as an appointed representative the amount is\ncurrently £100 per hour. This amount may vary from time to time.",
+                      "source_pdf_pages": [
+                        58
+                      ],
+                      "source_printed_pages": [
+                        56
+                      ]
+                    },
+                    {
+                      "term": "Date of occurrence",
+                      "definition": "a. For civil cases (other than as specified under c, d and e below), the date of the event\nthat leads to a claim. If there is more than one event arising at different times from the\nsame originating cause, the date of occurrence is the date of the first of these events.\n(This is the date the event happened, which may be before the date you first became\naware of it.)\nb. For criminal cases, the date you began, or are alleged to have begun, to break the law.\nc. For insured incident Tax, the date when HM Revenue & Customs first notifies you in\nwriting of its intention to make an enquiry\nd. For insured incident Consumer disputes and Motor contract dispute, the date when\nyou first became aware of, or should have been aware of a claim.\ne. For insured incident Legal Defence, 3 the date you first became aware of the formal\ninvestigation or disciplinary hearing against you.",
+                      "source_pdf_pages": [
+                        59
+                      ],
+                      "source_printed_pages": [
+                        57
+                      ]
+                    },
+                    {
+                      "term": "Identity theft",
+                      "definition": "The theft or unauthorised use of your personal identification which has resulted in the\nunlawful use of your identity.",
+                      "source_pdf_pages": [
+                        59
+                      ],
+                      "source_printed_pages": [
+                        57
+                      ]
+                    },
+                    {
+                      "term": "Insured period",
+                      "definition": "From the date Home Legal Expenses was added to the associated home policy\nuntil its renewal or cancellation. As long as the policyholder remains eligible, this\npolicy will automatically renew with the associated home policy unless you inform\nEUI Limited otherwise.",
+                      "source_pdf_pages": [
+                        59
+                      ],
+                      "source_printed_pages": [
+                        57
+                      ]
+                    },
+                    {
+                      "term": "Preferred law firm",
+                      "definition": "A law firm or barristers’ chambers we choose to provide legal services. These legal\nspecialists are chosen as they have the proven expertise to deal with your claim and\nmust comply with our agreed service standard levels, which we audit regularly. They are\nappointed according to the ARAG Standard Terms of Appointment.",
+                      "source_pdf_pages": [
+                        59
+                      ],
+                      "source_printed_pages": [
+                        57
+                      ]
+                    },
+                    {
+                      "term": "Reasonable prospects",
+                      "definition": "a. For civil cases, the prospects that you will recover losses or damages (or obtain any\nother legal remedy that we have agreed to, including an enforcement of judgment),\nmake a successful defence or make a successful appeal or defence of an appeal, must\nbe at least 51%. We, or a preferred law firm on our behalf, will assess whether there\nare reasonable prospects.\nb. For criminal cases there is no requirement for there to be prospects of a\nsuccessful outcome.\nc. For all civil and criminal appeals, the prospects of a successful outcome must be at least\n51%.",
+                      "source_pdf_pages": [
+                        59
+                      ],
+                      "source_printed_pages": [
+                        57
+                      ]
+                    },
+                    {
+                      "term": "Vehicle cloning",
+                      "definition": "Illegal use of your motor vehicle’s registration details.",
+                      "source_pdf_pages": [
+                        59
+                      ],
+                      "source_printed_pages": [
+                        57
+                      ]
+                    },
+                    {
+                      "term": "We, us, our, ARAG",
+                      "definition": "ARAG Legal Expenses Insurance Company Limited",
+                      "source_pdf_pages": [
+                        59
+                      ],
+                      "source_printed_pages": [
+                        57
+                      ]
+                    },
+                    {
+                      "term": "You, your",
+                      "definition": "The person who has taken out this policy (the policyholder) and any member of their\nfamily who always lives with them. This includes students temporarily living away\nfrom home and unmarried partners. Anyone claiming under this section must have the\npolicyholder’s agreement to claim.",
+                      "source_pdf_pages": [
+                        59
+                      ],
+                      "source_printed_pages": [
+                        57
+                      ]
+                    }
+                  ],
                   "source_pdf_pages": [
-                    58
+                    58,
+                    59
                   ],
                   "source_printed_pages": [
-                    56
+                    56,
+                    57
                   ],
                   "order": 55
-                },
-                {
-                  "content_type": "paragraph",
-                  "text": "The preferred law firm, law firm, accountant or other suitably qualified person we’ll\nappoint to act on your behalf.",
-                  "source_pdf_pages": [
-                    58
-                  ],
-                  "source_printed_pages": [
-                    56
-                  ],
-                  "order": 56
-                },
-                {
-                  "content_type": "heading",
-                  "heading_level": 4,
-                  "text": "Associated home\npolicy",
-                  "source_pdf_pages": [
-                    58
-                  ],
-                  "source_printed_pages": [
-                    56
-                  ],
-                  "order": 57
-                },
-                {
-                  "content_type": "paragraph",
-                  "text": "The valid home insurance policy arranged by EUI Limited which has been taken out by you.\nFor policies with multiple homes, Home Legal Expenses will be confirmed on the Home\nPolicy Schedule for each home",
-                  "source_pdf_pages": [
-                    58
-                  ],
-                  "source_printed_pages": [
-                    56
-                  ],
-                  "order": 58
-                },
-                {
-                  "content_type": "heading",
-                  "heading_level": 4,
-                  "text": "Costs and Expenses",
-                  "source_pdf_pages": [
-                    58
-                  ],
-                  "source_printed_pages": [
-                    56
-                  ],
-                  "order": 59
-                },
-                {
-                  "content_type": "list_item",
-                  "list_marker": "a.",
-                  "text": "All reasonable and necessary costs chargeable by the appointed representative and\nagreed by us in accordance with the ARAG Standard Terms of Appointment.",
-                  "source_pdf_pages": [
-                    58
-                  ],
-                  "source_printed_pages": [
-                    56
-                  ],
-                  "order": 60
-                },
-                {
-                  "content_type": "list_item",
-                  "list_marker": "b.",
-                  "text": "The costs incurred by opponents in civil cases if you have been ordered to pay them, or\nyou pay them with our agreement.",
-                  "source_pdf_pages": [
-                    58
-                  ],
-                  "source_printed_pages": [
-                    56
-                  ],
-                  "order": 61
-                },
-                {
-                  "content_type": "heading",
-                  "heading_level": 4,
-                  "text": "Countries covered",
-                  "source_pdf_pages": [
-                    58
-                  ],
-                  "source_printed_pages": [
-                    56
-                  ],
-                  "order": 62
-                },
-                {
-                  "content_type": "paragraph",
-                  "text": "The United Kingdom of Great Britain and Northern Ireland, the Isle of Man and the\nChannel Islands.",
-                  "source_pdf_pages": [
-                    58
-                  ],
-                  "source_printed_pages": [
-                    56
-                  ],
-                  "order": 63
-                },
-                {
-                  "content_type": "heading",
-                  "heading_level": 4,
-                  "text": "ARAG Standard\nTerms of\nAppointment",
-                  "source_pdf_pages": [
-                    58
-                  ],
-                  "source_printed_pages": [
-                    56
-                  ],
-                  "order": 64
-                },
-                {
-                  "content_type": "paragraph",
-                  "text": "The terms and conditions (including the amount we’ll pay to an appointed representative)\nthat apply to the relevant type of claim, which could include a conditional fee agreement\n(no win, no fee). Where a law firm is acting as an appointed representative the amount is\ncurrently £100 per hour. This amount may vary from time to time.",
-                  "source_pdf_pages": [
-                    58
-                  ],
-                  "source_printed_pages": [
-                    56
-                  ],
-                  "order": 65
-                },
-                {
-                  "content_type": "heading",
-                  "heading_level": 4,
-                  "text": "Date of occurrence",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 66
-                },
-                {
-                  "content_type": "list_item",
-                  "list_marker": "a.",
-                  "text": "For civil cases (other than as specified under c, d and e below), the date of the event\nthat leads to a claim. If there is more than one event arising at different times from the\nsame originating cause, the date of occurrence is the date of the first of these events.\n(This is the date the event happened, which may be before the date you first became\naware of it.)",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 67
-                },
-                {
-                  "content_type": "list_item",
-                  "list_marker": "b.",
-                  "text": "For criminal cases, the date you began, or are alleged to have begun, to break the law.",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 68
-                },
-                {
-                  "content_type": "list_item",
-                  "list_marker": "c.",
-                  "text": "For insured incident Tax, the date when HM Revenue & Customs first notifies you in\nwriting of its intention to make an enquiry",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 69
-                },
-                {
-                  "content_type": "list_item",
-                  "list_marker": "d.",
-                  "text": "For insured incident Consumer disputes and Motor contract dispute, the date when\nyou first became aware of, or should have been aware of a claim.",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 70
-                },
-                {
-                  "content_type": "list_item",
-                  "list_marker": "e.",
-                  "text": "For insured incident Legal Defence, 3 the date you first became aware of the formal\ninvestigation or disciplinary hearing against you.",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 71
-                },
-                {
-                  "content_type": "heading",
-                  "heading_level": 4,
-                  "text": "Identity theft",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 72
-                },
-                {
-                  "content_type": "paragraph",
-                  "text": "The theft or unauthorised use of your personal identification which has resulted in the\nunlawful use of your identity.",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 73
-                },
-                {
-                  "content_type": "heading",
-                  "heading_level": 4,
-                  "text": "Insured period",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 74
-                },
-                {
-                  "content_type": "paragraph",
-                  "text": "From the date Home Legal Expenses was added to the associated home policy\nuntil its renewal or cancellation. As long as the policyholder remains eligible, this\npolicy will automatically renew with the associated home policy unless you inform\nEUI Limited otherwise.",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 75
-                },
-                {
-                  "content_type": "heading",
-                  "heading_level": 4,
-                  "text": "Preferred law firm",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 76
-                },
-                {
-                  "content_type": "paragraph",
-                  "text": "A law firm or barristers’ chambers we choose to provide legal services. These legal\nspecialists are chosen as they have the proven expertise to deal with your claim and\nmust comply with our agreed service standard levels, which we audit regularly. They are\nappointed according to the ARAG Standard Terms of Appointment.",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 77
-                },
-                {
-                  "content_type": "heading",
-                  "heading_level": 4,
-                  "text": "Reasonable\nprospects",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 78
-                },
-                {
-                  "content_type": "list_item",
-                  "list_marker": "a.",
-                  "text": "For civil cases, the prospects that you will recover losses or damages (or obtain any\nother legal remedy that we have agreed to, including an enforcement of judgment),\nmake a successful defence or make a successful appeal or defence of an appeal, must\nbe at least 51%. We, or a preferred law firm on our behalf, will assess whether there\nare reasonable prospects.",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 79
-                },
-                {
-                  "content_type": "list_item",
-                  "list_marker": "b.",
-                  "text": "For criminal cases there is no requirement for there to be prospects of a\nsuccessful outcome.",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 80
-                },
-                {
-                  "content_type": "list_item",
-                  "list_marker": "c.",
-                  "text": "For all civil and criminal appeals, the prospects of a successful outcome must be at least\n51%.",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 81
-                },
-                {
-                  "content_type": "heading",
-                  "heading_level": 4,
-                  "text": "Vehicle cloning",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 82
-                },
-                {
-                  "content_type": "paragraph",
-                  "text": "Illegal use of your motor vehicle’s registration details.",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 83
-                },
-                {
-                  "content_type": "heading",
-                  "heading_level": 4,
-                  "text": "We, us, our, ARAG",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 84
-                },
-                {
-                  "content_type": "paragraph",
-                  "text": "ARAG Legal Expenses Insurance Company Limited",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 85
-                },
-                {
-                  "content_type": "heading",
-                  "heading_level": 4,
-                  "text": "You, your",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 86
-                },
-                {
-                  "content_type": "paragraph",
-                  "text": "The person who has taken out this policy (the policyholder) and any member of their\nfamily who always lives with them. This includes students temporarily living away\nfrom home and unmarried partners. Anyone claiming under this section must have the\npolicyholder’s agreement to claim.",
-                  "source_pdf_pages": [
-                    59
-                  ],
-                  "source_printed_pages": [
-                    57
-                  ],
-                  "order": 87
                 },
                 {
                   "content_type": "table",
@@ -9488,24 +9046,7 @@
                       "source_printed_pages": [
                         58
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    60
-                  ],
-                  "source_printed_pages": [
-                    58
-                  ],
-                  "order": 88
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "coverage_details",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "Property disputes\nA civil dispute relating to your principal home or personal\npossessions that you own or are responsible for, following:\na. an event which causes physical damage to such\nproperty but the amount in dispute must be more than\n£100.\nPlease note we’ll not defend your legal rights but we’ll cover\ndefending a counter-claim.\nb. a legal nuisance\nc. a trespass\nPlease note you must have, or there must be reasonable\nprospects of establishing you have, the legal ownership or\nright to the land or personal possessions that are the subject\nof the dispute.",
                       "what_is_not_covered": "A claim relating to the following:\na. a contract you have entered into\nb. any building or land except your main home\nc. someone legally taking your property from you, whether\nyou are offered money or not, or restrictions or controls\nplaced on your property by any government or public or\nlocal authority\nd. work done by, or on behalf of, any government or public\nor local authority unless the claim is for accidental\nphysical damage\ne. adverse possession (meaning the occupation of any building\nor land either by someone trying to take possession from\nyou or of which you are trying to take possession)",
@@ -9545,24 +9086,7 @@
                       "source_printed_pages": [
                         59
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    61
-                  ],
-                  "source_printed_pages": [
-                    59
-                  ],
-                  "order": 89
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "coverage_details",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "Personal identity fraud\n1. Following a call to the Personal Cyber and Identity\nTheft Helpline we’ll assign a personal caseworker who\nwill provide phone advice and a personal action plan to\nhelp regain your identity.\n2. If you become a victim of identity theft, we’ll pay the\ncosts you incur for phone calls, faxes or postage to\ncommunicate with the police, credit agencies, financial\nservice providers, other creditors or debt-collection\nagencies. We’ll also pay the cost of replacement\ndocuments to help restore your identity and\ncredit status.\n3. Following your identity theft we’ll pay:\na. costs and expenses to reinstate your identity including\ncosts for the signing of statutory declarations or\nsimilar documents\nb. costs and expenses to defend your legal rights in\na dispute with debt collectors or any party taking\nlegal action against you arising from or relating to\nidentity theft\nc. loan-rejection fees and any re-application\nadministration fee for a loan when your original\napplication has been rejected.\nPlease note that:\ni. you must notify your bank or building society as soon\nas possible\nii. you must tell us if you have previously suffered identity\ntheft, and\niii. you must take all reasonable action to prevent continued\nunauthorised use of your identity.",
                       "what_is_not_covered": "A claim relating to the following:\na. fraud committed by anyone entitled to make a claim under\nthis section\nb. losses arising from your business activities.",
@@ -9582,24 +9106,7 @@
                       "source_printed_pages": [
                         60
                       ]
-                    }
-                  ],
-                  "source_pdf_pages": [
-                    62
-                  ],
-                  "source_printed_pages": [
-                    60
-                  ],
-                  "order": 90
-                },
-                {
-                  "content_type": "table",
-                  "table_type": "coverage_details",
-                  "columns": [
-                    "what_is_covered",
-                    "what_is_not_covered"
-                  ],
-                  "rows": [
+                    },
                     {
                       "what_is_covered": "Vehicle cloning\nIf you are concerned that you may have become a victim\nof vehicle cloning, please call the Legal Advice helpline on\n0117 927 1852 who can provide telephone advice,\nincluding any action you may need to take:\na. We’ll pay the costs that you incur for phone calls, faxes\nor postage to communicate with the police, the Driver\nand Vehicle Licensing Agency (DVLA), credit agencies,\nfinancial service providers including your motor insurer\nand other creditors or debt-collection agencies.\nb. Costs and expenses to defend your legal rights arising\nfrom the vehicle cloning of your vehicle.\nPlease note that:\nYou must notify us, the police, the DVLA, and any party\nwith an interest in your motor vehicle such as the motor\ninsurer, or leasing or finance company as soon as possible\nonce you become aware that such illegal use has occurred.",
                       "what_is_not_covered": "a. Illegal use of the motor vehicle’s registration details by\nanyone entitled to make a claim under this section.\nb. Losses arising from your business.",
@@ -9612,12 +9119,18 @@
                     }
                   ],
                   "source_pdf_pages": [
+                    60,
+                    61,
+                    62,
                     63
                   ],
                   "source_printed_pages": [
+                    58,
+                    59,
+                    60,
                     61
                   ],
-                  "order": 91
+                  "order": 56
                 },
                 {
                   "content_type": "heading",
@@ -9629,7 +9142,7 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 92
+                  "order": 57
                 },
                 {
                   "content_type": "paragraph",
@@ -9640,11 +9153,11 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 93
+                  "order": 58
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "1. Late reported claims",
                   "source_pdf_pages": [
                     63
@@ -9652,7 +9165,7 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 94
+                  "order": 59
                 },
                 {
                   "content_type": "paragraph",
@@ -9663,11 +9176,11 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 95
+                  "order": 60
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "2. Costs we haven’t agreed",
                   "source_pdf_pages": [
                     63
@@ -9675,7 +9188,7 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 96
+                  "order": 61
                 },
                 {
                   "content_type": "paragraph",
@@ -9686,11 +9199,11 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 97
+                  "order": 62
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "3. Court awards and fines",
                   "source_pdf_pages": [
                     63
@@ -9698,7 +9211,7 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 98
+                  "order": 63
                 },
                 {
                   "content_type": "paragraph",
@@ -9709,11 +9222,11 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 99
+                  "order": 64
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "4. Legal action we haven’t agreed",
                   "source_pdf_pages": [
                     63
@@ -9721,7 +9234,7 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 100
+                  "order": 65
                 },
                 {
                   "content_type": "paragraph",
@@ -9732,11 +9245,11 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 101
+                  "order": 66
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "5. Defamation",
                   "source_pdf_pages": [
                     63
@@ -9744,7 +9257,7 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 102
+                  "order": 67
                 },
                 {
                   "content_type": "paragraph",
@@ -9755,11 +9268,11 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 103
+                  "order": 68
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "6. A dispute with ARAG",
                   "source_pdf_pages": [
                     63
@@ -9767,7 +9280,7 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 104
+                  "order": 69
                 },
                 {
                   "content_type": "paragraph",
@@ -9778,11 +9291,11 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 105
+                  "order": 70
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "7. Judicial review",
                   "source_pdf_pages": [
                     63
@@ -9790,7 +9303,7 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 106
+                  "order": 71
                 },
                 {
                   "content_type": "paragraph",
@@ -9801,11 +9314,11 @@
                   "source_printed_pages": [
                     61
                   ],
-                  "order": 107
+                  "order": 72
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "8. Nuclear, war and terrorism risks",
                   "source_pdf_pages": [
                     64
@@ -9813,7 +9326,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 108
+                  "order": 73
                 },
                 {
                   "content_type": "paragraph",
@@ -9824,7 +9337,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 109
+                  "order": 74
                 },
                 {
                   "content_type": "list_item",
@@ -9836,7 +9349,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 110
+                  "order": 75
                 },
                 {
                   "content_type": "list_item",
@@ -9848,7 +9361,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 111
+                  "order": 76
                 },
                 {
                   "content_type": "list_item",
@@ -9860,7 +9373,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 112
+                  "order": 77
                 },
                 {
                   "content_type": "list_item",
@@ -9872,11 +9385,11 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 113
+                  "order": 78
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "9. Litigant in person",
                   "source_pdf_pages": [
                     64
@@ -9884,7 +9397,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 114
+                  "order": 79
                 },
                 {
                   "content_type": "paragraph",
@@ -9895,7 +9408,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 115
+                  "order": 80
                 },
                 {
                   "content_type": "heading",
@@ -9907,11 +9420,11 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 116
+                  "order": 81
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Your Legal Representation",
                   "source_pdf_pages": [
                     64
@@ -9919,7 +9432,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 117
+                  "order": 82
                 },
                 {
                   "content_type": "list_item",
@@ -9931,7 +9444,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 118
+                  "order": 83
                 },
                 {
                   "content_type": "list_item",
@@ -9943,7 +9456,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 119
+                  "order": 84
                 },
                 {
                   "content_type": "list_item",
@@ -9955,7 +9468,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 120
+                  "order": 85
                 },
                 {
                   "content_type": "list_item",
@@ -9967,11 +9480,11 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 121
+                  "order": 86
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Your Responsibilities",
                   "source_pdf_pages": [
                     64
@@ -9979,7 +9492,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 122
+                  "order": 87
                 },
                 {
                   "content_type": "list_item",
@@ -9991,7 +9504,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 123
+                  "order": 88
                 },
                 {
                   "content_type": "list_item",
@@ -10003,11 +9516,11 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 124
+                  "order": 89
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Offers to Settle a Claim",
                   "source_pdf_pages": [
                     64
@@ -10015,7 +9528,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 125
+                  "order": 90
                 },
                 {
                   "content_type": "list_item",
@@ -10027,7 +9540,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 126
+                  "order": 91
                 },
                 {
                   "content_type": "list_item",
@@ -10039,7 +9552,7 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 127
+                  "order": 92
                 },
                 {
                   "content_type": "list_item",
@@ -10051,11 +9564,11 @@
                   "source_printed_pages": [
                     62
                   ],
-                  "order": 128
+                  "order": 93
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Assessing and Recovering Costs",
                   "source_pdf_pages": [
                     65
@@ -10063,7 +9576,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 129
+                  "order": 94
                 },
                 {
                   "content_type": "list_item",
@@ -10075,7 +9588,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 130
+                  "order": 95
                 },
                 {
                   "content_type": "list_item",
@@ -10087,11 +9600,11 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 131
+                  "order": 96
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Cancelling an Appointed Representative’s Appointment",
                   "source_pdf_pages": [
                     65
@@ -10099,7 +9612,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 132
+                  "order": 97
                 },
                 {
                   "content_type": "paragraph",
@@ -10110,11 +9623,11 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 133
+                  "order": 98
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Withdrawing Cover",
                   "source_pdf_pages": [
                     65
@@ -10122,7 +9635,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 134
+                  "order": 99
                 },
                 {
                   "content_type": "paragraph",
@@ -10133,11 +9646,11 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 135
+                  "order": 100
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Expert Opinion",
                   "source_pdf_pages": [
                     65
@@ -10145,7 +9658,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 136
+                  "order": 101
                 },
                 {
                   "content_type": "paragraph",
@@ -10156,11 +9669,11 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 137
+                  "order": 102
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Arbitration",
                   "source_pdf_pages": [
                     65
@@ -10168,7 +9681,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 138
+                  "order": 103
                 },
                 {
                   "content_type": "paragraph",
@@ -10179,11 +9692,11 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 139
+                  "order": 104
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Keeping to the Terms of This Section",
                   "source_pdf_pages": [
                     65
@@ -10191,7 +9704,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 140
+                  "order": 105
                 },
                 {
                   "content_type": "paragraph",
@@ -10202,7 +9715,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 141
+                  "order": 106
                 },
                 {
                   "content_type": "list_item",
@@ -10214,7 +9727,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 142
+                  "order": 107
                 },
                 {
                   "content_type": "list_item",
@@ -10226,7 +9739,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 143
+                  "order": 108
                 },
                 {
                   "content_type": "list_item",
@@ -10238,7 +9751,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 144
+                  "order": 109
                 },
                 {
                   "content_type": "list_item",
@@ -10250,7 +9763,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 145
+                  "order": 110
                 },
                 {
                   "content_type": "list_item",
@@ -10262,11 +9775,11 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 146
+                  "order": 111
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Fraudulent Claims",
                   "source_pdf_pages": [
                     65
@@ -10274,7 +9787,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 147
+                  "order": 112
                 },
                 {
                   "content_type": "paragraph",
@@ -10285,7 +9798,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 148
+                  "order": 113
                 },
                 {
                   "content_type": "list_item",
@@ -10297,7 +9810,7 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 149
+                  "order": 114
                 },
                 {
                   "content_type": "list_item",
@@ -10309,11 +9822,11 @@
                   "source_printed_pages": [
                     63
                   ],
-                  "order": 150
+                  "order": 115
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Claims Under This Section by a Third Party",
                   "source_pdf_pages": [
                     66
@@ -10321,7 +9834,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 151
+                  "order": 116
                 },
                 {
                   "content_type": "paragraph",
@@ -10332,11 +9845,11 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 152
+                  "order": 117
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Other Insurances",
                   "source_pdf_pages": [
                     66
@@ -10344,7 +9857,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 153
+                  "order": 118
                 },
                 {
                   "content_type": "paragraph",
@@ -10355,11 +9868,11 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 154
+                  "order": 119
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Law",
                   "source_pdf_pages": [
                     66
@@ -10367,7 +9880,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 155
+                  "order": 120
                 },
                 {
                   "content_type": "paragraph",
@@ -10378,7 +9891,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 156
+                  "order": 121
                 },
                 {
                   "content_type": "paragraph",
@@ -10389,7 +9902,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 157
+                  "order": 122
                 },
                 {
                   "content_type": "heading",
@@ -10401,11 +9914,11 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 158
+                  "order": 123
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Your cancellation rights",
                   "source_pdf_pages": [
                     66
@@ -10413,7 +9926,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 159
+                  "order": 124
                 },
                 {
                   "content_type": "paragraph",
@@ -10424,7 +9937,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 160
+                  "order": 125
                 },
                 {
                   "content_type": "paragraph",
@@ -10435,7 +9948,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 161
+                  "order": 126
                 },
                 {
                   "content_type": "paragraph",
@@ -10446,11 +9959,11 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 162
+                  "order": 127
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Our cancellation rights",
                   "source_pdf_pages": [
                     66
@@ -10458,7 +9971,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 163
+                  "order": 128
                 },
                 {
                   "content_type": "paragraph",
@@ -10469,7 +9982,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 164
+                  "order": 129
                 },
                 {
                   "content_type": "list_item",
@@ -10481,7 +9994,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 165
+                  "order": 130
                 },
                 {
                   "content_type": "list_item",
@@ -10493,7 +10006,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 166
+                  "order": 131
                 },
                 {
                   "content_type": "list_item",
@@ -10505,7 +10018,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 167
+                  "order": 132
                 },
                 {
                   "content_type": "paragraph",
@@ -10516,11 +10029,11 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 168
+                  "order": 133
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "How to make a Home Legal Expenses complaint",
                   "source_pdf_pages": [
                     66
@@ -10528,7 +10041,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 169
+                  "order": 134
                 },
                 {
                   "content_type": "paragraph",
@@ -10539,7 +10052,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 170
+                  "order": 135
                 },
                 {
                   "content_type": "paragraph",
@@ -10550,7 +10063,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 171
+                  "order": 136
                 },
                 {
                   "content_type": "list_item",
@@ -10562,7 +10075,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 172
+                  "order": 137
                 },
                 {
                   "content_type": "list_item",
@@ -10574,7 +10087,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 173
+                  "order": 138
                 },
                 {
                   "content_type": "list_item",
@@ -10586,7 +10099,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 174
+                  "order": 139
                 },
                 {
                   "content_type": "list_item",
@@ -10598,7 +10111,7 @@
                   "source_printed_pages": [
                     64
                   ],
-                  "order": 175
+                  "order": 140
                 },
                 {
                   "content_type": "paragraph",
@@ -10609,7 +10122,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 176
+                  "order": 141
                 },
                 {
                   "content_type": "paragraph",
@@ -10620,7 +10133,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 177
+                  "order": 142
                 },
                 {
                   "content_type": "paragraph",
@@ -10631,7 +10144,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 178
+                  "order": 143
                 },
                 {
                   "content_type": "list_item",
@@ -10643,7 +10156,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 179
+                  "order": 144
                 },
                 {
                   "content_type": "list_item",
@@ -10655,7 +10168,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 180
+                  "order": 145
                 },
                 {
                   "content_type": "list_item",
@@ -10667,7 +10180,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 181
+                  "order": 146
                 },
                 {
                   "content_type": "paragraph",
@@ -10678,7 +10191,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 182
+                  "order": 147
                 },
                 {
                   "content_type": "heading",
@@ -10690,11 +10203,11 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 183
+                  "order": 148
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Financial Services Compensation Scheme",
                   "source_pdf_pages": [
                     67
@@ -10702,7 +10215,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 184
+                  "order": 149
                 },
                 {
                   "content_type": "paragraph",
@@ -10713,7 +10226,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 185
+                  "order": 150
                 },
                 {
                   "content_type": "heading",
@@ -10725,11 +10238,11 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 186
+                  "order": 151
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Privacy",
                   "source_pdf_pages": [
                     67
@@ -10737,7 +10250,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 187
+                  "order": 152
                 },
                 {
                   "content_type": "paragraph",
@@ -10748,7 +10261,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 188
+                  "order": 153
                 },
                 {
                   "content_type": "paragraph",
@@ -10759,11 +10272,11 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 189
+                  "order": 154
                 },
                 {
                   "content_type": "heading",
-                  "heading_level": 3,
+                  "heading_level": 4,
                   "text": "Authorisation",
                   "source_pdf_pages": [
                     67
@@ -10771,7 +10284,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 190
+                  "order": 155
                 },
                 {
                   "content_type": "paragraph",
@@ -10782,7 +10295,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 191
+                  "order": 156
                 },
                 {
                   "content_type": "paragraph",
@@ -10793,7 +10306,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 192
+                  "order": 157
                 },
                 {
                   "content_type": "paragraph",
@@ -10804,7 +10317,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 193
+                  "order": 158
                 },
                 {
                   "content_type": "paragraph",
@@ -10815,7 +10328,7 @@
                   "source_printed_pages": [
                     65
                   ],
-                  "order": 194
+                  "order": 159
                 }
               ]
             }
