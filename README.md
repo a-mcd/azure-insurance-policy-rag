@@ -153,7 +153,7 @@ This bash script uses the python scripts in folder src/setup_env
 
 *Updating the indexed chunks*
 
-If updating the chunks then use the following command which generates the new embeddings, deletes and recreates the existing search index, and uploads the latest chunks.
+If updating the chunks or the vector algorithm use the following command which generates the new embeddings, deletes and recreates the existing search index, and uploads the latest chunks.
 
 ```bash
 python3 src/setup_env/index_document_chunks.py \
@@ -164,7 +164,9 @@ python3 src/setup_env/index_document_chunks.py \
 ```
 
 
-## Search Indexed Chunks
+## Search Indexed Chunks and Evaluate Retrieval
+
+### search_document_chunks.py
 
 Use search_document_chunks.py to inspect the chunks retrieved for an ad hoc questions.
 
@@ -192,7 +194,7 @@ python3 src/search_chunks/search_document_chunks.py \
 | `--json` | No | Disabled | Prints machine-readable JSON instead of formatted text. |
 
 
-## Evaluate Retrieval 
+### evaluate_retrieval.py
 
 Evaluates retrieved chunk IDs against the expected chunk IDs in the labelled question set documented in retrieval_questions.json. This script has no required command-line parameters.
 
