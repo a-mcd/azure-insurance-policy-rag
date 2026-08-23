@@ -1,2 +1,5 @@
 pymupdf
 tiktoken
+openai
+python-dotenv
+azure-search-documents

@@ -494,6 +494,64 @@ def clean_cell(value: str | None) -> str | None:
     return cleaned or None
 
 
+def extract_table_row_heading(
+    page: pymupdf.Page,
+    cell: Any,
+) -> str | None:
+    """Extract a visually styled heading at the start of a table cell.
+
+    Coverage-table row headings use the booklet's blue heading colour and a
+    bold or semibold font.  Reading those style attributes avoids treating an
+    ordinary first sentence as a heading.  Consecutive styled lines are joined
+    so a heading that wraps visually is still stored as one value.
+    """
+    if cell is None:
+        return None
+
+    text = page.get_text(
+        "dict",
+        clip=pymupdf.Rect(cell),
+        sort=True,
+    )
+    heading_lines: list[str] = []
+
+    for block in text.get("blocks", []):
+        for line in block.get("lines", []):
+            spans = [
+                span
+                for span in line.get("spans", [])
+                if span.get("text", "").strip()
+            ]
+            if not spans:
+                continue
+
+            is_emphasised = all(
+                any(
+                    weight in span.get("font", "").casefold()
+                    for weight in ("bold", "semibold")
+                )
+                for span in spans
+            )
+            uses_heading_colour = all(
+                span.get("color") in HEADING_COLOURS
+                for span in spans
+            )
+
+            if not (is_emphasised and uses_heading_colour):
+                return (
+                    re.sub(r"\s+", " ", " ".join(heading_lines)).strip()
+                    or None
+                )
+
+            line_text = clean_text(
+                "".join(span.get("text", "") for span in spans)
+            )
+            if line_text:
+                heading_lines.append(line_text)
+
+    return re.sub(r"\s+", " ", " ".join(heading_lines)).strip() or None
+
+
 def split_bullet_items(value: str | None) -> list[str]:
     """Split a table cell's bullet list into complete individual items."""
     if not value:
@@ -910,6 +968,7 @@ def extract_tables(
                 start=1,
             ):
                 cells = table.rows[row_index].cells
+                row_heading = extract_table_row_heading(page, cells[0])
                 row = {
                         "what_is_covered": clean_cell(extracted_row[0]),
                         "what_is_not_covered": clean_cell(
@@ -926,6 +985,8 @@ def extract_tables(
                             )
                         },
                     }
+                if row_heading:
+                    row = {"row_heading": row_heading, **row}
                 inherited = vertically_merged_columns(
                     table,
                     row_index,
@@ -963,10 +1024,14 @@ def extract_tables(
                 extracted_rows[1:],
                 start=1,
             ):
+                cells = table.rows[row_index].cells
+                row_heading = extract_table_row_heading(page, cells[0])
                 row = {
                     "what_is_covered": clean_cell(extracted_row[0]),
                     "what_is_not_covered": clean_cell(extracted_row[1]),
                 }
+                if row_heading:
+                    row = {"row_heading": row_heading, **row}
                 inherited = vertically_merged_columns(
                     table,
                     row_index,
@@ -1006,6 +1071,7 @@ def extract_tables(
                 start=1,
             ):
                 cells = table.rows[row_index].cells
+                row_heading = extract_table_row_heading(page, cells[0])
                 row = {
                         "what_is_covered": clean_cell(extracted_row[0]),
                         "what_is_not_covered": clean_cell(
@@ -1016,6 +1082,8 @@ def extract_tables(
                             "hex": status_in_cell(cells[3], icons),
                         },
                     }
+                if row_heading:
+                    row = {"row_heading": row_heading, **row}
                 inherited = vertically_merged_columns(
                     table,
                     row_index,
@@ -2058,6 +2126,11 @@ def duplicate_vertically_merged_cells(
                         continue
 
                     row[column] = source_row.get(column)
+                    if (
+                        column == "what_is_covered"
+                        and source_row.get("row_heading")
+                    ):
+                        row["row_heading"] = source_row["row_heading"]
                     for provenance_key in (
                         "continued_through_pdf_page",
                         "continued_through_printed_page",

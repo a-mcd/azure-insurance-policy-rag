@@ -2612,6 +2612,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "Locks and keys",
                       "what_is_covered": "Locks and keys\nReplacing and installing locks and keys, if they’re\nlost or stolen, to:\n• Safes in your home.\n• The external doors of your home.\nThis cover is given under both ‘Your buildings\ncover’ and ‘Your contents cover’. If both sections\nare in force, we’ll only pay under one section. We’ll\ndecide this based on the overall nature of your\nclaim.",
                       "what_is_not_covered": null,
                       "cover_status": {
@@ -2627,6 +2628,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Site clearance and building fees",
                       "what_is_covered": "Site clearance and building fees\nWhen dealing with a claim for loss or damage due\nto a buildings event covered by this policy, we’ll\npay for:\n• Architects’, surveyors’ and consulting\nengineers’ fees.\n• Legal fees.\n• The cost of clearing debris from the site.\n• The cost of demolishing or supporting the\nbuildings.\n• The cost of keeping to government or local-\nauthority requirements.\nYou can find the buildings events covered by this\npolicy on pages 12-14.",
                       "what_is_not_covered": "Any fees for preparing your claim.\nAny costs you agree without our permission.",
                       "cover_status": {
@@ -2642,6 +2644,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Alternative accommodation and loss of rent",
                       "what_is_covered": "Alternative accommodation and loss of rent\nIf your home is not fit to live in after loss or\ndamage from a buildings event covered by this\npolicy.\nIf a local authority or emergency service order a\ncompulsory evacuation because of risks to your\nhealth or safety from something external to your\nhome.\nWe’ll pay:\n• The reasonable cost of temporary\naccommodation for you, your family and your\npets.\n• Any ground rent you still have to pay.\n• The amount of rent you would have received\nunder a contract if your home were let,\nincluding short-term lettings.\nYou can find the buildings events covered by this\npolicy on pages 12-14.",
                       "what_is_not_covered": "Any costs you agree without our permission.\nAny costs after your home is fit to be lived in again.\nAny costs after the local authority or emergency\nservices confirm you can return to your home.\nAny costs connected with keeping livestock.",
                       "cover_status": {
@@ -2692,6 +2695,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "Emergency access",
                       "what_is_covered": "Emergency access\nIf forced entry into your property caused damage\nto your buildings or garden. We’ll only cover\nthe forced entry if it was because of a medical\nemergency or to stop damage to your property.",
                       "what_is_not_covered": null,
                       "cover_status": {
@@ -2707,6 +2711,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Frost damage to plumbing",
                       "what_is_covered": "Frost damage to plumbing\nDamage to any part of the pipes and plumbing\ninside your home because of freezing.",
                       "what_is_not_covered": "Loss or damage to plumbing that’s outside or in an\noutbuilding.\nLoss or damage that happens while your home is\nunoccupied.",
                       "cover_status": {
@@ -2722,6 +2727,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Property owner’s liability",
                       "what_is_covered": "Property owner’s liability\nAmounts you or your family legally have to pay, as\nowners of your home, for:\n• Accidental death or injury to any person.\n• Accidental loss or damage to property.\nThis also applies to any home you used to own, as\npart of the Defective Premises Act 1972 or the\nDefective Premises (Northern Ireland) Order 1975.\nThere’s no excess for claims for property owner’s\nliability.",
                       "what_is_not_covered": "If you, your family, anyone permanently living\nwith you, or your domestic staff are injured or die.\nDamage to property which you, your family,\nanyone permanently living with you, or your\ndomestic staff, own or are responsible for.\nAny liability from:\n• You or your family being treated for or passing\non any disease or virus.\n• Any profession, business, trade or employment.\n• You owning or using a motorised vehicle.\nYou can’t claim under both ‘Occupier’s liability’ and\n‘Property Owner’s liability’ cover.",
                       "cover_status": {
@@ -2772,6 +2778,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "Sale of your home",
                       "what_is_covered": "Sale of your home\nThis cover is for the buyer of your home if the\nbuildings of your home are damaged. This cover\nonly applies after you give the new buyer the\ncontract and it ends after the sale is complete.\nWe’ll only cover loss or damage caused by a\nbuildings event covered by this policy.",
                       "what_is_not_covered": null,
                       "cover_status": {
@@ -2787,6 +2794,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Trace and access",
                       "what_is_covered": "Trace and access\nThe cost of removing and replacing any part of the\nbuildings to find the source of a water or oil leak.\nThis must be from a tank, pipe, or fixed water or\nheating system.\nThis cover can only be used if:\n• The buildings are damaged due to a buildings\nevent covered by this policy.\n• Your plumbing is damaged by frost.",
                       "what_is_not_covered": "Loss or damage to your tanks, pipes, fixed water or\nheating systems themselves.",
                       "cover_status": {
@@ -2802,6 +2810,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Matching items",
                       "what_is_covered": "Matching items\nIf part of a set or suite is damaged beyond repair,\nand we can’t find a replacement, we’ll pay for\nrepairing or replacing the whole set or suite.\nWe class a set or suite to be a bathroom suite,\nfitted kitchen, floor covering, or an area of wall\ntiles.",
                       "what_is_not_covered": "Undamaged flooring in rooms that are connected\nor clearly separated.",
                       "cover_status": {
@@ -2860,6 +2869,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "1) Accidental breakage of glass and sanitary fixtures",
                       "what_is_covered": "1) Accidental breakage of glass and sanitary\nfixtures\nThe accidental breakage of:\n• Fitted glass in windows, doors, fan lights, skylights\nand solar panels.\n• Washbasins, sinks, toilets, shower trays, shower\nscreens, baths and bidets.\n• Ceramic hobs in a fitted kitchen.",
                       "what_is_not_covered": "Loss or damage to:\n• Window frames.\n• Solar-panel frames.\n• Door frames.\n• Casements.",
                       "cover_status": {
@@ -2875,6 +2885,7 @@
                       ]
                     },
                     {
+                      "row_heading": "2) Buildings accidental damage",
                       "what_is_covered": "2) Buildings accidental damage\nAccidental damage to your buildings.",
                       "what_is_not_covered": "Loss or damage caused by:\n• Water entering the home (this may\nbe covered under event 7: Storm and\nFlood, or event 10: Water leaks, for more\ninformation, please see the table on page\n12-14).\n• Electrical or mechanical breakdown or\nfailure.\n• Movement or shrinkage of the buildings.\n• The weight of the buildings compressing\nand moving the ground, within 10 years\nof them being built (this is known as\nsettlement).\nLoss or damage which is specifically not covered\nunder ‘Your buildings cover’.\nAny cost of maintenance and decorating.",
                       "cover_status": {
@@ -3041,6 +3052,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "Host cover",
                       "what_is_covered": "Host cover\nYou can rent out your home through a dedicated\nhome sharing website for up to 90 days during the\nperiod of insurance.\nYour home must be:\n• Owned or mortgaged by you.\n• Your main home where you live permanently.\nThe exclusions about paying or invited guests in this\npolicy book don’t apply if the guests have booked\nthrough a dedicated home sharing website.\nDedicated home sharing websites usually have their\nown insurance e.g. Airbnb’s AirCover. We won’t cover\nany claims for Host Cover unless you’ve tried to use\ntheir cover first.",
                       "what_is_not_covered": "You can’t use this cover if the amount of adult\npaying guests is more than double the number\nof bedrooms (for example, more than 4 adults\nin a 2 bedroom property).",
                       "cover_status": {
@@ -3274,6 +3286,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "Loss of metered water and oil",
                       "what_is_covered": "Loss of metered water and oil\nWe’ll cover the cost of lost metered water or\nheating oil if domestic pipes and equipment which\nprovide services to your home are damaged by\naccident.",
                       "what_is_not_covered": "Loss or damage while your home is unoccupied.",
                       "cover_status": {
@@ -3289,6 +3302,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Money",
                       "what_is_covered": "Money\nLoss or damage to money in your home.",
                       "what_is_not_covered": "Theft, unless force and violence was used to enter\nyour home.\nLoss, damage or theft of money in your garden or\noutbuildings.",
                       "cover_status": {
@@ -3304,6 +3318,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Credit cards",
                       "what_is_covered": "Credit cards\nThe use of a charge, credit or debit card that’s\nbeen stolen from your home and used without\nyour permission.",
                       "what_is_not_covered": "Use of the card, without your permission by:\n• You, anyone named on your policy, your family\nor anyone invited into your home.\n• Anyone else, unless force and violence was\nused to enter your home.",
                       "cover_status": {
@@ -3319,6 +3334,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Locks and keys",
                       "what_is_covered": "Locks and keys\nReplacing and installing locks and keys to the\nexternal doors of your home, or safes in your home,\nif the keys are lost or stolen.\nThis cover is given under both ‘Your buildings cover’\nand ‘your contents cover’. If both sections are in\nforce, we’ll only pay under one section. We’ll decide\nthis based on the overall nature of your claim.",
                       "what_is_not_covered": "Claims for theft or loss of keys if you have this\ncover on a separate buildings policy.",
                       "cover_status": {
@@ -3334,6 +3350,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Alternative accommodation",
                       "what_is_covered": "Alternative accommodation\nIf your home isn’t fit for you to live in due to loss or\ndamage to contents caused by any contents event\ncovered by this policy.\nIf a local authority or emergency service order a\ncompulsory evacuation because of risks to your\nhealth or safety from something external to your\nhome.\nWe’ll pay either:\n• The reasonable cost of temporary\naccommodation for you, your family and your\npets while your home is being repaired.\n• Any rent which you, as the tenant, remain\nlegally responsible for paying.\nWe’ll also pay for the temporary storage of your\ncontents if they’re at risk.",
                       "what_is_not_covered": "Any costs you agree without our permission.\nAny costs once your home is fit for you to live in\nagain.\nAny costs after the local authority or emergency\nservices confirm you can return to your home.\nCosts for any person who isn’t a member of your\nfamily for example, a lodger\nAny costs connected with keeping livestock.",
                       "cover_status": {
@@ -3384,6 +3401,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "Digital downloads",
                       "what_is_covered": "Digital downloads\nLoss or damage to legally downloaded content\nthat you’ve bought and stored on your home\nentertainment equipment.",
                       "what_is_not_covered": "The cost of remaking a film, tape or disc.\nRewriting the information on your home\nentertainment equipment.\nFiles that can be recovered from elsewhere.\nClaims where you can’t provide proof of purchase\nand confirmation from the download provider that\nthey can’t restore your lost files.",
                       "cover_status": {
@@ -3399,6 +3417,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Freezer food",
                       "what_is_covered": "Freezer food\nLoss or damage to food in a freezer in your home\nafter a sudden rise or fall in temperature or\nbecause of contamination from refrigerant or\nrefrigerant fumes.",
                       "what_is_not_covered": "Loss or damage caused:\n• By the plug being accidentally removed or the\nappliance being switched off by mistake.\n• By any planned interruption to your supply\ncarried out by an electricity provider.\n• If the refrigeration unit of the appliance is over\n10 years old.\n• While your home is unoccupied.",
                       "cover_status": {
@@ -3414,6 +3433,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Celebration cover",
                       "what_is_covered": "Celebration cover\nCover for gifts and food bought for:\n• A special event.\n• A religious festival.\n• Your wedding day.\n• The birth of your child.\nYou’ll be covered for up to the amount shown in\nyour Home Policy Schedule. This cover will last for\n61 days - the day of the celebration, and 30 days\nbefore and after that day.",
                       "what_is_not_covered": null,
                       "cover_status": {
@@ -3429,6 +3449,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Garden plants",
                       "what_is_covered": "Garden plants\nDamage to trees, shrubs, plants and lawns while\noutside on the land your home stands on.",
                       "what_is_not_covered": "Loss or damage caused by:\n• You, your family, or anyone invited into your\nhome.\n• Storm or flood.\n• Oil escaping.",
                       "cover_status": {
@@ -3444,6 +3465,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Office equipment",
                       "what_is_covered": "Office equipment\nLoss or damage to office equipment, because of\nany contents events covered by this policy. The\noffice equipment must belong to you or your\nfamily, and be used at home or in outbuildings for\noffice work.\nBy office equipment we mean:\n• Computers, keyboards and monitors.\n• Printers, fax machines and photocopiers.\n• Landline phones (not mobile phones).\n• Office furniture.",
                       "what_is_not_covered": "Loss or damage to electronic storage media, discs,\nrecords, diskettes or tapes.\nLoss or damage caused while your home is\nunoccupied.\nTheft from unlocked outbuildings.\nLoss or damage to business equipment or stock.",
                       "cover_status": {
@@ -3459,6 +3481,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Deeds and documents",
                       "what_is_covered": "Deeds and documents\nLoss or damage to title deeds and documents\nwhich prove that you or your family own your\nhome or property. The deeds and documents are\nonly covered while they’re held in a bank, building\nsociety or solicitor’s strongroom or kept in your\nhome.",
                       "what_is_not_covered": "Deeds and documents held for any professional,\nbusiness, trade or as part of your employment.\nAny loss or damage arising outside the UK, the Isle\nof Man and the Channel Islands.\nSecurities (financial certificates such as shares and\nbonds).",
                       "cover_status": {
@@ -3474,6 +3497,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Household removal and temporary storage",
                       "what_is_covered": "Household removal and temporary storage\nAccidental damage to contents while they’re\nbeing moved to your new home, by a professional\nmoving company or, to a temporary storage unit,\nfor up to seven days.",
                       "what_is_not_covered": "Loss or damage to:\n• Money, high-risk items, deeds and\ndocuments.\n• China, glass, earthenware or other fragile\nitems, unless they were packed by professional\npackers.",
                       "cover_status": {
@@ -3489,6 +3513,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Contents temporarily away from home",
                       "what_is_covered": "Contents temporarily away from home\nLoss or damage to contents, due to any contents\nevents covered by this policy, while they’re\ntemporarily away from your home. The contents\nmust be kept in a family member’s home or in a\npurpose-built storage facility, anywhere in the\nworld, for up to 90 days.",
                       "what_is_not_covered": "Loss or damage:\n• While the contents are being transported.\n• To any contents not previously kept in your\nhome.",
                       "cover_status": {
@@ -3504,6 +3529,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Items in a bank",
                       "what_is_covered": "Items in a bank\nLoss or damage to contents while they’re being\nstored in a bank or building society safe deposit.\nThis cover only applies within the UK, the Isle of\nMan and the Channel Islands.",
                       "what_is_not_covered": "Contents that are being removed from or being\ntransported to the bank or safe deposit.",
                       "cover_status": {
@@ -3519,6 +3545,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Theft from garages and outbuildings",
                       "what_is_covered": "Theft from garages and outbuildings\nTheft or attempted theft of your or your family’s\ncontents (including sporting equipment) which are\nkept locked in your outbuildings on the land your\nhome stands on.\nFor theft or attempted theft of your office\nequipment, please see the office equipment cover\nabove.",
                       "what_is_not_covered": "Money, credit cards and high-risk items.\nTheft from greenhouses.\nLoss or damage caused:\n• By you, your family, or anyone invited into\nyour home.\n• While your home is unoccupied.",
                       "cover_status": {
@@ -3534,6 +3561,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Garden Contents",
                       "what_is_covered": "Garden Contents\nLoss or damage to your or your family’s contents\nwhile they’re kept in the open on the land that\nyour home stands on.\nIf your contents are away from your home, please\nsee ‘Cover away from your home’.",
                       "what_is_not_covered": "Loss or damage caused by you, your family, or\nanyone invited into your home.\nLoss or damage while your home is unoccupied.\nHigh-risk items, bicycles, or money.\nLoss or damage caused by a storm and flood.",
                       "cover_status": {
@@ -3549,6 +3577,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Visitors’ belongings",
                       "what_is_covered": "Visitors’ belongings\nLoss or damage to contents belonging to visitors,\nwhile they’re in your home, due to any contents\nevents covered by this policy.",
                       "what_is_not_covered": "Loss or damage to money.",
                       "cover_status": {
@@ -3564,6 +3593,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Contents at university",
                       "what_is_covered": "Contents at university\nLoss or damage to your or your family’s contents\nwhile temporarily in student accommodation.\nYou or the family member must be in full-time\neducation anywhere in the world.",
                       "what_is_not_covered": "Loss or damage:\n• While the contents are being moved, carried\nor worn.\n• While the student accommodation is\nunoccupied.\n• Caused by theft or attempted theft, unless\nforce and violence was used to enter the\nstudent accommodation.",
                       "cover_status": {
@@ -3579,6 +3609,7 @@
                       ]
                     },
                     {
+                      "row_heading": "New purchases",
                       "what_is_covered": "New purchases\nNewly bought high-risk items that you haven’t yet\ntold us about, for up to 30 days from the date they\nwere bought.",
                       "what_is_not_covered": null,
                       "cover_status": {
@@ -3594,6 +3625,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Contents in a nursing home",
                       "what_is_covered": "Contents in a nursing home\nLoss or damage to your or your family’s contents\nwhile they’re temporarily removed from your\nhome. The contents must be kept in your or your\nfamily’s room in a nursing home.",
                       "what_is_not_covered": "Loss or damage while:\n• The contents are being moved, carried or\nworn.\n• Your or your family’s room is unoccupied.\nLoss or damage caused by theft or attempted theft,\nunless force and violence was used to enter the\nroom.",
                       "cover_status": {
@@ -3609,6 +3641,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Domestic staff’s belongings",
                       "what_is_covered": "Domestic staff’s belongings\nLoss or damage to contents that belong to your\ndomestic staff and are kept in your home.",
                       "what_is_not_covered": null,
                       "cover_status": {
@@ -3624,6 +3657,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Fatal injury benefit",
                       "what_is_covered": "Fatal injury benefit\nWe’ll provide cover if you or a member of your\nfamily dies as the result of an accident, explosion,\nfire or criminal assault in your home. We’ll pay the\namount shown in your Home Policy Schedule.\nThere’s no excess for claims for fatal injury\nbenefit.",
                       "what_is_not_covered": "Your or your family member’s death if it:\n• Happens more than 12 months after the\naccident, explosion, fire or assault.\n• Is a result of any incident outside the UK, the\nIsle of Man and the Channel Islands.",
                       "cover_status": {
@@ -3639,6 +3673,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Matching items",
                       "what_is_covered": "Matching items\nWe’ll pay for undamaged items in a matching set if\na part is damaged beyond repair and we can’t find\na replacement.",
                       "what_is_not_covered": "Undamaged flooring in rooms that are connected\nor clearly separated.",
                       "cover_status": {
@@ -3703,6 +3738,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "Specified items",
                       "what_is_covered": "Specified items\nLoss or damage caused to specified items by a\ncontents event covered by this policy.\nYou can see the ‘Events covered by your contents\npolicy’ on pages 19-21.",
                       "what_is_not_covered": "Accidental damage to specified items, unless\nyou have ‘Cover for Contents accidental breakage\nand accidental damage’. This will be shown in your\nHome Policy Schedule.\nAny amount over the:\n• ‘Unspecified item limit’ for any item or\ncollection not mentioned in your Home Policy\nSchedule.\n• Value shown for each item in the ‘Specified\nItems’ table in your Home Policy Schedule.",
                       "cover_status": {
@@ -3774,6 +3810,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "(1) Audio-visual equipment",
                       "what_is_covered": "(1) Audio-visual equipment\nWe’ll cover you for accidental damage to\nelectrical items, in your home.\nFor example:\n• Television sets\n• DVD players.\n• Radios.\n• Games consoles.\n• Personal computers (including accessories).",
                       "what_is_not_covered": "Loss or damage to portable items, for example:\n• Handheld games consoles.\n• Radio transmitters.\n• Hearing aids.\n• Cameras.\n• Records and discs (including CDs, DVDs and\ncomputer games).\nLoss or damage to software or downloaded\ncontent.\nLoss or damage caused by:\n• Dismantling, adjusting or repairing any\nequipment.\n• Misusing the item, or ignoring the\nmanufacturer’s instructions.\nAccidental damage to mobile phones, laptops\nor tablets aren’t covered under this section. You\nmay be covered for these items under a different\nsection if ‘Accidental damage Contents’ is shown\non your Home Policy Schedule.",
                       "cover_status": {
@@ -3789,6 +3826,7 @@
                       ]
                     },
                     {
+                      "row_heading": "(2) Mirrors or glass",
                       "what_is_covered": "(2) Mirrors or glass\nAccidental breakage of mirrors or glass, in your\nhome. This includes;\n• Pictures and ornaments.\n• Plate-glass tops to furniture.\n• Fixed glass in furniture.\n• Ceramic hobs on freestanding cookers.",
                       "what_is_not_covered": "Loss or damage to fixtures and fittings. These may\nbe covered under ‘Your buildings cover’.",
                       "cover_status": {
@@ -3804,6 +3842,7 @@
                       ]
                     },
                     {
+                      "row_heading": "(3) Contents",
                       "what_is_covered": "(3) Contents\nAccidental damage or loss of contents in your\nhome.",
                       "what_is_not_covered": "Loss or damage to food, drink, plants, corneal or\ncontact lenses, money, securities, bicycles and\nclothing.\nLoss or damage caused to the inside of watches\nand clocks.",
                       "cover_status": {
@@ -3970,6 +4009,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "Host cover",
                       "what_is_covered": "Host cover\nYou can rent out your home through a dedicated\nhome sharing website for up to 90 days during the\nperiod of insurance.\nYour home must be.\n• Owned or mortgaged by you.\n• Your main home where you live permanently.\nThe exclusions about paying or invited guests in this\npolicy book don’t apply if the guests have booked\nthrough a dedicated home sharing website.\nDedicated home sharing websites usually have their\nown insurance e.g. Airbnb’s AirCover. We won’t cover\nany claims for Host Cover unless you’ve tried to use\ntheir cover first",
                       "what_is_not_covered": "You can’t use this cover if the amount of adult\npaying guests is more than double the number\nof bedrooms (for example, more than 4 adults\nin a 2 bedroom property).\nYour high-risk items won’t be fully covered\nunless they’re kept in either a:\n• Locked securely fixed safe.\n• Locked room.\n• Locked cupboard.\nWe’ll pay up to £5,000 for your high-risk\nitems, or the amount shown on your Home\nPolicy Schedule, whichever is less. This is for\nloss or damage caused by Theft, Vandalism or\nMalicious Acts, or Accidental Damage.",
                       "cover_status": {
@@ -4027,6 +4067,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "(1) Occupier’s liability",
                       "what_is_covered": "(1) Occupier’s liability\nYour or your family’s liability to the public as\noccupier (but not owner) of your home.",
                       "what_is_not_covered": "Any liability for death or physical injury to you,\nyour family or anyone permanently living with\nyou, including your domestic staff, unless covered\nunder ‘Employer’s liability’.\nYou can’t claim under both ‘Occupier’s liability’\nand ‘Property Owner’s liability’ cover. For more\ninformation about Property Owner’s liability,\nplease see page 16.\nAny land or building you or your family own or live\nin, other than your home, unless covered under\n‘Tenant’s liability’ and ‘Liability as occupier of\ntemporary accommodation’.\nAny liability from you or your family owning or\nusing a:\n• Motorised vehicle.\n• Caravan that’s being towed.\n• Watercraft, hovercraft or aircraft (including\ndrones).\nAny liability from you or your family’s profession,\nbusiness, trade or employment.\nAny liability from you or your family being treated\nfor or passing on any disease or virus.\nAny liability from any living creature (other than\ncats and dogs you or your family own or are legally\nresponsible for).\nAny dog dangerously out of control, any breed\ndefined as dangerous or any dog crossed with\nthese breeds. As per;\n• The Dangerous Dogs Act 1991.\n• The Dangerous Dogs (Northern Ireland) Order\n1991.\n• Any other law.\nAny liability resulting from the use of firearms or\nany other weapon.\nAny damages, legal costs or other costs awarded by\na court or other body with no authority in the UK.\nAny liability from The Party Wall etc Act 1996.\nAny liability from you or your family taking part\nin any sporting activity including racing, hunting\nand polo.",
                       "cover_status": {
@@ -4044,6 +4085,7 @@
                       ]
                     },
                     {
+                      "row_heading": "(2) Personal liability",
                       "what_is_covered": "(2) Personal liability\nYour or your family’s liability after an accident\nthat caused:\n• Death, illness or physical injury to a person.\n• Damage to someone else’s property. The\nproperty can’t belong to (or be in the\nresponsibility of) you, your family, your\nhousehold staff or anyone else permanently\nliving with you.\nThis section only covers accidents that happen:\n• During the period of insurance.\n• In the UK, the Isle of Man and the Channel\nIslands.",
                       "what_is_not_covered": "Any liability for death or physical injury to you,\nyour family or anyone permanently living with\nyou, including your domestic staff, unless covered\nunder ‘Employer’s liability’.\nYou can’t claim under both ‘Occupier’s liability’\nand ‘Property Owner’s liability’ cover. For more\ninformation about Property Owner’s liability,\nplease see page 16.\nAny land or building you or your family own or live\nin, other than your home, unless covered under\n‘Tenant’s liability’ and ‘Liability as occupier of\ntemporary accommodation’.\nAny liability from you or your family owning or\nusing a:\n• Motorised vehicle.\n• Caravan that’s being towed.\n• Watercraft, hovercraft or aircraft (including\ndrones).\nAny liability from you or your family’s profession,\nbusiness, trade or employment.\nAny liability from you or your family being treated\nfor or passing on any disease or virus.\nAny liability from any living creature (other than\ncats and dogs you or your family own or are legally\nresponsible for).\nAny dog dangerously out of control, any breed\ndefined as dangerous or any dog crossed with\nthese breeds. As per;\n• The Dangerous Dogs Act 1991.\n• The Dangerous Dogs (Northern Ireland) Order\n1991.\n• Any other law.\nAny liability resulting from the use of firearms or\nany other weapon.\nAny damages, legal costs or other costs awarded by\na court or other body with no authority in the UK.\nAny liability from The Party Wall etc Act 1996.\nAny liability from you or your family taking part\nin any sporting activity including racing, hunting\nand polo.",
                       "cover_status": {
@@ -4061,6 +4103,7 @@
                       ]
                     },
                     {
+                      "row_heading": "(3) Tenant’s liability",
                       "what_is_covered": "(3) Tenant’s liability\nYour or your family’s liability for damage to\nyour landlord’s fixtures and fittings, caused by a\nbuildings event covered by this policy.\nYou can find the buildings events covered by this\npolicy on pages 12-14.\nAccidental breakage of glass, sanitary fixtures or\nbuilt-in ceramic hobs in a fitted kitchen.\nAccidental damage to mirrors and glass.",
                       "what_is_not_covered": "Any liability for death or physical injury to you,\nyour family or anyone permanently living with\nyou, including your domestic staff, unless covered\nunder ‘Employer’s liability’.\nYou can’t claim under both ‘Occupier’s liability’\nand ‘Property Owner’s liability’ cover. For more\ninformation about Property Owner’s liability,\nplease see page 16.\nAny land or building you or your family own or live\nin, other than your home, unless covered under\n‘Tenant’s liability’ and ‘Liability as occupier of\ntemporary accommodation’.\nAny liability from you or your family owning or\nusing a:\n• Motorised vehicle.\n• Caravan that’s being towed.\n• Watercraft, hovercraft or aircraft (including\ndrones).\nAny liability from you or your family’s profession,\nbusiness, trade or employment.\nAny liability from you or your family being treated\nfor or passing on any disease or virus.\nAny liability from any living creature (other than\ncats and dogs you or your family own or are legally\nresponsible for).\nAny dog dangerously out of control, any breed\ndefined as dangerous or any dog crossed with\nthese breeds. As per;\n• The Dangerous Dogs Act 1991.\n• The Dangerous Dogs (Northern Ireland) Order\n1991.\n• Any other law.\nAny liability resulting from the use of firearms or\nany other weapon.\nAny damages, legal costs or other costs awarded by\na court or other body with no authority in the UK.\nAny liability from The Party Wall etc Act 1996.\nAny liability from you or your family taking part\nin any sporting activity including racing, hunting\nand polo.",
                       "cover_status": {
@@ -4078,6 +4121,7 @@
                       ]
                     },
                     {
+                      "row_heading": "(4) Employer’s liability",
                       "what_is_covered": "(4) Employer’s liability\nYour or your family’s liability because of\naccidental injury or illness of your domestic staff.\nThe staff member needs to have an employment\ncontract and be employed by you or your family.\nThe injury or illness needs to have happened:\n• While they were carrying out work they’re\nemployed to do.\n• During the period of insurance.",
                       "what_is_not_covered": null,
                       "cover_status": {
@@ -4093,6 +4137,7 @@
                       ]
                     },
                     {
+                      "row_heading": "(5) Liability as occupier of temporary accommodation",
                       "what_is_covered": "(5) Liability as occupier of temporary\naccommodation\nYour or your family’s liability due to an accident\nthat caused:\n• Death, illness or physical injury to a person.\n• Damage to someone else’s property. The\nproperty can’t belong to (or be in the\nresponsibility of) you, your family, your\ndomestic staff or anyone permanently living\nwith you.\nThis section only covers accidents that happen\nwhile you’re living in temporary accommodation,\nthe accommodation must be agreed by us.",
                       "what_is_not_covered": null,
                       "cover_status": {
@@ -4163,6 +4208,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "1) Personal possessions",
                       "what_is_covered": "1) Personal possessions\nPersonal possessions are covered up to the\namount shown under ‘Personal possessions limit’\non your Home Policy Schedule.",
                       "what_is_not_covered": "Loss or damage to:\n• Any personal possessions and high-risk items\nlost or damaged in your home or on the land\nthat your home stands on.\n• High-risk items worth more than the\n‘Unspecified item limit’.\n• Plants or any living creature.\n• Corneal or contact lenses.\n• Lottery or raffle tickets, credit cards, securities\nor documents.\n• Domestic appliances.\n• Business equipment.\n• Remote-controlled models or sporting\nequipment while being used.\n• The inside of watches and clocks.\nLoss or damage to property which has been\noutside the UK, the Isle of Man and the Channel\nIslands for more than 90 days in a row. This doesn’t\napply to property taken on an ‘operational tour’. (A\nmilitary tour of duty for which an allowance is paid\nto you).\nLoss or damage to items that aren’t with you or\nyour family at the time of the loss or damage. For\nexample, items that aren’t being worn or carried,\nor aren’t within reach of, you or your family.\nLoss or damage to motorised vehicles, bicycles\nand ride-on lawnmowers. (Bicycles are covered\nunder ‘Your bicycle cover’)\nLoss or damage caused by any living creature,\nincluding pets.\nLoss or damage that happens at a storage facility\nor when you’re moving home.\nTheft or attempted theft from a motor vehicle\nunless:\n• All windows, doors and the boot were closed\nand locked.\n• The items were hidden from view in the boot,\na closed glove compartment, or a concealed\nluggage compartment.\nWe won’t pay more than £1,000 for any theft from\na motor vehicle.\nLoss or damage caused by theft or attempted\ntheft, unless you have the items in your\npossession, or have left them in a secure place.\nBy ‘secure place’ we mean that your belongings are\nlocked in your room or other security facility such\nas a safe, or a secure room.",
                       "cover_status": {
@@ -4180,6 +4226,7 @@
                       ]
                     },
                     {
+                      "row_heading": "2) Specified items",
                       "what_is_covered": "2) Specified items\nSpecified items listed in the ‘Specified Items’ table\nare covered away from home, up to the individual\namount shown for each item.\nThe ‘specified items’ table can be found on your\nHome Policy Schedule. ‘Cover away from your\nhome’ must be shown as ‘yes’ in the table, for\nitems to be covered away from your home.",
                       "what_is_not_covered": "Loss or damage to:\n• Any personal possessions and high-risk items\nlost or damaged in your home or on the land\nthat your home stands on.\n• High-risk items worth more than the\n‘Unspecified item limit’.\n• Plants or any living creature.\n• Corneal or contact lenses.\n• Lottery or raffle tickets, credit cards, securities\nor documents.\n• Domestic appliances.\n• Business equipment.\n• Remote-controlled models or sporting\nequipment while being used.\n• The inside of watches and clocks.\nLoss or damage to property which has been\noutside the UK, the Isle of Man and the Channel\nIslands for more than 90 days in a row. This doesn’t\napply to property taken on an ‘operational tour’. (A\nmilitary tour of duty for which an allowance is paid\nto you).\nLoss or damage to items that aren’t with you or\nyour family at the time of the loss or damage. For\nexample, items that aren’t being worn or carried,\nor aren’t within reach of, you or your family.\nLoss or damage to motorised vehicles, bicycles\nand ride-on lawnmowers. (Bicycles are covered\nunder ‘Your bicycle cover’)\nLoss or damage caused by any living creature,\nincluding pets.\nLoss or damage that happens at a storage facility\nor when you’re moving home.\nTheft or attempted theft from a motor vehicle\nunless:\n• All windows, doors and the boot were closed\nand locked.\n• The items were hidden from view in the boot,\na closed glove compartment, or a concealed\nluggage compartment.\nWe won’t pay more than £1,000 for any theft from\na motor vehicle.\nLoss or damage caused by theft or attempted\ntheft, unless you have the items in your\npossession, or have left them in a secure place.\nBy ‘secure place’ we mean that your belongings are\nlocked in your room or other security facility such\nas a safe, or a secure room.",
                       "cover_status": {
@@ -4252,6 +4299,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "1) Unspecified bicycles",
                       "what_is_covered": "1) Unspecified bicycles\nAny bicycle, anywhere in the world, up to the\n‘Unspecified cycle limit’.\nWe’ll also pay up to 10% of the unspecified bicycle\nlimit for accessories attached to your bicycle.\nYou can find your Unspecified bicycle limit in the\n‘Bicycles’ table in your Home Policy Schedule.",
                       "what_is_not_covered": "Loss or damage:\n• To specified bicycles worth more than the\nvalue shown in the ‘Bicycles’ table in your\nHome Policy Schedule.\n• To tyres or accessories, unless the bicycle is\nstolen or damaged at the same time.\n• While the bicycle is being used for racing,\npacemaking, or speed or time trials.\n• To motorised vehicles.\n• To business equipment.\nTheft of bicycles when left unattended, unless:\n• When left outside or kept in a communal area,\nthey’re locked to an immovable object using a\nsecurity device.\n• They’re kept in a locked and secure building\nthat only you and your family have access to.\n• They’re kept inside a locked vehicle, or locked\nto one using a cycle rack.",
                       "cover_status": {
@@ -4267,6 +4315,7 @@
                       ]
                     },
                     {
+                      "row_heading": "2) Specified bicycles",
                       "what_is_covered": "2) Specified bicycles\nAny bicycle shown in the ‘Bicycles’ table in your\nHome Policy Schedule, while they’re either:\n• In your home.\n• On the land your home stands on.\n• Anywhere in the world. ‘Cover away from your\nhome’ must show as ‘Yes’ in the ‘Bicycles’ table.\nWe’ll also pay up to 10% of the specified bicycle\nvalue for accessories attached to your bicycle.\nYou can find your specified bicycle limit in the\n‘Bicycles’ table in your Home Policy Schedule.",
                       "what_is_not_covered": "Loss or damage:\n• To specified bicycles worth more than the\nvalue shown in the ‘Bicycles’ table in your\nHome Policy Schedule.\n• To tyres or accessories, unless the bicycle is\nstolen or damaged at the same time.\n• While the bicycle is being used for racing,\npacemaking, or speed or time trials.\n• To motorised vehicles.\n• To business equipment.\nTheft of bicycles when left unattended, unless:\n• When left outside or kept in a communal area,\nthey’re locked to an immovable object using a\nsecurity device.\n• They’re kept in a locked and secure building\nthat only you and your family have access to.\n• They’re kept inside a locked vehicle, or locked\nto one using a cycle rack.",
                       "cover_status": {
@@ -6988,6 +7037,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "Boiler and heating system",
                       "what_is_covered": "Boiler and heating system\nWe’ll cover your boiler, heating system or hot-\nwater system if it fails or breaks down because of:\n• An emergency, leaving you without heating or\nhot water.\n• A loss of water pressure within a boiler due to\na fault.\n• A water leak from the boiler or\nheating system.\nAir or ground source heat pumps are covered on a\nreimbursement basis only. This means you arrange\nand pay for the cost of repairs and then send us\nthe receipts to claim back, up to the policy limit.",
                       "what_is_not_covered": "Plumbing problems which haven’t caused your\nboiler to break down and which relate to leaking\npipes, blocked drains or leaking radiators. (This\nmay be covered under ‘Plumbing’.)\nWhere a loss of gas supply has caused your boiler\nto stop working. (This may be covered under\n‘Internal gas pipe’.)\nWhere a loss of electricity supply has caused your\nboiler to stop working. (This may be covered under\n‘Electrics’.)\nCommercial boilers or heating systems with an\noutput of over 70kW/hr.\nAny boiler or heating system that’s shared with\nneighbouring homes.\nAny boiler or heating system outside your\nhome, unless it is the main source of heating for\nyour home.\nReplacing the following:\n• Radiators or their valves.\n• Inhibitors.\n• Any equipment added to your heating system\n(For example, magnetic filters).\nAdjusting or replacing the timing and temperature\ncontrols if it’s still safe to use. This includes\nrelighting the pilot light.\nFaults where the boiler still provides hot water and\nheating.\nRepairs that need a power flush of your boiler or\nheating system.\nAny fault that is not clear to our contractor or\nyour contractor.\nRepairing or replacing any of the following:\n• Underfloor heating.\n• Warm air units.\n• Gas appliances such as cookers.\nAny fault arising due to sludge, scale, rust or debris\nin the heating system, or damage caused by the\nchemical composition of the water (for example, if\nyou live in a hard water area).\nRepairing or replacing convector heaters, water\ntanks or hot-water cylinders.\nAny breakdown that our contractor deems that\nnegligence or poor maintenance has caused.",
                       "cover_status": {
@@ -7004,6 +7054,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Temporary heating",
                       "what_is_covered": "Temporary heating\nWe’ll pay you up to £50 towards the cost of\nheaters if you have no heating and the engineer\nis waiting for parts. This also applies if we can’t\nrepair the boiler or heating system. These heaters\nwould be yours to keep.",
                       "what_is_not_covered": null,
                       "cover_status": {
@@ -7018,6 +7069,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Alternative accommodation",
                       "what_is_covered": "Alternative accommodation\nWe’ll pay towards the cost of alternative\naccommodation if you can’t stay in your home\novernight due to an emergency. This covers you,\neveryone who permanently lives in your home and\nyour pets. This cover includes transport to the\nalternative accommodation and then home again.\nWe’ll settle the claim on a reimbursement basis.\nWe’ll pay you up to £500 under Home Emergency\ncover, and up to £1,000 under Home Emergency\nExtra cover. The maximum we’ll pay per night is\n£250.",
                       "what_is_not_covered": null,
                       "cover_status": {
@@ -7032,6 +7084,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Plumbing",
                       "what_is_covered": "Plumbing\nWe’ll cover an emergency relating to water pipes\ninside your home.\nWe’ll cover draining and isolating leaking water\ntanks.\nWe’ll cover toilet flushing mechanisms.\nWe’ll also cover leaks from:\n• Your toilet.\n• Pipes leading to and from the shower or bath.\n• The internal section of overflow pipes.\n• Water pipes that are part of the\nheating system.",
                       "what_is_not_covered": "Repairing or replacing all pipes outside the home.\nDripping taps or nozzles.\nAny part of the plumbing or drainage system\nif the water is going down a drain without\ncausing damage.\nRepairing or replacing any of the following:\n• Hot-water cylinders.\n• Water storage tanks or immersion tanks.\n• Radiators.\n• Sanitary fixtures, including sinks and basins.\n• External overflows.\n• Burst, split or leaking flexible hoses.\n• Lead pipes.\nDomestic appliances such as dishwashers and\nwashing machines.\nSeptic tanks, swimming pools and hot tubs.\nDealing with temporarily frozen pipes.",
                       "cover_status": {
@@ -7082,6 +7135,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "Drainage",
                       "what_is_covered": "Drainage\nWe’ll cover an emergency relating to\nblocked waste pipes or drains that are your\nsole responsibility.\nBelow is a list of emergencies you are covered for.\n• Blocked sinks.\n• Blocked or leaking waste pipes.\n• Blocked rainwater drains.\n• Blocked bath, toilet or external drainage.\n• Blocked or leaking soil vent pipes (pipes\nthat carry waste water to the underground\ndrainage system).",
                       "what_is_not_covered": "Repairs to drains that are the responsibility of the\nlocal water authority (even if they are within the\nboundaries of your home).\nShared soil pipes (even if they are within the\nboundaries of your home).\nRepairing or replacing:\n• Manholes, soakaways, cesspits, guttering and\ndownpipes.\n• Treatment plants and their outflow pipes.\n• Any part of the drain which doesn’t totally\nblock the drain.\nClearing or emptying septic tanks. Regular\ncleaning or descaling of your drains.\nRepairing or unblocking drains which are used for\ncommercial purposes.\nMaking access to drain systems, such as manhole\ncovers, that have been built over.\nClearing drains due to installation faults or misuse\nof drains. This includes flushing baby wipes down\nthe toilet or putting cooking oil down the drain.",
                       "cover_status": {
@@ -7096,6 +7150,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Windows, doors and locks",
                       "what_is_covered": "Windows, doors and locks\nWe’ll cover an emergency relating to damaged\nexternal windows and doors if your home is not\nsafe or secure. We’ll provide a temporary repair\nusing boarding or a similar material to solve the\nimmediate security risk.\nWe’ll also cover gaining access to your home\nfollowing damage to the lock of the external doors.\nWe’ll cover damage to locks on external windows\nand doors if your home is not safe or secure.",
                       "what_is_not_covered": "Double glazing where one pane is broken but the\nother is intact and the home is therefore secure.\nInternal doors and windows that do not affect the\nsecurity and safety of the property.\nReplacing lost or stolen keys.",
                       "cover_status": {
@@ -7110,6 +7165,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Electrics",
                       "what_is_covered": "Electrics\nWe’ll cover an emergency relating to the failure of\nthe electricity supply in your home.",
                       "what_is_not_covered": "Repairing or replacing electrical appliances.\nElectrical wiring and electrical infrastructure, such\nas mains cables, outside the home.\nRepairing or replacing burglar-alarm, fire-alarm or\nCCTV systems.\nSwimming pools and their plumbing or filtration\nsystems.\nElectric showers.\nReplacing light bulbs or fuses in plugs.\nIntermittent loss of electricity.",
                       "cover_status": {
@@ -7124,6 +7180,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Boiler and heating system – beyond economic repair",
                       "what_is_covered": "Boiler and heating system – beyond economic\nrepair\nWe’ll pay you £250 towards the cost of a\nnew boiler if your heating system is beyond\neconomic repair.\nBeyond economic repair means that the cost\nof repairing it would be more than the cost of\nreplacing it.",
                       "what_is_not_covered": null,
                       "cover_status": {
@@ -7138,6 +7195,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Roofing",
                       "what_is_covered": "Roofing\nWe’ll cover an emergency relating to the roof due\nto storm or bad weather.\nWe’ll pay for a temporary repair that’s necessary\nto prevent further damage.",
                       "what_is_not_covered": "Repositioning tiles (unless this is the only way to\ncontain the emergency).\nDamage due to poor roof maintenance or wear\nand tear.\nDamage caused to property or contents as a result\nof water entering your home.\nDamage to chimneys and guttering.",
                       "cover_status": {
@@ -7152,6 +7210,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Pests",
                       "what_is_covered": "Pests\nWe’ll cover an emergency relating to pest\ninfestations. If there’s evidence of an infestation\nin your home, we’ll provide cover for getting rid of\nthe following:\n• Rats and mice.\n• Wasps and hornets.\n• Grey squirrels.\n• Cockroaches.",
                       "what_is_not_covered": "Pests found outside your home.\nGetting rid of any pests not listed under this cover.",
                       "cover_status": {
@@ -7166,6 +7225,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Internal gas pipes",
                       "what_is_covered": "Internal gas pipes\nWe’ll cover an emergency relating to a leak from\nthe gas supply pipe in your home, between the\nmeter and a gas appliance.\nWhen the National Gas Emergency Service have\nfound and isolated the source of a leak, we’ll repair\nor replace the section of pipe.\nIf you think you have a gas leak, you should\nimmediately call the National Gas Emergency\nService on 0800 111 999.",
                       "what_is_not_covered": "Restoring the gas supply after a temporary repair.\nYour supplier will be able to arrange this for you.\nCorrosion of the gas supply pipe due to wear and\ntear or methods used to conceal the pipework.\nFor example, from being under a concrete floor\nwithout adequate protection.\nRepairing or replacing gas appliances.",
                       "cover_status": {
@@ -8998,6 +9058,7 @@
                   ],
                   "rows": [
                     {
+                      "row_heading": "Consumer disputes",
                       "what_is_covered": "Consumer disputes\nA contractual dispute arising from an agreement or an\nalleged agreement which you have entered into in a\npersonal capacity for:\na. Buying or hiring in goods or services\nb. Selling goods\nc. Buying or selling your principal home.\nd. Renting your principal home as a tenant.\nPlease note that the amount in dispute must be more than\n£100 (including VAT).",
                       "what_is_not_covered": "A claim relating to the following:\na. dispute relating to an insurance policy, other than when\nyour insurer refuses your claim\nb. a dispute arising from any loan, mortgage, pension,\ninvestment or borrowing\nc. a dispute over the sale, purchase, terms of a lease, licence,\nor tenancy of land or buildings (other than disputes arising\nfrom you buying or selling your principal home or you\nrenting your principal home as a tenant). However, we’ll\ncover a dispute with a professional adviser in connection\nwith these matters\nd. a motor vehicle owned by or hired or leased to you (please\nrefer to insured incident Motor contract disputes).",
                       "source_pdf_pages": [
@@ -9008,6 +9069,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Motor contract disputes",
                       "what_is_covered": "Motor contract disputes\nA contractual dispute arising from an agreement or an\nalleged agreement which you have entered into in a\npersonal capacity for:\na. buying, selling, hiring or insurance of a motor vehicle or\nits spare parts or accessories\nb. service, repair or testing of a motor vehicle.\nPlease note that the amount in dispute must be more than\n£100 (including VAT).",
                       "what_is_not_covered": "A dispute relating to an insurance policy, other than when your\ninsurer refuses your claim.",
                       "source_pdf_pages": [
@@ -9018,6 +9080,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Personal injury",
                       "what_is_covered": "Personal injury\nA specific or sudden accident that causes your death or\nbodily injury to you.\nPlease note that we’ll not defend your legal rights, but\nwe’ll cover defending a counter-claim.",
                       "what_is_not_covered": "A claim relating to the following:\na. illness or bodily injury that happens gradually\nb. psychological injury or mental illness unless the condition\nfollows a specific or sudden accident that has caused\nphysical bodily injury to you\nc. clinical negligence (please refer to insured incident Clinical\nnegligence).",
                       "source_pdf_pages": [
@@ -9028,6 +9091,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Clinical negligence",
                       "what_is_covered": "Clinical negligence\nAn identified negligent act of surgery or identified\nnegligent clinical or medical procedure, which causes\ndeath or bodily injury to you.",
                       "what_is_not_covered": "A claim relating to the following:\na. the failure or alleged failure to correctly diagnose\nyour condition\nb. psychological injury or mental illness that is not associated\nwith you having suffered physical bodily injury",
                       "source_pdf_pages": [
@@ -9038,6 +9102,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Employment disputes",
                       "what_is_covered": "Employment disputes\nA dispute relating to your contract of employment.\nPlease note that a dispute is deemed to have occurred once\nall employer’s disciplinary hearings and internal grievance\nprocedures have been completed.",
                       "what_is_not_covered": "A claim relating to the following:\na. any claim relating solely to personal injury (please refer to\ninsured incident Personal injury)\nb. a settlement agreement while you are still employed.",
                       "source_pdf_pages": [
@@ -9048,6 +9113,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Property disputes",
                       "what_is_covered": "Property disputes\nA civil dispute relating to your principal home or personal\npossessions that you own or are responsible for, following:\na. an event which causes physical damage to such\nproperty but the amount in dispute must be more than\n£100.\nPlease note we’ll not defend your legal rights but we’ll cover\ndefending a counter-claim.\nb. a legal nuisance\nc. a trespass\nPlease note you must have, or there must be reasonable\nprospects of establishing you have, the legal ownership or\nright to the land or personal possessions that are the subject\nof the dispute.",
                       "what_is_not_covered": "A claim relating to the following:\na. a contract you have entered into\nb. any building or land except your main home\nc. someone legally taking your property from you, whether\nyou are offered money or not, or restrictions or controls\nplaced on your property by any government or public or\nlocal authority\nd. work done by, or on behalf of, any government or public\nor local authority unless the claim is for accidental\nphysical damage\ne. adverse possession (meaning the occupation of any building\nor land either by someone trying to take possession from\nyou or of which you are trying to take possession)",
                       "source_pdf_pages": [
@@ -9058,6 +9124,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Tax",
                       "what_is_covered": "Tax\nA comprehensive examination by HM Revenue & Customs\nthat considers all areas of your self assessment tax return,\nbut not enquiries limited to one or more specific area.\nProvided that:\nYou have taken reasonable care to ensure that all returns\nare complete and correct and are submitted within the\nstatutory time limits allowed.",
                       "what_is_not_covered": "A claim relating to the following:\na. your business activities\nb. any investigation, enquiry, or prosecution relating to\nsuspected or alleged dishonesty or suspected or alleged\ncriminal offences.",
                       "source_pdf_pages": [
@@ -9068,6 +9135,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Probate",
                       "what_is_covered": "Probate\nCosts and expenses to pursue your legal rights in respect\nof a probate dispute involving the will of your parents,\ngrandparents, children, step-children or adopted children\nwhere you are contesting a will as a named beneficiary,\nor as a member of a class of beneficiaries with an\nimmediate interest.",
                       "what_is_not_covered": "Claims in respect of any dispute where a will has not been\npreviously made or concluded or can’t be traced (Intestate).",
                       "source_pdf_pages": [
@@ -9078,6 +9146,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Legal defence",
                       "what_is_covered": "Legal defence\nCosts and expenses to defend your legal rights if:\n1. An event arising from your work as a worker or an\nemployee leads to:\na. You being contacted by the police, or others with\ncriminal investigatory powers, where it is alleged you\nhave, or may have, committed a criminal offence\nb. You being prosecuted in a court of criminal jurisdiction\nc. Civil action being taken against you under:\n• Discrimination legislation\n• Data protection legislation\n2. A formal investigation or disciplinary hearing is brought\nagainst you by a professional or regulatory body you by\na professional or regulatory body",
                       "what_is_not_covered": "A claim relating to the following:\na. Any claim involving assault, violence or sexual misconduct.\nb. Any claim involving alcohol or illegal drugs\nc. Any claim resulting from hacking (unauthorised access) or\nother type of cyber attack affecting stored personal data.\nd. Any criminal investigation or enquiry by, with or on behalf of\nHM Revenue & Customs.\ne. Any claim relating to you driving a motor vehicle",
                       "source_pdf_pages": [
@@ -9088,6 +9157,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Personal identity fraud",
                       "what_is_covered": "Personal identity fraud\n1. Following a call to the Personal Cyber and Identity\nTheft Helpline we’ll assign a personal caseworker who\nwill provide phone advice and a personal action plan to\nhelp regain your identity.\n2. If you become a victim of identity theft, we’ll pay the\ncosts you incur for phone calls, faxes or postage to\ncommunicate with the police, credit agencies, financial\nservice providers, other creditors or debt-collection\nagencies. We’ll also pay the cost of replacement\ndocuments to help restore your identity and\ncredit status.\n3. Following your identity theft we’ll pay:\na. costs and expenses to reinstate your identity including\ncosts for the signing of statutory declarations or\nsimilar documents\nb. costs and expenses to defend your legal rights in\na dispute with debt collectors or any party taking\nlegal action against you arising from or relating to\nidentity theft\nc. loan-rejection fees and any re-application\nadministration fee for a loan when your original\napplication has been rejected.\nPlease note that:\ni. you must notify your bank or building society as soon\nas possible\nii. you must tell us if you have previously suffered identity\ntheft, and\niii. you must take all reasonable action to prevent continued\nunauthorised use of your identity.",
                       "what_is_not_covered": "A claim relating to the following:\na. fraud committed by anyone entitled to make a claim under\nthis section\nb. losses arising from your business activities.",
                       "source_pdf_pages": [
@@ -9098,6 +9168,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Jury service",
                       "what_is_covered": "Jury service\nYour absence from work:\na. to attend any court or tribunal at the request of the\nappointed representative\nb. to perform jury service\nc. to carry out activities specified in your identity\ntheft action plan under insured incident Personal\nidentity fraud.\nThe maximum we’ll pay is your net salary or wages for the\ntime that you are absent from work less any amount the\ncourt gives you.",
                       "what_is_not_covered": "Any claim if you are unable to prove your loss",
                       "source_pdf_pages": [
@@ -9108,6 +9179,7 @@
                       ]
                     },
                     {
+                      "row_heading": "Vehicle cloning",
                       "what_is_covered": "Vehicle cloning\nIf you are concerned that you may have become a victim\nof vehicle cloning, please call the Legal Advice helpline on\n0117 927 1852 who can provide telephone advice,\nincluding any action you may need to take:\na. We’ll pay the costs that you incur for phone calls, faxes\nor postage to communicate with the police, the Driver\nand Vehicle Licensing Agency (DVLA), credit agencies,\nfinancial service providers including your motor insurer\nand other creditors or debt-collection agencies.\nb. Costs and expenses to defend your legal rights arising\nfrom the vehicle cloning of your vehicle.\nPlease note that:\nYou must notify us, the police, the DVLA, and any party\nwith an interest in your motor vehicle such as the motor\ninsurer, or leasing or finance company as soon as possible\nonce you become aware that such illegal use has occurred.",
                       "what_is_not_covered": "a. Illegal use of the motor vehicle’s registration details by\nanyone entitled to make a claim under this section.\nb. Losses arising from your business.",
                       "source_pdf_pages": [

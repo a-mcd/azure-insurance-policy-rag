@@ -3,8 +3,9 @@
 
 The input must use the shared ``documents -> sections -> subsections -> content``
 schema produced by the IP and HH PDF extractors. Chunk boundaries occur at a
-section, subsection, or level-three heading. Tables are isolated and, when
-necessary, split only between complete rows.
+section, subsection, or level-three heading. Tables are isolated and normally
+emitted as one complete table row per chunk. Small policy-comparison tables
+that need their full context are retained as complete tables.
 """
 
 from __future__ import annotations
@@ -25,6 +26,21 @@ except ImportError:  # pragma: no cover - fallback is exercised only without dep
 
 DEFAULT_MAX_TOKENS = 500
 
+COVER_STATUS_LABELS = {
+    "hec": "Home Emergency cover (HEC)",
+    "hex": "Home Emergency Extra cover (HEX)",
+}
+
+HOME_EMERGENCY_DEFINITION_TERMS = {
+    "associated home cover",
+    "emergency",
+    "heating system",
+    "home",
+    "our contractor",
+    "period of insurance",
+    "reimbursement basis",
+}
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -37,8 +53,49 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def normalise_soft_line_wraps(value: Any) -> str:
+    """Join PDF line wraps while preserving paragraphs and list boundaries."""
+    text = str(value or "").replace("\r\n", "\n").replace("\r", "\n")
+    output: list[str] = []
+    current = ""
+
+    def flush_line() -> None:
+        nonlocal current
+        if current:
+            output.append(current)
+            current = ""
+
+    for raw_line in text.split("\n"):
+        line = re.sub(r"[ \t]+", " ", raw_line).strip()
+        if not line:
+            flush_line()
+            if output and output[-1] != "":
+                output.append("")
+            continue
+
+        starts_list_item = bool(
+            re.match(r"^(?:[•*-]|\d+[.)]|[A-Za-z][.)])\s+", line)
+        )
+        if starts_list_item:
+            flush_line()
+            current = line
+        elif current:
+            # PDF extraction can leave a hyphen at the end of a visual line,
+            # for example ``hot-\nwater``. Preserve the hyphen but do not add
+            # an artificial space after it.
+            separator = "" if current.endswith("-") else " "
+            current = f"{current}{separator}{line}"
+        else:
+            current = line
+
+    flush_line()
+    while output and output[-1] == "":
+        output.pop()
+    return "\n".join(output).strip()
+
+
 def clean_text(value: Any) -> str:
-    return re.sub(r"[ \t]+\n", "\n", str(value or "")).strip()
+    return normalise_soft_line_wraps(value)
 
 
 def unique(values: Iterable[Any]) -> list[Any]:
@@ -51,6 +108,11 @@ def unique(values: Iterable[Any]) -> list[Any]:
 
 def humanise(value: str) -> str:
     return value.replace("_", " ").strip().capitalize()
+
+
+def display_label(value: Any) -> str:
+    key = str(value).strip().casefold()
+    return COVER_STATUS_LABELS.get(key, humanise(str(value)))
 
 
 def render_item(item: dict[str, Any]) -> str:
@@ -72,10 +134,10 @@ def table_header_lines(table: dict[str, Any]) -> list[str]:
     lines = [f"Table: {humanise(str(table.get('table_type', 'table')))}"]
     columns = table.get("columns")
     if columns:
-        lines.append("Columns: " + " | ".join(humanise(str(c)) for c in columns))
+        lines.append("Columns: " + " | ".join(display_label(c) for c in columns))
     for group in table.get("permission_groups", []):
         heading = clean_text(group.get("heading"))
-        permissions = ", ".join(humanise(str(p)) for p in group.get("permissions", []))
+        permissions = ", ".join(display_label(p) for p in group.get("permissions", []))
         lines.append(f"{heading}: {permissions}")
     return lines
 
@@ -84,7 +146,7 @@ def render_table_row(row: Any, columns: list[Any] | None = None) -> str:
     if isinstance(row, list):
         labels = columns or list(range(1, len(row) + 1))
         return " | ".join(
-            f"{humanise(str(label))}: {clean_text(value)}"
+            f"{display_label(label)}: {clean_text(value)}"
             for label, value in zip(labels, row)
         )
 
@@ -97,7 +159,10 @@ def render_table_row(row: Any, columns: list[Any] | None = None) -> str:
             continue
         label = humanise(str(key))
         if key == "cover_status" and isinstance(value, dict):
-            status = ", ".join(f"{humanise(str(k))}: {humanise(str(v))}" for k, v in value.items())
+            status = ", ".join(
+                f"{display_label(k)}: {humanise(str(v))}"
+                for k, v in value.items()
+            )
             parts.append(f"Cover status: {status}")
         elif key == "permissions" and isinstance(value, dict):
             permissions = ", ".join(
@@ -202,6 +267,52 @@ def base_metadata(document: dict[str, Any], section: str, subsection: list[str])
     }
 
 
+def split_ip_section_paragraphs(
+    document: dict[str, Any], section_heading: str
+) -> bool:
+    """Return whether paragraphs in this IP section are standalone chunks."""
+    if clean_text(document.get("document_type")).casefold() != (
+        "insurance_product_information"
+    ):
+        return False
+
+    normalised_heading = re.sub(
+        r"[^a-z]+", " ", clean_text(section_heading).casefold()
+    ).strip()
+    return normalised_heading in {
+        "what is insured",
+        "what is not insured",
+        "are there any restrictions on cover",
+        "where am i covered",
+    }
+
+
+def is_home_emergency_definitions_heading(value: Any) -> bool:
+    """Return whether a heading introduces the Home Emergency glossary."""
+    normalised = re.sub(
+        r"[^a-z]+", " ", clean_text(value).casefold()
+    ).strip()
+    return normalised == (
+        "home emergency cover and home emergency extra cover definitions"
+    )
+
+
+def is_home_emergency_cover_heading(value: Any) -> bool:
+    """Return whether a heading introduces the HEC/HEX overview and table."""
+    normalised = re.sub(
+        r"[^a-z]+", " ", clean_text(value).casefold()
+    ).strip()
+    return normalised == "home emergency cover and home emergency extra cover"
+
+
+def is_home_emergency_definition_term(value: Any) -> bool:
+    """Recognise definition labels even when extraction marks them as text."""
+    normalised = re.sub(
+        r"[^a-z]+", " ", clean_text(value).casefold()
+    ).strip()
+    return normalised in HOME_EMERGENCY_DEFINITION_TERMS
+
+
 def make_draft(meta: dict[str, Any], text: str, items: list[dict[str, Any]], chunk_type: str = "content") -> dict[str, Any]:
     pdf_pages = unique(page for item in items for page in item_pages(item, "source_pdf_pages"))
     printed_pages = unique(page for item in items for page in item_pages(item, "source_printed_pages"))
@@ -222,47 +333,94 @@ def make_draft(meta: dict[str, Any], text: str, items: list[dict[str, Any]], chu
 
 
 def split_table(chunker: Chunker, meta: dict[str, Any], table: dict[str, Any]) -> list[dict[str, Any]]:
+    """Emit one self-contained chunk for every complete table row.
+
+    The table heading and column labels are repeated in every chunk. A single
+    long row remains intact even when the chunk exceeds ``max_tokens``.
+    """
     headers = table_header_lines(table)
     rows = table.get("rows", [])
-    rendered = [render_table_row(row, table.get("columns")) for row in rows]
-    groups: list[tuple[int, int, list[str]]] = []
-    start = 0
-    current: list[str] = []
 
-    for index, row_text in enumerate(rendered):
-        candidate_rows = current + [row_text]
-        candidate = "\n\n".join(headers + candidate_rows)
-        if current and not chunker.fits(meta, candidate):
-            groups.append((start, index - 1, current))
-            start = index
-            current = [row_text]
-        else:
-            current = candidate_rows
-    if current or not rows:
-        groups.append((start, max(start, len(rows) - 1), current))
-
-    drafts: list[dict[str, Any]] = []
-    for group_index, (row_start, row_end, row_texts) in enumerate(groups, start=1):
-        selected_rows = rows[row_start : row_end + 1]
-        row_pdf = unique(page for row in selected_rows if isinstance(row, dict) for page in item_pages(row, "source_pdf_pages"))
-        row_printed = unique(page for row in selected_rows if isinstance(row, dict) for page in item_pages(row, "source_printed_pages"))
-        item = dict(table)
-        if row_pdf:
-            item["source_pdf_pages"] = row_pdf
-        if row_printed:
-            item["source_printed_pages"] = row_printed
-        text = "\n\n".join(headers + row_texts)
-        draft = make_draft(meta, text, [item], "table")
+    # This is a small comparison table whose rows only make full sense when
+    # Admiral, Gold and Platinum can be considered together. Keeping it whole
+    # also allows one retrieved chunk to answer cross-policy questions.
+    if table.get("table_type") == "emergency_cover_by_level" and rows:
+        row_texts = [
+            render_table_row(row, table.get("columns")) for row in rows
+        ]
+        text = "\n\n".join([*headers, *row_texts])
+        provenance_items = [table, *(row for row in rows if isinstance(row, dict))]
+        draft = make_draft(meta, text, provenance_items, "table")
         draft.update(
             {
                 "table_type": table.get("table_type"),
-                "table_is_split": len(groups) > 1,
+                "table_is_split": False,
+                "table_chunk_index": 1,
+                "table_chunk_count": 1,
+                "table_row_start": 1,
+                "table_row_end": len(rows),
+                "contains_complete_rows": True,
+                "contains_complete_table": True,
+            }
+        )
+        return [draft]
+
+    groups: list[tuple[int | None, Any | None, str | None]] = [
+        (index, row, render_table_row(row, table.get("columns")))
+        for index, row in enumerate(rows)
+    ]
+    if not groups:
+        # Retain an explicitly extracted empty table as a header-only chunk.
+        groups.append((None, None, None))
+
+    drafts: list[dict[str, Any]] = []
+    for group_index, (row_index, row, row_text) in enumerate(groups, start=1):
+        row_pdf = item_pages(row, "source_pdf_pages") if isinstance(row, dict) else []
+        row_printed = item_pages(row, "source_printed_pages") if isinstance(row, dict) else []
+        row_heading = (
+            clean_text(row.get("row_heading"))
+            if isinstance(row, dict)
+            else ""
+        )
+        row_meta = dict(meta)
+        if row_heading:
+            # Preserve meaningful parent context and append the row-specific
+            # subject. Generic introductory headings describe how to read the
+            # table rather than what the row covers, so use the human-readable
+            # table type for those instead.
+            parent_heading = clean_text(meta.get("semantic_heading"))
+            if (
+                not parent_heading
+                or parent_heading.casefold()
+                in {"how to read this document", "what we’ll not pay", "what we'll not pay"}
+            ):
+                parent_heading = humanise(
+                    str(table.get("table_type", "table"))
+                )
+            combined_heading = f"{parent_heading} - {row_heading}"
+            row_meta.update(
+                {
+                    "semantic_heading": combined_heading,
+                    "semantic_heading_level": 4,
+                }
+            )
+        item = dict(table)
+        if row_pdf:
+            item["source_pdf_pages"] = unique(row_pdf)
+        if row_printed:
+            item["source_printed_pages"] = unique(row_printed)
+        text = "\n\n".join(headers + ([row_text] if row_text else []))
+        draft = make_draft(row_meta, text, [item], "table")
+        draft.update(
+            {
+                "table_type": table.get("table_type"),
+                "table_is_split": len(rows) > 1,
                 "table_chunk_index": group_index,
                 "table_chunk_count": len(groups),
-                "table_row_start": row_start + 1 if rows else None,
-                "table_row_end": row_end + 1 if rows else None,
+                "table_row_start": row_index + 1 if row_index is not None else None,
+                "table_row_end": row_index + 1 if row_index is not None else None,
                 "contains_complete_rows": True,
-                "contains_complete_table": len(groups) == 1,
+                "contains_complete_table": len(rows) <= 1,
             }
         )
         drafts.append(draft)
@@ -271,11 +429,17 @@ def split_table(chunker: Chunker, meta: dict[str, Any], table: dict[str, Any]) -
 
 def chunk_subsection(chunker: Chunker, document: dict[str, Any], section: str, subsection: dict[str, Any]) -> list[dict[str, Any]]:
     subsection_headings = list(subsection.get("subsection_headings") or [])
+    is_definitions_subsection = any(
+        clean_text(heading).casefold() == "definitions"
+        for heading in subsection_headings
+    )
     base = base_metadata(document, section, subsection_headings)
+    paragraphs_are_atomic = split_ip_section_paragraphs(document, section)
     drafts: list[dict[str, Any]] = []
     current_items: list[dict[str, Any]] = []
     current_parts: list[str] = []
     current_meta = dict(base)
+    in_home_emergency_definitions = False
 
     def flush() -> None:
         nonlocal current_items, current_parts
@@ -356,6 +520,17 @@ def chunk_subsection(chunker: Chunker, document: dict[str, Any], section: str, s
         # block is larger than max_tokens, semantic integrity takes priority
         # and the resulting content chunk is intentionally oversized.
         if content_type == "heading" and item.get("heading_level") == 4:
+            if is_home_emergency_cover_heading(item.get("text")):
+                # This overview follows "Important phone numbers" in the same
+                # subsection. Start fresh so its explanatory text and coverage
+                # table do not inherit that unrelated level-three heading.
+                flush()
+                current_meta = {
+                    **base,
+                    "semantic_heading": clean_text(item.get("text")),
+                    "semantic_heading_level": 4,
+                }
+
             block_end = item_index + 1
             while block_end < len(content):
                 candidate_item = content[block_end]
@@ -374,6 +549,53 @@ def chunk_subsection(chunker: Chunker, document: dict[str, Any], section: str, s
             block_text = "\n\n".join(block_parts)
 
             if block_text:
+                # Glossary terms are independently useful retrieval units.
+                # Keep each definition in its own chunk even when it is well
+                # below the normal target size, and expose the term as the
+                # semantic heading used by the embedding metadata.
+                if (
+                    is_definitions_subsection
+                    or in_home_emergency_definitions
+                ):
+                    flush()
+                    definition_meta = {
+                        **base,
+                        "semantic_heading": clean_text(item.get("text")),
+                        "semantic_heading_level": 4,
+                    }
+                    if chunker.fits(definition_meta, block_text):
+                        drafts.append(
+                            make_draft(definition_meta, block_text, block_items)
+                        )
+                    else:
+                        for piece in chunker.split_long_text(
+                            definition_meta, block_text
+                        ):
+                            drafts.append(
+                                make_draft(
+                                    definition_meta,
+                                    piece,
+                                    block_items,
+                                )
+                            )
+                    next_item = (
+                        content[block_end] if block_end < len(content) else None
+                    )
+                    if (
+                        next_item
+                        and next_item.get("content_type") == "table"
+                        and not next_item.get("semantic_heading_level")
+                    ):
+                        # A table immediately following a definition paragraph
+                        # belongs to that definition unless it supplies its own
+                        # semantic context. For example, the Contents table
+                        # inherits the level-four "Contents" heading.
+                        current_meta = dict(definition_meta)
+                    else:
+                        current_meta = dict(base)
+                    item_index = block_end
+                    continue
+
                 combined_text = "\n\n".join(current_parts + [block_text])
                 if current_parts and not chunker.fits(current_meta, combined_text):
                     flush()
@@ -388,14 +610,66 @@ def chunk_subsection(chunker: Chunker, document: dict[str, Any], section: str, s
             item_index = block_end
             continue
 
+        # In this glossary the visually styled definition labels may be
+        # extracted as ordinary paragraphs rather than level-four headings.
+        # Treat those known labels as structural boundaries so each term and
+        # its following definition are emitted as an independent chunk.
+        rendered = render_item(item)
+        if (
+            in_home_emergency_definitions
+            and is_home_emergency_definition_term(rendered)
+        ):
+            flush()
+            current_meta = {
+                **base,
+                "semantic_heading": clean_text(rendered),
+                "semantic_heading_level": 4,
+            }
+            current_items.append(item)
+            current_parts.append(rendered)
+            item_index += 1
+            continue
+
         if content_type == "table":
             flush()
-            drafts.extend(split_table(chunker, current_meta, item))
+            table_meta = dict(current_meta)
+            if item.get("semantic_heading_level") is not None:
+                table_meta.update(
+                    {
+                        "semantic_heading": clean_text(
+                            item.get("semantic_heading")
+                        ),
+                        "semantic_heading_level": item.get(
+                            "semantic_heading_level"
+                        ),
+                    }
+                )
+            drafts.extend(split_table(chunker, table_meta, item))
+            current_meta = dict(base)
+            item_index += 1
+            continue
+
+        # Each benefit or exclusion paragraph in these IP sections is an
+        # independent retrieval unit. Do not merge it with neighbouring
+        # paragraphs, even when the resulting chunk is below max_tokens.
+        if paragraphs_are_atomic and content_type == "paragraph":
+            flush()
+            rendered = render_item(item)
+            if rendered:
+                if chunker.fits(current_meta, rendered):
+                    drafts.append(make_draft(current_meta, rendered, [item]))
+                else:
+                    for piece in chunker.split_long_text(current_meta, rendered):
+                        drafts.append(make_draft(current_meta, piece, [item]))
+            current_meta = dict(base)
             item_index += 1
             continue
 
         if content_type == "heading" and item.get("heading_level") == 3:
             flush()
+            in_home_emergency_definitions = (
+                is_home_emergency_definitions_heading(item.get("text"))
+            )
             current_meta = {
                 **base,
                 "semantic_heading": clean_text(item.get("text")),
