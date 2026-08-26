@@ -352,7 +352,7 @@ Output cost =
 
 Total request cost =
     embedding cost + chat input cost + output cost
-
+```
 
 ## Further enhancements
 
