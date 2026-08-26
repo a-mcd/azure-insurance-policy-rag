@@ -279,7 +279,7 @@ python3 src/generate_answers/generate_answer.py \
 £0.00 per month while unused
 
 
-### Query and index chunnks
+### Query and index chunks
 
 - £0.000019 	Per 1,000 tokens
 
@@ -303,14 +303,14 @@ Cost to query for chunks
 | I have the Gold policy. Is my phone covered if I take it on holiday? | 17 | **£0.000000323** |
 | **Total** | **110** | **£0.000002090** |
 
-- 13 ÷ 1,000 × £0.000019 = £0.00000038
+- 13 ÷ 1,000 × £0.000019 = £0.000000247
 
 ### Store indexed chunks
 
 | Azure AI Search Free-tier service                | Limit | Used |
 | -------------------------- | ---------------: | -----------: |
 | Storage |              50 MB |       9.91 MB |
-| Vector index quota usage |              25 MB8.58 MB |       8.58 MB |
+| Vector index quota usage |              25 MB |       8.58 MB |
 
 ### Agentic Retrieval
 First 50M tokens free per month. This is not yet used but could be if functionality to break down complex questions into smaller questions was implemented.
@@ -356,9 +356,6 @@ Question
 | **Average per question** | **£0.000000418** | **£0.000863518** | **£0.000863936** |
 
 
-
-
-### Query Embedding and ...
 
 ## Further enhancements
 
