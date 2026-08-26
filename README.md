@@ -271,3 +271,80 @@ python3 src/generate_answers/generate_answer.py \
   --top 10 \
   --show-scores
 ```
+
+
+## Costs
+
+### Deploy text-embedding-3-small
+£0.00 per month while unused
+
+### Running index_document_chunks.py
+Cost to embed all chunks, run inex script, using text-embedding-3-small
+
+| Chunk file                 | Number of chunks | Total tokens |
+| -------------------------- | ---------------: | -----------: |
+| `ip_document_chunks.jsonl` |              228 |       15,182 |
+| `hh_document_chunks.jsonl` |              256 |       49,067 |
+| **Total**                  |          **484** |   **64,249** |
+
+- £0.000019 	Per 1,000 tokens
+- 20 ÷ 1,000 × £0.000019 = £0.00000038
+
+### Store indexed chunks
+
+| Azure AI Search Free-tier service                | Limit | Used |
+| -------------------------- | ---------------: | -----------: |
+| Storage |              50 MB |       9.91 MB |
+| Vector index quota usage |              25 MB8.58 MB |       9.91 MB |
+
+
+### Estimated GPT-5-mini question costs
+
+GPT-5-mini Global pricing:
+- £0 while unused
+- Input: £0.19 per 1 million tokens
+- Cached input: £0.02 per 1 million tokens
+- Output: £1.51 per 1 million tokens
+- Maximum completion tokens: 2, the maximum number of tokens the model may generate for one request.
+- Reasoning effort: Minimal, tells the model to use the smallest available amount of internal reasoning before answering.
+
+The following estimates assume approximately 2,000 input tokens per request. This includes the system prompt, question, metadata and 10 retrieved policy chunks. Cached-input pricing has not been applied because the retrieved context changes between questions.
+
+| Question | Estimated input tokens | Estimated output and reasoning tokens | Input cost | Output cost | Estimated total |
+|---|---:|---:|---:|---:|---:|
+| If my home became unsafe to live in after a fire, how much would each level of cover pay for somewhere else for my family and pets to stay? | 2,000 | 500 | £0.000380 | £0.000755 | **£0.001135** |
+| I have garden furniture worth £2,000. Will any policies cover it being left in the garden? | 2,000 | 350 | £0.000380 | £0.000529 | **£0.000909** |
+| If someone broke into my detached garage and stole my tools, which levels of home insurance would cover them, and how much could I claim? | 2,000 | 500 | £0.000380 | £0.000755 | **£0.001135** |
+| I have the Gold policy. Is my phone covered if I take it on holiday? | 2,000 | 250 | £0.000380 | £0.000378 | **£0.000758** |
+| **Estimated total** | **8,000** | **1,600** | **£0.001520** | **£0.002416** | **£0.003936** |
+
+The estimated total for all four questions is approximately **£0.00394**, or **0.39 pence**.
+
+The calculations use:
+
+```text
+Input cost = input tokens ÷ 1,000,000 × £0.19
+Output cost = output and reasoning tokens ÷ 1,000,000 × £1.51
+```
+
+
+## Further enhancements
+
+### Decompose complex questions into focused retrieval queries
+
+Some user questions contain several topics or conditions and may retrieve better results when they are broken down into smaller, focused queries.
+
+A future enhancement could add a query-decomposition stage before vector retrieval. The application would:
+
+1. Send the original question to the chat model.
+2. Ask the model to generate two to four focused retrieval queries.
+3. Create an embedding for each query.
+4. Add a VectorizedQuery object for each embedding to vector_queries.
+5. Let Azure AI Search combine the ranked result lists.
+6. Deduplicate the returned chunks.
+7. Pass the highest-ranked chunks and the original question to the answer generator.
+
+Azure AI Search supports multiple vector queries in a single search request. It combines their ranked result lists using Reciprocal Rank Fusion (RRF), so a chunk that ranks well for several focused queries can rise in the final ranking.
+
+This approach can improve retrieval for multi-part questions, but it should be evaluated against the existing retrieval question set. Query decomposition adds an extra chat-model request and may introduce unnecessary or misleading subqueries for simple questions, so the application could apply it only to questions identified as complex.
+

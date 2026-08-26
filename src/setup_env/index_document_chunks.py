@@ -262,22 +262,19 @@ def create_index_definition(index_name: str, vector_algorithm: str) -> SearchInd
 
 def create_or_update_index(
     client: SearchIndexClient,
-    index_name: str,
+    index: SearchIndex,
     recreate: bool,
-    vector_algorithm: str,
 ) -> None:
     if recreate:
         try:
-            client.delete_index(index_name)
-            print(f"Deleted existing index: {index_name}")
+            client.delete_index(index.name)
+            print(f"Deleted existing index: {index.name}")
         except Exception as exc:  # Azure returns ResourceNotFoundError if absent.
             if exc.__class__.__name__ != "ResourceNotFoundError":
                 raise
 
-    client.create_or_update_index(
-        create_index_definition(index_name, vector_algorithm)
-    )
-    print(f"Index is ready: {index_name} ({vector_algorithm})")
+    client.create_or_update_index(index)
+    print(f"Index is ready: {index.name}")
 
 
 def batched(items: list[Any], size: int) -> Iterable[list[Any]]:
@@ -363,11 +360,15 @@ def main() -> int:
     index_client = SearchIndexClient(
         endpoint=config["AZURE_SEARCH_ENDPOINT"], credential=search_credential
     )
+
+    index = create_index_definition(
+            config["AZURE_SEARCH_INDEX_NAME"], args.vector_algorithm
+        )
+    
     create_or_update_index(
         index_client,
-        config["AZURE_SEARCH_INDEX_NAME"],
+        index,
         args.recreate_index,
-        args.vector_algorithm,
     )
 
     openai_client = AzureOpenAI(
@@ -383,9 +384,7 @@ def main() -> int:
         args.embedding_batch_size,
     )
 
-    index = create_index_definition(
-        config["AZURE_SEARCH_INDEX_NAME"], args.vector_algorithm
-    )
+    
     allowed_fields = {field.name for field in index.fields}
     search_client = SearchClient(
         endpoint=config["AZURE_SEARCH_ENDPOINT"],
