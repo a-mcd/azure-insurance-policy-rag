@@ -279,7 +279,7 @@ python3 src/generate_answers/generate_answer.py \
 £0.00 per month while unused
 
 ### Running index_document_chunks.py
-Cost to embed all chunks, run inex script, using text-embedding-3-small
+Cost to embed all chunks by running index script, using text-embedding-3-small
 
 | Chunk file                 | Number of chunks | Total tokens |
 | -------------------------- | ---------------: | -----------: |
@@ -295,7 +295,7 @@ Cost to embed all chunks, run inex script, using text-embedding-3-small
 | Azure AI Search Free-tier service                | Limit | Used |
 | -------------------------- | ---------------: | -----------: |
 | Storage |              50 MB |       9.91 MB |
-| Vector index quota usage |              25 MB8.58 MB |       9.91 MB |
+| Vector index quota usage |              25 MB8.58 MB |       8.58 MB |
 
 
 ### Estimated GPT-5-mini question costs
@@ -305,7 +305,7 @@ GPT-5-mini Global pricing:
 - Input: £0.19 per 1 million tokens
 - Cached input: £0.02 per 1 million tokens
 - Output: £1.51 per 1 million tokens
-- Maximum completion tokens: 2, the maximum number of tokens the model may generate for one request.
+- Maximum completion tokens: 2000, the maximum number of tokens the model may generate for one request.
 - Reasoning effort: Minimal, tells the model to use the smallest available amount of internal reasoning before answering.
 
 The following estimates assume approximately 2,000 input tokens per request. This includes the system prompt, question, metadata and 10 retrieved policy chunks. Cached-input pricing has not been applied because the retrieved context changes between questions.
