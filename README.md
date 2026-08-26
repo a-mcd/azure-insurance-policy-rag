@@ -295,8 +295,13 @@ Cost to embed all chunks by running index script, using text-embedding-3-small
 
 Cost to query for chunks
 | Question | Embedding tokens | Cost |
-|---|---:|---:|---:|---:|---:|
-| Do I need to list my £3,000 violin separately? | 13 | **£0.00000038** |
+|---|---:|---:|
+| Do I need to list my £3,000 violin separately? | 13 | **£0.000000247** |
+| If my home became unsafe to live in after a fire, how much would each level of cover pay for somewhere else for my family and pets to stay? | 31 | **£0.000000589** |
+| I have garden furniture worth £2,000. Will any policies cover it being left in the garden? | 21 | **£0.000000399** |
+| If someone broke into my detached garage and stole my tools, which levels of home insurance would cover them, and how much could I claim? | 28 | **£0.000000532** |
+| I have the Gold policy. Is my phone covered if I take it on holiday? | 17 | **£0.000000323** |
+| **Total** | **110** | **£0.000002090** |
 
 - 13 ÷ 1,000 × £0.000019 = £0.00000038
 
@@ -311,10 +316,7 @@ Cost to query for chunks
 First 50M tokens free per month. This is not yet used but could be if functionality to break down complex questions into smaller questions was implemented.
 
 
-
-
-
-### Overall GPT-5-mini question costs
+### GPT-5-mini question costs
 
 GPT-5-mini Global pricing:
 
@@ -325,50 +327,38 @@ GPT-5-mini Global pricing:
 - Maximum completion tokens: 2,000 per request
 - Reasoning effort: Minimal
 
-The following results use the actual token usage reported by Azure for five questions. Each request included the system prompt, question, source metadata and 10 retrieved policy chunks. Cached-input pricing has not been applied.
+The following results show only the GPT-5-mini cost. Each request included the system prompt, question, source metadata and 10 retrieved policy chunks. Question-embedding costs are excluded from this section, and cached-input pricing has not been applied.
 
-| Question | Embedding tokens | Chat input tokens | Chat completion tokens | Total tokens | Total cost |
-|---|---:|---:|---:|---:|---:|
-| Do I need to list my £3,000 violin separately? | 13 | 1,050 | 120 total<br>0 reasoning<br>120 visible | 1,183 | **£0.000380947** |
-| If my home became unsafe to live in after a fire, how much would each level of cover pay for somewhere else for my family and pets to stay? | 31 | 1,783 | 487 total<br>0 reasoning<br>487 visible | 2,301 | **£0.001074729** |
-| I have garden furniture worth £2,000. Will any policies cover it being left in the garden? | 21 | 1,674 | 569 total<br>0 reasoning<br>569 visible | 2,264 | **£0.001177649** |
-| If someone broke into my detached garage and stole my tools, which levels of home insurance would cover them, and how much could I claim? | 28 | 2,891 | 397 total<br>0 reasoning<br>397 visible | 3,316 | **£0.001149292** |
-| I have the Gold policy. Is my phone covered if I take it on holiday? | 17 | 1,005 | 229 total<br>0 reasoning<br>229 visible | 1,251 | **£0.000537063** |
-| **Total** | **110** | **8,403** | **1,802 total**<br>**0 reasoning**<br>**1,802 visible** | **10,315** | **£0.004319680** |
+| Question | Input tokens | Completion tokens | Total GPT tokens | Input cost | Output cost | GPT-5-mini cost |
+|---|---:|---:|---:|---:|---:|---:|
+| Do I need to list my £3,000 violin separately? | 1,050 | 120 total<br>0 reasoning<br>120 visible | 1,170 | £0.000199500 | £0.000181200 | **£0.000380700** |
+| If my home became unsafe to live in after a fire, how much would each level of cover pay for somewhere else for my family and pets to stay? | 1,783 | 487 total<br>0 reasoning<br>487 visible | 2,270 | £0.000338770 | £0.000735370 | **£0.001074140** |
+| I have garden furniture worth £2,000. Will any policies cover it being left in the garden? | 1,674 | 569 total<br>0 reasoning<br>569 visible | 2,243 | £0.000318060 | £0.000859190 | **£0.001177250** |
+| If someone broke into my detached garage and stole my tools, which levels of home insurance would cover them, and how much could I claim? | 2,891 | 397 total<br>0 reasoning<br>397 visible | 3,288 | £0.000549290 | £0.000599470 | **£0.001148760** |
+| I have the Gold policy. Is my phone covered if I take it on holiday? | 1,005 | 229 total<br>0 reasoning<br>229 visible | 1,234 | £0.000190950 | £0.000345790 | **£0.000536740** |
+| **Total** | **8,403** | **1,802 total**<br>**0 reasoning**<br>**1,802 visible** | **10,205** | **£0.001596570** | **£0.002721020** | **£0.004317590** |
 
-Across the five measured questions:
 
-- Total tokens processed: **10,315**
-- Total embedding cost: **£0.000002090**
-- Total GPT-5-mini input cost: **£0.001596570**
-- Total GPT-5-mini output cost: **£0.002721020**
-- Total cost: **£0.004319680**
-- Average cost per question: **£0.000863936**
+### End-to-end question costs
+Question
+→ create a question embedding with text-embedding-3-small
+→ retrieve 10 chunks from Azure AI Search
+→ generate an answer with GPT-5-mini
 
-The five questions cost approximately **£0.00432 in total**, equivalent to approximately **0.432 pence**. The average cost was approximately **£0.000864 per question**, equivalent to approximately **0.086 pence**.
+| Question | Embedding cost | GPT-5-mini cost | End-to-end cost |
+|---|---:|---:|---:|
+| Do I need to list my £3,000 violin separately? | £0.000000247 | £0.000380700 | **£0.000380947** |
+| If my home became unsafe to live in after a fire, how much would each level of cover pay for somewhere else for my family and pets to stay? | £0.000000589 | £0.001074140 | **£0.001074729** |
+| I have garden furniture worth £2,000. Will any policies cover it being left in the garden? | £0.000000399 | £0.001177250 | **£0.001177649** |
+| If someone broke into my detached garage and stole my tools, which levels of home insurance would cover them, and how much could I claim? | £0.000000532 | £0.001148760 | **£0.001149292** |
+| I have the Gold policy. Is my phone covered if I take it on holiday? | £0.000000323 | £0.000536740 | **£0.000537063** |
+| **Total** | **£0.000002090** | **£0.004317590** | **£0.004319680** |
+| **Average per question** | **£0.000000418** | **£0.000863518** | **£0.000863936** |
 
-| Number of questions | Projected cost at measured average |
-|---:|---:|
-| 100 | £0.09 |
-| 1,000 | £0.86 |
-| 10,000 | £8.64 |
-| 100,000 | £86.39 |
 
-The calculations use:
 
-```text
-Embedding cost =
-    embedding tokens ÷ 1,000 × £0.000019
 
-Chat input cost =
-    chat input tokens ÷ 1,000,000 × £0.19
-
-Output cost =
-    completion tokens ÷ 1,000,000 × £1.51
-
-Total request cost =
-    embedding cost + chat input cost + output cost
-```
+### Query Embedding and ...
 
 ## Further enhancements
 
