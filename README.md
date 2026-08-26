@@ -278,17 +278,27 @@ python3 src/generate_answers/generate_answer.py \
 ### Deploy text-embedding-3-small
 £0.00 per month while unused
 
-### Running index_document_chunks.py
-Cost to embed all chunks by running index script, using text-embedding-3-small
 
-| Chunk file                 | Number of chunks | Total tokens |
-| -------------------------- | ---------------: | -----------: |
-| `ip_document_chunks.jsonl` |              228 |       15,182 |
-| `hh_document_chunks.jsonl` |              256 |       49,067 |
-| **Total**                  |          **484** |   **64,249** |
+### Query and index chunnks
 
 - £0.000019 	Per 1,000 tokens
-- 20 ÷ 1,000 × £0.000019 = £0.00000038
+
+Cost to embed all chunks by running index script, using text-embedding-3-small
+
+| Chunk file | Number of chunks | Total tokens | Embedding cost |
+|---|---:|---:|---:|
+| `ip_document_chunks.jsonl` | 228 | 15,182 | £0.000288458 |
+| `hh_document_chunks.jsonl` | 256 | 49,067 | £0.000932273 |
+| **Total** | **484** | **64,249** | **£0.001220731** |
+
+- 15,182 ÷ 1,000 × £0.000019 = £0.000288458
+
+Cost to query for chunks
+| Question | Embedding tokens | Cost |
+|---|---:|---:|---:|---:|---:|
+| Do I need to list my £3,000 violin separately? | 13 | **£0.00000038** |
+
+- 13 ÷ 1,000 × £0.000019 = £0.00000038
 
 ### Store indexed chunks
 
@@ -296,6 +306,12 @@ Cost to embed all chunks by running index script, using text-embedding-3-small
 | -------------------------- | ---------------: | -----------: |
 | Storage |              50 MB |       9.91 MB |
 | Vector index quota usage |              25 MB8.58 MB |       8.58 MB |
+
+### Agentic Retrieval
+First 50M tokens free per month. This is not yet used but could be if functionality to break down complex questions into smaller questions was implemented.
+
+
+
 
 
 ### Overall GPT-5-mini question costs
@@ -356,7 +372,7 @@ Total request cost =
 
 ## Further enhancements
 
-### Decompose complex questions into focused retrieval queries
+### Decompose complex questions into focused retrieval queries using Azure Agentic Retrieval
 
 Some user questions contain several topics or conditions and may retrieve better results when they are broken down into smaller, focused queries.
 
