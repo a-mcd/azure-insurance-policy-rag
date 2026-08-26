@@ -311,14 +311,14 @@ GPT-5-mini Global pricing:
 
 The following results use the actual token usage reported by Azure for five questions. Each request included the system prompt, question, source metadata and 10 retrieved policy chunks. Cached-input pricing has not been applied.
 
-| Question | Embedding tokens | Chat input tokens | Reasoning tokens | Visible output tokens | Total tokens | Embedding cost | Chat input cost | Output cost | Total cost |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Do I need to list my £3,000 violin separately? | 13 | 1,050 | 0 | 120 | 1,183 | £0.000000247 | £0.000199500 | £0.000181200 | **£0.000380947** |
-| If my home became unsafe to live in after a fire, how much would each level of cover pay for somewhere else for my family and pets to stay? | 31 | 1,783 | 0 | 487 | 2,301 | £0.000000589 | £0.000338770 | £0.000735370 | **£0.001074729** |
-| I have garden furniture worth £2,000. Will any policies cover it being left in the garden? | 21 | 1,674 | 0 | 569 | 2,264 | £0.000000399 | £0.000318060 | £0.000859190 | **£0.001177649** |
-| If someone broke into my detached garage and stole my tools, which levels of home insurance would cover them, and how much could I claim? | 28 | 2,891 | 0 | 397 | 3,316 | £0.000000532 | £0.000549290 | £0.000599470 | **£0.001149292** |
-| I have the Gold policy. Is my phone covered if I take it on holiday? | 17 | 1,005 | 0 | 229 | 1,251 | £0.000000323 | £0.000190950 | £0.000345790 | **£0.000537063** |
-| **Total** | **110** | **8,403** | **0** | **1,802** | **10,315** | **£0.000002090** | **£0.001596570** | **£0.002721020** | **£0.004319680** |
+| Question | Embedding tokens | Chat input tokens | Chat completion tokens | Total tokens | Total cost |
+|---|---:|---:|---:|---:|---:|
+| Do I need to list my £3,000 violin separately? | 13 | 1,050 | 120 total<br>0 reasoning<br>120 visible | 1,183 | **£0.000380947** |
+| If my home became unsafe to live in after a fire, how much would each level of cover pay for somewhere else for my family and pets to stay? | 31 | 1,783 | 487 total<br>0 reasoning<br>487 visible | 2,301 | **£0.001074729** |
+| I have garden furniture worth £2,000. Will any policies cover it being left in the garden? | 21 | 1,674 | 569 total<br>0 reasoning<br>569 visible | 2,264 | **£0.001177649** |
+| If someone broke into my detached garage and stole my tools, which levels of home insurance would cover them, and how much could I claim? | 28 | 2,891 | 397 total<br>0 reasoning<br>397 visible | 3,316 | **£0.001149292** |
+| I have the Gold policy. Is my phone covered if I take it on holiday? | 17 | 1,005 | 229 total<br>0 reasoning<br>229 visible | 1,251 | **£0.000537063** |
+| **Total** | **110** | **8,403** | **1,802 total**<br>**0 reasoning**<br>**1,802 visible** | **10,315** | **£0.004319680** |
 
 Across the five measured questions:
 
