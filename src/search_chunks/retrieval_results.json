@@ -1,12 +1,11 @@
 {
-  "input_file": "src/search_chunks/retrieval_questions.json",
+  "input_file": "retrieval_questions.json",
   "index_name": "insurance-policy-chunks",
-  "top": 10,
+  "top": 5,
   "metric_cutoffs": [
     1,
     3,
-    5,
-    10
+    5
   ],
   "modes": [
     "vector"
@@ -33,12 +32,6 @@
           "mean_recall": 0.7724489795918368,
           "all_expected_rate": 0.42857142857142855,
           "misses": 0
-        },
-        "at_10": {
-          "hit_rate": 1.0,
-          "mean_recall": 0.9468253968253968,
-          "all_expected_rate": 0.8571428571428571,
-          "misses": 0
         }
       }
     }
@@ -63,20 +56,14 @@
         "ip-he-1-008-0009-21411be2a2e0",
         "hh-010-018-0072-1eafb7013075",
         "ip-ho-2-012-0004-42f299b9dace",
-        "ip-ho-1-012-0004-02a86b9d1052",
-        "ip-ho-3-010-0004-f8c02f89465d",
-        "ip-hee-1-005-0013-bd5bdcc36839",
-        "ip-he-1-008-0010-836c5948813d",
-        "hh-010-018-0187-320ecb90e3a9",
-        "hh-010-018-0179-cd4a81c8b2b9"
+        "ip-ho-1-012-0004-02a86b9d1052"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -99,13 +86,6 @@
           "expected_total": 6,
           "recall": 0.6666666666666666,
           "all_expected": false
-        },
-        "at_10": {
-          "hit": true,
-          "expected_found": 6,
-          "expected_total": 6,
-          "recall": 1.0,
-          "all_expected": true
         }
       },
       "retrieved_results": [
@@ -186,84 +166,6 @@
           "end_pdf_page": 1,
           "text": "Alternative accommodation: Up to £50,000 for temporary accommodation for your family and pets if your home is not safe to live in following an insured event.",
           "is_expected": true
-        },
-        {
-          "rank": 6,
-          "score": 0.6813686,
-          "chunk_id": "ip-ho-3-010-0004-f8c02f89465d",
-          "document_code": "IP-HO-3-010",
-          "title": "Platinum Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Buildings (Main features, if selected)"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Alternative accommodation: Up to £100,000 for temporary accommodation for your family and pets if your home is not safe to live in following an insured event.",
-          "is_expected": true
-        },
-        {
-          "rank": 7,
-          "score": 0.6794636,
-          "chunk_id": "ip-hee-1-005-0013-bd5bdcc36839",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "What is insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Accommodation: We'll pay up to £1,000 for accommodation and transport if your home remains uninhabitable overnight. The maximum we will pay per night is £250.",
-          "is_expected": true
-        },
-        {
-          "rank": 8,
-          "score": 0.67169714,
-          "chunk_id": "ip-he-1-008-0010-836c5948813d",
-          "document_code": "IP-HE-1-008",
-          "title": "Home Emergency Cover",
-          "section_heading": "What is insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Temporary heating: We'll pay you up to £50 towards the cost of heaters if you have no heating and the engineer is waiting for parts.",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.6715706,
-          "chunk_id": "hh-010-018-0187-320ecb90e3a9",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Optional cover:",
-          "subsection_headings": [
-            "Home Emergency cover (as standard on Gold)",
-            "Home Emergency Extra cover (as standard on Platinum)"
-          ],
-          "semantic_heading": "Emergency coverage details - Alternative accommodation",
-          "start_pdf_page": 48,
-          "end_pdf_page": 48,
-          "text": "Table: Emergency coverage details\n\nColumns: What is covered | What is not covered | Home Emergency cover (HEC) | Home Emergency Extra cover (HEX)\n\nRow heading: Alternative accommodation | What is covered: Alternative accommodation We’ll pay towards the cost of alternative accommodation if you can’t stay in your home overnight due to an emergency. This covers you, everyone who permanently lives in your home and your pets. This cover includes transport to the alternative accommodation and then home again. We’ll settle the claim on a reimbursement basis. We’ll pay you up to £500 under Home Emergency cover, and up to £1,000 under Home Emergency Extra cover. The maximum we’ll pay per night is £250. | What is not covered:  | Cover status: Home Emergency cover (HEC): Included, Home Emergency Extra cover (HEX): Included",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.6675518,
-          "chunk_id": "hh-010-018-0179-cd4a81c8b2b9",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Optional cover:",
-          "subsection_headings": [
-            "Home Emergency cover (as standard on Gold)",
-            "Home Emergency Extra cover (as standard on Platinum)"
-          ],
-          "semantic_heading": "Reimbursement basis",
-          "start_pdf_page": 45,
-          "end_pdf_page": 45,
-          "text": "Reimbursement basis\n\nWe’ll need to receive your contractor’s or our contractor’s full breakdown and invoice for repairs. We’ll then pay you up to:\n\n• £1,000 (including VAT) as a contribution towards a repair you arranged yourself, under Home Emergency Extra cover.\n\n• £500 (including VAT) as a contribution towards a repair you arranged yourself, under Home Emergency cover.\n\n• £1,000 (including VAT) for alternative accommodation, under Home Emergency Extra cover.\n\n• £500 (including VAT) for alternative accommodation, under Home Emergency cover.\n\n• £250 (including VAT) towards the cost of a new boiler if your heating system is beyond economic repair, under Home Emergency Extra cover.\n\n• £50 (including VAT) for heaters you have bought.",
-          "is_expected": false
         }
       ]
     },
@@ -281,20 +183,14 @@
         "hh-010-018-0142-399187ad31ce",
         "hh-010-018-0143-38d466ec27ca",
         "hh-010-018-0076-c412abae6457",
-        "hh-010-018-0134-e0cc08446ee7",
-        "hh-010-018-0080-85ac01d7a6a1",
-        "hh-010-018-0127-bebfb7dd1254",
-        "hh-010-018-0078-11137956f078",
-        "hh-010-018-0171-421307270655",
-        "hh-010-018-0113-d24619a752da"
+        "hh-010-018-0134-e0cc08446ee7"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -312,13 +208,6 @@
           "all_expected": true
         },
         "at_5": {
-          "hit": true,
-          "expected_found": 1,
-          "expected_total": 1,
-          "recall": 1.0,
-          "all_expected": true
-        },
-        "at_10": {
           "hit": true,
           "expected_found": 1,
           "expected_total": 1,
@@ -393,7 +282,7 @@
         },
         {
           "rank": 5,
-          "score": 0.7175784,
+          "score": 0.7175977,
           "chunk_id": "hh-010-018-0134-e0cc08446ee7",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -405,87 +294,6 @@
           "start_pdf_page": 30,
           "end_pdf_page": 30,
           "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: Host cover | What is covered: Host cover You can rent out your home through a dedicated home sharing website for up to 90 days during the period of insurance. Your home must be.\n• Owned or mortgaged by you.\n• Your main home where you live permanently. The exclusions about paying or invited guests in this policy book don’t apply if the guests have booked through a dedicated home sharing website. Dedicated home sharing websites usually have their own insurance e.g. Airbnb’s AirCover. We won’t cover any claims for Host Cover unless you’ve tried to use their cover first | What is not covered: You can’t use this cover if the amount of adult paying guests is more than double the number of bedrooms (for example, more than 4 adults in a 2 bedroom property). Your high-risk items won’t be fully covered unless they’re kept in either a:\n• Locked securely fixed safe.\n• Locked room.\n• Locked cupboard. We’ll pay up to £5,000 for your high-risk items, or the amount shown on your Home Policy Schedule, whichever is less. This is for loss or damage caused by Theft, Vandalism or Malicious Acts, or Accidental Damage. | Cover status: Admiral: Included, Gold: Included, Platinum: Included",
-          "is_expected": false
-        },
-        {
-          "rank": 6,
-          "score": 0.7158104,
-          "chunk_id": "hh-010-018-0080-85ac01d7a6a1",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your buildings cover"
-          ],
-          "semantic_heading": "Coverage by level - Matching items",
-          "start_pdf_page": 18,
-          "end_pdf_page": 18,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: Matching items | What is covered: Matching items If part of a set or suite is damaged beyond repair, and we can’t find a replacement, we’ll pay for repairing or replacing the whole set or suite. We class a set or suite to be a bathroom suite, fitted kitchen, floor covering, or an area of wall tiles. | What is not covered: Undamaged flooring in rooms that are connected or clearly separated. | Cover status: Admiral: Not included, Gold: Not included, Platinum: Included",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.71249944,
-          "chunk_id": "hh-010-018-0127-bebfb7dd1254",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your contents cover"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 28,
-          "end_pdf_page": 28,
-          "text": "Collections\nIf you want to insure a collection worth more in total than the ‘Unspecified item limit’, it must be listed in your Home Policy Schedule. For example, a stamp or coin collection. Unspecified item limit You can find this limit in your Home Policy Schedule under the ‘Specified Items’ table. All high-risk items above this limit must be listed in your latest Home Policy Schedule. If they’re not, we won’t pay more than the ‘Unspecified item limit’ for them. Total high-risk items limit We won’t pay more than the ‘Total high-risk items limit’ shown in your Home Policy Schedule for all your high-risk items, whether they’re specified or unspecified. Cover for items away from the home Please see ‘Cover away from your home’. Inflation The value of specified items can change. We don’t index link the value of your specified items. This means the value they’re insured for won’t increase when you renew your policy. It’s your responsibility to make sure you have enough cover for your specified items by keeping their value up to date.",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.7109345,
-          "chunk_id": "hh-010-018-0078-11137956f078",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your buildings cover"
-          ],
-          "semantic_heading": "Coverage by level - Sale of your home",
-          "start_pdf_page": 18,
-          "end_pdf_page": 18,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: Sale of your home | What is covered: Sale of your home This cover is for the buyer of your home if the buildings of your home are damaged. This cover only applies after you give the new buyer the contract and it ends after the sale is complete. We’ll only cover loss or damage caused by a buildings event covered by this policy. | What is not covered:  | Cover status: Admiral: Included, Gold: Included, Platinum: Included",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.70988196,
-          "chunk_id": "hh-010-018-0171-421307270655",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Optional cover:",
-          "subsection_headings": [
-            "Home Emergency cover (as standard on Gold)",
-            "Home Emergency Extra cover (as standard on Platinum)"
-          ],
-          "semantic_heading": "Home Emergency cover and Home Emergency Extra cover",
-          "start_pdf_page": 44,
-          "end_pdf_page": 44,
-          "text": "Table: Emergency cover by level\n\nColumns: Cover level | Home Emergency cover (HEC) | Home Emergency Extra cover (HEX)\n\nCover level: Admiral | Cover status: Home Emergency cover (HEC): Optional, Home Emergency Extra cover (HEX): Optional\n\nCover level: Gold | Cover status: Home Emergency cover (HEC): Included, Home Emergency Extra cover (HEX): Optional\n\nCover level: Platinum | Cover status: Home Emergency cover (HEC): Not included, Home Emergency Extra cover (HEX): Included",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.7096853,
-          "chunk_id": "hh-010-018-0113-d24619a752da",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your contents cover"
-          ],
-          "semantic_heading": "Coverage by level - Household removal and temporary storage",
-          "start_pdf_page": 25,
-          "end_pdf_page": 25,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: Household removal and temporary storage | What is covered: Household removal and temporary storage Accidental damage to contents while they’re being moved to your new home, by a professional moving company or, to a temporary storage unit, for up to seven days. | What is not covered: Loss or damage to:\n• Money, high-risk items, deeds and documents.\n• China, glass, earthenware or other fragile items, unless they were packed by professional packers. | Cover status: Admiral: Included, Gold: Included, Platinum: Included",
           "is_expected": false
         }
       ]
@@ -505,20 +313,14 @@
         "ip-ho-2-012-0016-697f49b57c87",
         "ip-ho-3-010-0018-ad33c0d4085c",
         "ip-ho-3-010-0017-2e95659b8b30",
-        "ip-ho-1-012-0014-c131576ed532",
-        "hh-010-018-0110-51a688d4cd62",
-        "hh-010-018-0143-38d466ec27ca",
-        "ip-ho-2-012-0015-bbb48f748db0",
-        "hh-010-018-0142-399187ad31ce",
-        "ip-ho-2-012-0023-a49d91c96f2a"
+        "ip-ho-1-012-0014-c131576ed532"
       ],
       "first_relevant_rank": 2,
       "reciprocal_rank": 0.5,
       "hits": {
         "hit_at_1": false,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -541,19 +343,12 @@
           "expected_total": 2,
           "recall": 1.0,
           "all_expected": true
-        },
-        "at_10": {
-          "hit": true,
-          "expected_found": 2,
-          "expected_total": 2,
-          "recall": 1.0,
-          "all_expected": true
         }
       },
       "retrieved_results": [
         {
           "rank": 1,
-          "score": 0.7155682,
+          "score": 0.7155526,
           "chunk_id": "ip-ho-2-012-0017-0a0a83b92266",
           "document_code": "IP-HO-2-012",
           "title": "Gold Home Insurance Policy",
@@ -569,7 +364,7 @@
         },
         {
           "rank": 2,
-          "score": 0.7101579,
+          "score": 0.71017545,
           "chunk_id": "ip-ho-2-012-0016-697f49b57c87",
           "document_code": "IP-HO-2-012",
           "title": "Gold Home Insurance Policy",
@@ -630,86 +425,6 @@
           "end_pdf_page": 1,
           "text": "Garden plants cover: Up to £1,000.",
           "is_expected": false
-        },
-        {
-          "rank": 6,
-          "score": 0.67618644,
-          "chunk_id": "hh-010-018-0110-51a688d4cd62",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your contents cover"
-          ],
-          "semantic_heading": "Coverage by level - Garden plants",
-          "start_pdf_page": 25,
-          "end_pdf_page": 25,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: Garden plants | What is covered: Garden plants Damage to trees, shrubs, plants and lawns while outside on the land your home stands on. | What is not covered: Loss or damage caused by:\n• You, your family, or anyone invited into your home.\n• Storm or flood.\n• Oil escaping. | Cover status: Admiral: Included, Gold: Included, Platinum: Included",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.67560154,
-          "chunk_id": "hh-010-018-0143-38d466ec27ca",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Cover away from your home"
-          ],
-          "semantic_heading": "Coverage by level - 2) Specified items",
-          "start_pdf_page": 33,
-          "end_pdf_page": 34,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: 2) Specified items | What is covered: 2) Specified items Specified items listed in the ‘Specified Items’ table are covered away from home, up to the individual amount shown for each item. The ‘specified items’ table can be found on your Home Policy Schedule. ‘Cover away from your home’ must be shown as ‘yes’ in the table, for items to be covered away from your home. | What is not covered: Loss or damage to:\n• Any personal possessions and high-risk items lost or damaged in your home or on the land that your home stands on.\n• High-risk items worth more than the ‘Unspecified item limit’.\n• Plants or any living creature.\n• Corneal or contact lenses.\n• Lottery or raffle tickets, credit cards, securities or documents.\n• Domestic appliances.\n• Business equipment.\n• Remote-controlled models or sporting equipment while being used.\n• The inside of watches and clocks. Loss or damage to property which has been outside the UK, the Isle of Man and the Channel Islands for more than 90 days in a row. This doesn’t apply to property taken on an ‘operational tour’. (A military tour of duty for which an allowance is paid to you). Loss or damage to items that aren’t with you or your family at the time of the loss or damage. For example, items that aren’t being worn or carried, or aren’t within reach of, you or your family. Loss or damage to motorised vehicles, bicycles and ride-on lawnmowers. (Bicycles are covered under ‘Your bicycle cover’) Loss or damage caused by any living creature, including pets. Loss or damage that happens at a storage facility or when you’re moving home. Theft or attempted theft from a motor vehicle unless:\n• All windows, doors and the boot were closed and locked.\n• The items were hidden from view in the boot, a closed glove compartment, or a concealed luggage compartment. We won’t pay more than £1,000 for any theft from a motor vehicle. Loss or damage caused by theft or attempted theft, unless you have the items in your possession, or have left them in a secure place. By ‘secure place’ we mean that your belongings are locked in your room or other security facility such as a safe, or a secure room. | Cover status: Admiral: Optional, Gold: Optional, Platinum: Optional",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.674208,
-          "chunk_id": "ip-ho-2-012-0015-bbb48f748db0",
-          "document_code": "IP-HO-2-012",
-          "title": "Gold Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Contents (Main features, if selected)"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Theft from Garages and Outbuildings: Up to £5,000.",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.6732008,
-          "chunk_id": "hh-010-018-0142-399187ad31ce",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Cover away from your home"
-          ],
-          "semantic_heading": "Coverage by level - 1) Personal possessions",
-          "start_pdf_page": 33,
-          "end_pdf_page": 34,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: 1) Personal possessions | What is covered: 1) Personal possessions Personal possessions are covered up to the amount shown under ‘Personal possessions limit’ on your Home Policy Schedule. | What is not covered: Loss or damage to:\n• Any personal possessions and high-risk items lost or damaged in your home or on the land that your home stands on.\n• High-risk items worth more than the ‘Unspecified item limit’.\n• Plants or any living creature.\n• Corneal or contact lenses.\n• Lottery or raffle tickets, credit cards, securities or documents.\n• Domestic appliances.\n• Business equipment.\n• Remote-controlled models or sporting equipment while being used.\n• The inside of watches and clocks. Loss or damage to property which has been outside the UK, the Isle of Man and the Channel Islands for more than 90 days in a row. This doesn’t apply to property taken on an ‘operational tour’. (A military tour of duty for which an allowance is paid to you). Loss or damage to items that aren’t with you or your family at the time of the loss or damage. For example, items that aren’t being worn or carried, or aren’t within reach of, you or your family. Loss or damage to motorised vehicles, bicycles and ride-on lawnmowers. (Bicycles are covered under ‘Your bicycle cover’) Loss or damage caused by any living creature, including pets. Loss or damage that happens at a storage facility or when you’re moving home. Theft or attempted theft from a motor vehicle unless:\n• All windows, doors and the boot were closed and locked.\n• The items were hidden from view in the boot, a closed glove compartment, or a concealed luggage compartment. We won’t pay more than £1,000 for any theft from a motor vehicle. Loss or damage caused by theft or attempted theft, unless you have the items in your possession, or have left them in a secure place. By ‘secure place’ we mean that your belongings are locked in your room or other security facility such as a safe, or a secure room. | Cover status: Admiral: Optional, Gold: Optional, Platinum: Included",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.67231214,
-          "chunk_id": "ip-ho-2-012-0023-a49d91c96f2a",
-          "document_code": "IP-HO-2-012",
-          "title": "Gold Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Optional Cover"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "Specified items: Add valuables over £2,000 up to a maximum of £30,000.",
-          "is_expected": false
         }
       ]
     },
@@ -728,20 +443,14 @@
         "ip-he-1-008-0003-790f2e8f887f",
         "ip-hee-1-005-0025-977b9ee98cd7",
         "ip-hee-1-005-0013-bd5bdcc36839",
-        "ip-hee-1-005-0028-cfc7c868357a",
-        "ip-hee-1-005-0014-d2a7cc290e1a",
-        "ip-hee-1-005-0031-357eba366d38",
-        "ip-hee-1-005-0015-f06d99d27bad",
-        "ip-hee-1-005-0002-208df37a5dcd",
-        "ip-hee-1-005-0027-3e7ada1dfe93"
+        "ip-hee-1-005-0028-cfc7c868357a"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -759,13 +468,6 @@
           "all_expected": true
         },
         "at_5": {
-          "hit": true,
-          "expected_found": 2,
-          "expected_total": 2,
-          "recall": 1.0,
-          "all_expected": true
-        },
-        "at_10": {
           "hit": true,
           "expected_found": 2,
           "expected_total": 2,
@@ -843,76 +545,6 @@
           "end_pdf_page": 1,
           "text": "Contractor availability: In some circumstances there may be a delay in our contractor's attendance, for example, bad weather limiting the availability within your area.",
           "is_expected": false
-        },
-        {
-          "rank": 6,
-          "score": 0.7303535,
-          "chunk_id": "ip-hee-1-005-0014-d2a7cc290e1a",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "What is insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Temporary heating: We'll pay you up to £50 towards the cost of heaters if you have no heating and the engineer is waiting for parts.",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.72846454,
-          "chunk_id": "ip-hee-1-005-0031-357eba366d38",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "What are my obligations?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "- Please call us within 4 days of discovering the emergency.\n\n- Normal day to day maintenance of your home.\n\n- In some instances you will be required to replace the temporary repair with a permanent one.",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.726919,
-          "chunk_id": "ip-hee-1-005-0015-f06d99d27bad",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "What is insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Unlimited claims: There is no limit on the number of claims you can make in each policy term.",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.7265462,
-          "chunk_id": "ip-hee-1-005-0002-208df37a5dcd",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "What is this type of insurance?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Home Emergency Extra Cover provides assistance for the emergencies specified in this policy. For example, broken boilers, burst pipes, broken windows, doors and locks. It is not intended to replace the normal day-to-day maintenance of your home. We'll help to arrange and pay for any work needed to make a temporary repair to resolve the emergency in your home. You'll be covered for up to £1,000 per claim with no excess to pay.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.7226307,
-          "chunk_id": "ip-hee-1-005-0027-3e7ada1dfe93",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "Are there any restrictions on cover?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Parts availability: If the engineer is not carrying the correct part to deal with an emergency it could mean the repair is delayed until the part is sourced.",
-          "is_expected": false
         }
       ]
     },
@@ -930,20 +562,14 @@
         "ip-ho-1-012-0013-bbb8511f830f",
         "ip-fl-1-008-0009-18ed8ef49852",
         "ip-fl-1-008-0032-d4bdbd731321",
-        "hh-010-018-0137-5b2ba41f52ce",
-        "ip-ho-3-010-0015-aee92a088f26",
-        "ip-fl-1-008-0023-49d60d92a447",
-        "ip-fl-1-008-0024-64512da430ed",
-        "hh-010-018-0230-e88d5842dd0d",
-        "hh-010-018-0136-d4414d134612"
+        "hh-010-018-0137-5b2ba41f52ce"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -966,19 +592,12 @@
           "expected_total": 1,
           "recall": 1.0,
           "all_expected": true
-        },
-        "at_10": {
-          "hit": true,
-          "expected_found": 1,
-          "expected_total": 1,
-          "recall": 1.0,
-          "all_expected": true
         }
       },
       "retrieved_results": [
         {
           "rank": 1,
-          "score": 0.6691567,
+          "score": 0.6691808,
           "chunk_id": "hh-010-018-0025-b43348e79a9b",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -994,7 +613,7 @@
         },
         {
           "rank": 2,
-          "score": 0.6276139,
+          "score": 0.62761736,
           "chunk_id": "ip-ho-1-012-0013-bbb8511f830f",
           "document_code": "IP-HO-1-012",
           "title": "Admiral Home Insurance Policy",
@@ -1010,7 +629,7 @@
         },
         {
           "rank": 3,
-          "score": 0.6275325,
+          "score": 0.62753475,
           "chunk_id": "ip-fl-1-008-0009-18ed8ef49852",
           "document_code": "IP-FL-1-008",
           "title": "Home Legal Expenses",
@@ -1024,7 +643,7 @@
         },
         {
           "rank": 4,
-          "score": 0.6268101,
+          "score": 0.6268017,
           "chunk_id": "ip-fl-1-008-0032-d4bdbd731321",
           "document_code": "IP-FL-1-008",
           "title": "Home Legal Expenses",
@@ -1038,7 +657,7 @@
         },
         {
           "rank": 5,
-          "score": 0.62277484,
+          "score": 0.6227486,
           "chunk_id": "hh-010-018-0137-5b2ba41f52ce",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -1050,82 +669,6 @@
           "start_pdf_page": 31,
           "end_pdf_page": 32,
           "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: (2) Personal liability | What is covered: (2) Personal liability Your or your family’s liability after an accident that caused:\n• Death, illness or physical injury to a person.\n• Damage to someone else’s property. The property can’t belong to (or be in the responsibility of) you, your family, your household staff or anyone else permanently living with you. This section only covers accidents that happen:\n• During the period of insurance.\n• In the UK, the Isle of Man and the Channel Islands. | What is not covered: Any liability for death or physical injury to you, your family or anyone permanently living with you, including your domestic staff, unless covered under ‘Employer’s liability’. You can’t claim under both ‘Occupier’s liability’ and ‘Property Owner’s liability’ cover. For more information about Property Owner’s liability, please see page 16. Any land or building you or your family own or live in, other than your home, unless covered under ‘Tenant’s liability’ and ‘Liability as occupier of temporary accommodation’. Any liability from you or your family owning or using a:\n• Motorised vehicle.\n• Caravan that’s being towed.\n• Watercraft, hovercraft or aircraft (including drones). Any liability from you or your family’s profession, business, trade or employment. Any liability from you or your family being treated for or passing on any disease or virus. Any liability from any living creature (other than cats and dogs you or your family own or are legally responsible for). Any dog dangerously out of control, any breed defined as dangerous or any dog crossed with these breeds. As per;\n• The Dangerous Dogs Act 1991.\n• The Dangerous Dogs (Northern Ireland) Order 1991.\n• Any other law. Any liability resulting from the use of firearms or any other weapon. Any damages, legal costs or other costs awarded by a court or other body with no authority in the UK. Any liability from The Party Wall etc Act 1996. Any liability from you or your family taking part in any sporting activity including racing, hunting and polo. | Cover status: Admiral: Included, Gold: Included, Platinum: Included",
-          "is_expected": false
-        },
-        {
-          "rank": 6,
-          "score": 0.62137747,
-          "chunk_id": "ip-ho-3-010-0015-aee92a088f26",
-          "document_code": "IP-HO-3-010",
-          "title": "Platinum Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Contents (Main features, if selected)"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Shared properties: As well as covering those living with their partner and/or families we also offer cover for those living in shared accommodation such as student houses.",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.6207978,
-          "chunk_id": "ip-fl-1-008-0023-49d60d92a447",
-          "document_code": "IP-FL-1-008",
-          "title": "Home Legal Expenses",
-          "section_heading": "Are there any restrictions on cover?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "You are not covered for:",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.620561,
-          "chunk_id": "ip-fl-1-008-0024-64512da430ed",
-          "document_code": "IP-FL-1-008",
-          "title": "Home Legal Expenses",
-          "section_heading": "Are there any restrictions on cover?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "The use of your own lawyer. We will appoint a preferred lawyer or other professional for you. You may choose your own lawyer when legal proceedings start or if there is a conflict of interest.",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.61965847,
-          "chunk_id": "hh-010-018-0230-e88d5842dd0d",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Optional cover:",
-          "subsection_headings": [
-            "Home Legal Expenses (as standard on Platinum)"
-          ],
-          "semantic_heading": "What we’ll not pay",
-          "start_pdf_page": 59,
-          "end_pdf_page": 59,
-          "text": "Table: Definitions\n\nColumns: Term | Definition\n\nTerm: You, your | Definition: The person who has taken out this policy (the policyholder) and any member of their family who always lives with them. This includes students temporarily living away from home and unmarried partners. Anyone claiming under this section must have the policyholder’s agreement to claim.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.6188605,
-          "chunk_id": "hh-010-018-0136-d4414d134612",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your liability cover"
-          ],
-          "semantic_heading": "Coverage by level - (1) Occupier’s liability",
-          "start_pdf_page": 31,
-          "end_pdf_page": 32,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: (1) Occupier’s liability | What is covered: (1) Occupier’s liability Your or your family’s liability to the public as occupier (but not owner) of your home. | What is not covered: Any liability for death or physical injury to you, your family or anyone permanently living with you, including your domestic staff, unless covered under ‘Employer’s liability’. You can’t claim under both ‘Occupier’s liability’ and ‘Property Owner’s liability’ cover. For more information about Property Owner’s liability, please see page 16. Any land or building you or your family own or live in, other than your home, unless covered under ‘Tenant’s liability’ and ‘Liability as occupier of temporary accommodation’. Any liability from you or your family owning or using a:\n• Motorised vehicle.\n• Caravan that’s being towed.\n• Watercraft, hovercraft or aircraft (including drones). Any liability from you or your family’s profession, business, trade or employment. Any liability from you or your family being treated for or passing on any disease or virus. Any liability from any living creature (other than cats and dogs you or your family own or are legally responsible for). Any dog dangerously out of control, any breed defined as dangerous or any dog crossed with these breeds. As per;\n• The Dangerous Dogs Act 1991.\n• The Dangerous Dogs (Northern Ireland) Order 1991.\n• Any other law. Any liability resulting from the use of firearms or any other weapon. Any damages, legal costs or other costs awarded by a court or other body with no authority in the UK. Any liability from The Party Wall etc Act 1996. Any liability from you or your family taking part in any sporting activity including racing, hunting and polo. | Cover status: Admiral: Included, Gold: Included, Platinum: Included",
           "is_expected": false
         }
       ]
@@ -1145,20 +688,14 @@
         "ip-ho-1-012-0018-10d993711a66",
         "ip-ho-2-012-0023-a49d91c96f2a",
         "hh-010-018-0125-03aefcdbd6dc",
-        "ip-ho-1-012-0017-dc407d5d4213",
-        "ip-ho-3-010-0026-dc81f3313a8b",
-        "hh-010-018-0127-bebfb7dd1254",
-        "hh-010-018-0036-37462e58ccba",
-        "ip-ho-2-012-0022-f74d1973790c",
-        "hh-010-018-0142-399187ad31ce"
+        "ip-ho-1-012-0017-dc407d5d4213"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -1181,13 +718,6 @@
           "expected_total": 2,
           "recall": 0.5,
           "all_expected": false
-        },
-        "at_10": {
-          "hit": true,
-          "expected_found": 2,
-          "expected_total": 2,
-          "recall": 1.0,
-          "all_expected": true
         }
       },
       "retrieved_results": [
@@ -1225,7 +755,7 @@
         },
         {
           "rank": 3,
-          "score": 0.6224681,
+          "score": 0.6224665,
           "chunk_id": "ip-ho-2-012-0023-a49d91c96f2a",
           "document_code": "IP-HO-2-012",
           "title": "Gold Home Insurance Policy",
@@ -1241,7 +771,7 @@
         },
         {
           "rank": 4,
-          "score": 0.6202735,
+          "score": 0.6202471,
           "chunk_id": "hh-010-018-0125-03aefcdbd6dc",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -1270,86 +800,6 @@
           "end_pdf_page": 1,
           "text": "Personal possessions: Increase your cover up to a maximum of £20,000.",
           "is_expected": false
-        },
-        {
-          "rank": 6,
-          "score": 0.6182498,
-          "chunk_id": "ip-ho-3-010-0026-dc81f3313a8b",
-          "document_code": "IP-HO-3-010",
-          "title": "Platinum Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Optional Cover"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "Specified items: Add valuables over £2,000 up to a maximum of £50,000.",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.6171821,
-          "chunk_id": "hh-010-018-0127-bebfb7dd1254",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your contents cover"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 28,
-          "end_pdf_page": 28,
-          "text": "Collections\nIf you want to insure a collection worth more in total than the ‘Unspecified item limit’, it must be listed in your Home Policy Schedule. For example, a stamp or coin collection. Unspecified item limit You can find this limit in your Home Policy Schedule under the ‘Specified Items’ table. All high-risk items above this limit must be listed in your latest Home Policy Schedule. If they’re not, we won’t pay more than the ‘Unspecified item limit’ for them. Total high-risk items limit We won’t pay more than the ‘Total high-risk items limit’ shown in your Home Policy Schedule for all your high-risk items, whether they’re specified or unspecified. Cover for items away from the home Please see ‘Cover away from your home’. Inflation The value of specified items can change. We don’t index link the value of your specified items. This means the value they’re insured for won’t increase when you renew your policy. It’s your responsibility to make sure you have enough cover for your specified items by keeping their value up to date.",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.6163275,
-          "chunk_id": "hh-010-018-0036-37462e58ccba",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Guide to your Home Insurance cover",
-          "subsection_headings": [
-            "Definitions"
-          ],
-          "semantic_heading": "Specified item",
-          "start_pdf_page": 8,
-          "end_pdf_page": 8,
-          "text": "Specified item\n\nHigh-risk items which are worth more than £2,000. If you specify an item, we’ll list it in your Home Policy Schedule.",
-          "is_expected": true
-        },
-        {
-          "rank": 9,
-          "score": 0.6158882,
-          "chunk_id": "ip-ho-2-012-0022-f74d1973790c",
-          "document_code": "IP-HO-2-012",
-          "title": "Gold Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Optional Cover"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "Personal possessions: Increase your cover up to a maximum of £20,000.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.6134963,
-          "chunk_id": "hh-010-018-0142-399187ad31ce",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Cover away from your home"
-          ],
-          "semantic_heading": "Coverage by level - 1) Personal possessions",
-          "start_pdf_page": 33,
-          "end_pdf_page": 34,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: 1) Personal possessions | What is covered: 1) Personal possessions Personal possessions are covered up to the amount shown under ‘Personal possessions limit’ on your Home Policy Schedule. | What is not covered: Loss or damage to:\n• Any personal possessions and high-risk items lost or damaged in your home or on the land that your home stands on.\n• High-risk items worth more than the ‘Unspecified item limit’.\n• Plants or any living creature.\n• Corneal or contact lenses.\n• Lottery or raffle tickets, credit cards, securities or documents.\n• Domestic appliances.\n• Business equipment.\n• Remote-controlled models or sporting equipment while being used.\n• The inside of watches and clocks. Loss or damage to property which has been outside the UK, the Isle of Man and the Channel Islands for more than 90 days in a row. This doesn’t apply to property taken on an ‘operational tour’. (A military tour of duty for which an allowance is paid to you). Loss or damage to items that aren’t with you or your family at the time of the loss or damage. For example, items that aren’t being worn or carried, or aren’t within reach of, you or your family. Loss or damage to motorised vehicles, bicycles and ride-on lawnmowers. (Bicycles are covered under ‘Your bicycle cover’) Loss or damage caused by any living creature, including pets. Loss or damage that happens at a storage facility or when you’re moving home. Theft or attempted theft from a motor vehicle unless:\n• All windows, doors and the boot were closed and locked.\n• The items were hidden from view in the boot, a closed glove compartment, or a concealed luggage compartment. We won’t pay more than £1,000 for any theft from a motor vehicle. Loss or damage caused by theft or attempted theft, unless you have the items in your possession, or have left them in a secure place. By ‘secure place’ we mean that your belongings are locked in your room or other security facility such as a safe, or a secure room. | Cover status: Admiral: Optional, Gold: Optional, Platinum: Included",
-          "is_expected": false
         }
       ]
     },
@@ -1369,20 +819,14 @@
         "ip-he-1-008-0021-1a448a65a7d7",
         "ip-hee-1-005-0027-3e7ada1dfe93",
         "ip-ho-3-010-0010-887387ba4c24",
-        "ip-ho-1-012-0032-8541101fe58d",
-        "hh-010-018-0080-85ac01d7a6a1",
-        "ip-he-1-008-0016-c62817d64166",
-        "ip-hee-1-005-0020-05bc76d0067e",
-        "ip-he-1-008-0025-dcaae6f69b2c",
-        "ip-hee-1-005-0031-357eba366d38"
+        "ip-ho-1-012-0032-8541101fe58d"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -1405,19 +849,12 @@
           "expected_total": 3,
           "recall": 0.6666666666666666,
           "all_expected": false
-        },
-        "at_10": {
-          "hit": true,
-          "expected_found": 3,
-          "expected_total": 3,
-          "recall": 1.0,
-          "all_expected": true
         }
       },
       "retrieved_results": [
         {
           "rank": 1,
-          "score": 0.62189305,
+          "score": 0.6218934,
           "chunk_id": "hh-010-018-0049-8bed6f20f8d6",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -1477,7 +914,7 @@
         },
         {
           "rank": 5,
-          "score": 0.60133874,
+          "score": 0.60131884,
           "chunk_id": "ip-ho-1-012-0032-8541101fe58d",
           "document_code": "IP-HO-1-012",
           "title": "Admiral Home Insurance Policy",
@@ -1489,78 +926,6 @@
           "start_pdf_page": 2,
           "end_pdf_page": 2,
           "text": "Matching Suites: We will treat an individual item from a matching set of items as a single item. We will only pay for items that are lost or damaged but not for the other pieces of the set or suite which are not damaged or lost.",
-          "is_expected": false
-        },
-        {
-          "rank": 6,
-          "score": 0.60125977,
-          "chunk_id": "hh-010-018-0080-85ac01d7a6a1",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your buildings cover"
-          ],
-          "semantic_heading": "Coverage by level - Matching items",
-          "start_pdf_page": 18,
-          "end_pdf_page": 18,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: Matching items | What is covered: Matching items If part of a set or suite is damaged beyond repair, and we can’t find a replacement, we’ll pay for repairing or replacing the whole set or suite. We class a set or suite to be a bathroom suite, fitted kitchen, floor covering, or an area of wall tiles. | What is not covered: Undamaged flooring in rooms that are connected or clearly separated. | Cover status: Admiral: Not included, Gold: Not included, Platinum: Included",
-          "is_expected": true
-        },
-        {
-          "rank": 7,
-          "score": 0.5969521,
-          "chunk_id": "ip-he-1-008-0016-c62817d64166",
-          "document_code": "IP-HE-1-008",
-          "title": "Home Emergency Cover",
-          "section_heading": "What is not insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Windows, doors and locks: We won't cover internal doors and windows that do not affect the security and safety of the property. We won't cover replacing lost or stolen keys.",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.59639245,
-          "chunk_id": "ip-hee-1-005-0020-05bc76d0067e",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "What is not insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Windows, doors and locks: We won't cover internal doors and windows that do not affect the security and safety of the property. We won't cover replacing lost or stolen keys.",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.59631467,
-          "chunk_id": "ip-he-1-008-0025-dcaae6f69b2c",
-          "document_code": "IP-HE-1-008",
-          "title": "Home Emergency Cover",
-          "section_heading": "What are my obligations?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "- Please call us within 4 days of discovering the emergency.\n\n- Normal day to day maintenance of your home.\n\n- In some instances you will be required to replace the temporary repair with a permanent one.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.5959915,
-          "chunk_id": "ip-hee-1-005-0031-357eba366d38",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "What are my obligations?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "- Please call us within 4 days of discovering the emergency.\n\n- Normal day to day maintenance of your home.\n\n- In some instances you will be required to replace the temporary repair with a permanent one.",
           "is_expected": false
         }
       ]
@@ -1584,20 +949,14 @@
         "ip-ho-1-012-0027-85f708445994",
         "hh-010-018-0132-496f5bb547e3",
         "hh-010-018-0129-a034888c3cc4",
-        "ip-ho-2-012-0031-790b1b20526c",
-        "hh-010-018-0084-73159415dfe3",
-        "hh-010-018-0093-a7b05afd65af",
-        "hh-010-018-0138-183d136581a9",
-        "hh-010-018-0061-a116d8040709",
-        "hh-010-018-0137-5b2ba41f52ce"
+        "ip-ho-2-012-0031-790b1b20526c"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -1620,13 +979,6 @@
           "expected_total": 6,
           "recall": 0.8333333333333334,
           "all_expected": false
-        },
-        "at_10": {
-          "hit": true,
-          "expected_found": 6,
-          "expected_total": 6,
-          "recall": 1.0,
-          "all_expected": true
         }
       },
       "retrieved_results": [
@@ -1664,7 +1016,7 @@
         },
         {
           "rank": 3,
-          "score": 0.6377301,
+          "score": 0.6377269,
           "chunk_id": "hh-010-018-0132-496f5bb547e3",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -1680,7 +1032,7 @@
         },
         {
           "rank": 4,
-          "score": 0.6375732,
+          "score": 0.6376306,
           "chunk_id": "hh-010-018-0129-a034888c3cc4",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -1696,7 +1048,7 @@
         },
         {
           "rank": 5,
-          "score": 0.6348253,
+          "score": 0.634801,
           "chunk_id": "ip-ho-2-012-0031-790b1b20526c",
           "document_code": "IP-HO-2-012",
           "title": "Gold Home Insurance Policy",
@@ -1709,86 +1061,6 @@
           "end_pdf_page": 1,
           "text": "Pets: Loss or damage caused by chewing, scratching, tearing, fouling or vomiting by domestic pets.",
           "is_expected": true
-        },
-        {
-          "rank": 6,
-          "score": 0.632862,
-          "chunk_id": "hh-010-018-0084-73159415dfe3",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your buildings cover"
-          ],
-          "semantic_heading": "When we won’t cover claims for accidental breakage or accidental damage",
-          "start_pdf_page": 19,
-          "end_pdf_page": 20,
-          "text": "When we won’t cover claims for accidental breakage or accidental damage\n\nWe won’t pay for damage caused:\n\n• As a result of alterations (changes) or extensions to the buildings.\n\n• By demolition.\n\n• By any paying guest or tenant.\n\n• By pets, through chewing, scratching, tearing, fouling or vomiting.\n\n• While your home is unoccupied.\n\n• By brown or black rats, grey squirrels, house or field mice, wasps or hornets, woodworm or insects.\n\nAccidental damage\nYou’ll have to pay an excess if you claim for accidental breakage or accidental damage. The details of the excess and your ‘cover and limits’ are shown in your Home Policy Schedule. For example, if you claim for accidental damage to locks, the limit of cover for locks will apply.",
-          "is_expected": true
-        },
-        {
-          "rank": 7,
-          "score": 0.63269836,
-          "chunk_id": "hh-010-018-0093-a7b05afd65af",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your contents cover"
-          ],
-          "semantic_heading": "Events covered by your contents policy",
-          "start_pdf_page": 21,
-          "end_pdf_page": 21,
-          "text": "Table: Coverage details\n\nColumns: What is covered | What is not covered\n\nWhat is covered: 6) Falling television and radio aerials, including satellite dishes, and their fittings and masts. | What is not covered:",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.63018084,
-          "chunk_id": "hh-010-018-0138-183d136581a9",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your liability cover"
-          ],
-          "semantic_heading": "Coverage by level - (3) Tenant’s liability",
-          "start_pdf_page": 31,
-          "end_pdf_page": 32,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: (3) Tenant’s liability | What is covered: (3) Tenant’s liability Your or your family’s liability for damage to your landlord’s fixtures and fittings, caused by a buildings event covered by this policy. You can find the buildings events covered by this policy on pages 12-14. Accidental breakage of glass, sanitary fixtures or built-in ceramic hobs in a fitted kitchen. Accidental damage to mirrors and glass. | What is not covered: Any liability for death or physical injury to you, your family or anyone permanently living with you, including your domestic staff, unless covered under ‘Employer’s liability’. You can’t claim under both ‘Occupier’s liability’ and ‘Property Owner’s liability’ cover. For more information about Property Owner’s liability, please see page 16. Any land or building you or your family own or live in, other than your home, unless covered under ‘Tenant’s liability’ and ‘Liability as occupier of temporary accommodation’. Any liability from you or your family owning or using a:\n• Motorised vehicle.\n• Caravan that’s being towed.\n• Watercraft, hovercraft or aircraft (including drones). Any liability from you or your family’s profession, business, trade or employment. Any liability from you or your family being treated for or passing on any disease or virus. Any liability from any living creature (other than cats and dogs you or your family own or are legally responsible for). Any dog dangerously out of control, any breed defined as dangerous or any dog crossed with these breeds. As per;\n• The Dangerous Dogs Act 1991.\n• The Dangerous Dogs (Northern Ireland) Order 1991.\n• Any other law. Any liability resulting from the use of firearms or any other weapon. Any damages, legal costs or other costs awarded by a court or other body with no authority in the UK. Any liability from The Party Wall etc Act 1996. Any liability from you or your family taking part in any sporting activity including racing, hunting and polo. | Cover status: Admiral: Included, Gold: Included, Platinum: Included",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.62651217,
-          "chunk_id": "hh-010-018-0061-a116d8040709",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your buildings cover"
-          ],
-          "semantic_heading": "Events covered by your buildings policy",
-          "start_pdf_page": 14,
-          "end_pdf_page": 14,
-          "text": "Table: Coverage details\n\nColumns: What is covered | What is not covered\n\nWhat is covered: 6) Falling television and radio aerials, satellite dishes, and their fittings and masts. | What is not covered: Loss or damage to hedges, gates or fences.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.6235465,
-          "chunk_id": "hh-010-018-0137-5b2ba41f52ce",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your liability cover"
-          ],
-          "semantic_heading": "Coverage by level - (2) Personal liability",
-          "start_pdf_page": 31,
-          "end_pdf_page": 32,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: (2) Personal liability | What is covered: (2) Personal liability Your or your family’s liability after an accident that caused:\n• Death, illness or physical injury to a person.\n• Damage to someone else’s property. The property can’t belong to (or be in the responsibility of) you, your family, your household staff or anyone else permanently living with you. This section only covers accidents that happen:\n• During the period of insurance.\n• In the UK, the Isle of Man and the Channel Islands. | What is not covered: Any liability for death or physical injury to you, your family or anyone permanently living with you, including your domestic staff, unless covered under ‘Employer’s liability’. You can’t claim under both ‘Occupier’s liability’ and ‘Property Owner’s liability’ cover. For more information about Property Owner’s liability, please see page 16. Any land or building you or your family own or live in, other than your home, unless covered under ‘Tenant’s liability’ and ‘Liability as occupier of temporary accommodation’. Any liability from you or your family owning or using a:\n• Motorised vehicle.\n• Caravan that’s being towed.\n• Watercraft, hovercraft or aircraft (including drones). Any liability from you or your family’s profession, business, trade or employment. Any liability from you or your family being treated for or passing on any disease or virus. Any liability from any living creature (other than cats and dogs you or your family own or are legally responsible for). Any dog dangerously out of control, any breed defined as dangerous or any dog crossed with these breeds. As per;\n• The Dangerous Dogs Act 1991.\n• The Dangerous Dogs (Northern Ireland) Order 1991.\n• Any other law. Any liability resulting from the use of firearms or any other weapon. Any damages, legal costs or other costs awarded by a court or other body with no authority in the UK. Any liability from The Party Wall etc Act 1996. Any liability from you or your family taking part in any sporting activity including racing, hunting and polo. | Cover status: Admiral: Included, Gold: Included, Platinum: Included",
-          "is_expected": false
         }
       ]
     },
@@ -1810,20 +1082,14 @@
         "hh-010-018-0142-399187ad31ce",
         "ip-ho-3-010-0041-f7a687077619",
         "ip-ho-2-012-0039-7ef02b87ced7",
-        "hh-010-018-0114-44d154d278d2",
-        "ip-ho-3-010-0039-a07444f3aa02",
-        "ip-ho-1-012-0035-be7bf35bf78f",
-        "hh-010-018-0095-4a2ab365d7af",
-        "hh-010-018-0141-b9e870e85641",
-        "hh-010-018-0134-e0cc08446ee7"
+        "hh-010-018-0114-44d154d278d2"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -1846,13 +1112,6 @@
           "expected_total": 5,
           "recall": 0.8,
           "all_expected": false
-        },
-        "at_10": {
-          "hit": true,
-          "expected_found": 5,
-          "expected_total": 5,
-          "recall": 1.0,
-          "all_expected": true
         }
       },
       "retrieved_results": [
@@ -1918,7 +1177,7 @@
         },
         {
           "rank": 5,
-          "score": 0.6456705,
+          "score": 0.64568233,
           "chunk_id": "hh-010-018-0114-44d154d278d2",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -1930,82 +1189,6 @@
           "start_pdf_page": 25,
           "end_pdf_page": 25,
           "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: Contents temporarily away from home | What is covered: Contents temporarily away from home Loss or damage to contents, due to any contents events covered by this policy, while they’re temporarily away from your home. The contents must be kept in a family member’s home or in a purpose-built storage facility, anywhere in the world, for up to 90 days. | What is not covered: Loss or damage:\n• While the contents are being transported.\n• To any contents not previously kept in your home. | Cover status: Admiral: Not included, Gold: Included, Platinum: Included",
-          "is_expected": false
-        },
-        {
-          "rank": 6,
-          "score": 0.6413751,
-          "chunk_id": "ip-ho-3-010-0039-a07444f3aa02",
-          "document_code": "IP-HO-3-010",
-          "title": "Platinum Home Insurance Policy",
-          "section_heading": "Where am I covered?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "We cover personal possessions anywhere in the world.",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.6398509,
-          "chunk_id": "ip-ho-1-012-0035-be7bf35bf78f",
-          "document_code": "IP-HO-1-012",
-          "title": "Admiral Home Insurance Policy",
-          "section_heading": "Where am I covered?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "Optional Cover: For personal possessions, specified bikes and specified items you have asked to cover away from home, we will cover you anywhere in the world.",
-          "is_expected": true
-        },
-        {
-          "rank": 8,
-          "score": 0.63403654,
-          "chunk_id": "hh-010-018-0095-4a2ab365d7af",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your contents cover"
-          ],
-          "semantic_heading": "Events covered by your contents policy",
-          "start_pdf_page": 22,
-          "end_pdf_page": 22,
-          "text": "Table: Coverage details\n\nColumns: What is covered | What is not covered\n\nWhat is covered: 8) Theft and attempted theft. We’ll only pay up to £1,000 for any theft from a motor vehicle. For guidance on what steps to take after a theft or attempted theft, please see ‘How to make a claim’. | What is not covered: Loss or damage to contents in your outbuildings, or kept in the open on the land your home stands on. (This may be covered under ‘Theft from garages and outbuildings’ or ‘Garden Contents’, if you have Gold or Platinum cover.) Loss or damage caused by you, your family, or anyone invited into your home, unless force and violence was used to enter your home. Loss or damage while your home is being lived in by anyone other than you or your family, unless force and violence was used to enter your home. Loss or damage while your home is unoccupied. Loss or damage to contents left in an unattended motor vehicle, while parked on the land your home stands on. Unless you do the following:\n• All windows, doors and the boot are closed and locked.\n• The items are hidden from view in the boot, a closed glove compartment, or a concealed luggage compartment.",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.63191736,
-          "chunk_id": "hh-010-018-0141-b9e870e85641",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Cover away from your home"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 33,
-          "end_pdf_page": 33,
-          "text": "You’re covered for this section if you have contents insurance. If you want to make a claim for this section you’ll need to pay the compulsory contents excess and voluntary excess (if you have chosen one).\n\nYou can find your level of cover, and any optional cover you’ve chosen in your Home Policy Schedule. Personal possessions is included as standard on Platinum policies and is optional for Gold and Admiral policies.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.6311542,
-          "chunk_id": "hh-010-018-0134-e0cc08446ee7",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your contents cover"
-          ],
-          "semantic_heading": "Host cover - Host cover",
-          "start_pdf_page": 30,
-          "end_pdf_page": 30,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: Host cover | What is covered: Host cover You can rent out your home through a dedicated home sharing website for up to 90 days during the period of insurance. Your home must be.\n• Owned or mortgaged by you.\n• Your main home where you live permanently. The exclusions about paying or invited guests in this policy book don’t apply if the guests have booked through a dedicated home sharing website. Dedicated home sharing websites usually have their own insurance e.g. Airbnb’s AirCover. We won’t cover any claims for Host Cover unless you’ve tried to use their cover first | What is not covered: You can’t use this cover if the amount of adult paying guests is more than double the number of bedrooms (for example, more than 4 adults in a 2 bedroom property). Your high-risk items won’t be fully covered unless they’re kept in either a:\n• Locked securely fixed safe.\n• Locked room.\n• Locked cupboard. We’ll pay up to £5,000 for your high-risk items, or the amount shown on your Home Policy Schedule, whichever is less. This is for loss or damage caused by Theft, Vandalism or Malicious Acts, or Accidental Damage. | Cover status: Admiral: Included, Gold: Included, Platinum: Included",
           "is_expected": false
         }
       ]
@@ -2025,20 +1208,14 @@
         "ip-ho-2-012-0038-9081220cbcaa",
         "ip-ho-2-012-0022-f74d1973790c",
         "ip-ho-2-012-0019-cb45785fdda7",
-        "ip-ho-2-012-0023-a49d91c96f2a",
-        "ip-ho-2-012-0004-42f299b9dace",
-        "ip-ho-2-012-0013-bc95e456dadc",
-        "ip-ho-2-012-0010-cdabb57ae980",
-        "ip-ho-2-012-0024-52abdaa01ad4",
-        "ip-ho-2-012-0012-fa8878c7e79c"
+        "ip-ho-2-012-0023-a49d91c96f2a"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -2056,13 +1233,6 @@
           "all_expected": true
         },
         "at_5": {
-          "hit": true,
-          "expected_found": 2,
-          "expected_total": 2,
-          "recall": 1.0,
-          "all_expected": true
-        },
-        "at_10": {
           "hit": true,
           "expected_found": 2,
           "expected_total": 2,
@@ -2101,7 +1271,7 @@
         },
         {
           "rank": 3,
-          "score": 0.7297424,
+          "score": 0.72977036,
           "chunk_id": "ip-ho-2-012-0022-f74d1973790c",
           "document_code": "IP-HO-2-012",
           "title": "Gold Home Insurance Policy",
@@ -2117,7 +1287,7 @@
         },
         {
           "rank": 4,
-          "score": 0.7210564,
+          "score": 0.7210665,
           "chunk_id": "ip-ho-2-012-0019-cb45785fdda7",
           "document_code": "IP-HO-2-012",
           "title": "Gold Home Insurance Policy",
@@ -2133,7 +1303,7 @@
         },
         {
           "rank": 5,
-          "score": 0.71980006,
+          "score": 0.71983355,
           "chunk_id": "ip-ho-2-012-0023-a49d91c96f2a",
           "document_code": "IP-HO-2-012",
           "title": "Gold Home Insurance Policy",
@@ -2145,86 +1315,6 @@
           "start_pdf_page": 2,
           "end_pdf_page": 2,
           "text": "Specified items: Add valuables over £2,000 up to a maximum of £30,000.",
-          "is_expected": false
-        },
-        {
-          "rank": 6,
-          "score": 0.7189563,
-          "chunk_id": "ip-ho-2-012-0004-42f299b9dace",
-          "document_code": "IP-HO-2-012",
-          "title": "Gold Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Buildings (Main features, if selected)"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Alternative accommodation: Up to £75,000 for temporary accommodation for your family and pets if your home is not safe to live in following an insured event.",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.7164837,
-          "chunk_id": "ip-ho-2-012-0013-bc95e456dadc",
-          "document_code": "IP-HO-2-012",
-          "title": "Gold Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Contents (Main features, if selected)"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Occupiers and personal liability: Up to £2 Million for sums you and your family are legally liable for.",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.7163746,
-          "chunk_id": "ip-ho-2-012-0010-cdabb57ae980",
-          "document_code": "IP-HO-2-012",
-          "title": "Gold Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Contents (Main features, if selected)"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Household contents: Are covered for damage or loss by events such as fire, storm, flood, theft, escape of water, malicious acts and subsidence up to £125,000.",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.7158635,
-          "chunk_id": "ip-ho-2-012-0024-52abdaa01ad4",
-          "document_code": "IP-HO-2-012",
-          "title": "Gold Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Optional Cover"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "Bikes over £350: Add bikes up to £10,000 per bike up to a maximum of £20,000.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.71507627,
-          "chunk_id": "ip-ho-2-012-0012-fa8878c7e79c",
-          "document_code": "IP-HO-2-012",
-          "title": "Gold Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Contents (Main features, if selected)"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Digital downloads: Up to £1,000 for the loss or damage of content you have legally downloaded.",
           "is_expected": false
         }
       ]
@@ -2246,20 +1336,14 @@
         "hh-010-018-0142-399187ad31ce",
         "ip-ho-3-010-0041-f7a687077619",
         "ip-ho-2-012-0039-7ef02b87ced7",
-        "ip-ho-3-010-0039-a07444f3aa02",
-        "hh-010-018-0114-44d154d278d2",
-        "hh-010-018-0148-804893e6505c",
-        "hh-010-018-0134-e0cc08446ee7",
-        "ip-ho-3-010-0040-4d6c28c3d859",
-        "hh-010-018-0209-b7f24bf6a35d"
+        "ip-ho-3-010-0039-a07444f3aa02"
       ],
       "first_relevant_rank": 2,
       "reciprocal_rank": 0.5,
       "hits": {
         "hit_at_1": false,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -2277,13 +1361,6 @@
           "all_expected": false
         },
         "at_5": {
-          "hit": true,
-          "expected_found": 3,
-          "expected_total": 4,
-          "recall": 0.75,
-          "all_expected": false
-        },
-        "at_10": {
           "hit": true,
           "expected_found": 3,
           "expected_total": 4,
@@ -2365,84 +1442,6 @@
           "end_pdf_page": 2,
           "text": "We cover personal possessions anywhere in the world.",
           "is_expected": true
-        },
-        {
-          "rank": 6,
-          "score": 0.65109646,
-          "chunk_id": "hh-010-018-0114-44d154d278d2",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your contents cover"
-          ],
-          "semantic_heading": "Coverage by level - Contents temporarily away from home",
-          "start_pdf_page": 25,
-          "end_pdf_page": 25,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: Contents temporarily away from home | What is covered: Contents temporarily away from home Loss or damage to contents, due to any contents events covered by this policy, while they’re temporarily away from your home. The contents must be kept in a family member’s home or in a purpose-built storage facility, anywhere in the world, for up to 90 days. | What is not covered: Loss or damage:\n• While the contents are being transported.\n• To any contents not previously kept in your home. | Cover status: Admiral: Not included, Gold: Included, Platinum: Included",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.64848036,
-          "chunk_id": "hh-010-018-0148-804893e6505c",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy doesn’t cover and general conditions:",
-          "subsection_headings": [
-            "What this policy doesn’t cover"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 36,
-          "end_pdf_page": 36,
-          "text": "We won’t cover you for any accident, injury, loss, damage or be legally responsible for any of the below.\n\n1. War and terrorism\n\nAny loss, damage, cost or expense directly or indirectly caused or contributed to by:\n\n• War, invasion or events similar to war (whether or not war is declared), revolution, rebellion, uprising or overthrowing of power.\n\n• Any death, injury or damage to property caused by or in the course of an act of terrorism.\n\nAn ‘act of terrorism’ means using, or threatening to use, biological, chemical, radioactive or nuclear material, pollution or contamination for political, religious, ideological or similar purposes, including to:\n\n• Influence any government.\n\n• Scare or intimidate the public or any section of the public.\n\n2. Riot\n\nAny riot or civil commotion outside of the UK, the Isle of Man and the Channel Islands.\n\n3. Radioactivity\n\nAny nuclear reaction, radiation or radioactive contamination, or other dangerous properties of any nuclear device, part or material.\n\n4. Sonic bangs\n\nAny pressure waves caused by planes or other flying objects travelling at any speed.\n\n5. Pollution or contamination\n\nAny pollution or contamination. This doesn’t apply to a sudden, unexpected and identifiable incident, or oil leaking from a domestic oil system in your home.\n\n6. Faulty design\n\nAny faulty or poor designs, faulty materials or poor workmanship.\n\n7. Electronic data and computer virus\n\nAny computer viruses or other attacks such as hacking, malfunction, or fault of the user.\n\n8. Depreciation\n\nAny lowering of the market value of items that have been repaired or replaced.\n\n9. Loss of tone\n\nAny loss of tone, broken strings or broken drum skins, to any musical instruments.\n\n10. Gradual causes\n\nAnything that happens gradually over time. This includes:\n\n• Wear and tear (this is where, with time and normal use, things become damaged or stop working).\n\n• Wet and dry rot.\n\n• Exposure to sunlight or atmospheric conditions.\n\n• Mildew, rust or corrosion.\n\n• The weight of the buildings compressing and moving the ground, within 10 years of them being built (this is known as settlement).",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.64810556,
-          "chunk_id": "hh-010-018-0134-e0cc08446ee7",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your contents cover"
-          ],
-          "semantic_heading": "Host cover - Host cover",
-          "start_pdf_page": 30,
-          "end_pdf_page": 30,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: Host cover | What is covered: Host cover You can rent out your home through a dedicated home sharing website for up to 90 days during the period of insurance. Your home must be.\n• Owned or mortgaged by you.\n• Your main home where you live permanently. The exclusions about paying or invited guests in this policy book don’t apply if the guests have booked through a dedicated home sharing website. Dedicated home sharing websites usually have their own insurance e.g. Airbnb’s AirCover. We won’t cover any claims for Host Cover unless you’ve tried to use their cover first | What is not covered: You can’t use this cover if the amount of adult paying guests is more than double the number of bedrooms (for example, more than 4 adults in a 2 bedroom property). Your high-risk items won’t be fully covered unless they’re kept in either a:\n• Locked securely fixed safe.\n• Locked room.\n• Locked cupboard. We’ll pay up to £5,000 for your high-risk items, or the amount shown on your Home Policy Schedule, whichever is less. This is for loss or damage caused by Theft, Vandalism or Malicious Acts, or Accidental Damage. | Cover status: Admiral: Included, Gold: Included, Platinum: Included",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.64793813,
-          "chunk_id": "ip-ho-3-010-0040-4d6c28c3d859",
-          "document_code": "IP-HO-3-010",
-          "title": "Platinum Home Insurance Policy",
-          "section_heading": "Where am I covered?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "We cover pedal cycles worth up to £350 anywhere in the world if Contents Cover is purchased.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.6475909,
-          "chunk_id": "hh-010-018-0209-b7f24bf6a35d",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Optional cover:",
-          "subsection_headings": [
-            "Home Legal Expenses (as standard on Platinum)"
-          ],
-          "semantic_heading": "Personal Cyber and Identity Theft Helpline 0333 7777 387",
-          "start_pdf_page": 56,
-          "end_pdf_page": 56,
-          "text": "Personal Cyber and Identity Theft Helpline 0333 7777 387\n\nWe’ll provide you with unlimited access to experienced fraud and cyber specialists who can assist you with issues including, identity theft, fraudulent fund transfer, cyber extortion, financial loss, breach of personal information and cyber bullying.\n\nThe helpline is open 24 hours per day. It is closed on 25th December and 1st January.\n\nThe helpline can assist you with, documenting evidence, notifying authorities, liaising with banks and financial service providers to help attempt to recover any lost monies, filling reports, determining if data back-ups are available, securing accounts, assisting with password changes, and providing advice on protection.\n\nWe make no guarantee that the helpline will be able to resolve your issue. The helpline is unable to assist with any matters relating to your business or professional activities. They will also be unable to help with issues that began before your associated home policy started.",
-          "is_expected": false
         }
       ]
     },
@@ -2460,20 +1459,14 @@
         "ip-ho-2-012-0008-2a81ed4835b1",
         "hh-010-018-0130-fb6be269a31a",
         "ip-he-1-008-0007-7a536c44c7d2",
-        "ip-he-1-008-0016-c62817d64166",
-        "ip-ho-1-012-0016-5fefb1c40bea",
-        "hh-010-018-0017-f70881e2c2f9",
-        "hh-010-018-0084-73159415dfe3",
-        "ip-hee-1-005-0020-05bc76d0067e",
-        "ip-hee-1-005-0008-8db43b6dfde8"
+        "ip-he-1-008-0016-c62817d64166"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -2496,19 +1489,12 @@
           "expected_total": 1,
           "recall": 1.0,
           "all_expected": true
-        },
-        "at_10": {
-          "hit": true,
-          "expected_found": 1,
-          "expected_total": 1,
-          "recall": 1.0,
-          "all_expected": true
         }
       },
       "retrieved_results": [
         {
           "rank": 1,
-          "score": 0.636175,
+          "score": 0.636243,
           "chunk_id": "hh-010-018-0082-ab3e86da136a",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -2540,7 +1526,7 @@
         },
         {
           "rank": 3,
-          "score": 0.63395905,
+          "score": 0.6339557,
           "chunk_id": "hh-010-018-0130-fb6be269a31a",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -2570,7 +1556,7 @@
         },
         {
           "rank": 5,
-          "score": 0.6278328,
+          "score": 0.62785363,
           "chunk_id": "ip-he-1-008-0016-c62817d64166",
           "document_code": "IP-HE-1-008",
           "title": "Home Emergency Cover",
@@ -2580,82 +1566,6 @@
           "start_pdf_page": 1,
           "end_pdf_page": 1,
           "text": "Windows, doors and locks: We won't cover internal doors and windows that do not affect the security and safety of the property. We won't cover replacing lost or stolen keys.",
-          "is_expected": false
-        },
-        {
-          "rank": 6,
-          "score": 0.62769735,
-          "chunk_id": "ip-ho-1-012-0016-5fefb1c40bea",
-          "document_code": "IP-HO-1-012",
-          "title": "Admiral Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Optional Cover"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Full accidental damage: To buildings or contents for unintentional and unforeseen incidents such as smashing a window with a football or knocking a tin of paint over a carpet.",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.6262954,
-          "chunk_id": "hh-010-018-0017-f70881e2c2f9",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Guide to your Home Insurance cover",
-          "subsection_headings": [
-            "Definitions"
-          ],
-          "semantic_heading": "Accidental breakage",
-          "start_pdf_page": 6,
-          "end_pdf_page": 6,
-          "text": "Accidental breakage\n\nSudden, unexpected and visible breakage which wasn’t done on purpose. There needs to be a specific, external force that caused the breakage.",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.62595767,
-          "chunk_id": "hh-010-018-0084-73159415dfe3",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your buildings cover"
-          ],
-          "semantic_heading": "When we won’t cover claims for accidental breakage or accidental damage",
-          "start_pdf_page": 19,
-          "end_pdf_page": 20,
-          "text": "When we won’t cover claims for accidental breakage or accidental damage\n\nWe won’t pay for damage caused:\n\n• As a result of alterations (changes) or extensions to the buildings.\n\n• By demolition.\n\n• By any paying guest or tenant.\n\n• By pets, through chewing, scratching, tearing, fouling or vomiting.\n\n• While your home is unoccupied.\n\n• By brown or black rats, grey squirrels, house or field mice, wasps or hornets, woodworm or insects.\n\nAccidental damage\nYou’ll have to pay an excess if you claim for accidental breakage or accidental damage. The details of the excess and your ‘cover and limits’ are shown in your Home Policy Schedule. For example, if you claim for accidental damage to locks, the limit of cover for locks will apply.",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.6254084,
-          "chunk_id": "ip-hee-1-005-0020-05bc76d0067e",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "What is not insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Windows, doors and locks: We won't cover internal doors and windows that do not affect the security and safety of the property. We won't cover replacing lost or stolen keys.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.6251313,
-          "chunk_id": "ip-hee-1-005-0008-8db43b6dfde8",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "What is insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Windows, doors and locks: We'll secure broken external windows, doors and locks.",
           "is_expected": false
         }
       ]
@@ -2676,20 +1586,14 @@
         "ip-ho-3-010-0016-1a8f2d57d6c8",
         "hh-010-018-0116-931681225641",
         "hh-010-018-0142-399187ad31ce",
-        "hh-010-018-0095-4a2ab365d7af",
-        "hh-010-018-0143-38d466ec27ca",
-        "ip-ho-1-012-0022-19f90ca50941",
-        "hh-010-018-0049-8bed6f20f8d6",
-        "ip-ho-2-012-0009-256c346d3e2a",
-        "hh-010-018-0145-3b1010a18ca8"
+        "hh-010-018-0095-4a2ab365d7af"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -2707,13 +1611,6 @@
           "all_expected": true
         },
         "at_5": {
-          "hit": true,
-          "expected_found": 3,
-          "expected_total": 3,
-          "recall": 1.0,
-          "all_expected": true
-        },
-        "at_10": {
           "hit": true,
           "expected_found": 3,
           "expected_total": 3,
@@ -2740,7 +1637,7 @@
         },
         {
           "rank": 2,
-          "score": 0.6884185,
+          "score": 0.6884711,
           "chunk_id": "ip-ho-3-010-0016-1a8f2d57d6c8",
           "document_code": "IP-HO-3-010",
           "title": "Platinum Home Insurance Policy",
@@ -2756,7 +1653,7 @@
         },
         {
           "rank": 3,
-          "score": 0.6822209,
+          "score": 0.6822263,
           "chunk_id": "hh-010-018-0116-931681225641",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -2801,86 +1698,6 @@
           "end_pdf_page": 22,
           "text": "Table: Coverage details\n\nColumns: What is covered | What is not covered\n\nWhat is covered: 8) Theft and attempted theft. We’ll only pay up to £1,000 for any theft from a motor vehicle. For guidance on what steps to take after a theft or attempted theft, please see ‘How to make a claim’. | What is not covered: Loss or damage to contents in your outbuildings, or kept in the open on the land your home stands on. (This may be covered under ‘Theft from garages and outbuildings’ or ‘Garden Contents’, if you have Gold or Platinum cover.) Loss or damage caused by you, your family, or anyone invited into your home, unless force and violence was used to enter your home. Loss or damage while your home is being lived in by anyone other than you or your family, unless force and violence was used to enter your home. Loss or damage while your home is unoccupied. Loss or damage to contents left in an unattended motor vehicle, while parked on the land your home stands on. Unless you do the following:\n• All windows, doors and the boot are closed and locked.\n• The items are hidden from view in the boot, a closed glove compartment, or a concealed luggage compartment.",
           "is_expected": false
-        },
-        {
-          "rank": 6,
-          "score": 0.67281383,
-          "chunk_id": "hh-010-018-0143-38d466ec27ca",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Cover away from your home"
-          ],
-          "semantic_heading": "Coverage by level - 2) Specified items",
-          "start_pdf_page": 33,
-          "end_pdf_page": 34,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: 2) Specified items | What is covered: 2) Specified items Specified items listed in the ‘Specified Items’ table are covered away from home, up to the individual amount shown for each item. The ‘specified items’ table can be found on your Home Policy Schedule. ‘Cover away from your home’ must be shown as ‘yes’ in the table, for items to be covered away from your home. | What is not covered: Loss or damage to:\n• Any personal possessions and high-risk items lost or damaged in your home or on the land that your home stands on.\n• High-risk items worth more than the ‘Unspecified item limit’.\n• Plants or any living creature.\n• Corneal or contact lenses.\n• Lottery or raffle tickets, credit cards, securities or documents.\n• Domestic appliances.\n• Business equipment.\n• Remote-controlled models or sporting equipment while being used.\n• The inside of watches and clocks. Loss or damage to property which has been outside the UK, the Isle of Man and the Channel Islands for more than 90 days in a row. This doesn’t apply to property taken on an ‘operational tour’. (A military tour of duty for which an allowance is paid to you). Loss or damage to items that aren’t with you or your family at the time of the loss or damage. For example, items that aren’t being worn or carried, or aren’t within reach of, you or your family. Loss or damage to motorised vehicles, bicycles and ride-on lawnmowers. (Bicycles are covered under ‘Your bicycle cover’) Loss or damage caused by any living creature, including pets. Loss or damage that happens at a storage facility or when you’re moving home. Theft or attempted theft from a motor vehicle unless:\n• All windows, doors and the boot were closed and locked.\n• The items were hidden from view in the boot, a closed glove compartment, or a concealed luggage compartment. We won’t pay more than £1,000 for any theft from a motor vehicle. Loss or damage caused by theft or attempted theft, unless you have the items in your possession, or have left them in a secure place. By ‘secure place’ we mean that your belongings are locked in your room or other security facility such as a safe, or a secure room. | Cover status: Admiral: Optional, Gold: Optional, Platinum: Optional",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.6707083,
-          "chunk_id": "ip-ho-1-012-0022-19f90ca50941",
-          "document_code": "IP-HO-1-012",
-          "title": "Admiral Home Insurance Policy",
-          "section_heading": "What is not insured?",
-          "subsection_headings": [
-            "Contents (Main cover exclusions)"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Garage and Outbuildings: Theft from Garages and Outbuildings.",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.65722543,
-          "chunk_id": "hh-010-018-0049-8bed6f20f8d6",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Guide to your Home Insurance cover",
-          "subsection_headings": [
-            "How to make a claim"
-          ],
-          "semantic_heading": "How we’ll settle your claim",
-          "start_pdf_page": 11,
-          "end_pdf_page": 11,
-          "text": "How we’ll settle buildings claims\n\nWe’ll decide how to settle your claim. We’ll either pay the cost of rebuilding, repairing or replacing any damaged part of the buildings, or we’ll pay you. The amount we pay you will be whichever is lower of the below:\n\n• The same amount it would have cost us to repair or replace the buildings using our supplier. This may be less than the cost you could rebuild, repair or replace the damaged part for.\n\n• The amount the property has reduced in value because of the damage.\n\n• The estimated cost of repair.\n\nHow we’ll settle contents claims\n\nWe’ll decide to either:\n\n• Replace the item as new.\n\n• Pay the cost of fixing the item.\n\n• Fix or restore the item, for example, using professional cleaners for carpets.\n\n• Pay you or give you vouchers up to the amount we could fix, restore or replace the item for.\n\nOur right to take damaged items\n\nWhen you claim, we may take ownership of your damaged property and keep any salvage. By ‘salvage’ we mean what’s left of any damaged items.\n\nWe class each individual item from a matching set of items to be a single item. For example, a bathroom suite, a fitted kitchen, an area of wall tiles, floor coverings or a furniture set. We won’t pay for the other items in the set, unless ‘Matching items’ is shown in your Home Policy Schedule. If you claim, you must give us the undamaged parts of the set or suite, if we ask you to.",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.6546491,
-          "chunk_id": "ip-ho-2-012-0009-256c346d3e2a",
-          "document_code": "IP-HO-2-012",
-          "title": "Gold Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Buildings (Main features, if selected)"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Trace and access: Up to £5,000 to cover the cost of sourcing a water or oil leak.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.65298337,
-          "chunk_id": "hh-010-018-0145-3b1010a18ca8",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your bicycle cover"
-          ],
-          "semantic_heading": "Coverage by level - 1) Unspecified bicycles",
-          "start_pdf_page": 35,
-          "end_pdf_page": 35,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: 1) Unspecified bicycles | What is covered: 1) Unspecified bicycles Any bicycle, anywhere in the world, up to the ‘Unspecified cycle limit’. We’ll also pay up to 10% of the unspecified bicycle limit for accessories attached to your bicycle. You can find your Unspecified bicycle limit in the ‘Bicycles’ table in your Home Policy Schedule. | What is not covered: Loss or damage:\n• To specified bicycles worth more than the value shown in the ‘Bicycles’ table in your Home Policy Schedule.\n• To tyres or accessories, unless the bicycle is stolen or damaged at the same time.\n• While the bicycle is being used for racing, pacemaking, or speed or time trials.\n• To motorised vehicles.\n• To business equipment. Theft of bicycles when left unattended, unless:\n• When left outside or kept in a communal area, they’re locked to an immovable object using a security device.\n• They’re kept in a locked and secure building that only you and your family have access to.\n• They’re kept inside a locked vehicle, or locked to one using a cycle rack. | Cover status: Admiral: Included, Gold: Included, Platinum: Included",
-          "is_expected": false
         }
       ]
     },
@@ -2904,20 +1721,14 @@
         "ip-ho-1-012-0015-3833ee77e50c",
         "ip-ho-1-012-0023-ed4642665541",
         "ip-ho-3-010-0022-79b62ed2b7fb",
-        "ip-fl-1-008-0034-36af84cdde7c",
-        "ip-ho-3-010-0030-34f842e235c4",
-        "ip-ho-2-012-0019-cb45785fdda7",
-        "ip-ho-2-012-0027-73c29000ae19",
-        "ip-fl-1-008-0023-49d60d92a447",
-        "ip-fl-1-008-0032-d4bdbd731321"
+        "ip-fl-1-008-0034-36af84cdde7c"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -2940,13 +1751,6 @@
           "expected_total": 7,
           "recall": 0.5714285714285714,
           "all_expected": false
-        },
-        "at_10": {
-          "hit": true,
-          "expected_found": 7,
-          "expected_total": 7,
-          "recall": 1.0,
-          "all_expected": true
         }
       },
       "retrieved_results": [
@@ -3016,7 +1820,7 @@
         },
         {
           "rank": 5,
-          "score": 0.6498647,
+          "score": 0.64984506,
           "chunk_id": "ip-fl-1-008-0034-36af84cdde7c",
           "document_code": "IP-FL-1-008",
           "title": "Home Legal Expenses",
@@ -3026,82 +1830,6 @@
           "start_pdf_page": 2,
           "end_pdf_page": 2,
           "text": "Jury service claims where you are unable to prove your loss.",
-          "is_expected": false
-        },
-        {
-          "rank": 6,
-          "score": 0.64679265,
-          "chunk_id": "ip-ho-3-010-0030-34f842e235c4",
-          "document_code": "IP-HO-3-010",
-          "title": "Platinum Home Insurance Policy",
-          "section_heading": "What is not insured?",
-          "subsection_headings": [
-            "Both Buildings and Contents (Main cover exclusions)"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Empty homes: Loss or damage under many sections of your policy if your home is left unoccupied for more than 60 days.",
-          "is_expected": true
-        },
-        {
-          "rank": 7,
-          "score": 0.6467676,
-          "chunk_id": "ip-ho-2-012-0019-cb45785fdda7",
-          "document_code": "IP-HO-2-012",
-          "title": "Gold Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Other included benefits"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Unoccupancy: There is an allowance of up to 60 days if you are not regularly residing in your property before restrictions apply.",
-          "is_expected": true
-        },
-        {
-          "rank": 8,
-          "score": 0.64298594,
-          "chunk_id": "ip-ho-2-012-0027-73c29000ae19",
-          "document_code": "IP-HO-2-012",
-          "title": "Gold Home Insurance Policy",
-          "section_heading": "What is not insured?",
-          "subsection_headings": [
-            "Both Buildings and Contents (Main cover exclusions)"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Empty homes: Loss or damage under many sections of your policy if your home is left unoccupied for more than 60 days.",
-          "is_expected": true
-        },
-        {
-          "rank": 9,
-          "score": 0.6427488,
-          "chunk_id": "ip-fl-1-008-0023-49d60d92a447",
-          "document_code": "IP-FL-1-008",
-          "title": "Home Legal Expenses",
-          "section_heading": "Are there any restrictions on cover?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "You are not covered for:",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.6410235,
-          "chunk_id": "ip-fl-1-008-0032-d4bdbd731321",
-          "document_code": "IP-FL-1-008",
-          "title": "Home Legal Expenses",
-          "section_heading": "Are there any restrictions on cover?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "Probate claims where a will has not been previously made or concluded or cannot be traced.",
           "is_expected": false
         }
       ]
@@ -3122,20 +1850,14 @@
         "ip-ho-1-012-0020-f6d1b52cf8f7",
         "hh-010-018-0062-41f243208b4d",
         "hh-010-018-0094-c833ffd41b9e",
-        "hh-010-018-0060-022dc8aa5b61",
-        "ip-hee-1-005-0007-d09032ef6b4e",
-        "ip-ho-1-012-0025-ffd128ddd832",
-        "hh-010-018-0092-e85f8015a480",
-        "ip-hee-1-005-0024-2458fe8541a5",
-        "ip-ho-3-010-0028-3c04b77eeb60"
+        "hh-010-018-0060-022dc8aa5b61"
       ],
       "first_relevant_rank": 5,
       "reciprocal_rank": 0.2,
       "hits": {
         "hit_at_1": false,
         "hit_at_3": false,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -3153,13 +1875,6 @@
           "all_expected": false
         },
         "at_5": {
-          "hit": true,
-          "expected_found": 1,
-          "expected_total": 3,
-          "recall": 0.3333333333333333,
-          "all_expected": false
-        },
-        "at_10": {
           "hit": true,
           "expected_found": 1,
           "expected_total": 3,
@@ -3234,7 +1949,7 @@
         },
         {
           "rank": 5,
-          "score": 0.6725556,
+          "score": 0.67255527,
           "chunk_id": "hh-010-018-0060-022dc8aa5b61",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -3247,82 +1962,6 @@
           "end_pdf_page": 14,
           "text": "Table: Coverage details\n\nColumns: What is covered | What is not covered\n\nWhat is covered: 5) Falling trees and branches. | What is not covered: Loss or damage caused during tree maintenance. Loss or damage to hedges, gates or fences. The cost of removing fallen trees or branches that haven’t caused damage to the buildings. The cost of removing any part of the tree remaining below ground, or of restoring the site.",
           "is_expected": true
-        },
-        {
-          "rank": 6,
-          "score": 0.6669921,
-          "chunk_id": "ip-hee-1-005-0007-d09032ef6b4e",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "What is insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Roofing: We'll cover damage to your roof due to storm or bad weather.",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.6654,
-          "chunk_id": "ip-ho-1-012-0025-ffd128ddd832",
-          "document_code": "IP-HO-1-012",
-          "title": "Admiral Home Insurance Policy",
-          "section_heading": "What is not insured?",
-          "subsection_headings": [
-            "Both Buildings and Contents (Main cover exclusions)"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Non-storm conditions: We will not pay for loss or damage from wind, rain, snow, or sleet unless caused by a storm, as defined in the policy booklet.",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.66327506,
-          "chunk_id": "hh-010-018-0092-e85f8015a480",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your contents cover"
-          ],
-          "semantic_heading": "Events covered by your contents policy",
-          "start_pdf_page": 21,
-          "end_pdf_page": 21,
-          "text": "Table: Coverage details\n\nColumns: What is covered | What is not covered\n\nWhat is covered: 5) Falling trees and branches. | What is not covered:",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.6582102,
-          "chunk_id": "ip-hee-1-005-0024-2458fe8541a5",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "What is not insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Roofing: We won't cover damage to chimneys or guttering.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.6552181,
-          "chunk_id": "ip-ho-3-010-0028-3c04b77eeb60",
-          "document_code": "IP-HO-3-010",
-          "title": "Platinum Home Insurance Policy",
-          "section_heading": "What is not insured?",
-          "subsection_headings": [
-            "Buildings (Main cover exclusions)"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Storm: Loss or damage to gates, fences and hedges.",
-          "is_expected": false
         }
       ]
     },
@@ -3342,20 +1981,14 @@
         "hh-010-018-0185-da071043afb6",
         "ip-hee-1-005-0017-ee9c63481c59",
         "hh-010-018-0179-cd4a81c8b2b9",
-        "hh-010-018-0193-c65138c93723",
-        "ip-he-1-008-0013-c615af378f12",
-        "ip-hee-1-005-0018-d24267f974b5",
-        "ip-he-1-008-0014-a08e520418e9",
-        "ip-hee-1-005-0014-d2a7cc290e1a",
-        "ip-hee-1-005-0010-c9ed1e00b20e"
+        "hh-010-018-0193-c65138c93723"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -3373,13 +2006,6 @@
           "all_expected": false
         },
         "at_5": {
-          "hit": true,
-          "expected_found": 3,
-          "expected_total": 3,
-          "recall": 1.0,
-          "all_expected": true
-        },
-        "at_10": {
           "hit": true,
           "expected_found": 3,
           "expected_total": 3,
@@ -3466,76 +2092,6 @@
           "end_pdf_page": 50,
           "text": "Table: Emergency coverage details\n\nColumns: What is covered | What is not covered | Home Emergency cover (HEC) | Home Emergency Extra cover (HEX)\n\nRow heading: Boiler and heating system – beyond economic repair | What is covered: Boiler and heating system – beyond economic repair We’ll pay you £250 towards the cost of a new boiler if your heating system is beyond economic repair. Beyond economic repair means that the cost of repairing it would be more than the cost of replacing it. | What is not covered:  | Cover status: Home Emergency cover (HEC): Not included, Home Emergency Extra cover (HEX): Included",
           "is_expected": true
-        },
-        {
-          "rank": 6,
-          "score": 0.6354878,
-          "chunk_id": "ip-he-1-008-0013-c615af378f12",
-          "document_code": "IP-HE-1-008",
-          "title": "Home Emergency Cover",
-          "section_heading": "What is not insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Boiler and heating: We won't cover underfloor heating systems and commercial boilers or heating systems with an output of over 70kW/hr.",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.63544273,
-          "chunk_id": "ip-hee-1-005-0018-d24267f974b5",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "What is not insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Boiler located outside of your home: We won't cover any boiler or heating system outside your home, unless this provides the main source of heating for your home.",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.63264716,
-          "chunk_id": "ip-he-1-008-0014-a08e520418e9",
-          "document_code": "IP-HE-1-008",
-          "title": "Home Emergency Cover",
-          "section_heading": "What is not insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Boiler located outside of your home: We won't cover any boiler or heating system outside your home, unless this provides the main source of heating for your home.",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.6314642,
-          "chunk_id": "ip-hee-1-005-0014-d2a7cc290e1a",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "What is insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Temporary heating: We'll pay you up to £50 towards the cost of heaters if you have no heating and the engineer is waiting for parts.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.6312835,
-          "chunk_id": "ip-hee-1-005-0010-c9ed1e00b20e",
-          "document_code": "IP-HEE-1-005",
-          "title": "Home Emergency Extra Cover",
-          "section_heading": "What is insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Internal gas pipes: We'll repair or replace the gas supply pipe within your home.",
-          "is_expected": false
         }
       ]
     },
@@ -3555,20 +2111,14 @@
         "ip-fl-1-008-0030-ae85b7b53937",
         "ip-fl-1-008-0024-64512da430ed",
         "ip-fl-1-008-0026-87acb7e339a5",
-        "ip-fl-1-008-0027-56925dd081bc",
-        "hh-010-018-0245-4b20205ee61a",
-        "ip-fl-1-008-0016-777606f96bc3",
-        "ip-fl-1-008-0034-36af84cdde7c",
-        "hh-010-018-0231-ab3835248bf5",
-        "hh-010-018-0236-92c981f1891d"
+        "ip-fl-1-008-0027-56925dd081bc"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -3591,13 +2141,6 @@
           "expected_total": 3,
           "recall": 0.6666666666666666,
           "all_expected": false
-        },
-        "at_10": {
-          "hit": true,
-          "expected_found": 3,
-          "expected_total": 3,
-          "recall": 1.0,
-          "all_expected": true
         }
       },
       "retrieved_results": [
@@ -3659,7 +2202,7 @@
         },
         {
           "rank": 5,
-          "score": 0.681702,
+          "score": 0.6815885,
           "chunk_id": "ip-fl-1-008-0027-56925dd081bc",
           "document_code": "IP-FL-1-008",
           "title": "Home Legal Expenses",
@@ -3669,82 +2212,6 @@
           "start_pdf_page": 2,
           "end_pdf_page": 2,
           "text": "Motor Contract dispute claims:\n- Where the amount in dispute is £100 or less incl. VAT.",
-          "is_expected": false
-        },
-        {
-          "rank": 6,
-          "score": 0.6811613,
-          "chunk_id": "hh-010-018-0245-4b20205ee61a",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Optional cover:",
-          "subsection_headings": [
-            "Home Legal Expenses (as standard on Platinum)"
-          ],
-          "semantic_heading": "Important conditions of your Home Legal Expenses Cover",
-          "start_pdf_page": 65,
-          "end_pdf_page": 65,
-          "text": "Assessing and Recovering Costs\n\na. You must instruct the appointed representative to have costs and expenses taxed, assessed or audited if we ask for this.\n\nb. You must take every step to recover costs and expenses and court attendance and jury service expenses that we have to pay and must pay us any amounts that are recovered\n\nCancelling an Appointed Representative’s Appointment\n\nIf the appointed representative refuses to continue acting for you with good reason, or if you dismiss the appointed representative without good reason, the cover we provide will end immediately, unless we agree to appoint another appointed representative.\n\nWithdrawing Cover\n\nIf you settle or withdraw a claim without our agreement, or do not give suitable instructions to the appointed representative, we can withdraw cover and will be entitled to reclaim from you any costs and expenses we have paid.\n\nExpert Opinion\n\nWe may require you to get, at your own expense, an opinion from an expert that we consider appropriate, on the merits of the claim or proceedings, or on a legal principle. The expert must be approved in advance by us and the cost agreed in writing between you and us. Subject to this, we’ll pay the cost of getting the opinion if the expert’s opinion indicates that it is more likely than not that you will recover damages (or obtain any other legal remedy that we have agreed to) or make a successful defence.\n\nArbitration\n\nIf there is a disagreement about the handling of a claim and it is not resolved through our internal complaints procedure the Financial Ombudsman Service may be able to help. This is a free arbitration service for eligible complaints. (Details available from www.financial-ombudsman.org.uk) If the dispute is not covered by the Financial Ombudsman Service there is a separate arbitration process available. The arbitrator will be a jointly agreed barrister, solicitor or other suitably qualified person. If there is a disagreement over the choice of arbitrator, we’ll ask the Chartered Institute of Arbitrators to decide. The arbitrator will decide who will pay the costs of the arbitration. For example, costs may be split between the parties or one party may pay all the costs.",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.68008524,
-          "chunk_id": "ip-fl-1-008-0016-777606f96bc3",
-          "document_code": "IP-FL-1-008",
-          "title": "Home Legal Expenses",
-          "section_heading": "What is not insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Claims where the lawyer we appoint for you does not believe you will be more likely than not to win your case.",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.6777255,
-          "chunk_id": "ip-fl-1-008-0034-36af84cdde7c",
-          "document_code": "IP-FL-1-008",
-          "title": "Home Legal Expenses",
-          "section_heading": "Are there any restrictions on cover?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "Jury service claims where you are unable to prove your loss.",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.6774401,
-          "chunk_id": "hh-010-018-0231-ab3835248bf5",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Optional cover:",
-          "subsection_headings": [
-            "Home Legal Expenses (as standard on Platinum)"
-          ],
-          "semantic_heading": "Coverage details - Consumer disputes",
-          "start_pdf_page": 60,
-          "end_pdf_page": 60,
-          "text": "Table: Coverage details\n\nColumns: What is covered | What is not covered\n\nRow heading: Consumer disputes | What is covered: Consumer disputes A contractual dispute arising from an agreement or an alleged agreement which you have entered into in a personal capacity for:\na. Buying or hiring in goods or services\nb. Selling goods\nc. Buying or selling your principal home.\nd. Renting your principal home as a tenant. Please note that the amount in dispute must be more than £100 (including VAT). | What is not covered: A claim relating to the following:\na. dispute relating to an insurance policy, other than when your insurer refuses your claim\nb. a dispute arising from any loan, mortgage, pension, investment or borrowing\nc. a dispute over the sale, purchase, terms of a lease, licence, or tenancy of land or buildings (other than disputes arising from you buying or selling your principal home or you renting your principal home as a tenant). However, we’ll cover a dispute with a professional adviser in connection with these matters\nd. a motor vehicle owned by or hired or leased to you (please refer to insured incident Motor contract disputes).",
-          "is_expected": true
-        },
-        {
-          "rank": 10,
-          "score": 0.67590576,
-          "chunk_id": "hh-010-018-0236-92c981f1891d",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Optional cover:",
-          "subsection_headings": [
-            "Home Legal Expenses (as standard on Platinum)"
-          ],
-          "semantic_heading": "Coverage details - Property disputes",
-          "start_pdf_page": 61,
-          "end_pdf_page": 61,
-          "text": "Table: Coverage details\n\nColumns: What is covered | What is not covered\n\nRow heading: Property disputes | What is covered: Property disputes A civil dispute relating to your principal home or personal possessions that you own or are responsible for, following:\na. an event which causes physical damage to such property but the amount in dispute must be more than £100. Please note we’ll not defend your legal rights but we’ll cover defending a counter-claim.\nb. a legal nuisance\nc. a trespass Please note you must have, or there must be reasonable prospects of establishing you have, the legal ownership or right to the land or personal possessions that are the subject of the dispute. | What is not covered: A claim relating to the following:\na. a contract you have entered into\nb. any building or land except your main home\nc. someone legally taking your property from you, whether you are offered money or not, or restrictions or controls placed on your property by any government or public or local authority\nd. work done by, or on behalf of, any government or public or local authority unless the claim is for accidental physical damage\ne. adverse possession (meaning the occupation of any building or land either by someone trying to take possession from you or of which you are trying to take possession)",
           "is_expected": false
         }
       ]
@@ -3765,20 +2232,14 @@
         "hh-010-018-0235-7df184b37b21",
         "ip-fl-1-008-0003-7f87434a2c4c",
         "ip-fl-1-008-0014-e7c814b211f3",
-        "hh-010-018-0239-67fffd0fe2c7",
-        "hh-010-018-0231-ab3835248bf5",
-        "hh-010-018-0236-92c981f1891d",
-        "ip-fl-1-008-0031-25a3a282f2d3",
-        "hh-010-018-0245-4b20205ee61a",
-        "ip-fl-1-008-0034-36af84cdde7c"
+        "hh-010-018-0239-67fffd0fe2c7"
       ],
       "first_relevant_rank": 1,
       "reciprocal_rank": 1.0,
       "hits": {
         "hit_at_1": true,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -3796,13 +2257,6 @@
           "all_expected": true
         },
         "at_5": {
-          "hit": true,
-          "expected_found": 3,
-          "expected_total": 3,
-          "recall": 1.0,
-          "all_expected": true
-        },
-        "at_10": {
           "hit": true,
           "expected_found": 3,
           "expected_total": 3,
@@ -3884,82 +2338,6 @@
           "end_pdf_page": 61,
           "text": "Table: Coverage details\n\nColumns: What is covered | What is not covered\n\nRow heading: Legal defence | What is covered: Legal defence Costs and expenses to defend your legal rights if:\n1. An event arising from your work as a worker or an employee leads to:\na. You being contacted by the police, or others with criminal investigatory powers, where it is alleged you have, or may have, committed a criminal offence\nb. You being prosecuted in a court of criminal jurisdiction\nc. Civil action being taken against you under:\n• Discrimination legislation\n• Data protection legislation\n2. A formal investigation or disciplinary hearing is brought against you by a professional or regulatory body you by a professional or regulatory body | What is not covered: A claim relating to the following:\na. Any claim involving assault, violence or sexual misconduct.\nb. Any claim involving alcohol or illegal drugs\nc. Any claim resulting from hacking (unauthorised access) or other type of cyber attack affecting stored personal data.\nd. Any criminal investigation or enquiry by, with or on behalf of HM Revenue & Customs.\ne. Any claim relating to you driving a motor vehicle",
           "is_expected": false
-        },
-        {
-          "rank": 6,
-          "score": 0.68056893,
-          "chunk_id": "hh-010-018-0231-ab3835248bf5",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Optional cover:",
-          "subsection_headings": [
-            "Home Legal Expenses (as standard on Platinum)"
-          ],
-          "semantic_heading": "Coverage details - Consumer disputes",
-          "start_pdf_page": 60,
-          "end_pdf_page": 60,
-          "text": "Table: Coverage details\n\nColumns: What is covered | What is not covered\n\nRow heading: Consumer disputes | What is covered: Consumer disputes A contractual dispute arising from an agreement or an alleged agreement which you have entered into in a personal capacity for:\na. Buying or hiring in goods or services\nb. Selling goods\nc. Buying or selling your principal home.\nd. Renting your principal home as a tenant. Please note that the amount in dispute must be more than £100 (including VAT). | What is not covered: A claim relating to the following:\na. dispute relating to an insurance policy, other than when your insurer refuses your claim\nb. a dispute arising from any loan, mortgage, pension, investment or borrowing\nc. a dispute over the sale, purchase, terms of a lease, licence, or tenancy of land or buildings (other than disputes arising from you buying or selling your principal home or you renting your principal home as a tenant). However, we’ll cover a dispute with a professional adviser in connection with these matters\nd. a motor vehicle owned by or hired or leased to you (please refer to insured incident Motor contract disputes).",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.6795982,
-          "chunk_id": "hh-010-018-0236-92c981f1891d",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Optional cover:",
-          "subsection_headings": [
-            "Home Legal Expenses (as standard on Platinum)"
-          ],
-          "semantic_heading": "Coverage details - Property disputes",
-          "start_pdf_page": 61,
-          "end_pdf_page": 61,
-          "text": "Table: Coverage details\n\nColumns: What is covered | What is not covered\n\nRow heading: Property disputes | What is covered: Property disputes A civil dispute relating to your principal home or personal possessions that you own or are responsible for, following:\na. an event which causes physical damage to such property but the amount in dispute must be more than £100. Please note we’ll not defend your legal rights but we’ll cover defending a counter-claim.\nb. a legal nuisance\nc. a trespass Please note you must have, or there must be reasonable prospects of establishing you have, the legal ownership or right to the land or personal possessions that are the subject of the dispute. | What is not covered: A claim relating to the following:\na. a contract you have entered into\nb. any building or land except your main home\nc. someone legally taking your property from you, whether you are offered money or not, or restrictions or controls placed on your property by any government or public or local authority\nd. work done by, or on behalf of, any government or public or local authority unless the claim is for accidental physical damage\ne. adverse possession (meaning the occupation of any building or land either by someone trying to take possession from you or of which you are trying to take possession)",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.6764794,
-          "chunk_id": "ip-fl-1-008-0031-25a3a282f2d3",
-          "document_code": "IP-FL-1-008",
-          "title": "Home Legal Expenses",
-          "section_heading": "Are there any restrictions on cover?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "Tax investigation A claim relating to the following:\n- Your business activities.\n- Any investigation, enquiry, or prosecution relating to suspected or alleged dishonesty or suspected or alleged criminal offences.",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.67590874,
-          "chunk_id": "hh-010-018-0245-4b20205ee61a",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Optional cover:",
-          "subsection_headings": [
-            "Home Legal Expenses (as standard on Platinum)"
-          ],
-          "semantic_heading": "Important conditions of your Home Legal Expenses Cover",
-          "start_pdf_page": 65,
-          "end_pdf_page": 65,
-          "text": "Assessing and Recovering Costs\n\na. You must instruct the appointed representative to have costs and expenses taxed, assessed or audited if we ask for this.\n\nb. You must take every step to recover costs and expenses and court attendance and jury service expenses that we have to pay and must pay us any amounts that are recovered\n\nCancelling an Appointed Representative’s Appointment\n\nIf the appointed representative refuses to continue acting for you with good reason, or if you dismiss the appointed representative without good reason, the cover we provide will end immediately, unless we agree to appoint another appointed representative.\n\nWithdrawing Cover\n\nIf you settle or withdraw a claim without our agreement, or do not give suitable instructions to the appointed representative, we can withdraw cover and will be entitled to reclaim from you any costs and expenses we have paid.\n\nExpert Opinion\n\nWe may require you to get, at your own expense, an opinion from an expert that we consider appropriate, on the merits of the claim or proceedings, or on a legal principle. The expert must be approved in advance by us and the cost agreed in writing between you and us. Subject to this, we’ll pay the cost of getting the opinion if the expert’s opinion indicates that it is more likely than not that you will recover damages (or obtain any other legal remedy that we have agreed to) or make a successful defence.\n\nArbitration\n\nIf there is a disagreement about the handling of a claim and it is not resolved through our internal complaints procedure the Financial Ombudsman Service may be able to help. This is a free arbitration service for eligible complaints. (Details available from www.financial-ombudsman.org.uk) If the dispute is not covered by the Financial Ombudsman Service there is a separate arbitration process available. The arbitrator will be a jointly agreed barrister, solicitor or other suitably qualified person. If there is a disagreement over the choice of arbitrator, we’ll ask the Chartered Institute of Arbitrators to decide. The arbitrator will decide who will pay the costs of the arbitration. For example, costs may be split between the parties or one party may pay all the costs.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.6758913,
-          "chunk_id": "ip-fl-1-008-0034-36af84cdde7c",
-          "document_code": "IP-FL-1-008",
-          "title": "Home Legal Expenses",
-          "section_heading": "Are there any restrictions on cover?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "Jury service claims where you are unable to prove your loss.",
-          "is_expected": false
         }
       ]
     },
@@ -3981,20 +2359,14 @@
         "ip-ho-2-012-0038-9081220cbcaa",
         "hh-010-018-0145-3b1010a18ca8",
         "ip-ho-3-010-0040-4d6c28c3d859",
-        "hh-010-018-0147-486fb7dd0656",
-        "ip-ho-1-012-0034-6a62f13e58a8",
-        "ip-ho-2-012-0024-52abdaa01ad4",
-        "ip-ho-3-010-0027-3463614fc130",
-        "ip-ho-1-012-0019-24560ef76ec6",
-        "hh-010-018-0143-38d466ec27ca"
+        "hh-010-018-0147-486fb7dd0656"
       ],
       "first_relevant_rank": 2,
       "reciprocal_rank": 0.5,
       "hits": {
         "hit_at_1": false,
         "hit_at_3": true,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -4016,13 +2388,6 @@
           "expected_found": 3,
           "expected_total": 5,
           "recall": 0.6,
-          "all_expected": false
-        },
-        "at_10": {
-          "hit": true,
-          "expected_found": 4,
-          "expected_total": 5,
-          "recall": 0.8,
           "all_expected": false
         }
       },
@@ -4102,84 +2467,6 @@
           "end_pdf_page": 35,
           "text": "Information about specified bicycles\nIf a bicycle is worth more than the unspecified bicycle limit, then we’d class it as a specified bicycle. You must list these bicycles in your latest Home Policy Schedule to be fully covered. You need to select ‘Cover away from your home’ if you want your specified bicycle to be covered away from your home. Some specified bicycles may need extra security measures. You can find these in your Home Policy Schedule, under ‘Extra conditions (endorsements)’.",
           "is_expected": false
-        },
-        {
-          "rank": 6,
-          "score": 0.642502,
-          "chunk_id": "ip-ho-1-012-0034-6a62f13e58a8",
-          "document_code": "IP-HO-1-012",
-          "title": "Admiral Home Insurance Policy",
-          "section_heading": "Where am I covered?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "We cover pedal cycles worth up to £350 anywhere in the world if Contents Cover is purchased.",
-          "is_expected": true
-        },
-        {
-          "rank": 7,
-          "score": 0.6390404,
-          "chunk_id": "ip-ho-2-012-0024-52abdaa01ad4",
-          "document_code": "IP-HO-2-012",
-          "title": "Gold Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Optional Cover"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "Bikes over £350: Add bikes up to £10,000 per bike up to a maximum of £20,000.",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.63375545,
-          "chunk_id": "ip-ho-3-010-0027-3463614fc130",
-          "document_code": "IP-HO-3-010",
-          "title": "Platinum Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Optional Cover"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "Bikes over £350: Add bikes up to £10,000 per bike up to a maximum of £20,000.",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.63135713,
-          "chunk_id": "ip-ho-1-012-0019-24560ef76ec6",
-          "document_code": "IP-HO-1-012",
-          "title": "Admiral Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Optional Cover"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Bikes over £350: Add bikes up to £10,000 per bike up to a maximum of £20,000.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.61870784,
-          "chunk_id": "hh-010-018-0143-38d466ec27ca",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Cover away from your home"
-          ],
-          "semantic_heading": "Coverage by level - 2) Specified items",
-          "start_pdf_page": 33,
-          "end_pdf_page": 34,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: 2) Specified items | What is covered: 2) Specified items Specified items listed in the ‘Specified Items’ table are covered away from home, up to the individual amount shown for each item. The ‘specified items’ table can be found on your Home Policy Schedule. ‘Cover away from your home’ must be shown as ‘yes’ in the table, for items to be covered away from your home. | What is not covered: Loss or damage to:\n• Any personal possessions and high-risk items lost or damaged in your home or on the land that your home stands on.\n• High-risk items worth more than the ‘Unspecified item limit’.\n• Plants or any living creature.\n• Corneal or contact lenses.\n• Lottery or raffle tickets, credit cards, securities or documents.\n• Domestic appliances.\n• Business equipment.\n• Remote-controlled models or sporting equipment while being used.\n• The inside of watches and clocks. Loss or damage to property which has been outside the UK, the Isle of Man and the Channel Islands for more than 90 days in a row. This doesn’t apply to property taken on an ‘operational tour’. (A military tour of duty for which an allowance is paid to you). Loss or damage to items that aren’t with you or your family at the time of the loss or damage. For example, items that aren’t being worn or carried, or aren’t within reach of, you or your family. Loss or damage to motorised vehicles, bicycles and ride-on lawnmowers. (Bicycles are covered under ‘Your bicycle cover’) Loss or damage caused by any living creature, including pets. Loss or damage that happens at a storage facility or when you’re moving home. Theft or attempted theft from a motor vehicle unless:\n• All windows, doors and the boot were closed and locked.\n• The items were hidden from view in the boot, a closed glove compartment, or a concealed luggage compartment. We won’t pay more than £1,000 for any theft from a motor vehicle. Loss or damage caused by theft or attempted theft, unless you have the items in your possession, or have left them in a secure place. By ‘secure place’ we mean that your belongings are locked in your room or other security facility such as a safe, or a secure room. | Cover status: Admiral: Optional, Gold: Optional, Platinum: Optional",
-          "is_expected": false
         }
       ]
     },
@@ -4199,20 +2486,14 @@
         "hh-010-018-0146-caed10df5105",
         "hh-010-018-0145-3b1010a18ca8",
         "ip-ho-3-010-0040-4d6c28c3d859",
-        "ip-ho-2-012-0024-52abdaa01ad4",
-        "ip-ho-1-012-0034-6a62f13e58a8",
-        "hh-010-018-0147-486fb7dd0656",
-        "ip-ho-3-010-0027-3463614fc130",
-        "ip-ho-1-012-0019-24560ef76ec6",
-        "ip-ho-3-010-0041-f7a687077619"
+        "ip-ho-2-012-0024-52abdaa01ad4"
       ],
       "first_relevant_rank": 5,
       "reciprocal_rank": 0.2,
       "hits": {
         "hit_at_1": false,
         "hit_at_3": false,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -4235,13 +2516,6 @@
           "expected_total": 3,
           "recall": 0.3333333333333333,
           "all_expected": false
-        },
-        "at_10": {
-          "hit": true,
-          "expected_found": 3,
-          "expected_total": 3,
-          "recall": 1.0,
-          "all_expected": true
         }
       },
       "retrieved_results": [
@@ -4307,7 +2581,7 @@
         },
         {
           "rank": 5,
-          "score": 0.64768535,
+          "score": 0.6476771,
           "chunk_id": "ip-ho-2-012-0024-52abdaa01ad4",
           "document_code": "IP-HO-2-012",
           "title": "Gold Home Insurance Policy",
@@ -4320,82 +2594,6 @@
           "end_pdf_page": 2,
           "text": "Bikes over £350: Add bikes up to £10,000 per bike up to a maximum of £20,000.",
           "is_expected": true
-        },
-        {
-          "rank": 6,
-          "score": 0.64488316,
-          "chunk_id": "ip-ho-1-012-0034-6a62f13e58a8",
-          "document_code": "IP-HO-1-012",
-          "title": "Admiral Home Insurance Policy",
-          "section_heading": "Where am I covered?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "We cover pedal cycles worth up to £350 anywhere in the world if Contents Cover is purchased.",
-          "is_expected": false
-        },
-        {
-          "rank": 7,
-          "score": 0.6424366,
-          "chunk_id": "hh-010-018-0147-486fb7dd0656",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your bicycle cover"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 35,
-          "end_pdf_page": 35,
-          "text": "Information about specified bicycles\nIf a bicycle is worth more than the unspecified bicycle limit, then we’d class it as a specified bicycle. You must list these bicycles in your latest Home Policy Schedule to be fully covered. You need to select ‘Cover away from your home’ if you want your specified bicycle to be covered away from your home. Some specified bicycles may need extra security measures. You can find these in your Home Policy Schedule, under ‘Extra conditions (endorsements)’.",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.642202,
-          "chunk_id": "ip-ho-3-010-0027-3463614fc130",
-          "document_code": "IP-HO-3-010",
-          "title": "Platinum Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Optional Cover"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "Bikes over £350: Add bikes up to £10,000 per bike up to a maximum of £20,000.",
-          "is_expected": true
-        },
-        {
-          "rank": 9,
-          "score": 0.63885975,
-          "chunk_id": "ip-ho-1-012-0019-24560ef76ec6",
-          "document_code": "IP-HO-1-012",
-          "title": "Admiral Home Insurance Policy",
-          "section_heading": "What is insured?",
-          "subsection_headings": [
-            "Optional Cover"
-          ],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Bikes over £350: Add bikes up to £10,000 per bike up to a maximum of £20,000.",
-          "is_expected": true
-        },
-        {
-          "rank": 10,
-          "score": 0.6244261,
-          "chunk_id": "ip-ho-3-010-0041-f7a687077619",
-          "document_code": "IP-HO-3-010",
-          "title": "Platinum Home Insurance Policy",
-          "section_heading": "Where am I covered?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "Optional Cover: For specified bikes and specified items you have asked to cover away from home, we will cover you anywhere in the world.",
-          "is_expected": false
         }
       ]
     },
@@ -4414,20 +2612,14 @@
         "hh-010-018-0233-1dd625d1e84f",
         "ip-fl-1-008-0028-57746063dd19",
         "hh-010-018-0137-5b2ba41f52ce",
-        "hh-010-018-0136-d4414d134612",
-        "hh-010-018-0076-c412abae6457",
-        "ip-fl-1-008-0034-36af84cdde7c",
-        "ip-fl-1-008-0004-8f7e68f632fa",
-        "hh-010-018-0084-73159415dfe3",
-        "hh-010-018-0042-e40f5015969f"
+        "hh-010-018-0136-d4414d134612"
       ],
       "first_relevant_rank": 5,
       "reciprocal_rank": 0.2,
       "hits": {
         "hit_at_1": false,
         "hit_at_3": false,
-        "hit_at_5": true,
-        "hit_at_10": true
+        "hit_at_5": true
       },
       "metrics": {
         "at_1": {
@@ -4450,19 +2642,12 @@
           "expected_total": 2,
           "recall": 0.5,
           "all_expected": false
-        },
-        "at_10": {
-          "hit": true,
-          "expected_found": 2,
-          "expected_total": 2,
-          "recall": 1.0,
-          "all_expected": true
         }
       },
       "retrieved_results": [
         {
           "rank": 1,
-          "score": 0.6522938,
+          "score": 0.6522947,
           "chunk_id": "hh-010-018-0138-183d136581a9",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -4508,7 +2693,7 @@
         },
         {
           "rank": 4,
-          "score": 0.6474236,
+          "score": 0.64741814,
           "chunk_id": "hh-010-018-0137-5b2ba41f52ce",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -4524,7 +2709,7 @@
         },
         {
           "rank": 5,
-          "score": 0.6466054,
+          "score": 0.6463766,
           "chunk_id": "hh-010-018-0136-d4414d134612",
           "document_code": "HH-010-018",
           "title": "Guide to your Home Insurance cover",
@@ -4537,82 +2722,6 @@
           "end_pdf_page": 32,
           "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: (1) Occupier’s liability | What is covered: (1) Occupier’s liability Your or your family’s liability to the public as occupier (but not owner) of your home. | What is not covered: Any liability for death or physical injury to you, your family or anyone permanently living with you, including your domestic staff, unless covered under ‘Employer’s liability’. You can’t claim under both ‘Occupier’s liability’ and ‘Property Owner’s liability’ cover. For more information about Property Owner’s liability, please see page 16. Any land or building you or your family own or live in, other than your home, unless covered under ‘Tenant’s liability’ and ‘Liability as occupier of temporary accommodation’. Any liability from you or your family owning or using a:\n• Motorised vehicle.\n• Caravan that’s being towed.\n• Watercraft, hovercraft or aircraft (including drones). Any liability from you or your family’s profession, business, trade or employment. Any liability from you or your family being treated for or passing on any disease or virus. Any liability from any living creature (other than cats and dogs you or your family own or are legally responsible for). Any dog dangerously out of control, any breed defined as dangerous or any dog crossed with these breeds. As per;\n• The Dangerous Dogs Act 1991.\n• The Dangerous Dogs (Northern Ireland) Order 1991.\n• Any other law. Any liability resulting from the use of firearms or any other weapon. Any damages, legal costs or other costs awarded by a court or other body with no authority in the UK. Any liability from The Party Wall etc Act 1996. Any liability from you or your family taking part in any sporting activity including racing, hunting and polo. | Cover status: Admiral: Included, Gold: Included, Platinum: Included",
           "is_expected": true
-        },
-        {
-          "rank": 6,
-          "score": 0.6462488,
-          "chunk_id": "hh-010-018-0076-c412abae6457",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your buildings cover"
-          ],
-          "semantic_heading": "Coverage by level - Property owner’s liability",
-          "start_pdf_page": 18,
-          "end_pdf_page": 18,
-          "text": "Table: Coverage by level\n\nColumns: What is covered | What is not covered | Admiral | Gold | Platinum\n\nRow heading: Property owner’s liability | What is covered: Property owner’s liability Amounts you or your family legally have to pay, as owners of your home, for:\n• Accidental death or injury to any person.\n• Accidental loss or damage to property. This also applies to any home you used to own, as part of the Defective Premises Act 1972 or the Defective Premises (Northern Ireland) Order 1975. There’s no excess for claims for property owner’s liability. | What is not covered: If you, your family, anyone permanently living with you, or your domestic staff are injured or die. Damage to property which you, your family, anyone permanently living with you, or your domestic staff, own or are responsible for. Any liability from:\n• You or your family being treated for or passing on any disease or virus.\n• Any profession, business, trade or employment.\n• You owning or using a motorised vehicle. You can’t claim under both ‘Occupier’s liability’ and ‘Property Owner’s liability’ cover. | Cover status: Admiral: Included, Gold: Included, Platinum: Included",
-          "is_expected": true
-        },
-        {
-          "rank": 7,
-          "score": 0.64409757,
-          "chunk_id": "ip-fl-1-008-0034-36af84cdde7c",
-          "document_code": "IP-FL-1-008",
-          "title": "Home Legal Expenses",
-          "section_heading": "Are there any restrictions on cover?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 2,
-          "end_pdf_page": 2,
-          "text": "Jury service claims where you are unable to prove your loss.",
-          "is_expected": false
-        },
-        {
-          "rank": 8,
-          "score": 0.6432981,
-          "chunk_id": "ip-fl-1-008-0004-8f7e68f632fa",
-          "document_code": "IP-FL-1-008",
-          "title": "Home Legal Expenses",
-          "section_heading": "What is insured?",
-          "subsection_headings": [],
-          "semantic_heading": null,
-          "start_pdf_page": 1,
-          "end_pdf_page": 1,
-          "text": "Personal injury: Sudden or specific accidents causing your death or bodily injury.",
-          "is_expected": false
-        },
-        {
-          "rank": 9,
-          "score": 0.642718,
-          "chunk_id": "hh-010-018-0084-73159415dfe3",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "What this policy covers:",
-          "subsection_headings": [
-            "Your buildings cover"
-          ],
-          "semantic_heading": "When we won’t cover claims for accidental breakage or accidental damage",
-          "start_pdf_page": 19,
-          "end_pdf_page": 20,
-          "text": "When we won’t cover claims for accidental breakage or accidental damage\n\nWe won’t pay for damage caused:\n\n• As a result of alterations (changes) or extensions to the buildings.\n\n• By demolition.\n\n• By any paying guest or tenant.\n\n• By pets, through chewing, scratching, tearing, fouling or vomiting.\n\n• While your home is unoccupied.\n\n• By brown or black rats, grey squirrels, house or field mice, wasps or hornets, woodworm or insects.\n\nAccidental damage\nYou’ll have to pay an excess if you claim for accidental breakage or accidental damage. The details of the excess and your ‘cover and limits’ are shown in your Home Policy Schedule. For example, if you claim for accidental damage to locks, the limit of cover for locks will apply.",
-          "is_expected": false
-        },
-        {
-          "rank": 10,
-          "score": 0.64180833,
-          "chunk_id": "hh-010-018-0042-e40f5015969f",
-          "document_code": "HH-010-018",
-          "title": "Guide to your Home Insurance cover",
-          "section_heading": "Guide to your Home Insurance cover",
-          "subsection_headings": [
-            "How to make a claim"
-          ],
-          "semantic_heading": "Information you’ll need to give us",
-          "start_pdf_page": 10,
-          "end_pdf_page": 10,
-          "text": "Information you’ll need to give us\n\n• Your personal details, including your policy number, so we can confirm your identity.\n\n• The date, time and details of the incident, including the value of any loss or damage (if you know this).\n\n• Details of any person responsible for the incident, any injured person and any witnesses.\n\n• If needed, we may ask you for a crime reference number from the police.\n\nWe might ask you to provide things like original receipts, invoices or valuations dated before the item was insured. We may also ask for instruction booklets, photographs or details of where and when an item was bought. If you don’t provide these, we might reduce the amount you can claim or not pay your claim at all. If it’s safe to do so, please keep damaged items as they might help us settle your claim faster.",
-          "is_expected": false
         }
       ]
     }

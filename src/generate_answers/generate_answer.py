@@ -5,7 +5,9 @@ from __future__ import annotations
 
 import argparse
 import os
+import re
 import sys
+import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
@@ -19,7 +21,7 @@ from openai import OpenAI
 
 
 DEFAULT_TOP = 10
-DEFAULT_MAX_COMPLETION_TOKENS = 4000
+DEFAULT_MAX_COMPLETION_TOKENS = 2000
 VECTOR_FIELD_CANDIDATES = (
     "embedding",
     "content_vector",
@@ -42,18 +44,35 @@ SOURCE_FIELD_CANDIDATES = (
     "text",
 )
 
-SYSTEM_PROMPT = """You answer questions about the supplied home-insurance documents.
+SYSTEM_PROMPT = """You answer questions about home insurance using only the supplied policy excerpts.
 
 Rules:
-- Use only the supplied policy excerpts. Do not use outside knowledge.
-- Cite every factual statement using the source number in square brackets, for example [1].
-- A citation must support the statement immediately before it.
-- Clearly distinguish Admiral, Gold and Platinum policy levels when the excerpts do.
-- Clearly distinguish standard, optional and excluded cover.
-- Do not make a definitive claim decision or promise that a claim will be accepted.
-- If the excerpts do not contain enough evidence, say that the available documents do not provide enough information.
-- Do not invent policy terms, limits, exclusions, page numbers or citations.
-- Give a direct, concise answer in British English.
+- Answer the exact question asked and lead with a direct, concise answer in British English.
+- Use only the supplied excerpts. Do not use outside knowledge or invent policy terms, limits, exclusions, conditions or citations.
+- Prioritise the policy section and insured event that most directly apply to the facts given.
+- Do not introduce related cover sections unless they provide a genuine alternative that applies to the question.
+- Do not assume an unstated cause, policy option, ownership status or Home Policy Schedule entry. If different facts would produce different outcomes, explain the distinction briefly.
+- Clearly distinguish included, optional, policy-level-specific, separate and excluded cover.
+- Distinguish Admiral, Gold and Platinum when the evidence supports a comparison.
+- Treat monetary figures as maximum limits unless the excerpt explicitly specifies a fixed payment. Say “provides cover up to” or “is within the stated limit”; do not imply that a limit guarantees payment.
+- Do not use a limit for one category of property or cover as evidence for another category.
+- Do not make a claim decision or promise that a claim will be accepted.
+- Include only requirements, consequences, conditions and exclusions that materially affect the answer.
+- Interpret explicit coverage tables, policy-level markers, inclusions and exclusions when supplied.
+- Do not infer that cover is excluded or unavailable merely because it is absent from an excerpt.
+- If the excerpts do not contain enough evidence, state precisely what cannot be established. Do this only after checking all excerpts for a direct answer, limit, inclusion, exclusion, eligibility rule or policy-level marker.
+- Cite every material policy claim using its source number, for example [1], immediately after the supported claim.
+- Use only supplied source numbers and never cite an excerpt that does not directly support the claim.
+- Do not add a Sources, Citations or Cite section; the application creates the source lists separately.
+- Do not repeat the same citation beside a claim.
+- Keep the answer proportionate to the question and do not repeat the conclusion in separate sections.
+- Before returning the answer, check that the direct answer is consistent with the explanation and that every policy-level amount has direct supporting evidence.
+- Apply each inclusion, exclusion, condition, definition and limit only to the policy section it governs. Do not apply a rule from one section to another unless the excerpts explicitly state that it applies more broadly.
+- When more than one section could apply, evaluate each section separately. Do not let an exclusion under one section override cover under another independent section.
+- Before returning the answer, check that the first sentence does not contradict any later statement.
+- Apply each inclusion, exclusion, condition, definition and limit only to the policy section it governs. Do not apply a rule from one section to another unless the excerpts explicitly state that it applies more broadly.
+- When more than one section could apply, evaluate each section separately. Do not let an exclusion under one section override cover under another independent section.
+- Before returning the answer, check that the first sentence does not contradict any later statement.
 """
 
 
@@ -66,6 +85,21 @@ class Settings:
     search_endpoint: str
     search_key: str
     search_index: str
+
+
+@dataclass(frozen=True)
+class EmbeddingResult:
+    vector: list[float]
+    input_tokens: int
+
+
+@dataclass(frozen=True)
+class AnswerResult:
+    answer: str
+    input_tokens: int
+    completion_tokens: int
+    reasoning_tokens: int
+    total_tokens: int
 
 
 def parse_args() -> argparse.Namespace:
@@ -186,9 +220,16 @@ def find_vector_field(fields: dict[str, Any], requested: str | None) -> str:
 
 def create_question_embedding(
     client: OpenAI, deployment: str, question: str
-) -> list[float]:
+) -> EmbeddingResult:
     response = client.embeddings.create(model=deployment, input=[question])
-    return response.data[0].embedding
+    usage = response.usage
+    input_tokens = getattr(usage, "prompt_tokens", None)
+    if input_tokens is None:
+        input_tokens = getattr(usage, "input_tokens", 0)
+    return EmbeddingResult(
+        vector=response.data[0].embedding,
+        input_tokens=input_tokens,
+    )
 
 
 def escape_odata_string(value: str) -> str:
@@ -276,12 +317,42 @@ def build_context(chunks: list[dict[str, Any]]) -> str:
     return "\n\n".join(sources)
 
 
+def clean_generated_answer(answer: str) -> str:
+    """Remove citation artefacts and deduplicate adjacent numbered citations."""
+    artefact_line = re.compile(
+        r"^\s*(?:#{1,6}\s*)?(?:[-*]\s*)?"
+        r"(?:cite|citations?|sources?)\s*:.*$",
+        flags=re.IGNORECASE,
+    )
+    cleaned_lines = [
+        line for line in answer.strip().splitlines() if not artefact_line.match(line)
+    ]
+    cleaned = "\n".join(cleaned_lines)
+
+    citation_run = re.compile(
+        r"\[(?:\d+(?:\s*,\s*\d+)*)\]"
+        r"(?:[ \t]*\[(?:\d+(?:\s*,\s*\d+)*)\])*"
+    )
+
+    def deduplicate_citation_run(match: re.Match[str]) -> str:
+        numbers: list[int] = []
+        for value in re.findall(r"\d+", match.group(0)):
+            number = int(value)
+            if number not in numbers:
+                numbers.append(number)
+        return "[" + ", ".join(str(number) for number in numbers) + "]"
+
+    cleaned = citation_run.sub(deduplicate_citation_run, cleaned)
+    cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
+    return cleaned.strip()
+
+
 def generate_answer(
     client: OpenAI,
     deployment: str,
     question: str,
     context: str,
-) -> str:
+) -> AnswerResult:
     user_prompt = f"""Question:
 {question}
 
@@ -321,20 +392,157 @@ Answer the question using only these excerpts and include numbered citations."""
             "The chat model returned an empty answer "
             f"(finish reason: {finish_reason}{reasoning_detail})."
         )
-    return answer.strip()
+    usage = response.usage
+    input_tokens = getattr(usage, "prompt_tokens", 0) if usage else 0
+    completion_tokens = getattr(usage, "completion_tokens", 0) if usage else 0
+    total_tokens = getattr(usage, "total_tokens", 0) if usage else 0
+    completion_details = (
+        getattr(usage, "completion_tokens_details", None) if usage else None
+    )
+    reasoning_tokens = getattr(completion_details, "reasoning_tokens", 0) or 0
+
+    return AnswerResult(
+        answer=clean_generated_answer(answer),
+        input_tokens=input_tokens,
+        completion_tokens=completion_tokens,
+        reasoning_tokens=reasoning_tokens,
+        total_tokens=total_tokens,
+    )
 
 
-def print_sources(chunks: list[dict[str, Any]], show_scores: bool) -> None:
-    print("\nSources")
-    print("-------")
-    for number, chunk in enumerate(chunks, start=1):
-        details = [f"[{number}] {source_label(chunk)}"]
-        chunk_id = display_value(chunk.get("chunk_id")).strip()
-        if chunk_id:
-            details.append(f"chunk: {chunk_id}")
-        if show_scores and chunk.get("@search.score") is not None:
-            details.append(f"score: {float(chunk['@search.score']):.6f}")
-        print(" | ".join(details))
+def print_token_usage(
+    embedding_input_tokens: int,
+    answer_result: AnswerResult,
+) -> None:
+    visible_answer_tokens = max(
+        answer_result.completion_tokens - answer_result.reasoning_tokens,
+        0,
+    )
+
+    print("\nToken usage")
+    print("-----------")
+    print(f"Question embedding input tokens: {embedding_input_tokens:,}")
+    print(f"Chat input tokens: {answer_result.input_tokens:,}")
+    print(f"Chat completion tokens: {answer_result.completion_tokens:,}")
+    print(f"  Reasoning tokens: {answer_result.reasoning_tokens:,}")
+    print(f"  Visible answer tokens: {visible_answer_tokens:,}")
+    print(f"Chat total tokens: {answer_result.total_tokens:,}")
+    print(f"Maximum completion tokens: {DEFAULT_MAX_COMPLETION_TOKENS:,}")
+
+
+def source_details(chunk: dict[str, Any], show_scores: bool) -> list[str]:
+    """Return the identifying details for one retrieved source."""
+    details = [source_label(chunk)]
+    chunk_id = display_value(chunk.get("chunk_id")).strip()
+    pdf_pages = display_value(
+        chunk.get("source_pdf_pages") or chunk.get("pdf_page")
+    ).strip()
+    printed_pages = display_value(
+        chunk.get("source_printed_pages") or chunk.get("printed_page")
+    ).strip()
+
+    if chunk_id:
+        details.append(f"chunk: {chunk_id}")
+    if pdf_pages:
+        details.append(f"PDF page(s): {pdf_pages}")
+    if printed_pages:
+        details.append(f"printed page(s): {printed_pages}")
+    if show_scores and chunk.get("@search.score") is not None:
+        details.append(f"score: {float(chunk['@search.score']):.6f}")
+    return details
+
+
+def cited_source_numbers(answer: str, source_count: int) -> set[int]:
+    """Return valid source numbers cited in brackets in the generated answer."""
+    cited_numbers: set[int] = set()
+    for citation_group in re.findall(r"\[(\d+(?:\s*,\s*\d+)*)\]", answer):
+        for value in citation_group.split(","):
+            number = int(value.strip())
+            if 1 <= number <= source_count:
+                cited_numbers.add(number)
+    return cited_numbers
+
+
+def split_sources(
+    chunks: list[dict[str, Any]], answer: str
+) -> tuple[list[tuple[int, dict[str, Any]]], list[tuple[int, dict[str, Any]]]]:
+    """Split retrieved chunks into cited and uncited lists, retaining source numbers."""
+    cited_numbers = cited_source_numbers(answer, len(chunks))
+    numbered_chunks = list(enumerate(chunks, start=1))
+    used = [item for item in numbered_chunks if item[0] in cited_numbers]
+    not_used = [item for item in numbered_chunks if item[0] not in cited_numbers]
+    return used, not_used
+
+
+def print_source_group(
+    heading: str,
+    sources: list[tuple[int, dict[str, Any]]],
+    show_scores: bool,
+) -> None:
+    print(f"\n{heading}")
+    print("-" * len(heading))
+    if not sources:
+        print("None")
+        return
+    for number, chunk in sources:
+        print(f"[{number}] " + " | ".join(source_details(chunk, show_scores)))
+
+
+def print_sources(
+    chunks: list[dict[str, Any]], answer: str, show_scores: bool
+) -> None:
+    used, not_used = split_sources(chunks, answer)
+    print_source_group("Sources used", used, show_scores)
+    print_source_group("Sources not used", not_used, show_scores)
+
+
+def question_filename(question: str, max_length: int = 80) -> str:
+    """Return a readable, filesystem-safe filename stem for a question."""
+    normalised = unicodedata.normalize("NFKD", question)
+    ascii_question = normalised.encode("ascii", "ignore").decode("ascii")
+    ascii_question = re.sub(r"(?<=\d),(?=\d)", "", ascii_question)
+    filename = re.sub(r"[^a-zA-Z0-9]+", "-", ascii_question).strip("-").lower()
+    filename = filename[:max_length].rstrip("-")
+    return filename or "question"
+
+
+def save_answer(
+    question: str,
+    answer: str,
+    chunks: list[dict[str, Any]],
+    show_scores: bool,
+) -> Path:
+    """Save a question and its answer in the script's answers directory."""
+    answers_directory = Path(__file__).resolve().parent / "answers"
+    answers_directory.mkdir(parents=True, exist_ok=True)
+
+    stem = question_filename(question)
+    output_path = answers_directory / f"{stem}.md"
+    copy_number = 2
+    while output_path.exists():
+        output_path = answers_directory / f"{stem}-{copy_number}.md"
+        copy_number += 1
+
+    used, not_used = split_sources(chunks, answer)
+
+    def markdown_source_lines(
+        sources: list[tuple[int, dict[str, Any]]],
+    ) -> str:
+        if not sources:
+            return "None."
+        return "\n".join(
+            f"{number}. " + " | ".join(source_details(chunk, show_scores))
+            for number, chunk in sources
+        )
+
+    content = (
+        f"# Question\n\n{question}\n\n"
+        f"# Answer\n\n{answer}\n\n"
+        f"# Sources used\n\n{markdown_source_lines(used)}\n\n"
+        f"# Sources not used\n\n{markdown_source_lines(not_used)}\n"
+    )
+    output_path.write_text(content, encoding="utf-8")
+    return output_path
 
 
 def main() -> int:
@@ -344,12 +552,12 @@ def main() -> int:
         openai_client = make_openai_client(settings)
         index_fields = get_index_fields(settings)
         vector_field = find_vector_field(index_fields, args.vector_field)
-        question_vector = create_question_embedding(
+        embedding_result = create_question_embedding(
             openai_client, settings.embedding_deployment, args.question.strip()
         )
         chunks = retrieve_chunks(
             settings=settings,
-            question_vector=question_vector,
+            question_vector=embedding_result.vector,
             vector_field=vector_field,
             available_fields=index_fields,
             top=args.top,
@@ -358,16 +566,24 @@ def main() -> int:
         if not chunks:
             raise RuntimeError("Vector search returned no policy chunks.")
 
-        answer = generate_answer(
+        answer_result = generate_answer(
             client=openai_client,
             deployment=settings.chat_deployment,
             question=args.question.strip(),
             context=build_context(chunks),
         )
+        output_path = save_answer(
+            args.question.strip(),
+            answer_result.answer,
+            chunks,
+            args.show_scores,
+        )
         print("Answer")
         print("------")
-        print(answer)
-        print_sources(chunks, args.show_scores)
+        print(answer_result.answer)
+        print_sources(chunks, answer_result.answer, args.show_scores)
+        print_token_usage(embedding_result.input_tokens, answer_result)
+        print(f"\nAnswer saved to: {output_path}")
         return 0
     except Exception as exc:  # Keep CLI errors concise and actionable.
         print(f"Error: {exc}", file=sys.stderr)

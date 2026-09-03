@@ -272,6 +272,12 @@ python3 src/generate_answers/generate_answer.py \
   --show-scores
 ```
 
+To run all the retrieval questions from retrieval_questions.json then use the following command.
+
+```
+python3 run_questions.py retrieval_questions.json
+```
+
 
 ## Costs
 
@@ -331,12 +337,12 @@ The following results show only the GPT-5-mini cost. Each request included the s
 
 | Question | Input tokens | Completion tokens | Total GPT tokens | Input cost | Output cost | GPT-5-mini cost |
 |---|---:|---:|---:|---:|---:|---:|
-| Do I need to list my £3,000 violin separately? | 1,050 | 120 total<br>0 reasoning<br>120 visible | 1,170 | £0.000199500 | £0.000181200 | **£0.000380700** |
-| If my home became unsafe to live in after a fire, how much would each level of cover pay for somewhere else for my family and pets to stay? | 1,783 | 487 total<br>0 reasoning<br>487 visible | 2,270 | £0.000338770 | £0.000735370 | **£0.001074140** |
-| I have garden furniture worth £2,000. Will any policies cover it being left in the garden? | 1,674 | 569 total<br>0 reasoning<br>569 visible | 2,243 | £0.000318060 | £0.000859190 | **£0.001177250** |
-| If someone broke into my detached garage and stole my tools, which levels of home insurance would cover them, and how much could I claim? | 2,891 | 397 total<br>0 reasoning<br>397 visible | 3,288 | £0.000549290 | £0.000599470 | **£0.001148760** |
-| I have the Gold policy. Is my phone covered if I take it on holiday? | 1,005 | 229 total<br>0 reasoning<br>229 visible | 1,234 | £0.000190950 | £0.000345790 | **£0.000536740** |
-| **Total** | **8,403** | **1,802 total**<br>**0 reasoning**<br>**1,802 visible** | **10,205** | **£0.001596570** | **£0.002721020** | **£0.004317590** |
+| Do I need to list my £3,000 violin separately? | 1,530 | 132 total<br>0 reasoning<br>132 visible | 1,662 | £0.000290700 | £0.000199320 | **£0.000490020** |
+| If my home became unsafe to live in after a fire, how much would each level of cover pay for somewhere else for my family and pets to stay? | 2,263 | 217 total<br>0 reasoning<br>217 visible | 2,480 | £0.000429970 | £0.000327670 | **£0.000757640** |
+| I have garden furniture worth £2,000. Will any policies cover it being left in the garden? | 2,154 | 410 total<br>0 reasoning<br>410 visible | 2,564 | £0.000409260 | £0.000619100 | **£0.001028360** |
+| If someone broke into my detached garage and stole my tools, which levels of home insurance would cover them, and how much could I claim? | 3,371 | 64 total<br>0 reasoning<br>64 visible | 3,435 | £0.000640490 | £0.000096640 | **£0.000737130** |
+| I have the Gold policy. Is my phone covered if I take it on holiday? | 1,485 | 172 total<br>0 reasoning<br>172 visible | 1,657 | £0.000282150 | £0.000259720 | **£0.000541870** |
+| **Total** | **10,803** | **995 total**<br>**0 reasoning**<br>**995 visible** | **11,798** | **£0.002052570** | **£0.001502450** | **£0.003555020** |
 
 
 ### End-to-end question costs
@@ -357,7 +363,9 @@ Question
 
 
 
-## Further enhancements
+## Possible further enhancements
+
+The key weakness in this RAG project is querying the chunking. There are some instances of required chunks are not being returned and also chunks which are not releavant are being returned. This is largely due to vocabularly mismatch. Below are improevements which could be tested.
 
 ### Decompose complex questions into focused retrieval queries using Azure Agentic Retrieval
 
@@ -377,3 +385,28 @@ Azure AI Search supports multiple vector queries in a single search request. It 
 
 This approach can improve retrieval for multi-part questions, but it should be evaluated against the existing retrieval question set. Query decomposition adds an extra chat-model request and may introduce unnecessary or misleading subqueries for simple questions, so the application could apply it only to questions identified as complex.
 
+### Expand policy terminology prior to retrieval
+A vector search quieries chunks with semantic simularity but not explicit insurance-domain reasoning. The embedding model will probably recognise that:
+- phone is related to mobile phone
+- holiday is related to travel
+- cover is related to insurance
+
+However, it may not reliably know or prioritise that, in these particular policy documents:
+- a mobile phone is policy-defined as a high-risk item
+- holiday cover is described as cover away from home
+- high-risk items being covered through personal possessions or specified-item cover.
+
+These relationships may be established across multiple chunks. Standard vector search compares the question with each chunk independently and does not join facts across chunks. It therefore cannot explicitly reason:
+
+"""
+Another chunk defines a phone as a high-risk item, therefore I should also retrieve chunks about personal possessions, specified items and cover away from home.
+"""
+
+A knowledge graph or GraphRAG system could represent relationships between concepts such as mobile phone, high-risk item, personal possessions and cover away from home. The system could identify related policy concepts before or during retrieval and use them to retrieve additional relevant chunks.
+
+A knowledge graph or GraphRAG system could represent relationships between concepts such as mobile phone, high-risk item, personal possessions and cover away from home. The system could identify related policy concepts before or during retrieval and use them to retrieve additional relevant chunks.
+
+"""
+phone → mobile phone, high-risk item, personal possessions, specified item
+holiday → away from home, worldwide, outside the UK
+"""
