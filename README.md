@@ -353,13 +353,13 @@ Question
 
 | Question | Embedding cost | GPT-5-mini cost | End-to-end cost |
 |---|---:|---:|---:|
-| Do I need to list my £3,000 violin separately? | £0.000000247 | £0.000380700 | **£0.000380947** |
-| If my home became unsafe to live in after a fire, how much would each level of cover pay for somewhere else for my family and pets to stay? | £0.000000589 | £0.001074140 | **£0.001074729** |
-| I have garden furniture worth £2,000. Will any policies cover it being left in the garden? | £0.000000399 | £0.001177250 | **£0.001177649** |
-| If someone broke into my detached garage and stole my tools, which levels of home insurance would cover them, and how much could I claim? | £0.000000532 | £0.001148760 | **£0.001149292** |
-| I have the Gold policy. Is my phone covered if I take it on holiday? | £0.000000323 | £0.000536740 | **£0.000537063** |
-| **Total** | **£0.000002090** | **£0.004317590** | **£0.004319680** |
-| **Average per question** | **£0.000000418** | **£0.000863518** | **£0.000863936** |
+| Do I need to list my £3,000 violin separately? | £0.000000247 | £0.000490020 | **£0.000490267** |
+| If my home became unsafe to live in after a fire, how much would each level of cover pay for somewhere else for my family and pets to stay? | £0.000000589 | £0.000757640 | **£0.000758229** |
+| I have garden furniture worth £2,000. Will any policies cover it being left in the garden? | £0.000000399 | £0.001028360 | **£0.001028759** |
+| If someone broke into my detached garage and stole my tools, which levels of home insurance would cover them, and how much could I claim? | £0.000000532 | £0.000737130 | **£0.000737662** |
+| I have the Gold policy. Is my phone covered if I take it on holiday? | £0.000000323 | £0.000541870 | **£0.000542193** |
+| **Total** | **£0.000002090** | **£0.003555020** | **£0.003557110** |
+| **Average per question** | **£0.000000418** | **£0.000711004** | **£0.000711422** |
 
 
 
