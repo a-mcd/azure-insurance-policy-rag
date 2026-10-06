@@ -64,7 +64,18 @@ Home insurance handbook (HH) documents: detailed policy wording, cover informati
 - Project dependencies installed from requirements.txt file, run: `python3 -m pip install -r requirements.txt`
 
 
-## Setup Environment
+## Setup Local Environment
+
+1. `python3 -m venv .venv`
+
+2. `source .venv/bin/activate` if Mac OS or Linux or `.venv\Scripts\Activate.ps1` if Windows
+
+3. `python3 -m pip install -r requirements.txt`
+
+4. Login to Azure `az login`
+
+
+## Prepare Data
 
 Run all commands from the project root.
 
@@ -118,8 +129,9 @@ python3 src/prep_data/chunk_documents.py \
   --output data/processed/hh_document_chunks.jsonl
 ```
 
+## Setup Azure Environment
 
-3. Create the Azure environment and index the chunks
+1. Create the Azure environment and index the chunks
 
 Run the setup script to:
 
