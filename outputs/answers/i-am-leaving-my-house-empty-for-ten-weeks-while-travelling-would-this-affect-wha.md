@@ -4,14 +4,14 @@ I am leaving my house empty for ten weeks while travelling. Would this affect wh
 
 # Answer
 
-Yes — it can affect claims if the home is unoccupied for more than 60 days.
+Yes — leaving your home unoccupied for ten weeks may affect what you can claim.
 
 Explanation:
-- All three policy levels (Admiral, Gold and Platinum) state there is an allowance of up to 60 days if you are not regularly residing in your property before restrictions apply [2, 7, 4].  
-- Each of those policy documents also say loss or damage under many sections of the policy is not insured if the home is left unoccupied for more than 60 days (an “empty homes” restriction) [3, 8, 6].  
-- The general Unoccupied guidance explains the insurer classes a home as unoccupied if it is not lived in by you or your family for more than your ‘days unoccupied limit’ and warns you must tell them beforehand if the home will be unoccupied for longer than that limit so you are not left without cover [1].
+- The policies (Admiral, Gold and Platinum) each allow up to 60 days of unoccupancy before restrictions apply, so an unoccupied period longer than 60 days would trigger those restrictions [2, 4, 7]. (Ten weeks is 70 days, which is more than 60 days.)
+- Each of those policy documents states that loss or damage under many sections of the policy is not insured if your home is left unoccupied for more than 60 days [3, 6, 8].
+- The general “Unoccupied” guidance also says you must tell the insurer beforehand if the home will be unoccupied for longer than your ‘days unoccupied limit’ so you are not left without cover [1].
 
-If your travel keeps the home empty for ten weeks (70 days), that exceeds the 60‑day allowance and the “empty homes” restriction would apply, potentially meaning loss or damage under many sections would not be covered unless you have agreed otherwise with the insurer [1, 2, 3].
+Because the excerpts do not give details of which specific sections are restricted or what happens if you notify the insurer, you would need to check your Home Policy Schedule for your exact ‘days unoccupied limit’ and contact the insurer for how cover would apply or any agreed changes. [1]
 
 # Sources used
 

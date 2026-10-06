@@ -4,7 +4,15 @@ I have the gold policy, is my phone covered if I take it on holiday?
 
 # Answer
 
-Yes — your phone can be covered when you take it on holiday, but only if it is insured as part of your personal possessions under an optional extension that covers those items anywhere in the world. The Gold policy says optional cover for personal possessions, specified bikes and specified items you have asked to cover away from home will cover you anywhere in the world [1]. The policy also shows personal possessions can be increased up to a maximum of £20,000 and valuables over £2,000 can be added as specified items up to a maximum of £30,000, which may affect how your phone should be declared or limited by any sub-limits or specifications you chose [3, 5].
+Yes — your phone can be covered on holiday under your Gold policy if it is included as part of your Personal possessions cover or as a Specified item, subject to the policy limits and any cover you have chosen.
+
+Explanation:
+- Optional personal possessions cover can extend to anywhere in the world for items you have asked to cover away from home, which would include a phone if it is insured under Personal possessions [1].  
+- The policy allows Personal possessions cover up to a maximum of £20,000 (this is the overall Personal possessions limit) [3].  
+- If your phone is a high‑value item you have specified as a Specified item, valuables over £2,000 can be added up to a maximum of £30,000 (subject to the specified item sum insured you arranged) [5].
+
+What I cannot establish from these excerpts:
+- The excerpt does not show the specific sublimit for a single phone or whether theft/loss overseas has different exclusions or excesses, nor does it show whether your policy schedule actually includes Personal possessions or a specified item entry for your phone. You would need to check your policy schedule and the full policy wording for any specific exclusions, excesses or single-item limits.
 
 # Sources used
 

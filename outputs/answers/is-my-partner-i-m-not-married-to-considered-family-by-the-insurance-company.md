@@ -4,7 +4,7 @@ Is my partner I'm not married to considered family by the insurance company?
 
 # Answer
 
-Yes — an unmarried partner who permanently lives with you is considered family under this policy. The policy defines "Family" as any relative who permanently lives with you and explicitly includes "partner" [1]. The definition of "You, your" also states it includes unmarried partners who always live with the policyholder and says anyone claiming must have the policyholder’s agreement to claim [9].
+Yes — an unmarried partner who always lives with the policyholder is considered family under this policy. The policy’s definition of “You, your” includes the policyholder “and any member of their family who always lives with them,” and it expressly lists “unmarried partners” as included [9]. The Guide also states “Family” includes “your husband, wife or partner” as relatives who permanently live with you at your home [1].
 
 # Sources used
 

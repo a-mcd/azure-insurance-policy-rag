@@ -4,7 +4,7 @@ What are the levels for home insurance cover?
 
 # Answer
 
-There are three levels of home insurance cover: Admiral, Gold and Platinum [1].
+There are three levels of cover: Admiral, Gold and Platinum [1].
 
 # Sources used
 

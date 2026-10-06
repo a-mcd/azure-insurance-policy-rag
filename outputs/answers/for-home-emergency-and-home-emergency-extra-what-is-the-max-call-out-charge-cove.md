@@ -4,8 +4,8 @@ For home emergency and home emergency extra what is the max call out charge cove
 
 # Answer
 
-Home Emergency Extra: provides cover up to £1,000 per claim for call‑out charges (and labour, parts and materials) [1, 9]. 
-Home Emergency: provides cover up to £500 per claim for call‑out charges (and labour, parts and materials) [2].
+Home Emergency Extra: provides cover up to £1,000 for call‑out charges, labour, parts and materials per claim [1, 9].  
+Home Emergency: provides cover up to £500 for call‑out charges, labour, parts and materials per claim [2].
 
 # Sources used
 

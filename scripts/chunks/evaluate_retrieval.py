@@ -25,7 +25,7 @@ from search_document_chunks import (
 
 
 DEFAULT_INPUT = Path("retrieval_questions.json")
-DEFAULT_OUTPUT = Path("src/search_chunks/retrieval_results.json")
+DEFAULT_OUTPUT = Path("outputs/retrieved_chunks/retrieval_results.json")
 DEFAULT_MODES = ("keyword", "vector", "hybrid")
 STANDARD_METRIC_CUTOFFS = (1, 3, 5, 10, 20)
 

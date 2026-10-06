@@ -6,11 +6,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-if [[ "$(basename "$SCRIPT_DIR")" == "setup_env" ]]; then
-    PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-else
-    PROJECT_ROOT="$SCRIPT_DIR"
-fi
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 
 LOCATION="norwayeast"
 RESOURCE_PREFIX=""
@@ -27,8 +23,8 @@ CHAT_DEPLOYMENT_SKU="GlobalStandard"
 CHAT_DEPLOYMENT_CAPACITY="10"
 SEARCH_INDEX_NAME="insurance-policy-chunks"
 VECTOR_ALGORITHM="hnsw"
-TEST_OPENAI_SCRIPT="${PROJECT_ROOT}/src/setup_env/test_openai_service.py"
-INDEX_CHUNKS_SCRIPT="${PROJECT_ROOT}/src/setup_env/index_document_chunks.py"
+TEST_OPENAI_SCRIPT="${PROJECT_ROOT}/scripts/setup_env/validate_openai_service.py"
+INDEX_CHUNKS_SCRIPT="${PROJECT_ROOT}/scripts/chunks/index_document_chunks.py"
 IP_CHUNKS_FILE="${PROJECT_ROOT}/data/processed/ip_document_chunks.jsonl"
 HH_CHUNKS_FILE="${PROJECT_ROOT}/data/processed/hh_document_chunks.jsonl"
 
@@ -154,7 +150,7 @@ require_command openssl
 require_command python3
 
 [[ -f "$TEST_OPENAI_SCRIPT" ]] ||
-    fail "OpenAI test script not found: $TEST_OPENAI_SCRIPT"
+    fail "OpenAI validate script not found: $TEST_OPENAI_SCRIPT"
 [[ -f "$INDEX_CHUNKS_SCRIPT" ]] ||
     fail "Chunk indexing script not found: $INDEX_CHUNKS_SCRIPT"
 
@@ -412,14 +408,14 @@ write_environment_file() {
     info "Updated '$ENV_FILE' with the Azure OpenAI and Azure AI Search settings."
 }
 
-test_openai_service() {
-    info "Testing the Azure OpenAI embedding deployment..."
+validate_openai_service() {
+    info "Validating the Azure OpenAI embedding deployment..."
 
     if ! (cd "$PROJECT_ROOT" && python3 "$TEST_OPENAI_SCRIPT"); then
-        fail "Azure OpenAI service test failed. The document chunks were not indexed."
+        fail "Azure OpenAI service validation failed. The document chunks were not indexed."
     fi
 
-    info "Azure OpenAI service test completed successfully."
+    info "Azure OpenAI service validation completed successfully."
 }
 
 check_processed_chunks() {
@@ -459,7 +455,7 @@ create_embedding_deployment
 create_chat_deployment
 create_search_service
 write_environment_file
-test_openai_service
+validate_openai_service
 check_processed_chunks
 index_document_chunks
 

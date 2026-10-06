@@ -4,13 +4,9 @@ If an item such as a TV is broken by my dog, is it covered?
 
 # Answer
 
-Direct answer: No — damage caused by a pet (for example your dog) is not covered.
+Direct answer: No — damage caused by a pet (for example your dog) is excluded and not covered. [3]
 
-Explanation:
-- Accidental damage cover for audio‑visual equipment (including television sets) applies for accidental damage in the home, but the policy excludes loss or damage caused by pets through chewing, scratching, tearing, fouling or vomiting [4, 3]. 
-- Each policy level (Admiral, Gold, Platinum) explicitly excludes pet damage in their “What is not insured” lists [2, 5, 1]. 
-
-Therefore a TV broken by your dog falls within the pet‑caused exclusion and wouldn’t be insured under the accidental damage/breakage provisions shown [4, 3, 2].
+Explanation: The accidental damage cover for audio‑visual equipment (including televisions) applies for accidental damage in the home under the Contents accidental damage section [4]. However, the policy explicitly says it will not pay for loss or damage caused by pets through chewing, scratching, tearing, fouling or vomiting — this exclusion for accidental damage/breakage applies under the policy [3]. The same pets exclusion language appears in the Admiral, Gold and Platinum policy wordings [2, 5, 1].
 
 # Sources used
 

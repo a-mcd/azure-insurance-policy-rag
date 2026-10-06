@@ -4,12 +4,13 @@ If a part of my kitchen e.g. a cupboard is damaged and matching replacements can
 
 # Answer
 
-No — only the Platinum policy provides cover to replace the whole matching set when one part cannot be replaced; Admiral and Gold do not. [4, 6]
+No — not on Admiral or Gold; only Platinum includes replacing the whole matched set if a part can’t be matched.
 
 Explanation:
-- The Platinum Home Insurance policy explicitly says if one item of a matching set (for example a unit of a fitted kitchen) is damaged and the insurer cannot replace that individual item, they will replace the whole set [4].  
-- The coverage table confirms “Matching items” cover (replace whole set or suite when part can’t be replaced) is included for Platinum but not included for Admiral or Gold [6].  
-- The general claims settlement rules state the insurer treats each individual item of a matching set as a single item and will not pay for other items in the set unless “Matching items” is shown in your Home Policy Schedule; you may have to give undamaged parts to the insurer if requested [1].
+- The policy treats each individual item from a matching set (for example a fitted kitchen) as a single item for claims unless “Matching items” cover applies [1].
+- Platinum’s “Matching items cover” says if one item in a matching set (such as one unit of a fitted kitchen) is damaged and the insurer cannot replace that individual item, they will replace the whole set [4].
+- The coverage table shows Matching items cover is Not included for Admiral and Gold but Included for Platinum; it also confirms that if part of a fitted kitchen is damaged beyond repair and a replacement can’t be found, they’ll pay to repair or replace the whole set or suite (Platinum only) [6].
+- Therefore, unless you hold the Platinum policy-level that includes Matching items cover, the insurer will not replace the undamaged matching cupboards just because one cupboard cannot be matched [1, 6].
 
 # Sources used
 

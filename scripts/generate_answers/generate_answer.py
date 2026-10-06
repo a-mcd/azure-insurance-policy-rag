@@ -513,8 +513,11 @@ def save_answer(
     show_scores: bool,
 ) -> Path:
     """Save a question and its answer in the script's answers directory."""
-    answers_directory = Path(__file__).resolve().parent / "answers"
+
+    project_root = Path(__file__).resolve().parents[2]
+    answers_directory = project_root / "outputs" / "answers"
     answers_directory.mkdir(parents=True, exist_ok=True)
+
 
     stem = question_filename(question)
     output_path = answers_directory / f"{stem}.md"

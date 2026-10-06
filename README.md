@@ -84,12 +84,12 @@ Run all commands from the project root.
 Extract the Insurance Product Information documents:
 
 ```bash
-python3 src/prep_data/extract_ip_pdfs.py \
+python3 scripts/prepare_data/extract_ip_pdfs.py \
   --input-dir data/raw \
   --output-file data/processed/ip_documents.json
 ```
 ```bash
-python3 src/prep_data/extract_hh_pdfs.py \
+python3 scripts/prepare_data/extract_hh_pdfs.py \
   --input-dir data/raw \
   --output-file data/processed/hh_documents.json
 ```
@@ -117,14 +117,14 @@ An LLM can help identify potential discrepancies, but verify every reported diff
 Chunk the Insurance Product Information documents:
 
 ```bash
-python3 src/prep_data/chunk_documents.py  \
+python3 scripts/prepare_data/chunk_documents.py  \
   data/processed/ip_documents.json \
   --output data/processed/ip_document_chunks.jsonl
 ```
 
 Chunk the home insurance handbook:
 ```bash
-python3 src/prep_data/chunk_documents.py \
+python3 scripts/prepare_data/chunk_documents.py \
   data/processed/hh_documents.json \
   --output data/processed/hh_document_chunks.jsonl
 ```
@@ -151,9 +151,9 @@ If no --vector-algorithm is supplied then it defualts to HNSW. EKNN can also be 
 
 
 ```bash
-./setup_env/setup_azure_openai.sh --prefix ********
+./scripts/setup_env/setup_azure_openai.sh --prefix ********
 
-./setup_env/setup_azure_openai.sh \
+./scripts/setup_env/setup_azure_openai.sh \
   --prefix aug17 \
   --vector-algorithm hnsw/eknn
 ```
@@ -168,7 +168,7 @@ This bash script uses the python scripts in folder src/setup_env
 If updating the chunks or the vector algorithm use the following command which generates the new embeddings, deletes and recreates the existing search index, and uploads the latest chunks.
 
 ```bash
-python3 src/setup_env/index_document_chunks.py \
+python3 scripts/chunks/index_document_chunks.py \
   data/processed/ip_document_chunks.jsonl \
   data/processed/hh_document_chunks.jsonl \
   --vector-algorithm hnsw/eknn \
@@ -187,7 +187,7 @@ Use search_document_chunks.py to inspect the chunks retrieved for an ad hoc ques
 - Which vector algorithm is most suitable hnsw or eknn
 
 ```bash
-python3 src/search_chunks/search_document_chunks.py \
+python3 scripts/chunks/search_document_chunks.py \
   "QUESTION" \
   [--mode hybrid|vector|keyword] \
   [--top NUMBER] \
@@ -211,7 +211,7 @@ python3 src/search_chunks/search_document_chunks.py \
 Evaluates retrieved chunk IDs against the expected chunk IDs in the labelled question set documented in retrieval_questions.json. This script has no required command-line parameters.
 
 ```bash
-python3 src/search_chunks/evaluate_retrieval.py \
+python3 scripts/chunks/evaluate_retrieval.py \
   [--input PATH] \
   [--output PATH] \
   [--modes MODE [MODE ...]] \
@@ -230,7 +230,7 @@ python3 src/search_chunks/evaluate_retrieval.py \
 Compare multiple selected modes:
 
 ```bash
-python3 src/search_chunks/evaluate_retrieval.py \
+python3 scripts/chunks/evaluate_retrieval.py \
   --modes vector hybrid \
   --top 10
 ```
@@ -238,7 +238,7 @@ python3 src/search_chunks/evaluate_retrieval.py \
 Evaluate one question only:
 
 ```bash
-python3 src/search_chunks/evaluate_retrieval.py \
+python3 scripts/chunks/evaluate_retrieval.py \
   --question-id Q006 \
   --modes vector \
   --top 10
@@ -251,7 +251,7 @@ Retrieves policy chunks using vector search and generates a grounded answer with
 
 
 ```bash
-python3 src/generate_answers/generate_answer.py \
+python3 scripts/generate_answers/generate_answer.py \
   "QUESTION" \
   [--top NUMBER] \
   [--document-code CODE] \
@@ -270,14 +270,14 @@ python3 src/generate_answers/generate_answer.py \
 Only `question` is required:
 
 ```bash
-python3 src/generate_answers/generate_answer.py \
+python3 scripts/generate_answers/generate_answer.py \
   "Do I need to list my £3,000 violin separately?"
 ```
 
 Example using optional parameters:
 
 ```bash
-python3 src/generate_answers/generate_answer.py \
+python3 scripts/generate_answers/generate_answer.py \
   "Are fences covered for storm damage?" \
   --document-code IP-HO-2-012 \
   --top 10 \
@@ -286,8 +286,8 @@ python3 src/generate_answers/generate_answer.py \
 
 To run all the retrieval questions from retrieval_questions.json then use the following command.
 
-```
-python3 run_questions.py retrieval_questions.json
+```bash
+python3 scripts/generate_answers/run_questions.py retrieval_questions.json
 ```
 
 
