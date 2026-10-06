@@ -1,5 +1,5 @@
-pymupdf
-tiktoken
-openai
-python-dotenv
-azure-search-documents
+pymupdf==1.28.2
+tiktoken==0.13.0
+openai==3.1.0
+python-dotenv==1.2.2
+azure-search-documents==12.0.0

@@ -2,8 +2,12 @@ import os
 
 from dotenv import load_dotenv
 from openai import AzureOpenAI
+from pathlib import Path
 
-load_dotenv()
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+ENV_FILE = PROJECT_ROOT / ".env"
+load_dotenv(ENV_FILE)
+
 
 client = AzureOpenAI(
     azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],

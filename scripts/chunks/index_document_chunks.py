@@ -39,6 +39,9 @@ VECTOR_FIELD = "content_vector"
 VECTOR_PROFILE = "insurance-vector-profile"
 DEFAULT_VECTOR_ALGORITHM = "hnsw"
 ENGLISH_ANALYZER = "en.microsoft"
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+ENV_FILE = PROJECT_ROOT / ".env"
+
 
 
 def parse_args() -> argparse.Namespace:
@@ -336,7 +339,7 @@ def upload_chunks(
 
 
 def main() -> int:
-    load_dotenv()
+    load_dotenv(ENV_FILE)
     args = parse_args()
     chunks = load_chunks(args.inputs)
     print(f"Validated {len(chunks)} unique chunks")

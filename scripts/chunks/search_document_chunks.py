@@ -9,6 +9,7 @@ import math
 import os
 import sys
 from typing import Any
+from pathlib import Path
 
 from dotenv import load_dotenv
 from openai import AzureOpenAI
@@ -44,6 +45,9 @@ RESULT_FIELDS = [
     "source_printed_pages",
     "table_type",
 ]
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+ENV_FILE = PROJECT_ROOT / ".env"
 
 
 def parse_args() -> argparse.Namespace:

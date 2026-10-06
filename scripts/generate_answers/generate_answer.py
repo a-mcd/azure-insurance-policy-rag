@@ -20,6 +20,9 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+ENV_FILE = PROJECT_ROOT / ".env"
+
 DEFAULT_TOP = 10
 DEFAULT_MAX_COMPLETION_TOKENS = 2000
 VECTOR_FIELD_CANDIDATES = (
@@ -137,7 +140,7 @@ def parse_args() -> argparse.Namespace:
 
 def load_settings() -> Settings:
     project_root = Path(__file__).resolve().parents[2]
-    load_dotenv(project_root / ".env")
+    load_dotenv(ENV_FILE)
 
     required = {
         "AZURE_OPENAI_ENDPOINT": os.getenv("AZURE_OPENAI_ENDPOINT"),

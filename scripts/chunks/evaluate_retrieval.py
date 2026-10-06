@@ -28,6 +28,8 @@ DEFAULT_INPUT = Path("retrieval_questions.json")
 DEFAULT_OUTPUT = Path("outputs/retrieved_chunks/retrieval_results.json")
 DEFAULT_MODES = ("keyword", "vector", "hybrid")
 STANDARD_METRIC_CUTOFFS = (1, 3, 5, 10, 20)
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+ENV_FILE = PROJECT_ROOT / ".env"
 
 
 def parse_args() -> argparse.Namespace:
@@ -310,7 +312,7 @@ def print_question_summary(
 
 
 def main() -> int:
-    load_dotenv()
+    load_dotenv(ENV_FILE)
     args = parse_args()
     questions = load_questions(args.input)
     cutoffs = metric_cutoffs(args.top)

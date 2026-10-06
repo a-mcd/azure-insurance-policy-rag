@@ -33,25 +33,49 @@ Home insurance handbook (HH) documents: detailed policy wording, cover informati
 ## Project structure
 
 ```text
-.
+
+azure-insurance-policy-rag/
+├── .env.example
+├── .gitignore
+├── README.md
+├── requirements.txt
+├── retrieval_questions.json
+│
 ├── data/
-│   ├── raw/                              # Source PDF documents
-│   └── processed/                        # Extracted JSON and chunk JSONL files
-├── setup_env/
-│   └── setup_azure_openai.sh             # Creates and configures Azure resources
-└── src/
-    ├── prep_data/
-    │   ├── extract_ip_pdfs.py            # Extracts IP PDFs into structured JSON
-    │   ├── extract_hh_pdfs.py            # Extracts the HH PDF into structured JSON
-    │   └── chunk_documents.py             # Creates retrieval chunks
-    ├── setup_env/
-    │   ├── index_document_chunks.py      # Embeds and indexes chunks
-    │   └── test_openai_service.py         # Tests the embedding deployment
-    ├── search_chunks/
-    │   ├── search_document_chunks.py     # Runs ad hoc retrieval queries
-    │   └── evaluate_retrieval.py          # Evaluates retrieval performance
-    └── generate_answers/
-        └── generate_answer.py             # Produces grounded, cited answers
+│   ├── raw/                                                 # Source PDF documents
+│   │   ├── Gold-IP-HO-2-012.pdf
+│   │   ├── HH-010-018-Guide-to-your-Home-Insurance-Cover.pdf
+│   │   ├── HomeEmergency-IP-HE-1-008.pdf
+│   │   ├── HomeEmergencyExtra-IP-HEE-1-005.pdf
+│   │   ├── HomeLegal-IP-FL-1-008.pdf
+│   │   ├── Platinum-IP-HO-3-010.pdf
+│   │   └── Standard-IP-HO-1-012.pdf
+│   │
+│   └── processed/                                           # Extracted JSON and chunk JSONL files
+│
+├── outputs/
+│   ├── answers/
+│   └── retrieved_chunks/
+│
+└── scripts/
+    ├── chunks/
+    │   ├── evaluate_retrieval.py                            # Evaluates retrieval performance
+    │   ├── index_document_chunks.py                         # Embeds and indexes chunks
+    │   └── search_document_chunks.py                        # Runs ad hoc retrieval queries
+    │
+    ├── generate_answers/
+    │   ├── generate_answer.py                                # Produces grounded, cited answers
+    │   └── run_questions.py                                  # Generates answers questions in retrieval_questions.json
+    │
+    ├── prepare_data/
+    │   ├── chunk_documents.py                                # Creates retrieval chunks
+    │   ├── extract_hh_pdfs.py                                # Extracts the HH PDF into structured JSON
+    │   └── extract_ip_pdfs.py                                # Extracts IP PDFs into structured JSON
+    │
+    └── setup_env/
+        ├── setup_azure_openai.sh                             # Creates and configures Azure resources
+        └── validate_openai_service.py                        # Validates the embedding deployment
+   
 ```
 
 
@@ -137,7 +161,7 @@ Run the setup script to:
 
 - Create the Azure resource group.
 - Create an Azure OpenAI resource.
-- Deploys the embedding and chat models
+- Deploy the embedding and chat models
 - Create a Free-tier Azure AI Search service.
 - Add the Azure OpenAI and Azure AI Search credentials to .env.
 - Test the Azure OpenAI embedding deployment.
@@ -147,7 +171,7 @@ Run the setup script to:
 
 Replace ******** with a unique resource prefix:
 
-If no --vector-algorithm is supplied then it defualts to HNSW. EKNN can also be supplied.
+If no --vector-algorithm is supplied then it defaults to HNSW. EKNN can also be supplied.
 
 
 ```bash
@@ -161,7 +185,7 @@ If no --vector-algorithm is supplied then it defualts to HNSW. EKNN can also be 
 HNSW is suitable as the production default because it scales efficiently as the index grows. Exhaustive KNN is useful as an exact baseline when evaluating whether approximate search reduces retrieval quality.
 
 
-This bash script uses the python scripts in folder src/setup_env
+This Bash script uses the Python validation script in scripts/setup_env/ and the indexing script in scripts/chunks/.
 
 *Updating the indexed chunks*
 
@@ -180,10 +204,10 @@ python3 scripts/chunks/index_document_chunks.py \
 
 ### search_document_chunks.py
 
-Use search_document_chunks.py to inspect the chunks retrieved for an ad hoc questions.
+Use search_document_chunks.py to inspect the chunks retrieved for an ad hoc question.
 
-- Decide which is the best retreval type vector/keyword/hybrid
-- Do the chunks needs to be updated?
+- Decide which is the best retrieval type vector/keyword/hybrid
+- Do the chunks need to be updated?
 - Which vector algorithm is most suitable hnsw or eknn
 
 ```bash
@@ -221,8 +245,8 @@ python3 scripts/chunks/evaluate_retrieval.py \
 
 | Parameter | Required? | Default | Description |
 | --- | --- | --- | --- |
-| `--input` | No | `src/search_chunks/retrieval_questions.json` | Evaluation questions JSON file. |
-| `--output` | No | `src/search_chunks/retrieval_results.json` | Destination for detailed JSON results. |
+| `--input` | No | `retrieval_questions.json` | Evaluation questions JSON file. |
+| `--output` | No | `outputs/retrieved_chunks/retrieval_results.json` | Destination for detailed JSON results. |
 | `--modes` | No | `keyword vector hybrid` | One or more retrieval modes. Accepted values: `keyword`, `vector`, and `hybrid`. |
 | `--top` | No | `5` | Number of chunks retrieved for each question. Accepted range: 1–50. |
 | `--question-id` | No | All questions | Evaluates only the specified question, such as `Q006`. |
@@ -398,7 +422,7 @@ Azure AI Search supports multiple vector queries in a single search request. It 
 This approach can improve retrieval for multi-part questions, but it should be evaluated against the existing retrieval question set. Query decomposition adds an extra chat-model request and may introduce unnecessary or misleading subqueries for simple questions, so the application could apply it only to questions identified as complex.
 
 ### Expand policy terminology prior to retrieval
-A vector search quieries chunks with semantic simularity but not explicit insurance-domain reasoning. The embedding model will probably recognise that:
+A vector search queries chunks with semantic similarity but not explicit insurance-domain reasoning. The embedding model will probably recognise that:
 - phone is related to mobile phone
 - holiday is related to travel
 - cover is related to insurance
