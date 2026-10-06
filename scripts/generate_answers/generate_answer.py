@@ -73,9 +73,6 @@ Rules:
 - Apply each inclusion, exclusion, condition, definition and limit only to the policy section it governs. Do not apply a rule from one section to another unless the excerpts explicitly state that it applies more broadly.
 - When more than one section could apply, evaluate each section separately. Do not let an exclusion under one section override cover under another independent section.
 - Before returning the answer, check that the first sentence does not contradict any later statement.
-- Apply each inclusion, exclusion, condition, definition and limit only to the policy section it governs. Do not apply a rule from one section to another unless the excerpts explicitly state that it applies more broadly.
-- When more than one section could apply, evaluate each section separately. Do not let an exclusion under one section override cover under another independent section.
-- Before returning the answer, check that the first sentence does not contradict any later statement.
 """
 
 

@@ -239,7 +239,7 @@ def print_results(
 
 
 def main() -> int:
-    load_dotenv()
+    load_dotenv(ENV_FILE)
     args = parse_args()
 
     search_config = require_environment(
