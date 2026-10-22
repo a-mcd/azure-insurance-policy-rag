@@ -1,0 +1,196 @@
+[
+  {
+    "question_id": "Q001",
+    "question": "If my home became unsafe to live in after a fire, how much would each level of cover pay for somewhere else for my family and pets to stay?",
+    "expected_chunk_ids": [
+      "ip-ho-2-012-0004-42f299b9dace",
+      "ip-ho-3-010-0004-f8c02f89465d",
+      "ip-ho-1-012-0004-02a86b9d1052",
+      "hh-010-018-0105-89e3c80053db",
+      "ip-he-1-008-0009-21411be2a2e0",
+      "ip-hee-1-005-0013-bd5bdcc36839"
+    ]
+  },
+  {
+    "question_id": "Q002",
+    "question": "What are the levels for home insurance cover?",
+    "expected_chunk_ids": [
+      "hh-010-018-0003-2b98be5b1b89"
+    ]
+  },
+  {
+    "question_id": "Q003",
+    "question": "I have garden furniture worth £2000 will any policies cover it being left in the garden?",
+    "expected_chunk_ids": [
+      "ip-ho-3-010-0017-2e95659b8b30",
+      "ip-ho-2-012-0016-697f49b57c87"
+    ]
+  },
+  {
+    "question_id": "Q004",
+    "question": "For home emergency and home emergency extra what is the max call out charge covered?",
+    "expected_chunk_ids": [
+      "ip-he-1-008-0003-790f2e8f887f",
+      "ip-hee-1-005-0003-06e635afdd7e"
+    ]
+  },
+  {
+    "question_id": "Q005",
+    "question": "Is my partner I'm not married to considered family by the insurance company?",
+    "expected_chunk_ids": [
+      "hh-010-018-0025-b43348e79a9b"
+    ]
+  },
+  {
+    "question_id": "Q006",
+    "question": "I have a violin worth £3000. Do I have to list it separately from my overall contents?",
+    "expected_chunk_ids": [
+      "hh-010-018-0027-96b0399d4ae0",
+      "hh-010-018-0036-37462e58ccba"
+    ]
+  },
+  {
+    "question_id": "Q007",
+    "question": "If a part of my kitchen e.g. a cupboard is damaged and matching replacements cannot be found will all the matching cupboards be replaced?",
+    "expected_chunk_ids": [
+      "hh-010-018-0080-85ac01d7a6a1",
+      "ip-ho-3-010-0010-887387ba4c24",
+      "hh-010-018-0049-8bed6f20f8d6"
+    ]
+  },
+  {
+    "question_id": "Q008",
+    "question": "If an item such as a TV is broken by my dog, is it covered?",
+    "expected_chunk_ids": [
+      "hh-010-018-0129-a034888c3cc4",
+      "hh-010-018-0132-496f5bb547e3",
+      "ip-ho-3-010-0033-3770b762a8b3",
+      "ip-ho-1-012-0027-85f708445994",
+      "ip-ho-2-012-0031-790b1b20526c",
+      "hh-010-018-0084-73159415dfe3"
+    ]
+  },
+  {
+    "question_id": "Q009",
+    "question": "Is my phone covered when away from home?",
+    "expected_chunk_ids": [
+      "hh-010-018-0143-38d466ec27ca",
+      "hh-010-018-0142-399187ad31ce",
+      "ip-ho-3-010-0041-f7a687077619",
+      "ip-ho-2-012-0039-7ef02b87ced7",
+      "ip-ho-1-012-0035-be7bf35bf78f"
+    ]
+  },
+  {
+    "question_id": "Q010",
+    "question": "I have the gold policy, is my phone covered if I take it on holiday?",
+    "expected_chunk_ids": [
+      "ip-ho-2-012-0039-7ef02b87ced7",
+      "ip-ho-2-012-0022-f74d1973790c"
+    ]
+  },
+  {
+    "question_id": "Q011",
+    "question": "What policies cover my phone if I take it on holiday?",
+    "expected_chunk_ids": [
+      "hh-010-018-0142-399187ad31ce",
+      "ip-ho-2-012-0039-7ef02b87ced7",
+      "ip-ho-1-012-0035-be7bf35bf78f",
+      "ip-ho-3-010-0039-a07444f3aa02"
+    ]
+  },
+  {
+    "question_id": "Q012",
+    "question": "While moving some furniture, I accidentally cracked the fixed glass in my patio door. Would my insurance pay for the repair?",
+    "expected_chunk_ids": [
+      "hh-010-018-0082-ab3e86da136a"
+    ]
+  },
+  {
+    "question_id": "Q013",
+    "question": "If someone broke into my detached garage and stole my tools. Which levels of home insurance would cover them, and how much could I claim?",
+    "expected_chunk_ids": [
+      "hh-010-018-0116-931681225641",
+      "ip-ho-2-012-0015-bbb48f748db0",
+      "ip-ho-3-010-0016-1a8f2d57d6c8"
+    ]
+  },
+  {
+    "question_id": "Q014",
+    "question": "I am leaving my house empty for ten weeks while travelling. Would this affect what I can claim for while I am away?",
+    "expected_chunk_ids": [
+      "hh-010-018-0039-043799dd735d",
+      "ip-ho-1-012-0015-3833ee77e50c",
+      "ip-ho-2-012-0019-cb45785fdda7",
+      "ip-ho-3-010-0022-79b62ed2b7fb",
+      "ip-ho-1-012-0023-ed4642665541",
+      "ip-ho-2-012-0027-73c29000ae19",
+      "ip-ho-3-010-0030-34f842e235c4"
+
+    ]
+  },
+  {
+    "question_id": "Q015",
+    "question": "A storm caused my tree to fall over and damage my decking. What is and what is not covered?",
+    "expected_chunk_ids": [
+      "hh-010-018-0019-463b12f4a0d6",
+      "hh-010-018-0060-022dc8aa5b61",
+      "hh-010-018-0110-51a688d4cd62"
+    ]
+  },
+  {
+    "question_id": "Q016",
+    "question": "The engineer says my boiler is too expensive to repair. Will I receive any money towards replacing it?",
+    "expected_chunk_ids": [
+      "ip-hee-1-005-0012-0b3f5457b8e3",
+      "hh-010-018-0193-c65138c93723",
+      "hh-010-018-0179-cd4a81c8b2b9"
+    ]
+  },
+  {
+    "question_id": "Q017",
+    "question": "I am in a dispute with a builder over poor work carried out at my home. Could the policy pay my solicitor’s fees?",
+    "expected_chunk_ids": [
+      "ip-fl-1-008-0021-67c22073d620",
+      "ip-fl-1-008-0024-64512da430ed",
+      "hh-010-018-0231-ab3835248bf5"
+    ]
+  },
+  {
+    "question_id": "Q018",
+    "question": "My employer has started disciplinary proceedings against me. Would the legal cover help with the dispute, or is this excluded?",
+    "expected_chunk_ids": [
+      "hh-010-018-0235-7df184b37b21",
+      "ip-fl-1-008-0025-6ad28000813e",
+      "ip-fl-1-008-0003-7f87434a2c4c"
+    ]
+  },
+  {
+    "question_id": "Q019",
+    "question": "I have a bike worth £200 which I travel with. How can I ensure it?",
+    "expected_chunk_ids": [
+      "hh-010-018-0145-3b1010a18ca8",
+      "hh-010-018-0144-2e3a7b19fd30",
+      "ip-ho-1-012-0034-6a62f13e58a8",
+      "ip-ho-2-012-0038-9081220cbcaa",
+      "ip-ho-3-010-0040-4d6c28c3d859"
+    ]
+  },
+  {
+    "question_id": "Q020",
+    "question": "I have a bike worth £5000 which I travel with. How can I ensure it?",
+    "expected_chunk_ids": [
+      "ip-ho-1-012-0019-24560ef76ec6",
+      "ip-ho-2-012-0024-52abdaa01ad4",
+      "ip-ho-3-010-0027-3463614fc130"
+    ]
+  },
+  {
+    "question_id": "Q021",
+    "question": "A visitor tripped on a loose paving stone at my home and was injured. Would my insurance cover me if they made a claim against me?",
+    "expected_chunk_ids": [
+      "hh-010-018-0076-c412abae6457",
+      "hh-010-018-0136-d4414d134612"
+    ]
+  }
+]

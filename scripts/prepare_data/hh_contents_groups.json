@@ -1,0 +1,128 @@
+{
+  "_comment": "Contents structure of the HH-010-018 Guide to your Home Insurance Cover booklet, transcribed from its contents page. start_page is the printed page number. Headings that start on the same page share one subgroup so their page content is not duplicated. Used by scripts/prepare_data/extract_hh_pdfs.py.",
+  "contents_groups": [
+    {
+      "group_heading": "Guide to your Home Insurance cover",
+      "subgroups": [
+        {
+          "start_page": 1,
+          "headings": [
+            "Welcome to your Home Insurance cover"
+          ]
+        },
+        {
+          "start_page": 4,
+          "headings": [
+            "Definitions"
+          ]
+        },
+        {
+          "start_page": 8,
+          "headings": [
+            "How to make a claim"
+          ]
+        },
+        {
+          "start_page": 10,
+          "headings": [
+            "Keeping your policy up to date"
+          ]
+        }
+      ]
+    },
+    {
+      "group_heading": "What this policy covers:",
+      "subgroups": [
+        {
+          "start_page": 12,
+          "headings": [
+            "Your buildings cover"
+          ]
+        },
+        {
+          "start_page": 19,
+          "headings": [
+            "Your contents cover"
+          ]
+        },
+        {
+          "start_page": 29,
+          "headings": [
+            "Your liability cover"
+          ]
+        },
+        {
+          "start_page": 31,
+          "headings": [
+            "Cover away from your home"
+          ]
+        },
+        {
+          "start_page": 33,
+          "headings": [
+            "Your bicycle cover"
+          ]
+        }
+      ]
+    },
+    {
+      "group_heading": "What this policy doesn’t cover and general conditions:",
+      "subgroups": [
+        {
+          "start_page": 34,
+          "headings": [
+            "What this policy doesn’t cover"
+          ]
+        },
+        {
+          "start_page": 37,
+          "headings": [
+            "General conditions that apply to your home policy"
+          ]
+        }
+      ]
+    },
+    {
+      "group_heading": "Optional cover:",
+      "subgroups": [
+        {
+          "start_page": 42,
+          "headings": [
+            "Home Emergency cover (as standard on Gold)",
+            "Home Emergency Extra cover (as standard on Platinum)"
+          ]
+        },
+        {
+          "start_page": 54,
+          "headings": [
+            "Home Legal Expenses (as standard on Platinum)"
+          ]
+        }
+      ]
+    },
+    {
+      "group_heading": "How to make a complaint:",
+      "subgroups": [
+        {
+          "start_page": 66,
+          "headings": [
+            "Complaint about your home cover",
+            "Complaint about a claim under your home cover",
+            "Complaint about your Home Emergency or Home Emergency Extra cover"
+          ]
+        }
+      ]
+    },
+    {
+      "group_heading": "How we use your personal information:",
+      "subgroups": [
+        {
+          "start_page": 67,
+          "headings": [
+            "How we use your personal information"
+          ]
+        }
+      ]
+    }
+  ]
+}

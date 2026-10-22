@@ -1,0 +1,3 @@
+# Installs this project in editable mode with the dependencies pinned in
+# pyproject.toml, so the scripts can import the insurance_rag package.
+-e .

@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "azure-insurance-policy-rag"
+version = "0.1.0"
+description = "Retrieval-augmented generation over home insurance policy documents using Azure OpenAI and Azure AI Search."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "azure-search-documents==12.0.0",
+    "openai==3.1.0",
+    "pymupdf==1.28.2",
+    "python-dotenv==1.2.2",
+    "tiktoken==0.13.0",
+]
+
+# Development tools, installed with: python3 -m pip install -e ".[dev]"
+# ruff is pinned because formatting can change between releases.
+[project.optional-dependencies]
+dev = [
+    "ruff==0.16.9",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+src = ["src", "scripts"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "D",   # pydocstyle
+    "PLW", # pylint warnings
+    "EXE", # shebangs
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["insurance_rag"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
